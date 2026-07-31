@@ -1,0 +1,8 @@
+{
+  "table": "Table 2",
+  "main_csv": "/Users/zhangdong/PycharmProjects/PythonProject/LOD/paper_artifacts/tables/Table02_loq_precision_main.csv",
+  "pool_csv": "/Users/zhangdong/PycharmProjects/PythonProject/LOD/paper_artifacts/tables/Table02b_troponin_precision_pools.csv",
+  "n_design_rows": 30,
+  "n_pool_rows": 18,
+  "interpretation": "Use design rows for G3 sample-size planning; troponin pools are tier-C illustrations of precision-profile structure, not clinical truth."
+}

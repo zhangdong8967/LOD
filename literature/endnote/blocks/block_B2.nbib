@@ -1,0 +1,653 @@
+
+PMID- 28834382
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20180920
+LR  - 20191210
+IS  - 1942-7611 (Electronic)
+IS  - 1942-7603 (Linking)
+VI  - 10
+IP  - 4
+DP  - 2018 Apr
+TI  - Application of a screening method for fentanyl and its analogues using 
+      UHPLC-QTOF-MS with data-independent acquisition (DIA) in MS(E) mode and 
+      retrospective analysis of authentic forensic blood samples.
+PG  - 651-662
+LID - 10.1002/dta.2263 [doi]
+AB  - The steady appearance of new fentanyl analogues and the associated overdose 
+      deaths require the development of sensitive screening approaches to detect these 
+      compounds in biological samples and seizures. We developed a targeted screening 
+      method to detect 50 4-anilidopiperidine-related fentanyl analogues in whole blood 
+      using ultra-high performance liquid chromatography quadrupole time-of-flight mass 
+      spectrometry in data-independent acquisition mode. Sample preparation was 
+      performed using protein precipitation on a fully automated robotic setup. 
+      Thirteen analogues were selected to validate the method. A small matrix ion 
+      enhancement effect (110-123%) was observed for all of the compounds; the recovery 
+      ranged from 67% to 81% and the process efficiency from 81% to 98%. Limit of 
+      detection was within 0.0005-0.001 mg/kg and limit of identification ranged from 
+      0.001 to 0.005 mg/kg. In the retrospective analysis of 2339 forensic blood 
+      samples, the major finding was fentanyl (n = 56), followed by alfentanil (n = 5) 
+      and remifentanil (n = 1). Identification of 34 fentanyl analogues was based on 
+      the predicted product ions resulting from common fentanyl-specific 
+      collision-induced cleavages, particularly on the product ion result of the 
+      fragmentation on the C-N bond between the phenylamide moiety and the piperidine 
+      ring. The proposed hypothesis was supported by the targeted analysis of 16 
+      fentanyl analogues using this method and available published mass spectral data 
+      sources for fentanyl analogues. A targeted screening method for 50 fentanyl 
+      analogues was successfully validated and implemented to analyse authentic blood 
+      samples, where identifying targeted fentanyl analogues was tentatively achieved 
+      without using reference standards.
+CI  - Copyright (c) 2017 John Wiley & Sons, Ltd.
+FAU - Noble, Carolina
+AU  - Noble C
+AUID- ORCID: 0000-0002-9527-536X
+AD  - Section of Forensic Chemistry, Department of Forensic Medicine, Faculty of Health 
+      and Medical Sciences, University of Copenhagen, Denmark.
+FAU - Weihe Dalsgaard, Petur
+AU  - Weihe Dalsgaard P
+AD  - Section of Forensic Chemistry, Department of Forensic Medicine, Faculty of Health 
+      and Medical Sciences, University of Copenhagen, Denmark.
+FAU - Stybe Johansen, Sys
+AU  - Stybe Johansen S
+AUID- ORCID: 0000-0002-9555-5134
+AD  - Section of Forensic Chemistry, Department of Forensic Medicine, Faculty of Health 
+      and Medical Sciences, University of Copenhagen, Denmark.
+FAU - Linnet, Kristian
+AU  - Linnet K
+AD  - Section of Forensic Chemistry, Department of Forensic Medicine, Faculty of Health 
+      and Medical Sciences, University of Copenhagen, Denmark.
+LA  - eng
+PT  - Journal Article
+PT  - Validation Study
+DEP - 20171027
+PL  - England
+TA  - Drug Test Anal
+JT  - Drug testing and analysis
+JID - 101483449
+RN  - 0 (Illicit Drugs)
+RN  - 0 (Narcotics)
+RN  - 0 (Piperidines)
+RN  - 1N74HM2BS7 (Alfentanil)
+RN  - P10582JYYK (Remifentanil)
+RN  - UF599785JZ (Fentanyl)
+SB  - IM
+MH  - Adolescent
+MH  - Adult
+MH  - Aged
+MH  - Aged, 80 and over
+MH  - Alfentanil/analysis/blood
+MH  - Child
+MH  - Chromatography, High Pressure Liquid/*methods
+MH  - Female
+MH  - Fentanyl/*analogs & derivatives/*blood
+MH  - Forensic Medicine/methods
+MH  - Forensic Toxicology/methods
+MH  - Humans
+MH  - Illicit Drugs/analysis/blood
+MH  - Limit of Detection
+MH  - Male
+MH  - Mass Spectrometry/*methods
+MH  - Middle Aged
+MH  - Narcotics/analysis/*blood
+MH  - Piperidines/analysis/blood
+MH  - Remifentanil
+MH  - Retrospective Studies
+MH  - Substance Abuse Detection/*methods
+MH  - Young Adult
+OTO - NOTNLM
+OT  - fentanyl analogues
+OT  - liquid chromatography
+OT  - mass spectrometry
+OT  - new psychoactive substances
+OT  - retrospective analysis
+OT  - screening
+EDAT- 2017/08/24 06:00
+MHDA- 2018/09/21 06:00
+CRDT- 2017/08/24 06:00
+PHST- 2017/07/14 00:00 [received]
+PHST- 2017/08/15 00:00 [revised]
+PHST- 2017/08/15 00:00 [accepted]
+PHST- 2017/08/24 06:00 [pubmed]
+PHST- 2018/09/21 06:00 [medline]
+PHST- 2017/08/24 06:00 [entrez]
+AID - 10.1002/dta.2263 [doi]
+PST - ppublish
+SO  - Drug Test Anal. 2018 Apr;10(4):651-662. doi: 10.1002/dta.2263. Epub 2017 Oct 27.
+
+PMID- 24063748
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20140827
+LR  - 20250529
+IS  - 1535-3907 (Electronic)
+IS  - 1535-3893 (Print)
+IS  - 1535-3893 (Linking)
+VI  - 12
+IP  - 12
+DP  - 2013 Dec 6
+TI  - Statistical design for biospecimen cohort size in proteomics-based biomarker 
+      discovery and verification studies.
+PG  - 5383-94
+LID - 10.1021/pr400132j [doi]
+AB  - Protein biomarkers are needed to deepen our understanding of cancer biology and 
+      to improve our ability to diagnose, monitor, and treat cancers. Important 
+      analytical and clinical hurdles must be overcome to allow the most promising 
+      protein biomarker candidates to advance into clinical validation studies. 
+      Although contemporary proteomics technologies support the measurement of large 
+      numbers of proteins in individual clinical specimens, sample throughput remains 
+      comparatively low. This problem is amplified in typical clinical proteomics 
+      research studies, which routinely suffer from a lack of proper experimental 
+      design, resulting in analysis of too few biospecimens to achieve adequate 
+      statistical power at each stage of a biomarker pipeline. To address this critical 
+      shortcoming, a joint workshop was held by the National Cancer Institute (NCI), 
+      National Heart, Lung, and Blood Institute (NHLBI), and American Association for 
+      Clinical Chemistry (AACC) with participation from the U.S. Food and Drug 
+      Administration (FDA). An important output from the workshop was a statistical 
+      framework for the design of biomarker discovery and verification studies. Herein, 
+      we describe the use of quantitative clinical judgments to set statistical 
+      criteria for clinical relevance and the development of an approach to calculate 
+      biospecimen sample size for proteomic studies in discovery and verification 
+      stages prior to clinical validation stage. This represents a first step toward 
+      building a consensus on quantitative criteria for statistical design of 
+      proteomics biomarker discovery and verification research.
+FAU - Skates, Steven J
+AU  - Skates SJ
+AD  - Biostatistics Center, Massachusetts General Hospital Cancer Center , Boston, 
+      Massachusetts 02114, United States.
+FAU - Gillette, Michael A
+AU  - Gillette MA
+FAU - LaBaer, Joshua
+AU  - LaBaer J
+FAU - Carr, Steven A
+AU  - Carr SA
+FAU - Anderson, Leigh
+AU  - Anderson L
+FAU - Liebler, Daniel C
+AU  - Liebler DC
+FAU - Ransohoff, David
+AU  - Ransohoff D
+FAU - Rifai, Nader
+AU  - Rifai N
+FAU - Kondratovich, Marina
+AU  - Kondratovich M
+FAU - Tezak, Zivana
+AU  - Tezak Z
+FAU - Mansfield, Elizabeth
+AU  - Mansfield E
+FAU - Oberg, Ann L
+AU  - Oberg AL
+FAU - Wright, Ian
+AU  - Wright I
+FAU - Barnes, Grady
+AU  - Barnes G
+FAU - Gail, Mitchell
+AU  - Gail M
+FAU - Mesri, Mehdi
+AU  - Mesri M
+FAU - Kinsinger, Christopher R
+AU  - Kinsinger CR
+FAU - Rodriguez, Henry
+AU  - Rodriguez H
+FAU - Boja, Emily S
+AU  - Boja ES
+LA  - eng
+GR  - U24 CA160034/CA/NCI NIH HHS/United States
+GR  - U01 CA152990/CA/NCI NIH HHS/United States
+GR  - P30 CA015083/CA/NCI NIH HHS/United States
+GR  - Z99 CA999999/ImNIH/Intramural NIH HHS/United States
+GR  - U24CA160034/CA/NCI NIH HHS/United States
+GR  - P50CA136393/CA/NCI NIH HHS/United States
+GR  - P50 CA136393/CA/NCI NIH HHS/United States
+GR  - U01CA152990/CA/NCI NIH HHS/United States
+GR  - U24 CA159988/CA/NCI NIH HHS/United States
+PT  - Consensus Development Conference, NIH
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+DEP - 20131028
+PL  - United States
+TA  - J Proteome Res
+JT  - Journal of proteome research
+JID - 101128775
+RN  - 0 (Biomarkers, Tumor)
+RN  - 0 (Blood Proteins)
+RN  - 0 (Neoplasm Proteins)
+SB  - IM
+MH  - Algorithms
+MH  - Biomarkers, Tumor/*genetics/metabolism
+MH  - Blood Proteins/*genetics/metabolism
+MH  - Cohort Studies
+MH  - *Gene Expression Regulation, Neoplastic
+MH  - Humans
+MH  - Neoplasm Proteins/*genetics/metabolism
+MH  - Neoplasms/diagnosis/*genetics/metabolism
+MH  - Proteomics/*statistics & numerical data
+MH  - Research Design
+MH  - Sample Size
+MH  - Sensitivity and Specificity
+MH  - Specimen Handling/*statistics & numerical data
+PMC - PMC4039197
+MID - NIHMS572217
+EDAT- 2013/09/26 06:00
+MHDA- 2014/08/29 06:00
+PMCR- 2014/05/30
+CRDT- 2013/09/26 06:00
+PHST- 2013/09/26 06:00 [entrez]
+PHST- 2013/09/26 06:00 [pubmed]
+PHST- 2014/08/29 06:00 [medline]
+PHST- 2014/05/30 00:00 [pmc-release]
+AID - 10.1021/pr400132j [doi]
+PST - ppublish
+SO  - J Proteome Res. 2013 Dec 6;12(12):5383-94. doi: 10.1021/pr400132j. Epub 2013 Oct 
+      28.
+
+PMID- 22829313
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20121101
+LR  - 20220410
+IS  - 1530-8561 (Electronic)
+IS  - 0009-9147 (Linking)
+VI  - 58
+IP  - 9
+DP  - 2012 Sep
+TI  - Quantifying the accuracy of a diagnostic test or marker.
+PG  - 1292-301
+LID - 10.1373/clinchem.2012.182543 [doi]
+AB  - BACKGROUND: In recent years, increasing focus has been directed to the 
+      methodology for evaluating (new) tests or biomarkers. A key step in the 
+      evaluation of a diagnostic test is the investigation into its accuracy. CONTENT: 
+      We reviewed the literature on how to assess the accuracy of diagnostic tests. 
+      Accuracy refers to the amount of agreement between the results of the test under 
+      evaluation (index test) and the results of a reference standard or test. The 
+      generally recommended approach is to use a prospective cohort design in patients 
+      who are suspected of having the disease of interest, in which each individual 
+      undergoes the index and same reference standard tests. This approach presents 
+      several challenges, including the problems that can arise with the verification 
+      of the index test results by the preferred reference standard test, the choice of 
+      cutoff value in case of a continuous index test result, and the determination of 
+      how to translate accuracy results to recommendations for clinical use. This first 
+      in a series of 4 reports presents an overview of the designs of single-test 
+      accuracy studies and the concepts of specificity, sensitivity, posterior 
+      probabilities (i.e., predictive values) for the presence of target disease, ROC 
+      curves, and likelihood ratios, all illustrated with empirical data from a study 
+      on the diagnosis of suspected deep venous thrombosis. Limitations of the concept 
+      of the diagnostic accuracy for a single test are also highlighted. CONCLUSIONS: 
+      The prospective cohort design in patients suspected of having the disease of 
+      interest is the optimal approach to estimate the accuracy of a diagnostic test. 
+      However, the accuracy of a diagnostic index test is not constant but varies 
+      across different clinical contexts, disease spectrums, and even patient 
+      subgroups.
+FAU - Linnet, Kristian
+AU  - Linnet K
+AD  - Section of Forensic Chemistry, Department of Forensic Medicine, Faculty of Health 
+      Sciences, University of Copenhagen, Copenhagen, Denmark. 
+      kristian.linnet@forensic.ku.dk
+FAU - Bossuyt, Patrick M M
+AU  - Bossuyt PM
+FAU - Moons, Karel G M
+AU  - Moons KG
+FAU - Reitsma, Johannes B R
+AU  - Reitsma JB
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+PT  - Review
+DEP - 20120724
+PL  - England
+TA  - Clin Chem
+JT  - Clinical chemistry
+JID - 9421549
+RN  - 0 (Biomarkers)
+SB  - IM
+MH  - Biomarkers/*analysis
+MH  - *Diagnosis
+MH  - Humans
+MH  - ROC Curve
+MH  - Reproducibility of Results
+MH  - Sensitivity and Specificity
+EDAT- 2012/07/26 06:00
+MHDA- 2012/11/02 06:00
+CRDT- 2012/07/26 06:00
+PHST- 2012/07/26 06:00 [entrez]
+PHST- 2012/07/26 06:00 [pubmed]
+PHST- 2012/11/02 06:00 [medline]
+AID - clinchem.2012.182543 [pii]
+AID - 10.1373/clinchem.2012.182543 [doi]
+PST - ppublish
+SO  - Clin Chem. 2012 Sep;58(9):1292-301. doi: 10.1373/clinchem.2012.182543. Epub 2012 
+      Jul 24.
+
+PMID- 18713518
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20081017
+LR  - 20190513
+IS  - 0146-4760 (Print)
+IS  - 0146-4760 (Linking)
+VI  - 32
+IP  - 7
+DP  - 2008 Sep
+TI  - Chiral analysis of methadone and its main metabolite EDDP in postmortem blood by 
+      liquid chromatography-mass spectrometry.
+PG  - 499-504
+AB  - A chiral liquid chromatography-tandem mass spectrometry method was developed for 
+      the measurement of methadone and 2-ethyl-1,5-dimethyl-3,3-diphenylpyrrolinium 
+      (EDDP) enantiomers in postmortem blood. Blood (0.100 g) was mixed with water and 
+      aqueous methadone-d(3) and EDDP-d(3) solutions. After addition of NaOH, 
+      extraction was carried out with butyl acetate. Chromatographic separation was 
+      performed on a chiral-AGP analytical column (100 mm x 4.0-mm i.d., 5 microm) with 
+      a mobile phase of acetonitrile/ammonium acetate buffer (10 mM, pH 7.0, 22:78, 
+      v/v). A Quattro micro mass spectrometer was operated in the positive ion mode 
+      with an electrospray source. Multiple reaction monitoring was used with two 
+      transitions for each compound. The calibration curves were linear over the range 
+      from 0.001 to 2.5 mg/kg blood per enantiomer, and the limit of detection was 
+      0.001 mg/kg, and the limit of quantitation was 0.003 mg/kg for all compounds. The 
+      precision (coefficient of variation%) was below 6.3%, and the trueness was 
+      88-104% for all compounds. R- and S-methadone were measured in femoral blood from 
+      10 postmortem cases. The R-methadone concentrations extended from 0.006 to 1.235 
+      mg/kg with a median of 0.41 mg/kg, and the S-methadone concentrations ranged from 
+      0 to 0.794 mg/kg (median 0.33 mg/kg). The median R/S-ratio was 1.46 (total range 
+      from 1.00 to 2.62), which tends to be higher than that reported in plasma of 
+      living subjects.
+FAU - Johansen, Sys Stybe
+AU  - Johansen SS
+AD  - Section of Forensic Chemistry, Department of Forensic Medicine, Faculty of Health 
+      Sciences, University of Copenhagen, Copenhagen, Denmark. SSJ@forensic.ku.dk
+FAU - Linnet, Kristian
+AU  - Linnet K
+LA  - eng
+PT  - Journal Article
+PL  - England
+TA  - J Anal Toxicol
+JT  - Journal of analytical toxicology
+JID - 7705085
+RN  - 0 (Narcotics)
+RN  - 0 (Pharmaceutical Preparations)
+RN  - 0 (Pyrrolidines)
+RN  - UC6VBE7V1Z (Methadone)
+RN  - Z3LC48U94I (2-ethylidene-1,5-dimethyl-3,3-diphenylpyrrolidine)
+SB  - IM
+MH  - Autopsy
+MH  - Calibration
+MH  - Chromatography, High Pressure Liquid
+MH  - Humans
+MH  - Mass Spectrometry
+MH  - Methadone/*blood
+MH  - Narcotics/*blood
+MH  - Pharmaceutical Preparations/analysis
+MH  - Pyrrolidines/*blood
+MH  - Quality Control
+MH  - Reproducibility of Results
+MH  - Stereoisomerism
+EDAT- 2008/08/21 09:00
+MHDA- 2008/10/18 09:00
+CRDT- 2008/08/21 09:00
+PHST- 2008/08/21 09:00 [pubmed]
+PHST- 2008/10/18 09:00 [medline]
+PHST- 2008/08/21 09:00 [entrez]
+AID - 10.1093/jat/32.7.499 [doi]
+PST - ppublish
+SO  - J Anal Toxicol. 2008 Sep;32(7):499-504. doi: 10.1093/jat/32.7.499.
+
+PMID- 18344106
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20080506
+LR  - 20091117
+IS  - 1556-3650 (Print)
+IS  - 1556-3650 (Linking)
+VI  - 46
+IP  - 3
+DP  - 2008 Mar
+TI  - Reliability of self-reported use of amphetamine, barbiturates, benzodiazepines, 
+      cannabinoids, cocaine, methadone, and opiates among acutely hospitalized elderly 
+      medical patients.
+PG  - 239-42
+LID - 10.1080/15563650701586397 [doi]
+AB  - BACKGROUND: Undisclosed use of illicit drugs and prescription controlled 
+      substances is frequent in some settings. The aim of the present study was to 
+      estimate the reliability of self-reported use of amphetamine, barbiturates, 
+      benzodiazepines, cannabinoids, cocaine, methadone, and opiates among acutely 
+      hospitalized medical patients. METHODS: Patients admitted to an acute medical 
+      department were interviewed about their drug use. Patients provided blood and 
+      urine samples for drug analysis. Results of a toxicology screen were compared to 
+      self-reported drug use. Toxicology screens positive for drugs not reported during 
+      the interview were only considered truly positive after verification by a 
+      substance specific analysis. RESULTS: Five hundred patients were included. The 
+      median age was 72 years and 298 (60%) were female. In total, 103 patients (21%) 
+      reported use of opiates and 65 patients (13%) used benzodiazepines. Only 8 
+      patients reported use of illicit drugs (cannabinoids, 2%). Toxicology analyses 
+      were performed in a randomly selected sub-sample of 100 patients. Among 27 
+      patients (27%), the analyses indicated use of one or more drugs, mainly 
+      benzodiazepines (15 patients), morphine (12 patients) or cannabinoids (5 
+      patients). Another 6 patients had screenings unexpectedly positive for opiates, 
+      but the verification analysis indicated use of codeine-containing drugs. The 
+      overall sensitivity of self-reports in detecting drug use was 66%. The negative 
+      predictive value of a patient not reporting use of a drug was over 90% for all 7 
+      drug-types screened. CONCLUSION: Among 100 randomly selected mainly elderly 
+      medical patients, undeclared use of illicit drugs was rare. However, some 
+      patients underreported use of benzodiazepines and cannabinoids.
+FAU - Glintborg, Bente
+AU  - Glintborg B
+AD  - Rigshospitalet, Clinical Pharmacology, Copenhagen, Denmark. glintborg@dadlnet.dk
+FAU - Olsen, Lenette
+AU  - Olsen L
+FAU - Poulsen, Henrik
+AU  - Poulsen H
+FAU - Linnet, Kristian
+AU  - Linnet K
+FAU - Dalhoff, Kim
+AU  - Dalhoff K
+LA  - eng
+PT  - Journal Article
+PL  - England
+TA  - Clin Toxicol (Phila)
+JT  - Clinical toxicology (Philadelphia, Pa.)
+JID - 101241654
+SB  - IM
+MH  - Adolescent
+MH  - Adult
+MH  - Aged
+MH  - Aged, 80 and over
+MH  - Denmark/epidemiology
+MH  - Female
+MH  - Gas Chromatography-Mass Spectrometry
+MH  - Hospitalization
+MH  - Humans
+MH  - Male
+MH  - Middle Aged
+MH  - Predictive Value of Tests
+MH  - Substance Abuse Detection
+MH  - Substance-Related Disorders/*diagnosis/epidemiology/*psychology
+EDAT- 2008/03/18 09:00
+MHDA- 2008/05/07 09:00
+CRDT- 2008/03/18 09:00
+PHST- 2008/03/18 09:00 [pubmed]
+PHST- 2008/05/07 09:00 [medline]
+PHST- 2008/03/18 09:00 [entrez]
+AID - 790021100 [pii]
+AID - 10.1080/15563650701586397 [doi]
+PST - ppublish
+SO  - Clin Toxicol (Phila). 2008 Mar;46(3):239-42. doi: 10.1080/15563650701586397.
+
+PMID- 18161546
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20080408
+LR  - 20071228
+IS  - 1520-5711 (Electronic)
+IS  - 1054-3406 (Linking)
+VI  - 18
+IP  - 1
+DP  - 2008
+TI  - Comparing two medical tests when results of reference standard are unavailable 
+      for those negative via both tests.
+PG  - 145-66
+AB  - In studies for comparing the diagnostic accuracy of two qualitative tests, very 
+      often the reference standard to confirm the disease status is not applied to all 
+      study subjects. We considered a situation when all subjects with a positive 
+      result by at least one of the tests had a verified disease status and none of the 
+      subjects with both tests negative results had a verification of disease status. 
+      In this paper, we discuss whether the information about the ratio of true 
+      positive rates and the ratio of false positive rates of two qualitative tests, 
+      T(New) and T(Old), is sufficient to draw a conclusion about effectiveness of the 
+      T(New). We show that if there is a statistically significant increase in true 
+      positive rates and the increase in true positive rates is statistically larger 
+      than increase in false positive rates, then a conclusion about effectiveness of 
+      test T(New) can be made and this does not require application of the reference 
+      standard to the subjects with negative results by both tests. An application of 
+      ratio of true positive rates and ratio of false positive rates to post-market 
+      studies is also presented.
+FAU - Kondratovich, Marina V
+AU  - Kondratovich MV
+AD  - CDRH, U.S. Food and Drug Administration, Rockville, Maryland 20850, USA. 
+      Marina.Kondratovich@fda.hhs.gov
+LA  - eng
+PT  - Comparative Study
+PT  - Journal Article
+PL  - England
+TA  - J Biopharm Stat
+JT  - Journal of biopharmaceutical statistics
+JID - 9200436
+SB  - IM
+MH  - False Positive Reactions
+MH  - *Reference Standards
+MH  - Research Design/*standards/statistics & numerical data
+MH  - Sensitivity and Specificity
+EDAT- 2007/12/29 09:00
+MHDA- 2008/04/09 09:00
+CRDT- 2007/12/29 09:00
+PHST- 2007/12/29 09:00 [pubmed]
+PHST- 2008/04/09 09:00 [medline]
+PHST- 2007/12/29 09:00 [entrez]
+AID - 789004472 [pii]
+AID - 10.1080/10543400701668308 [doi]
+PST - ppublish
+SO  - J Biopharm Stat. 2008;18(1):145-66. doi: 10.1080/10543400701668308.
+
+PMID- 15899655
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20050901
+LR  - 20161018
+IS  - 1434-6621 (Print)
+IS  - 1434-6621 (Linking)
+VI  - 43
+IP  - 4
+DP  - 2005
+TI  - Estimation of the limit of detection with a bootstrap-derived standard error by a 
+      partly non-parametric approach. Application to HPLC drug assays.
+PG  - 394-9
+AB  - A recently proposed procedure for estimating the limit of detection (LoD) of an 
+      assay using a partly non-parametric approach is applied to five HPLC drug assays. 
+      The non-parametrically determined 95th percentile of the blank measurements (LoB) 
+      is obtained as the value of the N (95/100) + 0.5 ordered observations. The LoD is 
+      the lowest level of analyte that is likely to yield a measured result exceeding 
+      the LoB. The LoD equals LoB + c(beta) x SD(S), where SD S is the analytical SD at 
+      low concentrations, and c(beta) = z(1-beta)/(1-1/(4 x f )) (f = degrees of 
+      freedom). c(beta) approximately 1.65 for a type II error of 5%. The blank 
+      distributions deviated significantly from normality for four of the five assays 
+      because of skewness to the right. The estimated LoB ranged from 3.3 to 10.2 
+      nmol/L. The LoDs were in the interval from 7.8 to 17.2 nmol/L. A new procedure 
+      for estimation of the standard error (SE) of the estimated LoD that is partly 
+      based on the bootstrap principle showed good performance in simulation studies. 
+      In conclusion, the partly non-parametric procedure for estimation of the LoD of 
+      typical HPLC drug assays was found to be a suitable approach.
+FAU - Linnet, Kristian
+AU  - Linnet K
+AD  - Laboratory of Clinical Biochemistry, Psychiatric University Hospital, Risskov, 
+      Denmark. linnet@post7.tele.dk
+LA  - eng
+PT  - Journal Article
+PL  - Germany
+TA  - Clin Chem Lab Med
+JT  - Clinical chemistry and laboratory medicine
+JID - 9806306
+RN  - 0 (Antidepressive Agents)
+RN  - 0 (Antipsychotic Agents)
+SB  - IM
+MH  - Antidepressive Agents/*analysis
+MH  - Antipsychotic Agents/*analysis
+MH  - Chromatography, High Pressure Liquid/methods/*statistics & numerical data
+MH  - Computer Simulation
+MH  - Confidence Intervals
+MH  - Normal Distribution
+MH  - Reproducibility of Results
+MH  - Sensitivity and Specificity
+MH  - Statistics, Nonparametric
+EDAT- 2005/05/19 09:00
+MHDA- 2005/09/02 09:00
+CRDT- 2005/05/19 09:00
+PHST- 2005/05/19 09:00 [pubmed]
+PHST- 2005/09/02 09:00 [medline]
+PHST- 2005/05/19 09:00 [entrez]
+AID - 10.1515/CCLM.2005.071 [doi]
+PST - ppublish
+SO  - Clin Chem Lab Med. 2005;43(4):394-9. doi: 10.1515/CCLM.2005.071.
+
+PMID- 14764644
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20040428
+LR  - 20190722
+IS  - 0009-9147 (Print)
+IS  - 0009-9147 (Linking)
+VI  - 50
+IP  - 4
+DP  - 2004 Apr
+TI  - Partly nonparametric approach for determining the limit of detection.
+PG  - 732-40
+AB  - BACKGROUND: According to recent International Organization for Standardization 
+      (ISO) standards, the limit of detection (LoD) of an assay should be estimated 
+      taking both type I (alpha) and II (beta) errors into account. The suggested 
+      procedure, however, supposes gaussian distributions of both blank and sample 
+      measurements and a linear calibration curve. In clinical chemistry, asymmetric, 
+      nongaussian blank distributions are common, and the calibration curve may be 
+      nonlinear. We present a partly nonparametric procedure that takes these aspects 
+      into account. METHODS: Using theoretical distribution models and simulation 
+      studies, we developed a LoD estimation procedure suitable for the field of 
+      clinical chemistry that is partly based on nonparametric statistics. RESULTS: For 
+      sample size n, the nonparametrically determined 95th percentile of the blank 
+      measurements obtained as the value of the [n(95/100) + 0.5]th ordered observation 
+      defines the limit for results significantly exceeding zero [limit of blank 
+      (LoB)]. The LoD is the lowest value that is likely to yield a result exceeding 
+      the LoB. LoD is estimated as: LoB + cbeta x SDS, where SDS is the analytical SD 
+      of a sample with a low concentration; cbeta = z(1 - beta)/[1 - 1/(4 x f)]; z(1 - 
+      beta) is the standard normal deviate; and f is the number of degrees of freedom 
+      for estimation of SD(S). c(beta) is approximately equal to 1.65 for a type II 
+      error of 5%. Approaches and needed tabular values for calculation of confidence 
+      limits are presented as well as sample size. Worked examples are given to 
+      illustrate estimation and verification of the limit of detection. Simulation 
+      results are used to document performance. CONCLUSION: The proposed procedure 
+      appears useful for application in the field of clinical chemistry and promotes a 
+      standardized approach for estimating LoDs of clinical chemistry assays.
+FAU - Linnet, Kristian
+AU  - Linnet K
+AD  - Laboratory of Clinical Biochemistry, Psychiatric University Hospital, Risskov, 
+      Denmark. linnet@post7.tele.dk
+FAU - Kondratovich, Marina
+AU  - Kondratovich M
+LA  - eng
+PT  - Journal Article
+DEP - 20040205
+PL  - England
+TA  - Clin Chem
+JT  - Clinical chemistry
+JID - 9421549
+SB  - IM
+MH  - Calibration
+MH  - Chemistry, Clinical/*statistics & numerical data
+MH  - Research Design/statistics & numerical data
+MH  - *Sensitivity and Specificity
+MH  - Statistics, Nonparametric
+EDAT- 2004/02/07 05:00
+MHDA- 2004/04/29 05:00
+CRDT- 2004/02/07 05:00
+PHST- 2004/02/07 05:00 [pubmed]
+PHST- 2004/04/29 05:00 [medline]
+PHST- 2004/02/07 05:00 [entrez]
+AID - clinchem.2003.029983 [pii]
+AID - 10.1373/clinchem.2003.029983 [doi]
+PST - ppublish
+SO  - Clin Chem. 2004 Apr;50(4):732-40. doi: 10.1373/clinchem.2003.029983. Epub 2004 
+      Feb 5.

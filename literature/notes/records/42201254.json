@@ -1,0 +1,18 @@
+{
+  "pmid": "42201254",
+  "doi": "10.1093/clinchem/hvag041",
+  "title": "Development and Analytical Validation of a Multiplex LC-MRM-MS-Based Reference Measurement Procedure for Apolipoprotein A-I and Btotal Quantification in Serum.",
+  "authors": "Diederiks Nina M; Romijn Fred P H T M; van Neer Nicolaas J M; Pieterse Mervin; Dittrich Julia; Ceglarek Uta; Cobbaert Christa M; Ruhaak L Renee",
+  "year": "2026",
+  "journal": "Clinical chemistry",
+  "blocks": "",
+  "priority": "screen",
+  "abstract": "Medical results from regulated in vitro diagnostic devices should be accurate. The previous reference measurement procedures (RMP) for apolipoprotein A-I (ApoA-I)/apolipoprotein B total (ApoBtotal) standardization are no longer functional. A new RMP aligned with ISO15193:2009 and calibration models of ISO17511:2020 was developed using multiplex liquid chromatography-multiple reaction monitoring-mass spectrometry (LC-MRM-MS) for quantifying ApoA-I and ApoBtotal in serum. Serum samples underwent reduction, alkylation, lysyl endopeptidase/trypsin digestion, and proteotypic peptide purification. Optimal retention times, precursor/fragment ion m/z were selected using an Agilent-1290 ultra-high-performance liquid chromatography coupled to a 6495C triple-quadrupole mass spectrometer. Calibrators were indirectly traceable to WHO/IFCC SP1-01/SP3-08 (ApoA-I/ApoBtotal) via the RMP, with propagated measurement uncertainty (MU), supported by replicate SP1-01/SP3-08 measurements across independent batches. Validation followed ISO15193:2009 and included linearity, recovery, uncertainty, precision, stability, preanalytical conditions, carryover, limit of blank (LoB), limit of detection (LoD), limit of quantification (LoQ), and comparability. Linearity was confirmed from 0.10 to 2.97 g/L and 0.27 to 3.83 g/L (ApoA-I/ApoBtotal), with <10% deviation, supporting broad analytical suitability. Duplicate MU was 2.3% for both analytes. Recovery ranged from 99.2% to 100.3%. Matrix effects were negligible except in citrate plasma (-14.1% to -15.7%). Carryover was <0.003 g/L (ApoA-I) and <0.004 g/L (ApoBtotal). LoB, LoD, and LoQ were <0.001/0.002 g/L, 0.0013/0.0019 g/L, and 0.01/0.02 g/L for ApoA-I/ApoBtotal, respectively. Compared with Roche immunoturbidimetric assays, data equivalence was demonstrated within allowable MU. This LC-MRM-MS-based RMP for ApoA-I and ApoBtotal provides a next-generation RMP succeeding the former ELISA-based RMP. Certification of commercially available ApoA-I/ApoBtotal tests will enable continued global standardization of ApoA-I/ApoBtotal measurements, while preserving traceability of test results to the former WHO-IFCC reference materials within maximum allowable uncertainty.",
+  "pmcid": "",
+  "pdf_path": "",
+  "pdf_source": "",
+  "download_status": "abstract_only",
+  "notes": "",
+  "pdf_text_chars": 0,
+  "pdf_text_preview": ""
+}

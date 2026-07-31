@@ -1,0 +1,10 @@
+dataset_id,evidence_tier,result_family,parametric_candidate,model_path,guidance_n,folklore_n,n_ratio_vs_folklore,loq_at_cv20,allowed_claim
+zenodo_mus_wt_qpcr,A,qpcr_cq_continuous,False,nonparametric_percentile,199,20,9.95,,primary_empirical_illustration
+zenodo_mus_multiplex_qpcr,A,qpcr_cq_continuous,False,nonparametric_percentile,199,20,9.95,,primary_empirical_illustration
+analyseit_ep17_estradiol,A,immunoassay_continuous,False,nonparametric_percentile,53,20,2.65,,primary_empirical_illustration
+analyseit_ep17_probit,A,probit_hit_rate,,,199,20,9.95,,primary_empirical_illustration
+mendeley_carobene_lombardy_eqa,A,clinical_chemistry_multilab,False,nonparametric_percentile,53,20,,0.6666666666666666,primary_empirical_illustration
+bioc_msstats_lobd_cptac,A,proteomics_blank_lob,False,parametric_lognormal,53,20,2.65,,primary_empirical_illustration
+zenodo_radioimmuno_precision,A,radioimmuno_precision_profile,True,parametric_normal,53,20,2.65,346.2666667,primary_empirical_illustration
+zenodo_radioimmuno_linearity,A,radioimmuno_linearity_continuous,,,,20,,631.7333333333333,primary_empirical_illustration
+zenodo_rmn_qualification,A,rmn_microneutralization_continuous,False,nonparametric_percentile,53,20,2.65,5.495444143579495,primary_empirical_illustration

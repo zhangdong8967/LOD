@@ -1,0 +1,18 @@
+{
+  "pmid": "20116401",
+  "doi": "10.1016/j.jviromet.2010.01.007",
+  "title": "A   p r o p o s e d   v a l i d a t i o n   m e t h o d   f o r   a u t o m a t e d   n u c l e i c   a c i d   e x t r a c t i o n   a n d   R T - q P C R   a n a l y s i s :   a n   e x a m p l e   u s i n g   B l u e t o n g u e   v i r u s .",
+  "authors": "Vandemeulebroucke Elise; De Clercq Kris; Van der Stede Yves; Vandenbussche Frank",
+  "year": "2010",
+  "journal": "Journal of virological methods",
+  "blocks": "D",
+  "priority": "screen",
+  "abstract": "This study proposes a validation strategy for an automated extraction procedure, followed by RT-qPCR analysis. To avoid false-negative results, a triplex RT-qPCR was used which detects the target viral RNA, an internal and an external control. The methods to determine the validation parameters such as linearity, efficiency, analytical sensitivity, analytical specificity and intra- and interrun variability are described in detail. Special attention is given to the analytical sensitivity, which is determined by probit analysis. The limit of detection was set at the input concentration resulting in a positive result in 95% of the repeats. The intra- and interrun variability was analysed profoundly by testing samples covering a broad range of viral loads, from strong positive to weak positive. To increase the diagnostic capacity, the extraction protocol was automated with a JANUS Automated Workstation (PerkinElmer, Waltham, MA), which can extract 186 samples in 2h and 30 min. The automation of the extraction protocol implied some additional validation parameters to be determined such as position-effect, absence of cross-contamination and comparison with the manual protocol. These parameters give essential information about the performance of the robot and are of great importance when the automated assay is used in an accreditation system.",
+  "pmcid": "",
+  "pdf_path": "",
+  "pdf_source": "",
+  "download_status": "abstract_only",
+  "notes": "",
+  "pdf_text_chars": 0,
+  "pdf_text_preview": ""
+}

@@ -1,0 +1,611 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preload" href="/Content/fonts/whitney-ssm-a-400-normal.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/Content/fonts/whitney-ssm-b-400-normal.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/Content/fonts/whitney-ssm-a-400-italic.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/Content/fonts/whitney-ssm-b-400-italic.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/Content/fonts/whitney-ssm-a-300-normal.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/Content/fonts/whitney-ssm-b-300-normal.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/Content/fonts/whitney-ssm-a-600-normal.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/Content/fonts/whitney-ssm-b-600-normal.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/Content/phosphor-subset-v3.svg" as="image" type="image/svg+xml">
+
+    <style>@font-face{font-family:"Whitney SSm A";src:url("/Content/fonts/whitney-ssm-a-300-normal.woff") format("woff");font-weight:300;font-style:normal;font-display:swap;}@font-face{font-family:"Whitney SSm B";src:url("/Content/fonts/whitney-ssm-b-300-normal.woff") format("woff");font-weight:300;font-style:normal;font-display:swap;}@font-face{font-family:"Whitney SSm A";src:url("/Content/fonts/whitney-ssm-a-400-normal.woff") format("woff");font-weight:400;font-style:normal;font-display:swap;}@font-face{font-family:"Whitney SSm B";src:url("/Content/fonts/whitney-ssm-b-400-normal.woff") format("woff");font-weight:400;font-style:normal;font-display:swap;}@font-face{font-family:"Whitney SSm A";src:url("/Content/fonts/whitney-ssm-a-400-italic.woff") format("woff");font-weight:400;font-style:italic;font-display:swap;}@font-face{font-family:"Whitney SSm B";src:url("/Content/fonts/whitney-ssm-b-400-italic.woff") format("woff");font-weight:400;font-style:italic;font-display:swap;}@font-face{font-family:"Whitney SSm A";src:url("/Content/fonts/whitney-ssm-a-600-normal.woff") format("woff");font-weight:600;font-style:normal;font-display:swap;}@font-face{font-family:"Whitney SSm B";src:url("/Content/fonts/whitney-ssm-b-600-normal.woff") format("woff");font-weight:600;font-style:normal;font-display:swap;}*,*::before,*::after{box-sizing:border-box;margin:0;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}html{line-height:1.15;text-size-adjust:100%;scroll-behavior:smooth;}body{line-height:1;min-height:100dvh;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote::before,blockquote::after,q::before,q::after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}a{text-decoration:none;color:inherit;background-color:transparent;}a:not([class]){text-decoration-skip-ink:auto;}img,picture,video,canvas,svg{display:block;max-width:100%;height:auto;}input,button,textarea,select{font:inherit;color:inherit;}button{cursor:pointer;background:none;border:0;}@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto;}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}}[hidden]{display:none!important;}fieldset{min-width:0;padding:0;margin:0;border:0;}textarea{resize:vertical;}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto;}input[type="search"]{-webkit-appearance:textfield;outline-offset:-2px;}input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}.x-flex{display:flex;}.x-inline-flex{display:inline-flex;}.x-flex-wrap{flex-wrap:wrap;}.x-flex-col{flex-direction:column;}.x-flex-row{flex-direction:row;}.x-items-center{align-items:center;}.x-items-start{align-items:flex-start;}.x-items-end{align-items:flex-end;}.x-items-stretch{align-items:stretch;}.x-justify-center{justify-content:center;}.x-justify-between{justify-content:space-between;}.x-justify-around{justify-content:space-around;}.x-justify-end{justify-content:flex-end;}.x-justify-start{justify-content:flex-start;}.x-gap-0{gap:0;}.x-gap-1{gap:10px;}.x-gap-2{gap:20px;}.x-gap-3{gap:40px;}.x-gap-4{gap:60px;}@media screen and (min-width:768px){.x-gap-4-except-mobile{gap:60px;}}.x-m-0{margin:0;}.x-m-1{margin:10px;}.x-m-2{margin:20px;}.x-m-3{margin:40px;}.x-m-4{margin:80px;}.x-mt-0{margin-top:0;}.x-mt-1{margin-top:10px;}.x-mt-2{margin-top:20px;}.x-mt-3{margin-top:40px;}.x-mt-4{margin-top:80px;}.x-mt-5{margin-top:100px;}.x-mb-0{margin-bottom:0;}.x-mb-1{margin-bottom:10px;}.x-mb-2{margin-bottom:20px;}.x-mb-3{margin-bottom:40px;}.x-mb-4{margin-bottom:80px;}.x-my-0{margin-top:0;margin-bottom:0;}.x-my-1{margin-top:10px;margin-bottom:10px;}.x-my-2{margin-top:20px;margin-bottom:20px;}.x-my-3{margin-top:40px;margin-bottom:40px;}.x-ml-3{margin-left:40px;}.x-my-4{margin-top:80px;margin-bottom:80px;}.x-ml-auto{margin-left:auto;}.x-mr-auto{margin-right:auto;}.x-mx-auto{margin-left:auto;margin-right:auto;}.x-mt-auto{margin-top:auto;}.x-p-0{padding:0;}.x-p-1{padding:10px;}.x-p-2{padding:20px;}.x-p-3{padding:40px;}.x-p-4{padding:80px;}.x-pt-0{padding-top:0;}.x-pt-1{padding-top:10px;}.x-pt-2{padding-top:20px;}.x-pt-3{padding-top:40px;}.x-pt-4{padding-top:80px;}.x-pb-0{padding-bottom:0;}.x-pb-1{padding-bottom:10px;}.x-pb-2{padding-bottom:20px;}.x-pb-3{padding-bottom:40px;}.x-pb-4{padding-bottom:80px;}.x-py-0{padding-top:0;padding-bottom:0;}.x-py-1{padding-top:10px;padding-bottom:10px;}.x-py-2{padding-top:20px;padding-bottom:20px;}.x-py-3{padding-top:40px;padding-bottom:40px;}.x-py-4{padding-top:80px;padding-bottom:80px;}.x-flex-1{flex:1;}.x-flex-2{flex:2;}.x-flex-3{flex:3;}.x-flex-4{flex:4;}.x-flex-5{flex:5;}.x-flex-none{flex:none;}.x-flex-grow{flex-grow:1;}.x-flex-shrink-0{flex-shrink:0;}.x-text-left{text-align:left;}.x-text-right{text-align:right;}.x-text-center{text-align:center;}.x-text-red{color:#e06464;}.x-text-purple{color:#7026ff;}.x-text-blue{color:#438ee1;}.x-text-green{color:#00a94d;}.x-sticky-top{position:sticky;top:100px;align-self:flex-start;}@media screen and (min-width:1042px){.x-content-sticky-top{position:sticky;top:100px;align-self:flex-start;}}@media screen and (max-width:1042px){.x-flex-1,.x-flex-2,.x-flex-3,.x-flex-4,.x-flex-5{flex:1 1 100%;}}@media screen and (min-width:1042px){.x-divider-right{padding-right:30px;border-right:1px solid #ccc;}.x-divider-left{padding-left:30px;border-left:1px solid #ccc;}}.x-divider-top{padding-top:30px;border-top:1px solid #ccc;}.x-divider-bottom{padding-bottom:30px;border-bottom:1px solid #ccc;}.x-col-38,.x-col-golden-small{flex:1 1 35%;min-width:300px;}.x-col-62,.x-col-golden-large{flex:1.6 1 55%;min-width:400px;}.x-col-50{flex:0 0 50%;max-width:50%;}.x-col-33{flex:0 0 33.33%;max-width:33.33%;}.x-col-25{flex:0 0 25%;max-width:25%;}@media screen and (max-width:1042px){.x-col-38,.x-col-golden-small,.x-col-62,.x-col-golden-large,.x-col-50,.x-col-33,.x-col-25{flex:0 0 100%;max-width:100%;min-width:0;}#x-content .x-mobile-nopull{float:none;}}.x-clearfix::after{content:"";display:table;clear:both;}.x-content{background-color:#f7f8fa;}@media screen and (min-width:1042px){.x-content{padding-top:80px;padding-bottom:250px;}}.x-content p{max-width:1042px;}.x-content section{clear:both;padding:30px 30px 20px 30px;border-bottom:1px solid #ddd;}@media screen and (max-width:1042px){.x-content section{padding:40px 10px 30px 10px;}}.x-content section::after{content:"";display:table;clear:both;}.x-content section:last-of-type{border-bottom:0;padding-bottom:80px;}.x-content section.x-no-divider{border-bottom:0;}.x-content section.x-alt{background-color:#fcfcfc;border-top:1px solid #ddd;}.x-container{clear:both;max-width:1200px;margin:20px 0;}.x-container-wide{clear:both;max-width:1800px;margin:20px 0;}.x-container-full{clear:both;margin:20px 0;width:100%;}.x-aspect-16x9{position:relative;width:100%;height:0;padding-bottom:56.25%;}.x-aspect-16x9>*{position:absolute;top:0;left:0;width:100%;height:100%;}.x-aspect-4x3{position:relative;width:100%;height:0;padding-bottom:75%;}.x-aspect-4x3>*{position:absolute;top:0;left:0;width:100%;height:100%;}.x-callout{font-size:14px;padding:20px;border:1px solid #ccc;border-radius:5px;background-color:#fff;margin:10px -30px 20px 20px;}.x-callout a{display:block;margin-bottom:10px;}.x-callout h5{margin:30px 0 10px 0;font-size:15px;}.x-callout h5:first-child{margin-top:0;}.x-callout-float{font-size:14px;padding:20px;border:1px solid #ccc;border-radius:5px;background-color:#fff;margin:10px -30px 20px 20px;float:right;width:30%;margin-left:20px;}.x-callout-float a{display:block;margin-bottom:10px;}.x-callout-float h5{margin:30px 0 10px 0;font-size:15px;}.x-callout-float h5:first-child{margin-top:0;}@media screen and (max-width:1042px){.x-callout-float{float:none;width:100%;margin-left:0;}}.x-pull-right{float:right;}.x-pull-left{float:left;}#server-information{background:#2d2d2d;right:5px;font:11px verdana;color:#fff;text-align:right;line-height:14px;}#server-information div{display:inline-block;padding:5px;margin:0;}#server-information img{width:32px;display:inline-block;margin:-5px 0;}form{margin:20px 0;}form label{margin:10px 0 0 0;font-size:14px;display:block;}form input[type=text],form textarea{width:100%;margin:0 0 5px 0;border:1px solid #ddd;padding:3px;border-radius:5px;font-size:14px;}form small{display:block;color:#888;font-style:italic;margin:3px 0 10px 0;}#x-nav-mobile-logo{position:relative;top:18px;left:20px;z-index:9998;display:none;}#x-nav-toggle{position:fixed;top:18px;right:20px;z-index:999999;background:#2d2d2d;color:#fff;border:0;border-radius:3px;padding:8px 12px;cursor:pointer;display:none;font-size:24px;}nav#x-nav{position:fixed;top:0;width:100%;height:80px;background:#2d2d2d;display:flex;align-items:center;padding:0 10px;z-index:9999;font-size:18px;box-shadow:0 4px 8px rgba(0,0,0,.4);}nav#x-nav .x-nav-logo{padding:10px 30px 5px 20px;width:220px;}nav#x-nav a{vertical-align:middle;display:inline-block;border-radius:3px;}nav#x-nav .x-nav-links{display:flex;list-style:none;margin:0;flex:1;padding:0 0 0 40px;}nav#x-nav .x-nav-links li{margin:0;}nav#x-nav .x-nav-links li a{color:#888;text-decoration:none;padding:7px 18px;margin:5px;border-radius:3px;}nav#x-nav .x-nav-links li a.x-active{color:#fff;font-weight:600;}nav#x-nav .x-nav-links li a:hover{color:#000;background:#f3b843;}nav#x-nav .x-nav-tools{display:flex;align-items:center;gap:10px;font-size:15px;}nav#x-nav .x-nav-tools a{color:#888;text-decoration:none;padding:7px 10px;border-radius:3px;}nav#x-nav .x-nav-tools a:hover{color:#000;background:#f3b843;}nav#x-nav .x-nav-tools a svg{font-size:24px;}nav#x-nav .x-nav-tools .x-nav-cta{background:#0086ce;color:#fff;padding:8px 10px;display:inline-flex;align-items:center;margin-right:4px;font-size:14px;}footer#x-footer{background:#2d2d2d;color:#ccc;padding:40px;font-size:13px;line-height:1.6;}footer#x-footer a{color:#aaa;text-decoration:none;}footer#x-footer a:hover{color:#000;}footer#x-footer small{color:#777;}footer#x-footer .x-footer-columns{max-width:1200px;display:grid;grid-template-columns:1fr;gap:0;}footer#x-footer .x-footer-group ul{list-style:none;margin:0;padding:0 0 .75rem 0;}footer#x-footer .x-footer-group li{margin:0;padding:3px 0;}footer#x-footer .x-footer-group summary{font-weight:600;font-size:1rem;color:#fff;cursor:pointer;padding:.875rem 0;border-top:1px solid #444;list-style:none;display:flex;justify-content:space-between;align-items:center;}footer#x-footer .x-footer-group summary::-webkit-details-marker{display:none;}footer#x-footer .x-footer-group summary::after{content:'+';font-size:1.25rem;font-weight:400;color:#777;transition:transform .2s ease;}footer#x-footer .x-footer-group[open] summary::after{content:'−';}footer#x-footer .x-footer-group .x-footer-inner{overflow:hidden;transition:max-height .25s ease,opacity .2s ease;}footer#x-footer .x-footer-group--cta{border-top:1px solid #444;padding-top:.875rem;}footer#x-footer .x-footer-heading{font-weight:600;font-size:1rem;color:#fff;margin:0 0 .5rem;}footer#x-footer .x-footer-bottom{padding-top:1.5rem;border-top:1px solid #444;font-size:.8125rem;color:#777;}footer#x-footer .x-footer-bottom p{margin:.125rem 0;}footer#x-footer .x-social-icons{font-size:24px;margin-bottom:15px;}footer#x-footer .x-social-icons a{margin-right:10px;color:#ccc;}footer#x-footer .x-social-icons a:hover{color:#fff;}.x-desktop-only{display:inline;}.x-mobile-only{display:none;}.x-has-megamenu{position:static;}.x-megamenu-trigger i.ph-caret-down,.x-megamenu-trigger i.ph-caret-right{font-size:14px;margin-left:4px;transition:transform .2s ease;}.x-megamenu{position:absolute;top:100%;left:0;right:0;width:100%;background:#2d2d2d;box-shadow:0 8px 16px rgba(0,0,0,.3);opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .2s ease,transform .2s ease,visibility .2s;z-index:9998;}.x-megamenu-back{display:none;}.x-megamenu-content{display:flex;max-width:1200px;margin:0 auto;padding:30px 40px;gap:60px;}.x-megamenu-column{flex:1;min-width:200px;}.x-megamenu-column h4{color:#fff;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin:0 0 15px 0;padding-bottom:10px;border-bottom:1px solid #444;}.x-megamenu-column ul{list-style:none;margin:0;padding:0;}.x-megamenu-column li{margin:0;padding:0;}.x-megamenu-column li a{display:flex;align-items:center;gap:10px;color:#888;text-decoration:none;padding:8px 0;font-size:15px;transition:color .15s ease;}.x-megamenu-column li a:hover{color:#f3b843;}.x-megamenu-column li a img{width:24px;height:24px;object-fit:contain;}@media screen and (min-width:1270px){.x-has-megamenu:hover .x-megamenu,.x-has-megamenu:focus-within .x-megamenu{opacity:1;visibility:visible;transform:translateY(0);}.x-has-megamenu:hover .x-megamenu-trigger i.ph-caret-down{transform:rotate(180deg);}}@media screen and (max-width:1270px){.x-desktop-only{display:none;}.x-mobile-only{display:inline;}#x-nav-mobile-logo,#x-nav-toggle{display:inline-block;}nav#x-nav{display:none;position:fixed;right:0;width:100%;max-width:500px;height:100%;flex-direction:column;align-items:stretch;padding:20px;overflow:hidden;}nav#x-nav .x-nav-logo{align-items:flex-start;padding-bottom:20px;border-bottom:1px solid #ddd;margin-bottom:20px;}nav#x-nav.x-open{display:flex;}nav#x-nav .x-nav-links{flex-direction:column;padding:0;flex:1;overflow-y:auto;transition:transform .3s ease;}nav#x-nav .x-nav-links li{border-bottom:1px solid #ddd;}nav#x-nav .x-nav-links li a{display:flex;justify-content:space-between;align-items:center;padding:15px 10px;}nav#x-nav .x-nav-links li.x-has-megamenu{position:static;}nav#x-nav .x-nav-links li.x-has-megamenu>a.x-megamenu-trigger{cursor:pointer;}nav#x-nav .x-nav-links li.x-has-megamenu>a.x-megamenu-trigger i.ph-caret-right{font-size:18px;color:#888;}nav#x-nav .x-megamenu{position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;background:#2d2d2d;transform:translateX(100%);opacity:1;visibility:visible;transition:transform .3s ease;z-index:10;overflow-y:auto;padding:20px;box-shadow:none;}nav#x-nav .x-megamenu.x-megamenu-open{transform:translateX(0);}nav#x-nav .x-megamenu-back{display:flex;align-items:center;gap:8px;background:none;border:0;color:#f3b843;font-size:16px;padding:10px 0 20px 0;cursor:pointer;border-bottom:1px solid #ddd;margin-bottom:15px;width:100%;text-align:left;}nav#x-nav .x-megamenu-back .ph{font-size:18px;}nav#x-nav .x-megamenu-content{flex-direction:column;padding:0;gap:25px;}nav#x-nav .x-megamenu-column{min-width:auto;}nav#x-nav .x-megamenu-column h4{font-size:13px;margin-bottom:10px;padding-bottom:8px;}nav#x-nav .x-megamenu-column li a{padding:12px 0;font-size:16px;border-bottom:1px solid #444;}nav#x-nav .x-megamenu-column li:last-child a{border-bottom:0;}nav#x-nav .x-nav-tools{flex-wrap:wrap;justify-content:center;border-top:1px solid #ddd;padding-top:15px;}}@media screen and (min-width:1270px){#x-nav-mobile-logo,#x-nav-toggle{display:none;}nav#x-nav{display:flex!important;}}@media screen and (min-width:1042px){footer#x-footer .x-footer-columns{grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:2rem;}footer#x-footer .x-footer-group summary{pointer-events:none;cursor:default;border-top:0;padding:0 0 .5rem;}footer#x-footer .x-footer-group summary::after{display:none;}footer#x-footer .x-footer-group--cta{border-top:0;padding-top:0;}footer#x-footer .x-footer-bottom{display:flex;justify-content:space-between;border-top:1px solid #444;margin-top:2rem;}}html,body{margin:0;padding:0;background-color:#f7f8fa;font-family:"Whitney SSm A","Whitney SSm B",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:15px;line-height:1.55;color:#000;}h1,h2,h3,h4,h5,h6{margin:30px 0 20px 0;font-weight:400;line-height:1.3;max-width:1100px;}h1{font-size:36px;}h2{font-size:24px;}h3{font-size:19px;}h4{font-size:18px;}h5{font-size:17px;}h6{font-size:14px;}p{margin-top:0;margin-bottom:1rem;}a,a:visited{color:#0086ce;text-decoration:none;border-radius:2px;cursor:pointer;padding:3px;margin:-3px;}a:active,a:hover{color:#000;background-color:#f3b843;transition:.5s ease;}a:active i,a:hover i{color:#000;transition:.5s ease;}small{font-size:.875em;color:#777;}strong,b{font-weight:600;}ul,ol{margin-top:0;margin-bottom:1rem;padding-left:1.5rem;}li{margin-bottom:.25rem;}img{max-width:100%;height:auto;}.x-btn{display:inline-block;padding:10px 20px;font-size:1rem;font-weight:400;text-align:center;text-decoration:none;border-radius:3px;cursor:pointer;transition:background-color .2s,color .2s;margin:5px;}.x-btn:hover{text-decoration:none;}.x-btn-primary,a.x-btn-primary{background-color:#0086ce;color:#fff;}.x-btn-primary:hover,a.x-btn-primary:hover{background-color:#f3b843;color:#000;}.x-btn-secondary,a.x-btn-secondary{background-color:#e0e0e0;color:#000;border:1px solid #aaa;padding:7px 14px;font-size:14px;}.x-btn-secondary:hover,a.x-btn-secondary:hover{background-color:#d0d0d0;}.x-btn-cta a.x-btn-cta{background-color:#f3b843;color:#000;}.x-btn-cta a.x-btn-cta:hover{background-color:#f0a613;}.x-label{display:inline-block;padding:1px 3px;border-radius:3px;white-space:nowrap;font-size:12px;margin:2px;}.x-label-highlight{color:#000;background-color:#f3b843;}.x-label-danger{color:#fff;background-color:#d9534f;}.x-label-primary{color:#fff;background-color:#0086ce;}.x-label-category{background-color:#fff;color:#888;border:1px solid #bbb;padding:2px 4px;}ul.x-check-list{list-style-type:none;}ul.x-check-list li{background-image:url(data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iaWNvbi1zbWFsbC1jaGVjayIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTYgMTYiPg0KICA8cG9seWdvbiBmaWxsPSIjNkJEMjREIiAgcG9pbnRzPSIxNC41OSwyLjI5NSA2LDEwLjg4NSAxLjQxLDYuMjk1IDAsNy43MDUgNiwxMy43MDUgMTYsMy43MDUiLz4NCjwvc3ZnPg0K);background-size:20px;background-repeat:no-repeat;margin:0 0 10px -20px;padding-left:25px;}.x-bullets{list-style-type:disc;margin-bottom:40px;}.x-bullets li{margin-bottom:15px;}.x-icons-list{margin-left:0;padding-left:0;}.x-icons-list ul{margin-top:5px;margin-left:25px;}.x-icons-list li{margin-bottom:5px;}.x-icons-list li svg{width:19px;height:19px;font-size:19px;margin-right:6px;}.x-index{font-size:14px;}ol.x-numbered{list-style-type:decimal;}ol.x-numbered li{margin:0 0 10px -10px;padding-left:10px;}.x-fade-edges{border-radius:10px;box-shadow:0 0 -20px -20px #f7f8fa;}table.x-table-grid{border:2px solid #ddd;}table.x-table-grid thead{font-weight:600;border-bottom:2px solid #ddd;}table.x-table-grid td,table.x-table-grid th{padding:5px;text-align:left;border-right:1px solid #ddd;border-bottom:1px solid #ddd;}figure{border-radius:8px;padding:8px;background-color:#fff;margin:0 0 20px 0;display:block;border:2px solid #fff;}figure figcaption{border-top:1px solid #eee;padding-top:16px;font-style:italic;color:#777;font-size:14px;}.x-long-document p,.x-long-document li{margin-bottom:15px;}.x-long-document h1,.x-long-document h2,.x-long-document h3,.x-long-document h4,.x-long-document h5,.x-long-document h6{margin:50px 0 15px 0;}.x-long-document h4{font-size:15px;font-weight:600;margin-bottom:10px;}.x-long-document table{font-size:14px;border:2px solid #ddd;margin:24px 0;}.x-long-document table thead{font-weight:600;border-bottom:2px solid #ddd;}.x-long-document table td,.x-long-document table th{padding:5px;text-align:left;border-right:1px solid #ddd;border-bottom:1px solid #ddd;}.x-long-document table th{font-weight:600;padding:10px 5px;vertical-align:bottom;}.x-long-document ol,.x-long-document ul{padding-left:30px;}.x-long-document ol li,.x-long-document ul li{padding-left:10px;}details summary{cursor:pointer;}.x-hero{clear:both;padding:0 0 30px 0;max-width:1270px;}.x-hero h1{font-weight:400;font-size:36px;margin-bottom:30px;line-height:1.5;padding:20px 0 0 0;}.x-hero h1 small{display:block;font-size:25px;font-weight:300;margin-top:10px;}.x-hero .x-product-edition{display:block;margin-bottom:15px;}.x-hero .x-product-edition:before,.x-hero .x-product-edition:after{content:" ";display:table;}.x-hero .x-product-edition:after{clear:both;}.x-hero .x-product-edition::after{content:"";display:table;clear:both;}.x-hero .x-product-edition .x-product-edition-name .x-logo{opacity:.75;}.x-hero .x-product-edition .x-product-edition-name h3 a{color:#777;}@media screen and (max-width:1042px){.x-hero h1{font-size:26px;padding:0;}.x-hero h1 small{font-size:20px;}}.x-timeline{box-shadow:0 0 30px 30px white;border-radius:15px;padding:15px 20px;font-size:14px;max-width:900px;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAoCAAAAAAeKB+WAAAADklEQVR4AWM4c+bMYMYA5FNfodik0vsAAAAASUVORK5CYII=') repeat-y center 0;background-color:#fff;}@media screen and (min-width:1042px){.x-timeline{color:#888;}}.x-timeline ul{list-style:none;margin:0;padding:0;max-width:none;}.x-timeline li{padding:8px 10px 0 10px;margin:10px 0;}@media screen and (min-width:1042px){.x-timeline li{border-top:3px solid #ccc;}}.x-timeline li img{max-width:70%;}@media screen and (min-width:1042px){.x-timeline li.x-timeline-note{margin-top:-3px;border-top:3px solid #f3b843;color:#000;}}.x-timeline li.x-timeline-year{padding:0;font-size:20px;font-weight:600;width:100%;background-color:rgba(247,248,250,.006);margin-bottom:15px;}@media screen and (min-width:1042px){.x-timeline li.x-timeline-year{color:#666;border-top:0;text-align:center;}}@media screen and (max-width:1042px){.x-timeline li.x-timeline-year{border-bottom:3px solid #f3b843;padding:20px 0 0 0;}}.x-timeline li.x-timeline-left,.x-timeline li.x-timeline-right{width:50%;}.x-timeline li.x-timeline-left{margin-right:auto;text-align:right;padding-right:30px;}.x-timeline li.x-timeline-right{margin-left:auto;text-align:left;padding-left:30px;}.x-timeline ul ul{margin:-5px 0 15px 0;}.x-timeline ul ul li{border:0;list-style-type:square;list-style-position:inside;padding:0;margin:2px 0;}@media screen and (max-width:1042px){.x-timeline{padding-left:0;padding-right:0;background:none;}.x-timeline li.x-timeline-left,.x-timeline li.x-timeline-right{width:100%;text-align:left;padding-left:10px;padding-right:10px;}}.x-customers-logos{background-color:#fff;padding:0;display:grid;grid-template-columns:repeat(8,1fr);gap:20px;}@media screen and (max-width:768px){.x-customers-logos{grid-template-columns:repeat(4,1fr);}}.x-customers-logos img{box-shadow:0 0 20px 20px white;aspect-ratio:1/1;object-fit:cover;display:block;filter:grayscale(100%);opacity:.6;}.x-customers-logos-4{grid-template-columns:repeat(4,1fr);}.x-tabcarousel{display:flex;flex-direction:column;}.x-tabcarousel .tabs{flex:1;}.x-tabcarousel .tabs div h3{margin:0 0 10px 0;}.x-tabcarousel .screenshots{flex:3;}.x-clsi-guidelines{margin:20px 0 20px 30px;text-align:right;}.x-clsi-guidelines .x-clsi-guideline{border:2px solid #095ea9;background-color:#fff;color:#095ea9;text-align:center;padding:4px;display:inline-block;border-radius:5px;margin:3px;max-width:100px;min-width:74px;}.x-clsi-guidelines .x-clsi-guideline img{width:40px;display:block;}.x-clsi-guidelines .x-clsi-guideline span{font-size:12px;font-weight:600;display:block;}.x-testimonial,.x-testimonial-left{max-width:460px;margin:15px 0 30px 20px;}.x-testimonial .x-testimonial-text,.x-testimonial-left .x-testimonial-text{color:#e06464;line-height:150%;font-style:italic;font-size:16px;}.x-testimonial .x-testimonial-text .ph,.x-testimonial-left .x-testimonial-text .ph{padding:0 0 8px 8px;float:right;font-size:40px;}.x-testimonial .x-testimonial-attribution,.x-testimonial-left .x-testimonial-attribution{color:#777;padding-top:10px;font-style:italic;font-size:12px;}.x-testimonial .x-testimonial-attribution .x-testimonial-attribution-name,.x-testimonial-left .x-testimonial-attribution .x-testimonial-attribution-name{font-weight:600;}.x-testimonial{text-align:right;}.x-anchors{padding-left:20px;font-size:14px;}.x-anchors .x-anchor{cursor:pointer;margin-left:-20px;padding-left:16px;border-left:4px solid #ddd;}.x-anchors .x-anchor h3{font-size:15px;font-weight:600;margin-bottom:5px;}.x-anchors .x-active-item{background-color:#fff;margin-left:-20px;padding-left:16px;border-left:4px solid #f3b843;box-shadow:0 0 20px 20px white;}.x-feature-block{font-size:14px;}.x-feature-block ul{margin-top:25px;}.x-feature-block ul li{margin-left:-20px;padding-left:16px;border-left:4px solid #ddd;margin-bottom:20px;}.x-carousel-screenshots{display:grid;}.x-carousel-screenshots>*{grid-area:1/1;opacity:0;transition:opacity .7s ease;}.x-carousel-screenshots>*.x-active-screenshot{opacity:1;}.x-carousel-has-screenshot{float:right;color:#888;margin-left:8px;font-size:24px;}.x-screenshot{border-radius:8px;box-shadow:5px 5px 10px 2px #444;}.x-block{margin:40px 5px;border:1px solid #444;background-color:#fff;border-radius:8px;padding:20px;color:#555;font-size:14px;}.x-block h5{margin-top:8px;}.x-features{border:1px solid #444;background-color:#fff;border-radius:8px;padding:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;color:#555;font-size:14px;}@media screen and (max-width:1270px){.x-features{grid-template-columns:repeat(2,1fr);}}@media screen and (max-width:768px){.x-features{grid-template-columns:repeat(1,1fr);}}.x-features .x-feature .ph{float:right;font-size:32px;padding:0 0 4px 4px;}.x-features .x-feature .x-feature-title{display:block;font-weight:600;}.x-tech-spec .x-tech-spec-block{font-size:14px;color:#555;}.x-tech-spec .x-tech-spec-block h4{font-size:13px;margin:10px 0 10px 0;font-weight:600;color:#222;}.x-tech-spec .x-tech-spec-block ul{list-style:none;margin-left:0;margin-bottom:30px;padding-left:0;}.x-tech-spec .x-tech-spec-block ul li{border-left:2px solid #ddd;padding-left:10px;margin-bottom:5px;}.x-examples{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;}@media screen and (max-width:1270px){.x-examples{grid-template-columns:repeat(2,1fr);}}.x-examples .x-example{max-width:255px;font-size:14px;margin:30px 0 30px 0;}.x-examples .x-example .x-example-title{font-weight:600;display:block;margin-bottom:5px;}.x-examples .x-example a img{border-radius:4px;box-shadow:3px 3px 5px 2px #999;padding:8px;background-color:#fff;margin:0 0 20px 0;display:block;border:2px solid #fff;}.x-examples .x-example a:hover{background-color:#f7f8fa;}.x-examples .x-example a:hover img{border-color:#f3b843;}.x-examples .x-example svg{float:right;font-size:40px;}.x-examples .x-example svg:hover{color:#f3b843;}table.x-protocol-table{width:100%;font-size:14px;border:2px solid #ccc;}table.x-protocol-table tr{border-bottom:2px solid #ccc;}table.x-protocol-table td,table.x-protocol-table th{padding:7px;border-right:2px solid #ccc;}.x-edition-list{font-size:14px;}@media screen and (min-width:768px){.x-edition-list{border-top:1px solid #ddd;border-bottom:1px solid #ddd;}}.x-edition-list .x-border-higlight{border-color:#f3b843;}.x-edition-list .x-edition{padding:10px;border-right:1px solid #ddd;}@media screen and (max-width:1042px){.x-edition-list .x-edition{padding:40px 10px;border-top:1px solid #ddd;border-right:0;}}.x-edition-list .x-edition h3{color:#000;font-weight:600;}.x-edition-list .x-edition .x-edition-includes{margin:5px 0;font-size:13px;color:#888;}@media screen and (min-width:1042px){.x-edition-list .x-edition .x-edition-includes{height:30px;}}@media screen and (min-width:1042px){.x-edition-list .x-edition .x-edition-info{height:400px;}}@media screen and (min-width:1560px){.x-edition-list .x-edition .x-edition-info{height:240px;}}.x-edition-list .x-edition .x-product-edition .x-product-logo{display:block;float:none;width:80px;margin-bottom:20px;}@media screen and (min-width:1042px){.x-edition-list .x-edition .x-product-edition .x-product-edition-name{height:80px;}}@media screen and (min-width:1470px){.x-edition-list .x-edition .x-product-edition .x-product-edition-name{height:50px;}}.x-edition-list .x-edition .x-product-edition .x-product-edition-name h3{font-size:20px;}@media screen and (max-width:1042px){.x-edition-list .x-edition .x-product-edition .x-product-edition-name h3{font-size:15px;}}.x-edition-list .x-edition h2{margin:0;}.x-edition-list .x-edition .x-logo{display:block;width:120px;margin:5px 0;}.x-product-edition{display:inline-block;}.x-product-edition .x-product-logo{width:65px;float:left;padding-right:10px;}.x-product-edition .x-product-edition-name{float:left;}.x-product-edition .x-product-edition-name .x-logo{display:block;width:120px;margin:8px 0 2px 0;}.x-product-edition .x-product-edition-name h3{display:block;margin:0;font-size:20px;}.x-product-edition .x-product-edition-name h3 a{color:#000;}.x-feature-matrix-filters{margin:10px 0 40px 0;}.x-feature-matrix-filters label{cursor:pointer;white-space:nowrap;}.x-feature-matrix-filters input{padding-right:20px;}.x-feature-matrix{font-size:14px;}.x-feature-matrix [data-ed]{transition:opacity .15s ease,padding .3s ease,max-width .3s ease,font-size .3s ease;overflow:hidden;max-width:300px;opacity:1;}.x-feature-matrix [data-ed].ed-collapsing{opacity:0;max-width:0;padding-left:0;padding-right:0;}.x-feature-matrix [data-ed].ed-highlight{animation:ed-flash .7s ease;}.x-feature-matrix .x-product-edition{margin-bottom:10px;}.x-feature-matrix .x-product-edition .x-product-logo{display:block;float:none;margin-bottom:5px;}.x-feature-matrix .x-product-edition h3{font-size:15px;}.x-feature-matrix thead td{padding:5px;position:sticky;z-index:2;background-color:#f7f8fa;}.x-feature-matrix tbody tr.x-text-left td{text-align:left;}.x-feature-matrix tbody td{text-align:center;}.x-feature-matrix tbody td .tick{font-size:24px;color:#008000;}.x-feature-matrix tbody td:first-child{text-align:left;background-color:#f8f8f8;}.x-feature-matrix .x-feature-matrix-description{color:#777;padding-bottom:15px;border-top:2px solid #ddd;border-bottom:2px solid #ddd;}.x-feature-matrix .x-section-row th{font-size:14px;text-align:left;padding:20px 5px 5px 5px;font-weight:600;border-top:2px solid #ddd;border-bottom:2px solid #ddd;border-right:1px solid #ddd;position:sticky;background-color:#eee;z-index:1;}@media screen and (max-width:1042px){.x-feature-matrix .x-section-row th{font-size:9px;}}.x-feature-matrix td{padding:5px;border-right:1px solid #ddd;}.x-feature-matrix td:last-child{border-right:0;}.x-feature-matrix thead tr td:first-child{min-width:240px;}.x-feature-matrix thead tr td.x-ed-col{min-width:170px;width:250px;vertical-align:top;}@media screen and (max-width:1042px){.x-feature-matrix .x-desktop-only-row{display:none;}}@keyframes ed-flash{0%{background-color:inherit;}30%{background-color:#f3b843;}100%{background-color:inherit;}}.x-kb .x-kb-section{margin-bottom:48px;color:#ff5a4d;}.x-kb .x-kb-section-heading{font-size:16px;font-weight:600;padding-bottom:12px;border-bottom:2px solid #ddd;margin-bottom:0;}.x-kb .x-kb-item{border-bottom:1px solid #ddd;}.x-kb .x-kb-item summary{display:flex;align-items:baseline;justify-content:space-between;color:#333;padding:14px 0;font-weight:600;cursor:pointer;list-style:none;user-select:none;line-height:1.4;}.x-kb .x-kb-item summary::-webkit-details-marker{display:none;}.x-kb .x-kb-item summary::after{content:'+';flex-shrink:0;font-size:20px;font-weight:400;margin-left:16px;transition:transform .15s ease;}.x-kb .x-kb-item[open] summary::after{content:'−';}.x-kb .x-kb-item summary:hover{background-color:#f3b843;}.x-kb .x-kb-answer{padding:0 0 20px 20px;color:#555;font-size:14px;border-left:2px solid #ddd;}.x-kb .x-kb-answer ul{list-style-type:circle;}.x-kb .x-kb-answer ol{list-style-type:decimal;}.x-kb .x-kb-answer table{border:2px solid #ddd;}.x-kb .x-kb-answer table thead{font-weight:600;border-bottom:2px solid #ddd;}.x-kb .x-kb-answer table td,.x-kb .x-kb-answer table th{padding:5px;text-align:left;border-right:1px solid #ddd;border-bottom:1px solid #ddd;}.x-kb .x-kb-flash{animation:kb-flash .7s ease 3;}@keyframes kb-flash{0%,100%{background-color:transparent;}50%{background-color:#f3b843;}}.x-pagelink-embed .x-pagelink{top:330px;}@media screen and (max-width:1470px){.x-pagelink-embed .x-pagelink{display:flex;}}@media screen and (max-width:1042px){.x-pagelink-embed .x-pagelink{display:none;}}.x-pagelink{position:fixed;top:150px;right:10px;max-width:260px;display:flex;flex-direction:column;gap:8px;z-index:100;background-color:#f7f8fa;border-radius:8px;padding:10px;border-left:1px solid #ddd;}.x-pagelink .x-pagelink-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;}.x-pagelink .x-pagelink-title{color:#555;font-size:13px;}.x-pagelink .x-pagelink-close{background:none;border:0;cursor:pointer;color:#b0b0b0;padding:0;line-height:1;font-size:14px;}.x-pagelink .x-pagelink-item{display:block;color:#b0b0b0;font-size:13px;line-height:1.4;text-decoration:none;padding:4px;}.x-pagelink .x-pagelink-item:hover{color:#444;}.x-pagelink .x-pagelink-item.x-pagelink-active{color:#333;font-weight:400;}.x-pagelink .x-pagelink-level-1{padding-left:5px;}.x-pagelink .x-pagelink-level-2{padding-left:20px;}.x-pagelink .x-pagelink-level-3{padding-left:35px;}@media screen and (max-width:1470px){.x-pagelink{display:none;}}form .x-search{margin-right:0;font-size:15px;}form .x-search input[type=text]{font-size:14px;width:95%;max-width:600px;padding:4px;display:inline-block;}form .x-search button{font-size:14px;margin:0;margin-left:-37px;margin-top:-2px;display:inline-block;min-height:28px;height:28px;border:0;border-radius:0;border-left:1px solid #ccc;text-align:center;font-weight:normal;color:#000;padding:3px 9px;}form .x-search button:hover{background-color:#f3b843;}.x-doc{width:100%;min-height:1000px;}.x-doc .x-doc-content{overflow-y:auto;}.x-doc .x-doc-content .x-doc-applies-to .x-product-edition{padding:0 30px 10px 0;}.x-doc .x-doc-content .x-doc-applies-to .x-product-edition .x-product-logo{width:48px;}.x-doc .x-doc-content .x-doc-applies-to .x-product-edition .x-logo{margin-top:4px;width:90px;}.x-doc .x-doc-content .x-doc-applies-to .x-product-edition h3{font-size:17px;}.x-doc .x-doc-content #dita-help{max-width:870px;margin-top:30px;}.x-doc .x-doc-content #dita-help :target,.x-doc .x-doc-content #dita-help h1[id],.x-doc .x-doc-content #dita-help h2[id],.x-doc .x-doc-content #dita-help h3[id],.x-doc .x-doc-content #dita-help h4[id],.x-doc .x-doc-content #dita-help h5[id],.x-doc .x-doc-content #dita-help h6[id],.x-doc .x-doc-content #dita-help a[id]{scroll-margin-top:140px;}.x-doc .x-doc-content #dita-help section{padding-left:0;padding-right:0;}@media screen and (max-width:1270px){.x-doc .x-doc-content #dita-help section{padding-left:10px;padding-right:10px;}}.x-doc .x-doc-content #dita-help div,.x-doc .x-doc-content #dita-help p,.x-doc .x-doc-content #dita-help table,.x-doc .x-doc-content #dita-help p+img{margin:20px 0 0 0;}.x-doc .x-doc-content #dita-help hr{margin:0;}.x-doc .x-doc-content #dita-help img{width:auto;height:auto;border-radius:8px;box-shadow:0 0 20px 20px white;}.x-doc .x-doc-content #dita-help dt{font-weight:600;}.x-doc .x-doc-content #dita-help dd{margin-left:0;}.x-doc .x-doc-content #dita-help .figcap{display:block;}.x-doc .x-doc-content #dita-help .wintitle{font-style:italic;}.x-doc .x-doc-content #dita-help .MCBreadcrumbsBox{display:none;}.x-doc .x-doc-content #dita-help .uicontrol,.x-doc .x-doc-content #dita-help strong{font-weight:600;}.x-doc .x-doc-content #dita-help ul,.x-doc .x-doc-content #dita-help ol{margin-top:20px;}.x-doc .x-doc-content #dita-help ul li,.x-doc .x-doc-content #dita-help ol li{margin:0 0 10px 0;}.x-doc .x-doc-content #dita-help ul li div,.x-doc .x-doc-content #dita-help ol li div,.x-doc .x-doc-content #dita-help ul li p,.x-doc .x-doc-content #dita-help ol li p{margin-top:10px;}.x-doc .x-doc-content #dita-help ul li ul li,.x-doc .x-doc-content #dita-help ol li ul li,.x-doc .x-doc-content #dita-help ul li ol li,.x-doc .x-doc-content #dita-help ol li ol li{margin-bottom:10px;}.x-doc .x-doc-content #dita-help ul ul,.x-doc .x-doc-content #dita-help ul ol,.x-doc .x-doc-content #dita-help ol ul,.x-doc .x-doc-content #dita-help ol ol{margin-top:10px;margin-bottom:20px;}.x-doc .x-doc-content #dita-help ul{list-style:square;}.x-doc .x-doc-content #dita-help ol{list-style:decimal;}.x-doc .x-doc-content #dita-help ul.ullinks{list-style-type:none;margin:30px 0 0 0;padding-left:0;}.x-doc .x-doc-content #dita-help ul.ullinks li{margin-bottom:30px;}.x-doc .x-doc-content #dita-help h1 b,.x-doc .x-doc-content #dita-help h2 b,.x-doc .x-doc-content #dita-help h3 b,.x-doc .x-doc-content #dita-help h4 b,.x-doc .x-doc-content #dita-help h5 b{font-weight:inherit;}.x-doc .x-doc-content #dita-help h1{margin:0 0 50px 0;font-size:30px;font-weight:400;line-height:1.5;}@media screen and (max-width:1042px){.x-doc .x-doc-content #dita-help h1{margin:0 0 20px 0;}}.x-doc .x-doc-content #dita-help h1 small{display:block;font-size:24px;font-weight:300;margin-top:10px;color:#777;}.x-doc .x-doc-content #dita-help h2{font-size:18px;font-weight:600;margin-bottom:10px;}.x-doc .x-doc-content #dita-help h3{font-size:17px;font-weight:600;}.x-doc .x-doc-content #dita-help h4{font-size:16px;}.x-doc .x-doc-content #dita-help h5,.x-doc .x-doc-content #dita-help h6{font-size:15px;}.x-doc .x-doc-content #dita-help p img{display:block;margin:12px 0 6px 0;}.x-doc .x-doc-content #dita-help div.imagecenter a{border:0;}.x-doc .x-doc-content #dita-help div.imagecenter a:hover{background-color:unset;box-shadow:none;}.x-doc .x-doc-content #dita-help div.relinfo{margin-bottom:20px;}.x-doc .x-doc-content #dita-help div.relinfo strong{font-weight:400;font-size:18px;display:inline-block;margin:0;}.x-doc .x-doc-content #dita-help div.relinfo div{margin-top:5px;}.x-doc .x-doc-content #dita-help div.familylinks{margin-top:40px;}.x-doc .x-doc-content #dita-help section:first-of-type{padding-top:0;}.x-doc .x-doc-content #dita-help .x-doc-breadcrumb{padding:60px 0 0 0;list-style:none;margin:0 0 20px 0;}.x-doc .x-doc-content #dita-help .x-doc-breadcrumb li{display:inline;}.x-doc .x-doc-content #dita-help .x-doc-breadcrumb li+li:before{padding:8px;content:'›';}.x-doc .x-doc-content #dita-help .x-doc-breadcrumb+h1{margin-top:-34px;}.x-doc .x-doc-content #dita-help table{font-size:14px;width:auto;border-collapse:collapse;border:0;}.x-doc .x-doc-content #dita-help table .tablecap{font-style:italic;text-align:left;padding:5px 0 15px 0;width:400px;display:block;}.x-doc .x-doc-content #dita-help table td{padding:0;margin:0;}.x-doc .x-doc-content #dita-help table tr td{padding:6px;border-right:solid 1px #ddd;border-bottom:solid 1px #ddd;}.x-doc .x-doc-content #dita-help table tr td p{margin-top:0;margin-bottom:12px;}.x-doc .x-doc-content #dita-help table tr th{min-width:100px;text-align:center;font-weight:600;padding:4px;border:0;border-bottom:solid 2px #ddd;border-right:solid 1px #ddd;}.x-doc .x-doc-content #dita-help table tr td:last-child,.x-doc .x-doc-content #dita-help table tr th:last-child{border-right:0;}.x-doc .x-doc-content #dita-help table tr:last-child td{border-bottom:0;}.x-doc .x-doc-content #dita-help kbd{padding:0 5px;font-style:italic;background:#eee;border:1px solid #aaa;border-radius:3px;font-size:15px;}.x-doc .x-doc-sidebar{order:-1;padding:10px 20px;margin-top:20px;max-width:480px;font-size:14px;border-right:2px solid #ddd;max-height:calc(100vh - 110px);overflow-y:auto;overscroll-behavior:contain;}.x-doc .x-doc-sidebar .x-search{margin-bottom:30px;}.x-doc .x-doc-sidebar h3{margin:20px 0;}.x-doc .x-doc-sidebar a{color:#777;display:inline-block;padding:0;}.x-doc .x-doc-sidebar a svg{font-size:19px;}.x-doc .x-doc-sidebar ul{padding-left:0;margin-left:0;max-width:100%;list-style:none;}.x-doc .x-doc-sidebar ul li{margin:0 0 5px 10px;padding:0;list-style:none;}.x-doc .x-doc-sidebar ul li svg.ph{margin-left:-20px;padding-right:3px;}.x-doc .x-doc-sidebar .x-doc-sidebar-tree{line-height:1.5;}.x-doc .x-doc-sidebar details{margin:0;interpolate-size:allow-keywords;}.x-doc .x-doc-sidebar details::details-content{block-size:0;overflow:hidden;opacity:0;transition:block-size .2s ease,content-visibility .2s ease allow-discrete,opacity .2s ease;}.x-doc .x-doc-sidebar details[open]::details-content{block-size:auto;opacity:1;}.x-doc .x-doc-sidebar details>summary{display:flex;align-items:baseline;gap:6px;list-style:none;cursor:pointer;padding:1px 0 3px 0;user-select:none;}.x-doc .x-doc-sidebar details>summary::-webkit-details-marker{display:none;}.x-doc .x-doc-sidebar details>summary::before{content:'›';flex-shrink:0;color:#aaa;font-size:18px;line-height:1;padding-right:5px;transition:transform .15s ease;transform:translateY(-1px);}.x-doc .x-doc-sidebar details>summary>a{flex:1;}.x-doc .x-doc-sidebar details>summary:hover::before{color:#555;}.x-doc .x-doc-sidebar details[open]>summary::before{transform:rotate(90deg) translateY(2px) translateX(4px);}.x-doc .x-doc-sidebar details>ul{margin:4px 0 4px 2px;padding-left:10px;border-left:1px solid #ddd;}.x-doc .x-doc-sidebar li.Current>details>summary>a,.x-doc .x-doc-sidebar li.Current>a{color:#000;}.x-doc .x-doc-sidebar a.x-doc-sidebar-active{color:#000;font-weight:600;}.x-doc .x-doc-version{color:#666;font-size:11px;}@media screen and (max-width:1042px){.x-doc{flex-direction:column;gap:20px;}.x-doc .x-doc-content,.x-doc .x-doc-sidebar{width:100%;max-width:100%;flex:0 0 auto;}.x-doc .x-doc-content{order:1;overflow:visible;min-width:0;}.x-doc .x-doc-content #dita-help{margin-top:0;}.x-doc .x-doc-content #dita-help img{max-width:100%;}.x-doc .x-doc-content #dita-help table{display:block;overflow-x:auto;}.x-doc .x-doc-sidebar{order:2;position:static;max-height:none;overflow:visible;margin-top:20px;padding-top:20px;border-right:0;border-top:2px solid #ddd;}}@media screen and (min-width:1270px){.x-doc .x-doc-sidebar{flex:24;}.x-doc .x-doc-content{flex:76;}}@media print{.x-doc .x-doc-sidebar,.x-doc .x-doc-print{display:none;}.x-doc .x-doc-content{width:100%;}}.x-doc-print{background:none;border:1px solid #ccc;padding:6px 12px;margin:10px;cursor:pointer;font-size:13px;border-radius:3px;}@media print{.x-doc-print{display:none;}}@media print{nav#x-nav,footer#x-footer,#x-nav-toggle,#x-nav-mobile-logo,.x-pagelink,#dita-help>button,.x-doc-applies-to,.x-doc-other-sections,[id^="chatbase-bubble"],chatbase-bubble,#server-information{display:none!important;}.x-doc{display:block;min-height:0;}.x-doc .x-doc-content{flex:none;width:100%;overflow:visible;}}#x-cookie-banner{display:none;position:fixed;top:0;left:0;right:0;bottom:0;justify-content:center;align-items:center;padding:20px;background:rgba(0,0,0,.5);z-index:99999;color:#333;font-size:14px;}#x-cookie-dialog{display:flex;flex-direction:column;gap:16px;width:100%;max-width:480px;background:#fff;border-radius:10px;padding:24px 28px;box-shadow:0 10px 40px rgba(0,0,0,.35);}#x-cookie-dialog #x-cookie-title{margin:8px 0 16px;}#x-cookie-dialog .x-cookie-text{line-height:1.5;}#x-cookie-dialog .x-cookie-text p{margin:0 0 16px 0;}#x-cookie-dialog .x-cookie-text a{color:#0086ce;}#x-cookie-dialog .x-cookie-actions{display:flex;gap:12px;justify-content:flex-end;}@media screen and (max-width:1042px){#x-cookie-dialog{padding:20px;}#x-cookie-dialog .x-cookie-actions{flex-direction:column;}#x-cookie-dialog .x-cookie-actions .x-btn{width:100%;}}svg.ph{display:inline-block;font-size:inherit;width:1em;height:1em;fill:currentColor;vertical-align:-.125em;flex-shrink:0;}svg.ph use{pointer-events:none;}</style>
+
+    <title>
+
+        LoB, LoD and LoQ detection limits in Excel | Analyse-it&#174;
+    </title>
+
+        <meta name="description" content="LoB, LoD, and LoQ estimation per CLSI EP17-A2 &#226;€” parametric and non-parametric approaches, probit regression, and precision profile methods." />
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied'
+        });
+
+        window.uetq = window.uetq || [];
+        window.uetq.push('consent', 'default', { 'ad_storage': 'denied' });
+
+        // Consent Mode v2: redact ad identifiers from tag requests while ad_storage is denied.
+        // NOTE: url_passthrough is intentionally NOT enabled — it appends gclid/_gl to internal
+        // links, which fragments the CloudFlare page cache (cache key includes the query string).
+        gtag('set', 'ads_data_redaction', true);
+
+        gtag('config', 'G-XSGLE136ST');
+        gtag('config', 'AW-1072719929');
+    </script>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XSGLE136ST"></script>
+
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="T+vGLY0cuoYD6OTcG0++xw" async></script>
+
+    <link rel="alternate" type="application/rss+xml" title='Analyse-it blog' href="/blog/feed.rss" />
+    <link rel="icon" href="/Content/favicon.ico" type="image/x-icon" />
+
+
+
+
+    <link rel="canonical" href="https://analyse-it.com/products/method-validation/detection-capability" />
+
+
+    <meta name="google-site-verification" content="htg7f9xOpGCjZYkQHV9XndG4odVfI6V6hYscGUm3bgo" />
+
+
+    <meta name="copyright" content="© 1997-2026 Analyse-it Software Ltd. All rights reserved." />
+
+    
+</head>
+
+<body>
+    
+
+    <a href="/" id="x-nav-mobile-logo"><img src="/Content/img/Analyse-it-black.svg" alt="Analyse-it logo" width="200" height="37"></a>
+    <button id="x-nav-toggle"><svg class='ph ph-list' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-list'></use></svg></button>
+    <nav id="x-nav" class="x-nav-product">
+        <div class="x-nav-edition">
+        <a href="/">
+            <img src="/Content/img/Analyse-it-white.svg" alt="Analyse-it logo" class="x-nav-logo" width="200" height="37"></a>
+</div>
+
+        <ul class="x-nav-links">
+            <li><a href="/products" class="x-active">Products</a></li>
+            <li><a href="/store/buy" class="">Pricing <svg class='ph ph-basket' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-basket'></use></svg></a></li>
+            <li><a href="/learn" class="">Learn</a></li>
+            <li><a href="/support" class=" ">Support</a></li>
+            <li><a href="/company/about-us" class="">About us</a></li>
+        </ul>
+
+        <div class="x-nav-tools">
+                <a href="/free-trial" class="x-nav-cta">
+                    <svg class='ph ph-fill ph-windows-logo' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-windows-logo-fill'></use></svg> Download trial
+                </a>
+                <a href="/store/buy/method-validation" class="x-nav-cta">
+                    <svg class='ph ph-shopping-cart' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-shopping-cart'></use></svg> Buy from US$&nbsp;475
+                </a>
+
+            <a href="/search" title="Search"><svg class='ph ph-magnifying-glass' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-magnifying-glass'></use></svg></a>
+            <a href="/company/contact-us" title="Contact us"><svg class='ph ph-envelope' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-envelope'></use></svg></a>
+
+                <a href="/account" title="Account"><svg class='ph ph-user' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-user'></use></svg></a>
+        </div>
+    </nav>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://analyse-it.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://analyse-it.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+    <div id="x-content" class="x-content">
+        
+
+
+
+
+    <script type="application/ld+json">
+
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://analyse-it.com/"},{"@type":"ListItem","position":2,"name":"Products","item":"https://analyse-it.com/products"},{"@type":"ListItem","position":3,"name":"Method validation edition","item":"https://analyse-it.com/products/method-validation"},{"@type":"ListItem","position":4,"name":"Detection capability"}]}
+    </script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Detection capability for method validation",
+  "url": "https://analyse-it.com/products/method-validation/detection-capability",
+  "mainEntityOfPage": "https://analyse-it.com/products/method-validation/detection-capability",
+  "inLanguage": "en-GB",
+  "author": {
+    "@type": "Organization",
+    "name": "Analyse-it Software, Ltd.",
+    "url": "https://analyse-it.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://analyse-it.com/img/analyse-it300dpi.png"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Analyse-it Software, Ltd.",
+    "url": "https://analyse-it.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://analyse-it.com/img/analyse-it300dpi.png"
+    }
+  },
+  "description": "LoB, LoD, and LoQ estimation per CLSI EP17-A2 â€” parametric and non-parametric approaches, probit regression, and precision profile methods.",
+  "image": "https://analyse-it.com/Content/landing/img/detection-capability.webp",
+  "about": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Detection capability",
+      "description": "Limit of blank, limit of detection, and limit of quantitation using parametric, non-parametric, probit regression, and variance function approaches"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "CLSI EP17-A2",
+      "termCode": "EP17-A2",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "CLSI Evaluation Protocols",
+        "url": "https://clsi.org"
+      },
+      "url": "https://clsi.org/shop/standards/ep17/"
+    }
+  ],
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "IVD manufacturers, clinical laboratories, regulatory professionals"
+  },
+  "isPartOf": {
+    "@type": "WebPage",
+    "name": "Method Validation Edition",
+    "url": "https://analyse-it.com/products/method-validation"
+  }
+}
+</script>
+
+<section>
+    <div class="x-hero">
+        <h1>
+            
+
+<div class="x-product-edition">
+    <img class="x-product-logo" src="/Content/img/MethodValidationEdition.png" alt="Method Validation Edition" width="64" height="64">
+
+    <div class="x-product-edition-name">
+        <img class="x-logo" src="/Content/img/Analyse-it-black.svg" alt="Analyse it black">
+        <h3><a href="/products/method-validation">Method Validation Edition</a></h3>
+    </div>
+</div>
+
+            Detection capability software for method validation
+            <small>LoB, LoD, and LoQ estimation &mdash; parametric and non-parametric approaches, probit regression, and precision profile variance function methods, covering the EP17-A2 study designs and the older approaches laboratories still use.</small>
+        </h1>
+    </div>
+</section>
+
+<section>
+    <div class="x-container">
+        <div class="x-pull-right x-clsi-guidelines">
+            <a class="x-clsi-guideline" target="_blank" href="https://clsi.org/shop/standards/ep17/">
+    <img src="/Content/img/logo/clsi.webp" alt="clsi logo" width="600" height="600">
+    <span>CLSI<br />EP17-A2</span>
+</a>
+        </div>
+        <h2 class="x-text-red" data-pagelink="1">Know what your assay can and can&rsquo;t detect</h2>
+        <p>
+            Low-concentration results drive clinical decisions &mdash; ruling out disease, screening, monitoring drug levels. If the measurement procedure can&rsquo;t reliably distinguish a true signal from blank noise, you risk reporting false positives or missing genuine low-level results. Getting detection limits wrong means either under-reporting (clinically dangerous) or over-reporting (eroding trust in the assay). EP17-A2 defines the framework: LoB characterises the noise floor, LoD confirms the lowest concentration you can reliably detect, and LoQ determines where measurement uncertainty is small enough for the result to be clinically actionable.
+        </p>
+
+        <p>
+            Analyse-it covers the full EP17-A2 workflow with multiple estimation approaches for each limit. Precision profiles from EP05-A3 studies feed directly into the variance function methods &mdash; no re-entering data, no separate tools for LoB, LoD, and LoQ.
+        </p>          <div class="x-testimonial x-pull-right">
+            <div class="x-testimonial-text">
+                <svg class='ph ph-fill ph-quotes' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-quotes-fill'></use></svg>We use Analyse-it frequently for our verification and pre-verification work, in accordance with CLSI guidelines for in-vitro diagnostics. It&rsquo;s saved time and effort compared to the hodge-podge of applications we used before, JMP, SAS, etc...
+            </div>
+            <div class="x-testimonial-attribution">
+                <span class="x-testimonial-attribution-name">
+                    Brian Noland, Ph.D.
+                </span><br />
+                Principal Scientist, Product Development<br />
+                Biosite / Inverness Medical Innovations<br />
+            </div>
+        </div>
+
+    </div>
+
+    <div class="x-container-wide">
+        <div class="x-flex x-flex-wrap x-gap-4">
+            <div class="x-flex-2">
+                <h3 class="x-text-red" data-pagelink="1">What's included</h3>
+                <div class="x-anchors" data-carousel>
+                    <div class="x-anchor" data-carousel-screenshot="anchor-detection-limit-screenshot">
+                        <h3>
+                            Limit of blank from blank material or precision profile
+                        </h3>
+                        Parametric LoB from the SD of blank measurements, non-parametric from the quantile, or from the precision profile variance function when an EP05-A3 study is already available. Frequency density histogram with LoB and LoD lines overlaid.
+                    </div>
+                    <div class="x-anchor">
+                        <h3>
+                            Limit of detection from low-level samples or probit regression
+                        </h3>
+                        LoD from pooled SD of non-blank materials per EP17-A2, from the precision profile variance function, or via probit regression for molecular and immunoassay methods where detection is probabilistic. Probit determines the LoD at the concentration where detection probability reaches the required threshold &mdash; such as 95%.
+                    </div>
+                    <div class="x-anchor">
+                        <h3>
+                            Limit of quantitation from precision profile
+                        </h3>
+                        LoQ directly from the precision profile variance function, linking EP17-A2 to EP05-A3 precision data &mdash; the concentration where imprecision drops below the threshold for clinically reliable quantitative results, such as a CV of 10% or 20%.
+                    </div>
+                </div>
+            </div>
+            <div class="x-flex-3 x-pt-3 x-sticky-top">
+                <div class="x-carousel-screenshots">
+                    <img id="anchor-detection-limit-screenshot" class="x-screenshot" src="/Content/landing/img/detection-capability.webp" fetchpriority="high" alt="detection capability" width="913" height="685">
+                    <!-- Callouts: frequency density histogram of blank and low-level samples | LoB and LoD lines marked | clear separation between blank noise and true signal -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="x-container">
+        <h4 class="x-text-red" data-pagelink="1">Example analyses</h4>
+        <p>
+            See detection capability results in detail &mdash; LoB, LoD, probit regression, and LoQ &mdash; using CLSI example datasets you can download and follow along with.
+        </p>
+        <div class="x-examples">
+            <div class="x-example">
+                <a href="/products/examples/EP17-A2-Example-1.pdf" target="_blank">
+                    <img src="/products/examples/EP17-A2-Example-1.webp" loading="lazy" alt="EP17 A2 Example 1" width="800" height="1132">
+                </a>
+                <a href="/products/examples/EP17-A2-Example-1.xlsx">
+                    <svg class='ph ph-file-xls' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-file-xls'></use></svg>
+                </a>
+                <a href="/products/examples/EP17-A2-Example-1.pdf" target="_blank">
+                    <svg class='ph ph-file-pdf' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-file-pdf'></use></svg>
+                </a>
+                <span class="x-example-title">EP17-A2 &mdash; Appendix A<br />Estradiol detection capability.</span>
+                Parametric LoB from 5 blank samples and LoD from pooled SD of 5 low-level samples. Frequency density histogram with LoB and LoD lines.
+            </div>
+            <div class="x-example">
+                <a href="/products/examples/EP17-A2-Example-2.pdf" target="_blank">
+                    <img src="/products/examples/EP17-A2-Example-2.webp" loading="lazy" alt="EP17 A2 Example 2" width="800" height="1132">
+                </a>
+                <a href="/products/examples/EP17-A2-Example-2.xlsx">
+                    <svg class='ph ph-file-xls' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-file-xls'></use></svg>
+                </a>
+                <a href="/products/examples/EP17-A2-Example-2.pdf" target="_blank">
+                    <svg class='ph ph-file-pdf' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-file-pdf'></use></svg>
+                </a>
+                <span class="x-example-title">EP17-A2 &mdash; Appendix A<br />Estradiol detection capability, second reagent lot.</span>
+                Same structure as Example 1 &mdash; parametric LoB and LoD with frequency density histogram. Second reagent lot.
+            </div>
+            <div class="x-example">
+                <a href="/products/examples/EP17-A2-Example-3.pdf" target="_blank">
+                    <img src="/products/examples/EP17-A2-Example-3.webp" loading="lazy" alt="EP17 A2 Example 3" width="800" height="1132">
+                </a>
+                <a href="/products/examples/EP17-A2-Example-3.xlsx">
+                    <svg class='ph ph-file-xls' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-file-xls'></use></svg>
+                </a>
+                <a href="/products/examples/EP17-A2-Example-3.pdf" target="_blank">
+                    <svg class='ph ph-file-pdf' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-file-pdf'></use></svg>
+                </a>
+                <span class="x-example-title">EP17-A2 &mdash; Appendix B<br />New Marker, precision profile approach (alternative power).</span>
+                LoB and LoD estimated from precision profile using 3-parameter alternative power variance function. Six pools across the measuring range.
+            </div>
+            <div class="x-example">
+                <a href="/products/examples/EP17-A2-Example-4.pdf" target="_blank">
+                    <img src="/products/examples/EP17-A2-Example-4.webp" loading="lazy" alt="EP17 A2 Example 4" width="800" height="1132">
+                </a>
+                <a href="/products/examples/EP17-A2-Example-4.xlsx">
+                    <svg class='ph ph-file-xls' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-file-xls'></use></svg>
+                </a>
+                <a href="/products/examples/EP17-A2-Example-4.pdf" target="_blank">
+                    <svg class='ph ph-file-pdf' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-file-pdf'></use></svg>
+                </a>
+                <span class="x-example-title">EP17-A2 &mdash; Appendix C<br />New Marker detection capability by probit analysis.</span>
+                Probit regression of detection rate against concentration across a dilution series, fitted per reagent lot, with the limit of detection estimated as the concentration giving a 95% probability of detection.            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="x-container">
+    <div>
+        <div>
+            <h3 class="x-text-red">Part of measurement system analysis</h3>
+            <p>Detection capability is one part of <a href="/products/method-validation/measurement-system-analysis">measurement system analysis</a>, alongside <a href="/products/method-validation/precision">precision</a> (EP05-A3), <a href="/products/method-validation/linearity">linearity</a> (EP06-A), bias/trueness verification (EP15-A3), and interference evaluation (EP10-A3-AMD). Precision profiles from EP05-A3 feed directly into detection capability estimation.</p>
+            <p>See the full MSA workflow on the <a href="/products/method-validation/measurement-system-analysis">measurement system analysis page &rarr;</a></p>
+            <p>Related guides in our <a href="/learn">Learn</a> section: <a href="/learn/lob-lod-loq-explained">LoB, LoD and LoQ explained</a>, <a href="/learn/limit-of-quantitation-precision-profile">the LoQ from a precision profile</a>, <a href="/learn/probit-analysis-limit-of-detection">probit analysis for the LoD</a>, and <a href="/learn/performance-studies-for-an-ivd-510k">performance studies for an IVD 510(k)</a>.</p>
+        </div>
+        <div>
+            <h3 class="x-text-red">
+    Software you can trust
+</h3>
+<div class="x-features">
+    <div class="x-feature">
+        <span class="x-feature-title">
+            <svg class='ph ph-seal-check' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-seal-check'></use></svg>
+            Validated calculations you can defend at inspection
+        </span>
+        Every calculation is performed by Analyse-it &mdash; no Excel formulas, no third-party functions. Results are validated against CLSI reference datasets, published datasets, and thousands of internal test cases before every release.  <a href="/support/development-and-validation-process">See how we develop and validate Analyse-it &rarr;</a>
+    </div>
+   
+    <div class="x-feature">
+        <span class="x-feature-title">
+            <svg class='ph ph-hard-drives' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-hard-drives'></use></svg>
+            Data stays in your facility
+        </span>
+        Analyse-it runs entirely within Microsoft Excel on your PC. No cloud processing, no data transmission. Pre-submission data, patient-adjacent data, and in-process results stay within your facility under your own data governance controls.
+    </div>
+    <div class="x-feature">
+        <span class="x-feature-title">
+            <svg class='ph ph-file-xls' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-file-xls'></use></svg>
+            Standard Excel workbooks anyone can open
+        </span>
+        Every analysis is an ordinary .xlsx workbook. Share with colleagues, submit to regulatory affairs, archive for audit, open on any PC with Excel. No proprietary format, no licence required to view results. Colleagues and auditors see exactly what you see.
+    </div>
+    <div class="x-feature">
+        <span class="x-feature-title">
+            <svg class='ph ph-lock-simple' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-lock-simple'></use></svg>
+            Results that can&rsquo;t be accidentally broken
+        </span>
+        Analysis output contains computed values, not formulas. Nothing to accidentally overwrite, no cell references to break, no formula errors to introduce. The results you reported are exactly what you&rsquo;ll find when you reopen the workbook months or years later for an audit.
+    </div>
+    </div>
+        </div>
+    </div>
+</section>
+
+<section class="x-container-wide">
+    <h3 class="x-text-red" data-pagelink="1">Technical details</h3>
+    <div class="x-tech-spec x-flex x-flex-row x-flex-wrap x-gap-4">
+        <div class="x-flex-1">
+            <div class="x-tech-spec-block">
+                <h4>CLSI protocols</h4>
+                <ul>
+                    <li>EP17-A2: Evaluation of Detection Capability for Clinical Laboratory Measurement Procedures</li>
+                </ul>
+            </div>
+            <div class="x-tech-spec-block">
+                <h4>Limit of blank (LoB)</h4>
+                <ul>
+                    <li>Parametric (SD of blank material) <span class="x-label x-label-highlight">new in v4.00</span></li>
+                    <li>Non-parametric (quantile of blank material) <span class="x-label x-label-highlight">new in v4.00</span></li>
+                    <li>From precision profile variance function <span class="x-label x-label-highlight">new in v4.00</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="x-flex-1">
+            <div class="x-tech-spec-block">
+                <h4>Limit of detection (LoD)</h4>
+                <ul>
+                    <li>Pooled SD of non-blank materials <span class="x-label x-label-highlight">new in v4.00</span></li>
+                    <li>From precision profile variance function <span class="x-label x-label-highlight">new in v4.00</span></li>
+                    <li>Probit regression <span class="x-label x-label-highlight">new in v5.50</span></li>
+                </ul>
+            </div>
+            <div class="x-tech-spec-block">
+                <h4>Limit of quantitation (LoQ)</h4>
+                <ul>
+                    <li>From precision profile variance function <span class="x-label x-label-highlight">new in v4.00</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="x-flex-1">
+            <div class="x-tech-spec-block">
+                <h4>Plots</h4>
+                <ul>
+                    <li>Frequency density histogram with LoB and LoD</li>
+                    <li>Probit regression curve <span class="x-label x-label-highlight">new in v5.50</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </div>
+
+    
+
+    <footer id="x-footer">
+        <div class="x-footer-columns">
+            <details class="x-footer-group">
+                <summary>Products</summary>
+                <ul>
+                    <li><a href="/products/standard">Standard Edition</a></li>
+                    <li><a href="/products/medical">Medical Edition</a></li>
+                    <li><a href="/products/quality-control">Quality Control &amp; Improvement Edition</a></li>
+                    <li><a href="/products/method-validation">Method Validation Edition</a></li>
+                    <li><a href="/products/ultimate">Ultimate Edition</a></li>
+                    <li><a href="/products/compare">Compare Editions</a></li>
+                    <li><a href="/store/buy">Pricing</a></li>
+                </ul>
+            </details>
+
+            <details class="x-footer-group">
+                <summary>Learn</summary>
+                <ul>
+                    <li><a href="/learn">All guides</a></li>
+                    <li><a href="/learn/which-clsi-ep-protocol-roadmap">Method validation roadmap</a></li>
+                    <li><a href="/learn/roc-curves-and-auc-explained">ROC curves &amp; AUC</a></li>
+                    <li><a href="/learn/sensitivity-specificity-predictive-values-explained">Sensitivity &amp; specificity</a></li>
+                    <li><a href="/learn/choosing-a-regression-for-method-comparison">Choosing a regression</a></li>
+                    <li><a href="/learn/choosing-a-reference-interval-method">Reference interval methods</a></li>
+                    <li><a href="/learn/verifying-manufacturer-precision-claims">Verifying precision claims</a></li>
+                </ul>
+            </details>
+
+            <details class="x-footer-group">
+                <summary>Support</summary>
+                <ul>
+                    <li><a href="/support">Documentation</a></li>
+                    <li><a href="/docs/tutorials">Tutorials</a></li>
+                    <li><a href="/support/download">Download latest version</a></li>
+                    <li><a href="/support/release-history">Release history</a></li>
+                    <li><a href="/company/contact-us">Contact support</a></li>
+                </ul>
+            </details>
+
+            <details class="x-footer-group">
+                <summary>Company</summary>
+                <ul>
+                    <li><a href="/company/about-us">About us</a></li>
+                    <li><a href="/blog">Blog <svg class='ph ph-rss' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-rss'></use></svg></a></li>
+                    <li><a href="/company/contact-us">Contact us</a></li>
+                    <li><a href="/company/privacy-policy">Privacy policy</a></li>
+                </ul>
+            </details>
+
+            <div class="x-footer-group x-footer-group--cta">
+                <p class="x-footer-heading">Get Started</p>
+                <ul>
+                    <li><a href="/free-trial">Download free trial</a></li>
+                    <li><a href="/sign-in">Sign In</a></li>
+                </ul>
+                <div class="x-social-icons">
+                    <a href="https://x.com/Analyse_it" aria-label="Twitter"><svg class='ph ph-x-logo' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-x-logo'></use></svg></a>
+                    <a href="https://www.linkedin.com/in/analyseit/" aria-label="LinkedIn"><svg class='ph ph-linkedin-logo' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-linkedin-logo'></use></svg></a>
+                    <a href="https://www.youtube.com/channel/UCPZozTkpIBxS0NEPWew00uA" aria-label="YouTube"><svg class='ph ph-youtube-logo' aria-hidden='true' focusable='false' viewBox='0 0 1024 1024'><use href='/Content/phosphor-subset-v3.svg#ph-youtube-logo'></use></svg></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="x-footer-bottom">
+            <p>&copy; 2026 Analyse-it&reg; Software, Ltd. All rights reserved.</p>
+            <p>Statistical analysis and method validation software for Microsoft Excel.</p>
+        </div>
+    </footer>
+
+
+    <!-- Cookie Banner -->
+<div id="x-cookie-banner">
+    <div id="x-cookie-dialog" role="dialog" aria-modal="true" aria-labelledby="x-cookie-title" aria-describedby="x-cookie-desc">
+        <div class="x-cookie-text">
+            <h2 id="x-cookie-title">We value your privacy</h2>
+            <p id="x-cookie-desc">
+                We use essential cookies to run the site. With your permission we'd also like to use analytics and
+                advertising cookies to see how visitors find and use Analyse-it, so we can keep improving it and reach
+                more people like you. <br><br/>You can change your mind at any time, see our
+                <a href="/company/privacy-policy">Privacy policy</a>.
+            </p>
+        </div>
+        <div class="x-cookie-actions">
+            <button class="x-btn x-btn-secondary" id="x-cookie-essential">Essential only</button>
+            <button class="x-btn x-btn-primary" id="x-cookie-analytics">Accept all cookies</button>
+        </div>
+    </div>
+</div>
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Analyse-it Software, Ltd.",
+            "url": "https://analyse-it.com",
+            "logo": "https://analyse-it.com/img/analyse-it300dpi.png",
+            "foundingDate": "1992",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "The Tannery, 91 Kirkstall Road",
+                "addressLocality": "Leeds",
+                "postalCode": "LS3 1HS",
+                "addressCountry": "GB"
+            }
+        }
+    </script>
+
+    <script>
+        (function () {
+            function loadThirdParty() {
+                // 1. Microsoft Clarity
+                /*(function (c, l, a, r, i, t, y) {
+                    c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+                    t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+                    y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+                })(window, document, "clarity", "script", "vc9pjid4vr");*/
+
+                /*// 2. Bing UET
+                (function (w, d, t, r, u) {
+                    var f, n, i; w[u] = w[u] || [], f = function () {
+                        var o = { ti: "271002311" }; o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad")
+                    },
+                        n = d.createElement(t), n.src = r, n.async = 1, n.onload = n.onreadystatechange = function () {
+                            var s = this.readyState; s && s !== "loaded" && s !== "complete" || (f(), n.onload = n.onreadystatechange = null)
+                        },
+                        i = d.getElementsByTagName(t)[0], i.parentNode.insertBefore(n, i)
+                })(window, document, "script", "//bat.bing.com/bat.js", "uetq");*/
+
+                // 3. Google Ads config runs early in <head> so the conversion linker captures
+                //    the gclid before any conversion event fires or the page redirects.
+
+                // 4. Chatbase — held back until the visitor responds to the cookie
+                //    consent modal, so the chat bubble doesn't compete with it.
+                loadChatbaseAfterConsent();
+            }
+
+            function loadChatbase() {
+                (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "x7XmDZrVqrqEEj9UrehEu"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+            }
+
+            // Chatbase is a third-party widget with no consent mode of its own, so we
+            // only load it once the visitor has made a cookie choice (either button).
+            function loadChatbaseAfterConsent() {
+                var decided = false;
+                try { decided = localStorage.getItem('cookie-consent1') !== null; } catch (e) { decided = true; }
+                if (decided) {
+                    loadChatbase();
+                } else {
+                    document.addEventListener('x-consent-decided', loadChatbase, { once: true });
+                }
+            }
+
+            // Fire after load, idle if possible, with a safety timeout
+            function schedule() {
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(loadThirdParty, { timeout: 3000 });
+                } else {
+                    setTimeout(loadThirdParty, 1500);
+                }
+            }
+
+            if (document.readyState === 'complete') {
+                schedule();
+            } else {
+                window.addEventListener('load', schedule, { once: true });
+            }
+        })();
+    </script>
+
+    <script type="text/javascript" src="/js/x-main.min.js?134297429400000000" defer></script>
+</body>
+</html>

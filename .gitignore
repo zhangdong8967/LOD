@@ -1,0 +1,24 @@
+data/raw/*
+!data/raw/.gitkeep
+data/simulated/*
+!data/simulated/.gitkeep
+data/audit/*
+!data/audit/.gitkeep
+data/research/*
+!data/research/.gitkeep
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.tools/
+.DS_Store
+
+# Generated figures and manuscript build outputs (rebuild via make paper-artifacts / fig1-tikz)
+figures/methodology/
+paper_artifacts/figures/
+manuscript/*.aux
+manuscript/*.log
+manuscript/*.out
+manuscript/figures_tex/*.aux
+manuscript/figures_tex/*.log
+manuscript/missfont.log
+manuscript/THEORY_MONOGRAPH.pdf

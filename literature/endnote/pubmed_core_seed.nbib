@@ -1,0 +1,402 @@
+
+PMID- 14764644
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20040428
+LR  - 20190722
+IS  - 0009-9147 (Print)
+IS  - 0009-9147 (Linking)
+VI  - 50
+IP  - 4
+DP  - 2004 Apr
+TI  - Partly nonparametric approach for determining the limit of detection.
+PG  - 732-40
+AB  - BACKGROUND: According to recent International Organization for Standardization 
+      (ISO) standards, the limit of detection (LoD) of an assay should be estimated 
+      taking both type I (alpha) and II (beta) errors into account. The suggested 
+      procedure, however, supposes gaussian distributions of both blank and sample 
+      measurements and a linear calibration curve. In clinical chemistry, asymmetric, 
+      nongaussian blank distributions are common, and the calibration curve may be 
+      nonlinear. We present a partly nonparametric procedure that takes these aspects 
+      into account. METHODS: Using theoretical distribution models and simulation 
+      studies, we developed a LoD estimation procedure suitable for the field of 
+      clinical chemistry that is partly based on nonparametric statistics. RESULTS: For 
+      sample size n, the nonparametrically determined 95th percentile of the blank 
+      measurements obtained as the value of the [n(95/100) + 0.5]th ordered observation 
+      defines the limit for results significantly exceeding zero [limit of blank 
+      (LoB)]. The LoD is the lowest value that is likely to yield a result exceeding 
+      the LoB. LoD is estimated as: LoB + cbeta x SDS, where SDS is the analytical SD 
+      of a sample with a low concentration; cbeta = z(1 - beta)/[1 - 1/(4 x f)]; z(1 - 
+      beta) is the standard normal deviate; and f is the number of degrees of freedom 
+      for estimation of SD(S). c(beta) is approximately equal to 1.65 for a type II 
+      error of 5%. Approaches and needed tabular values for calculation of confidence 
+      limits are presented as well as sample size. Worked examples are given to 
+      illustrate estimation and verification of the limit of detection. Simulation 
+      results are used to document performance. CONCLUSION: The proposed procedure 
+      appears useful for application in the field of clinical chemistry and promotes a 
+      standardized approach for estimating LoDs of clinical chemistry assays.
+FAU - Linnet, Kristian
+AU  - Linnet K
+AD  - Laboratory of Clinical Biochemistry, Psychiatric University Hospital, Risskov, 
+      Denmark. linnet@post7.tele.dk
+FAU - Kondratovich, Marina
+AU  - Kondratovich M
+LA  - eng
+PT  - Journal Article
+DEP - 20040205
+PL  - England
+TA  - Clin Chem
+JT  - Clinical chemistry
+JID - 9421549
+SB  - IM
+MH  - Calibration
+MH  - Chemistry, Clinical/*statistics & numerical data
+MH  - Research Design/statistics & numerical data
+MH  - *Sensitivity and Specificity
+MH  - Statistics, Nonparametric
+EDAT- 2004/02/07 05:00
+MHDA- 2004/04/29 05:00
+CRDT- 2004/02/07 05:00
+PHST- 2004/02/07 05:00 [pubmed]
+PHST- 2004/04/29 05:00 [medline]
+PHST- 2004/02/07 05:00 [entrez]
+AID - clinchem.2003.029983 [pii]
+AID - 10.1373/clinchem.2003.029983 [doi]
+PST - ppublish
+SO  - Clin Chem. 2004 Apr;50(4):732-40. doi: 10.1373/clinchem.2003.029983. Epub 2004 
+      Feb 5.
+
+PMID- 33626838
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+LR  - 20210225
+IS  - 2576-9456 (Print)
+IS  - 2475-7241 (Linking)
+VI  - 1
+IP  - 3
+DP  - 2016 Nov 1
+TI  - Verification of Claimed Limit of Detection in Molecular Diagnostics.
+PG  - 260-270
+LID - 10.1373/jalm.2016.020735 [doi]
+AB  - BACKGROUND: Limit of detection (LOD) is an important performance characteristic 
+      of clinical laboratory tests. Verification, as recommended by the CLSI EP17-A2 
+      guideline, is done by testing a sample with a claimed LOD concentration. Claimed 
+      LOD is verified if the 95% CI for the population proportion, calculated from 
+      observed proportion of positive results, contains the expected detection rate of 
+      95% (CLSI EP17-A2; Clin Chem 2004;50:732-40). Claimed LOD, verification sample 
+      concentration, and observed rate of positive results are subjects to systematic 
+      and random errors that can cause false failure or false acceptance of the LOD 
+      verification. The aim of this study was to assess the probability to pass or fail 
+      verification of claimed LOD with various numbers of tests as function of the 
+      ratio of test sample concentration and actual LOD for PCR-based molecular 
+      diagnostics tests and provide recommendations for study design. METHODS: A method 
+      of calculating the probability of passing the claimed LOD verification following 
+      CLSI EP17-A2 guideline recommendations, based on the Poisson-binomial probability 
+      model, have been developed for PCR-based assays. RESULTS: Calculations and graphs 
+      have shown that the probability of passing LOD verification depends on the number 
+      of tests and has local minima and maxima between 0.975 and 0.995 for the number 
+      of tests from 20 to 1000 on samples having actual LOD concentration. The 
+      probability of detecting the difference between claimed LOD and actual LOD 
+      increases with the number of tests performed. Graphs and tables with examples are 
+      included. CONCLUSIONS: Method, tables, and graphs helping in planning LOD 
+      verification study in molecular diagnostics are provided along with the 
+      recommendations on what to do in case of failure to verify the LOD claim.
+CI  - (c) 2016 American Association for Clinical Chemistry.
+FAU - Vaks, Jeffrey E
+AU  - Vaks JE
+AD  - Biometrics Department, Roche Molecular Systems, Inc., Pleasanton, CA.
+FAU - Hemyari, Parichehr
+AU  - Hemyari P
+AD  - Biometrics Department, Roche Molecular Systems, Inc., Pleasanton, CA.
+FAU - Rullkoetter, Matthias
+AU  - Rullkoetter M
+AD  - Assay Development, Roche Molecular Systems, Inc., Rotkreuz, Switzerland.
+FAU - Santulli, Michael J
+AU  - Santulli MJ
+AD  - Biometrics Department, Roche Molecular Systems, Inc., Pleasanton, CA.
+FAU - Schoenbrunner, Nancy
+AU  - Schoenbrunner N
+AD  - Chemistry Research, Roche Molecular Systems, Inc., Marlboro, CA.
+LA  - eng
+PT  - Journal Article
+PL  - England
+TA  - J Appl Lab Med
+JT  - The journal of applied laboratory medicine
+JID - 101693884
+SB  - IM
+EDAT- 2016/11/01 00:00
+MHDA- 2016/11/01 00:01
+CRDT- 2021/02/25 01:02
+PHST- 2016/05/18 00:00 [received]
+PHST- 2016/08/10 00:00 [accepted]
+PHST- 2021/02/25 01:02 [entrez]
+PHST- 2016/11/01 00:00 [pubmed]
+PHST- 2016/11/01 00:01 [medline]
+AID - 5587331 [pii]
+AID - 10.1373/jalm.2016.020735 [doi]
+PST - ppublish
+SO  - J Appl Lab Med. 2016 Nov 1;1(3):260-270. doi: 10.1373/jalm.2016.020735.
+
+PMID- 29438992
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20190308
+LR  - 20210217
+IS  - 1535-9484 (Electronic)
+IS  - 1535-9476 (Print)
+IS  - 1535-9476 (Linking)
+VI  - 17
+IP  - 5
+DP  - 2018 May
+TI  - Nonlinear Regression Improves Accuracy of Characterization of Multiplexed Mass 
+      Spectrometric Assays.
+PG  - 913-924
+LID - 10.1074/mcp.RA117.000322 [doi]
+AB  - The need for assay characterization is ubiquitous in quantitative mass 
+      spectrometry-based proteomics. Among many assay characteristics, the limit of 
+      blank (LOB) and limit of detection (LOD) are two particularly useful figures of 
+      merit. LOB and LOD are determined by repeatedly quantifying the observed 
+      intensities of peptides in samples with known peptide concentrations and deriving 
+      an intensity versus concentration response curve. Most commonly, a weighted 
+      linear or logistic curve is fit to the intensity-concentration response, and LOB 
+      and LOD are estimated from the fit. Here we argue that these methods inaccurately 
+      characterize assays where observed intensities level off at low concentrations, 
+      which is a common situation in multiplexed systems. This manuscript illustrates 
+      the deficiencies of these methods, and proposes an alternative approach based on 
+      nonlinear regression that overcomes these inaccuracies. We evaluated the 
+      performance of the proposed method using computer simulations and using eleven 
+      experimental data sets acquired in Data-Independent Acquisition (DIA), Parallel 
+      Reaction Monitoring (PRM), and Selected Reaction Monitoring (SRM) mode. When the 
+      intensity levels off at low concentrations, the nonlinear model changes the 
+      estimates of LOB/LOD upwards, in some data sets by 20-40%. In absence of a low 
+      concentration intensity leveling off, the estimates of LOB/LOD obtained with 
+      nonlinear statistical modeling were identical to those of weighted linear 
+      regression. We implemented the nonlinear regression approach in the open-source 
+      R-based software MSstats, and advocate its general use for characterization of 
+      mass spectrometry-based assays.
+CI  - (c) 2018 by The American Society for Biochemistry and Molecular Biology, Inc.
+FAU - Galitzine, Cyril
+AU  - Galitzine C
+AD  - From the double daggerCollege of Science, Northeastern University, Boston, Massachusetts 
+      02115.
+FAU - Egertson, Jarrett D
+AU  - Egertson JD
+AD  -  section signDepartment of Genome Sciences, University of Washington, Seattle, Washington 
+      98195.
+FAU - Abbatiello, Susan
+AU  - Abbatiello S
+AD  -  paragraph signThermo Fisher Scientific, Cambridge, Massachusetts 02139.
+FAU - Henderson, Clark M
+AU  - Henderson CM
+AD  -  ||Department of Laboratory Medicine, University of Washington, Seattle, Washington 
+      98195.
+FAU - Pino, Lindsay K
+AU  - Pino LK
+AD  -  section signDepartment of Genome Sciences, University of Washington, Seattle, Washington 
+      98195.
+FAU - MacCoss, Michael
+AU  - MacCoss M
+AD  -  section signDepartment of Genome Sciences, University of Washington, Seattle, Washington 
+      98195.
+FAU - Hoofnagle, Andrew N
+AU  - Hoofnagle AN
+AD  -  ||Department of Laboratory Medicine, University of Washington, Seattle, Washington 
+      98195.
+AD  - **Department of Medicine, University of Washington, Seattle, Washington 98195.
+FAU - Vitek, Olga
+AU  - Vitek O
+AD  - From the double daggerCollege of Science, Northeastern University, Boston, Massachusetts 
+      02115; o.vitek@neu.edu.
+AD  - double daggerdouble daggerCollege of Computer and Information Science, Northeastern University, Boston, 
+      Massachusetts 02115.
+LA  - eng
+GR  - T32 HL007028/HL/NHLBI NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, U.S. Gov't, Non-P.H.S.
+DEP - 20180209
+PL  - United States
+TA  - Mol Cell Proteomics
+JT  - Molecular & cellular proteomics : MCP
+JID - 101125647
+RN  - 0 (Peptides)
+SB  - IM
+MH  - Amino Acid Sequence
+MH  - Biological Assay
+MH  - Calibration
+MH  - Humans
+MH  - Limit of Detection
+MH  - Mass Spectrometry/*methods
+MH  - Models, Theoretical
+MH  - *Nonlinear Dynamics
+MH  - Peptides/chemistry
+MH  - Regression Analysis
+PMC - PMC5930407
+EDAT- 2018/02/14 06:00
+MHDA- 2019/03/09 06:00
+PMCR- 2019/05/01
+CRDT- 2018/02/14 06:00
+PHST- 2017/09/13 00:00 [received]
+PHST- 2018/01/16 00:00 [revised]
+PHST- 2018/02/14 06:00 [pubmed]
+PHST- 2019/03/09 06:00 [medline]
+PHST- 2018/02/14 06:00 [entrez]
+PHST- 2019/05/01 00:00 [pmc-release]
+AID - S1535-9476(20)32467-1 [pii]
+AID - RA117.000322 [pii]
+AID - 10.1074/mcp.RA117.000322 [doi]
+PST - ppublish
+SO  - Mol Cell Proteomics. 2018 May;17(5):913-924. doi: 10.1074/mcp.RA117.000322. Epub 
+      2018 Feb 9.
+
+PMID- 19151158
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20090413
+LR  - 20260128
+IS  - 1537-1719 (Electronic)
+IS  - 0737-4038 (Linking)
+VI  - 26
+IP  - 4
+DP  - 2009 Apr
+TI  - Gene flow in the face of countervailing selection: adaptation to high-altitude 
+      hypoxia in the betaA hemoglobin subunit of yellow-billed pintails in the Andes.
+PG  - 815-27
+LID - 10.1093/molbev/msp007 [doi]
+AB  - When populations become locally adapted to contrasting environments, alleles that 
+      have high fitness in only one environment may be quickly eliminated in 
+      populations adapted to other environments, such that gene flow is partly 
+      restricted. The stronger the selection, the more rapidly immigrant alleles of 
+      lower fitness will be eliminated from the population. However, gene flow may 
+      continue to occur at unlinked loci, and adaptive divergence can proceed in the 
+      face of countervailing gene flow if selection is strong relative to migration (s 
+      > m). We studied the population genetics of the major hemoglobin genes in 
+      yellow-billed pintails (Anas georgica) experiencing contrasting partial pressures 
+      of oxygen in the Andes of South America. High gene flow and weak population 
+      subdivision were evident at seven putatively neutral loci in different 
+      chromosomal linkage groups. In contrast, amino acid replacements (Ser-beta13, 
+      Ser-beta116, and Met-beta133) in the betaA hemoglobin subunit segregated by 
+      elevation between lowland and highland populations with significantly elevated 
+      F(ST). Migration rates for the betaA subunit alleles were approximately 17-24 
+      times smaller than for five unlinked reference loci, the alphaA hemoglobin 
+      subunit (which lacks amino acid replacements) and the mitochondrial DNA control 
+      region. The betaA subunit alleles of yellow-billed pintails were half as likely 
+      to be transferred downslope, from the highlands to the lowlands, than in the 
+      opposite direction upslope. We hypothesize that migration between the lowlands 
+      and highlands is restricted by local adaptation, and the betaA hemoglobin subunit 
+      is a likely target of selection related to high-altitude hypoxia; however, gene 
+      flow may be sufficiently high to retard divergence at most unlinked loci. 
+      Individuals homozygous for lowland alleles may have relatively little difficulty 
+      dispersing to the highlands initially but may experience long-term fitness 
+      reduction. Individuals homozygous for highland genotypes, in contrast, would be 
+      predicted to have difficulty dispersing to the lowlands if their hemoglobin 
+      alleles confer high oxygen affinity, predicted to result in chronic 
+      erythrocytosis at low elevation. Heterozygous individuals may have a dispersal 
+      advantage if their hemoglobin has a wider range of function due to the presence 
+      of multiple protein isoforms with a mixture of different oxygen affinities.
+FAU - McCracken, Kevin G
+AU  - McCracken KG
+AD  - Department of Biology and Wildlife, Institute of Arctic Biology, University of 
+      Alaska Fairbanks. fnkgm@uaf.edu
+FAU - Bulgarella, Mariana
+AU  - Bulgarella M
+FAU - Johnson, Kevin P
+AU  - Johnson KP
+FAU - Kuhner, Mary K
+AU  - Kuhner MK
+FAU - Trucco, Jorge
+AU  - Trucco J
+FAU - Valqui, Thomas H
+AU  - Valqui TH
+FAU - Wilson, Robert E
+AU  - Wilson RE
+FAU - Peters, Jeffrey L
+AU  - Peters JL
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20090116
+PL  - United States
+TA  - Mol Biol Evol
+JT  - Molecular biology and evolution
+JID - 8501455
+RN  - 0 (beta-Globins)
+SB  - IM
+MH  - Animals
+MH  - Ducks/*genetics/metabolism
+MH  - *Gene Flow
+MH  - Genetics, Population
+MH  - Hypoxia/metabolism
+MH  - *Selection, Genetic
+MH  - South America
+MH  - beta-Globins/*genetics/*metabolism
+EDAT- 2009/01/20 09:00
+MHDA- 2009/04/14 09:00
+CRDT- 2009/01/20 09:00
+PHST- 2009/01/20 09:00 [entrez]
+PHST- 2009/01/20 09:00 [pubmed]
+PHST- 2009/04/14 09:00 [medline]
+AID - msp007 [pii]
+AID - 10.1093/molbev/msp007 [doi]
+PST - ppublish
+SO  - Mol Biol Evol. 2009 Apr;26(4):815-27. doi: 10.1093/molbev/msp007. Epub 2009 Jan 
+      16.
+
+PMID- 15899655
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20050901
+LR  - 20161018
+IS  - 1434-6621 (Print)
+IS  - 1434-6621 (Linking)
+VI  - 43
+IP  - 4
+DP  - 2005
+TI  - Estimation of the limit of detection with a bootstrap-derived standard error by a 
+      partly non-parametric approach. Application to HPLC drug assays.
+PG  - 394-9
+AB  - A recently proposed procedure for estimating the limit of detection (LoD) of an 
+      assay using a partly non-parametric approach is applied to five HPLC drug assays. 
+      The non-parametrically determined 95th percentile of the blank measurements (LoB) 
+      is obtained as the value of the N (95/100) + 0.5 ordered observations. The LoD is 
+      the lowest level of analyte that is likely to yield a measured result exceeding 
+      the LoB. The LoD equals LoB + c(beta) x SD(S), where SD S is the analytical SD at 
+      low concentrations, and c(beta) = z(1-beta)/(1-1/(4 x f )) (f = degrees of 
+      freedom). c(beta) approximately 1.65 for a type II error of 5%. The blank 
+      distributions deviated significantly from normality for four of the five assays 
+      because of skewness to the right. The estimated LoB ranged from 3.3 to 10.2 
+      nmol/L. The LoDs were in the interval from 7.8 to 17.2 nmol/L. A new procedure 
+      for estimation of the standard error (SE) of the estimated LoD that is partly 
+      based on the bootstrap principle showed good performance in simulation studies. 
+      In conclusion, the partly non-parametric procedure for estimation of the LoD of 
+      typical HPLC drug assays was found to be a suitable approach.
+FAU - Linnet, Kristian
+AU  - Linnet K
+AD  - Laboratory of Clinical Biochemistry, Psychiatric University Hospital, Risskov, 
+      Denmark. linnet@post7.tele.dk
+LA  - eng
+PT  - Journal Article
+PL  - Germany
+TA  - Clin Chem Lab Med
+JT  - Clinical chemistry and laboratory medicine
+JID - 9806306
+RN  - 0 (Antidepressive Agents)
+RN  - 0 (Antipsychotic Agents)
+SB  - IM
+MH  - Antidepressive Agents/*analysis
+MH  - Antipsychotic Agents/*analysis
+MH  - Chromatography, High Pressure Liquid/methods/*statistics & numerical data
+MH  - Computer Simulation
+MH  - Confidence Intervals
+MH  - Normal Distribution
+MH  - Reproducibility of Results
+MH  - Sensitivity and Specificity
+MH  - Statistics, Nonparametric
+EDAT- 2005/05/19 09:00
+MHDA- 2005/09/02 09:00
+CRDT- 2005/05/19 09:00
+PHST- 2005/05/19 09:00 [pubmed]
+PHST- 2005/09/02 09:00 [medline]
+PHST- 2005/05/19 09:00 [entrez]
+AID - 10.1515/CCLM.2005.071 [doi]
+PST - ppublish
+SO  - Clin Chem Lab Med. 2005;43(4):394-9. doi: 10.1515/CCLM.2005.071.

@@ -1,0 +1,18 @@
+{
+  "pmid": "33626838",
+  "doi": "10.1373/jalm.2016.020735",
+  "title": "Verification of Claimed Limit of Detection in Molecular Diagnostics.",
+  "authors": "Vaks Jeffrey E; Hemyari Parichehr; Rullkoetter Matthias; Santulli Michael J; Schoenbrunner Nancy",
+  "year": "2016",
+  "journal": "The journal of applied laboratory medicine",
+  "blocks": "B|B2",
+  "priority": "core",
+  "abstract": "Limit of detection (LOD) is an important performance characteristic of clinical laboratory tests. Verification, as recommended by the CLSI EP17-A2 guideline, is done by testing a sample with a claimed LOD concentration. Claimed LOD is verified if the 95% CI for the population proportion, calculated from observed proportion of positive results, contains the expected detection rate of 95% (CLSI EP17-A2; Clin Chem 2004;50:732-40). Claimed LOD, verification sample concentration, and observed rate of positive results are subjects to systematic and random errors that can cause false failure or false acceptance of the LOD verification. The aim of this study was to assess the probability to pass or fail verification of claimed LOD with various numbers of tests as function of the ratio of test sample concentration and actual LOD for PCR-based molecular diagnostics tests and provide recommendations for study design. A method of calculating the probability of passing the claimed LOD verification following CLSI EP17-A2 guideline recommendations, based on the Poisson-binomial probability model, have been developed for PCR-based assays. Calculations and graphs have shown that the probability of passing LOD verification depends on the number of tests and has local minima and maxima between 0.975 and 0.995 for the number of tests from 20 to 1000 on samples having actual LOD concentration. The probability of detecting the difference between claimed LOD and actual LOD increases with the number of tests performed. Graphs and tables with examples are included. Method, tables, and graphs helping in planning LOD verification study in molecular diagnostics are provided along with the recommendations on what to do in case of failure to verify the LOD claim.",
+  "pmcid": "",
+  "pdf_path": "",
+  "pdf_source": "",
+  "download_status": "abstract_only",
+  "notes": "",
+  "pdf_text_chars": 0,
+  "pdf_text_preview": ""
+}

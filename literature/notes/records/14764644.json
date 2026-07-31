@@ -1,0 +1,18 @@
+{
+  "pmid": "14764644",
+  "doi": "10.1373/clinchem.2003.029983",
+  "title": "Partly nonparametric approach for determining the limit of detection.",
+  "authors": "Linnet Kristian; Kondratovich Marina",
+  "year": "2004",
+  "journal": "Clinical chemistry",
+  "blocks": "B|C",
+  "priority": "core",
+  "abstract": "According to recent International Organization for Standardization (ISO) standards, the limit of detection (LoD) of an assay should be estimated taking both type I (alpha) and II (beta) errors into account. The suggested procedure, however, supposes gaussian distributions of both blank and sample measurements and a linear calibration curve. In clinical chemistry, asymmetric, nongaussian blank distributions are common, and the calibration curve may be nonlinear. We present a partly nonparametric procedure that takes these aspects into account. Using theoretical distribution models and simulation studies, we developed a LoD estimation procedure suitable for the field of clinical chemistry that is partly based on nonparametric statistics. For sample size n, the nonparametrically determined 95th percentile of the blank measurements obtained as the value of the [n(95/100) + 0.5]th ordered observation defines the limit for results significantly exceeding zero [limit of blank (LoB)]. The LoD is the lowest value that is likely to yield a result exceeding the LoB. LoD is estimated as: LoB + cbeta x SDS, where SDS is the analytical SD of a sample with a low concentration; cbeta = z(1 - beta)/[1 - 1/(4 x f)]; z(1 - beta) is the standard normal deviate; and f is the number of degrees of freedom for estimation of SD(S). c(beta) is approximately equal to 1.65 for a type II error of 5%. Approaches and needed tabular values for calculation of confidence limits are presented as well as sample size. Worked examples are given to illustrate estimation and verification of the limit of detection. Simulation results are used to document performance. The proposed procedure appears useful for application in the field of clinical chemistry and promotes a standardized approach for estimating LoDs of clinical chemistry assays.",
+  "pmcid": "",
+  "pdf_path": "",
+  "pdf_source": "",
+  "download_status": "abstract_only",
+  "notes": "",
+  "pdf_text_chars": 0,
+  "pdf_text_preview": ""
+}

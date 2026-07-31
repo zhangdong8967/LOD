@@ -1,0 +1,18 @@
+{
+  "pmid": "42225882",
+  "doi": "10.1038/s41598-026-55896-w",
+  "title": "Detection of Mycobacterium tuberculosis antigens in urinary extracellular vesicles using real-time immuno-PCR: A non-invasive diagnostic approach for pulmonary tuberculosis.",
+  "authors": "Bedi Ayushi Kaur; Dahiya Bhawna; Sharma Monika; Mrigpuri Parul; Goel Nitin; Varma-Basil Mandira; Mehta Promod K; Sharma Sadhna",
+  "year": "2026",
+  "journal": "Scientific reports",
+  "blocks": "",
+  "priority": "screen",
+  "abstract": "Non-sputum-based diagnostics using readily available clinical samples represent an urgent need in the effort to improve tuberculosis (TB) detection and control. This study evaluated urine as a non-invasive alternative by isolating urinary extracellular vesicles (uEVs), which may facilitate the enrichment of Mycobacterium tuberculosis (Mtb) antigens including MPT-64 and lipoarabinomannan (LAM) being detected in this study. A total of 162 participants were enrolled, including pulmonary TB (PTB) patients (n = 54), latent TB infection (LTBI) subjects (n = 33), other respiratory disease (ORD) controls (n = 58), and healthy controls (n = 17). The uEVs were characterized using nanoparticle tracking analysis, transmission electron microscopy, and western blotting, and subsequently analyzed by real-time immuno-PCR (RT-I-PCR) for simultaneous detection of MPT-64 and LAM. The assay demonstrated ultralow limit of detection (LOD) for purified MPT-64 + LAM (9.7 fg/mL), markedly outperforming indirect ELISA (3.7 ng/mL). Clinically, RT-I-PCR demonstrated 94.44% sensitivity in bacteriologically confirmed PTB, detecting all smear- and/or culture-positive cases and 86.96% of smear- and culture-negative but GeneXpert-positive cases, with an overall specificity of 90.74% among the control groups. In comparison, indirect ELISA identified only 31.48% of bacteriologically confirmed PTB cases while maintaining a high specificity of 96.15%. Receiver operating characteristic (ROC) curve analysis of RT-I-PCR assay indicated high diagnostic accuracy, with area under the curve (AUC) values ranging from 0.9741 to 0.9847. These findings highlight the potential of uEVs-based RT-I-PCR as a highly sensitive, non-invasive approach for PTB diagnosis, while emphasizing the need for further evaluation in larger and more diverse clinical cohorts to develop a scalable, non-invasive diagnostic platform suitable for TB-endemic settings.",
+  "pmcid": "",
+  "pdf_path": "",
+  "pdf_source": "",
+  "download_status": "abstract_only",
+  "notes": "",
+  "pdf_text_chars": 0,
+  "pdf_text_preview": ""
+}

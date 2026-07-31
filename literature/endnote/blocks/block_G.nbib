@@ -1,0 +1,1509 @@
+
+PMID- 42484972
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+DCOM- 20260722
+LR  - 20260726
+IS  - 2520-8934 (Electronic)
+IS  - 2520-8934 (Linking)
+VI  - 9
+IP  - 1
+DP  - 2026 Jul 22
+TI  - Contrast-enhanced ultrasound versus CT angiography for endoleak detection after 
+      EVAR: a reference-standard-aware systematic review and meta-analysis.
+LID - 10.1186/s42155-026-00731-6 [doi]
+LID - 90
+AB  - PURPOSE: To evaluate contrast-enhanced ultrasound (CEUS) for endoleak detection 
+      after endovascular aneurysm repair (EVAR) against CT angiography (CTA) or 
+      CTA-centered composite references, explicitly treating CTA as an imperfect 
+      reference standard. METHODS: We searched PubMed/MEDLINE, Europe PMC, Crossref, 
+      OpenAlex, and performed an institutional Embase/Scopus coverage audit through 13 
+      May 2026, with citation checking from prior reviews and included-study 
+      bibliographies. Eligible studies included adults undergoing paired CEUS and CTA 
+      or CTA-centered reference imaging after EVAR. The primary estimand was apparent 
+      CEUS diagnostic performance for any endoleak at the paired-examination level. An 
+      approximate bivariate logit-normal random-effects model was used as the primary 
+      meta-analysis; separate logit random-effects models, leave-one-out analysis, 
+      source-basis sensitivity analysis, and paired discordance testing were 
+      prespecified support analyses. RESULTS: Eighteen all-endoleak studies contributed 
+      2064 participants and 2452 paired examinations. The bivariate model estimated 
+      CEUS sensitivity as 0.905 (95% CI 0.869-0.932) and specificity as 0.943 (95% CI 
+      0.890-0.971). Separate logit random-effects estimates were similar: sensitivity 
+      0.909 (95% CI 0.873-0.936; I(2) = 42.5%) and specificity 0.944 (95% CI 
+      0.892-0.972; I(2) = 88.7%). Results were consistent in </= 30-day and CTA-only 
+      subsets. CEUS-positive/reference-negative discordance exceeded 
+      CEUS-negative/reference-positive discordance (116 vs 67; ratio 1.73; 
+      p = 0.00036). CONCLUSIONS: CEUS shows high apparent diagnostic performance for 
+      post-EVAR endoleak detection against CTA-centered references, with sensitivity 
+      and specificity both approximately 91-94%. CEUS-positive/reference-negative 
+      discordance was more frequent than the reverse and may represent low-flow or 
+      delayed endoleaks not captured by CTA-centered reference imaging in some cases. 
+      However, substantial specificity heterogeneity and CTA-reference limitations 
+      argue against unqualified CTA replacement. CEUS is best supported as a 
+      CTA-sparing surveillance and adjudication tool in selected pathways, with CTA 
+      retained for baseline structural assessment, graft evaluation, procedural 
+      planning, and discordant or high-risk findings.
+CI  - (c) 2026. The Author(s).
+FAU - de Melo Soares, Rafaella Brandao
+AU  - de Melo Soares RB
+AD  - Postgraduate Program in Medical Sciences, Faculty of Medicine, University of 
+      Brasilia, Brasilia, DF, 70910-900, Brazil.
+FAU - de Negreiros Botan, Rafael
+AU  - de Negreiros Botan R
+AUID- ORCID: 0000-0002-7290-5824
+AD  - Postgraduate Program in Medical Sciences, Faculty of Medicine, University of 
+      Brasilia, Brasilia, DF, 70910-900, Brazil. oncologista@gmail.com.
+FAU - Kessler, Iruena Moraes
+AU  - Kessler IM
+AUID- ORCID: 0000-0002-0224-3765
+AD  - Postgraduate Program in Medical Sciences, Faculty of Medicine, University of 
+      Brasilia, Brasilia, DF, 70910-900, Brazil.
+AD  - Faculty of Medicine, University of Brasilia, Brasilia, DF, 70910-900, Brazil.
+AD  - Neurosurgery Service, University Hospital of Brasilia, Brasilia, DF, 70910-900, 
+      Brazil.
+LA  - eng
+PT  - Journal Article
+PT  - Review
+DEP - 20260722
+PL  - Switzerland
+TA  - CVIR Endovasc
+JT  - CVIR endovascular
+JID - 101738484
+PMC - PMC13391992
+OTO - NOTNLM
+OT  - Abdominal aortic aneurysm
+OT  - CT angiography
+OT  - Contrast-enhanced ultrasound
+OT  - Diagnostic accuracy
+OT  - Endoleak
+OT  - Endovascular aneurysm repair
+OT  - Systematic review
+COIS- Declarations. Ethics approval and consent to participate: Not applicable. This 
+      systematic review and meta-analysis used published aggregate data and did not 
+      involve new contact with human participants, human tissue, animals, or individual 
+      patient-level data. Consent for publication: Not applicable. The manuscript does 
+      not contain individual person-level data, images, or videos. Competing interests: 
+      The authors declare that they have no competing interests.
+EDAT- 2026/07/22 12:37
+MHDA- 2026/07/22 12:38
+PMCR- 2026/07/22
+CRDT- 2026/07/22 11:16
+PHST- 2026/05/18 00:00 [received]
+PHST- 2026/06/25 00:00 [accepted]
+PHST- 2026/07/22 12:38 [medline]
+PHST- 2026/07/22 12:37 [pubmed]
+PHST- 2026/07/22 11:16 [entrez]
+PHST- 2026/07/22 00:00 [pmc-release]
+AID - 10.1186/s42155-026-00731-6 [pii]
+AID - 731 [pii]
+AID - 10.1186/s42155-026-00731-6 [doi]
+PST - epublish
+SO  - CVIR Endovasc. 2026 Jul 22;9(1):90. doi: 10.1186/s42155-026-00731-6.
+
+PMID- 42299788
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20260616
+LR  - 20260622
+IS  - 1541-0420 (Electronic)
+IS  - 0006-341X (Linking)
+VI  - 82
+IP  - 2
+DP  - 2026 Apr 9
+TI  - A generalized difference-in-differences estimator for stepped-wedge 
+      cluster-randomized trials.
+LID - ujag105 [pii]
+LID - 10.1093/biomtc/ujag105 [doi]
+AB  - Staggered treatment adoption arises in the evaluation of policy impact and 
+      implementation in many settings, including both randomized stepped-wedge trials 
+      (SWTs) and non-randomized quasi-experiments with panel data. In both settings, 
+      getting an interpretable, unbiased effect estimate requires careful consideration 
+      of the target estimand and possible treatment effect heterogeneities. This paper 
+      proposes a novel non-parametric approach for interpretable estimation in SWTs. By 
+      constructing an estimator using weighted averages of two-by-two 
+      difference-in-differences comparisons as building blocks, the investigator can 
+      target the desired estimand for any assumed treatment effect heterogeneities. 
+      This provides desirable bias and interpretation properties while using the 
+      comparisons efficiently to mitigate the loss of precision, without requiring 
+      correct variance specification. The methods are demonstrated for a randomized SWT 
+      on the impact of novel tuberculosis diagnostic tools, and the results are 
+      compared to analyses using previous methods. A comparison of results in simulated 
+      settings is included as well. A full algorithm with R code is provided to 
+      implement this method and to compare against existing methods. The proposed 
+      method allows for high flexibility and clear targeting of desired effects, 
+      providing one solution to the bias-variance-generalizability tradeoff.
+CI  - (c) The Author(s) 2026. Published by Oxford University Press on behalf of The 
+      International Biometric Society. All rights reserved. For commercial re-use, 
+      please contact reprints@oup.com for reprints and translation rights for reprints. 
+      All other permissions can be obtained through our RightsLink service via the 
+      Permissions link on the article page on our site-for further information please 
+      contact journals.permissions@oup.com.
+FAU - Kennedy-Shaffer, Lee
+AU  - Kennedy-Shaffer L
+AUID- ORCID: 0000-0001-7604-3638
+AD  - Department of Biostatistics, Yale School of Public Health, New Haven, CT 06511, 
+      United States.
+LA  - eng
+PT  - Journal Article
+PL  - England
+TA  - Biometrics
+JT  - Biometrics
+JID - 0370625
+SB  - IM
+MH  - *Randomized Controlled Trials as Topic/statistics & numerical data/methods
+MH  - Humans
+MH  - Algorithms
+MH  - Computer Simulation
+MH  - *Models, Statistical
+MH  - Data Interpretation, Statistical
+MH  - Bias
+MH  - Tuberculosis/diagnosis
+MH  - Cluster Analysis
+MH  - Treatment Effect Heterogeneity
+MH  - Biometry/methods
+OTO - NOTNLM
+OT  - causal inference
+OT  - cluster-randomized trial
+OT  - natural experiment
+OT  - panel data
+OT  - quasi-experimental design
+EDAT- 2026/06/16 13:49
+MHDA- 2026/06/16 13:50
+CRDT- 2026/06/16 06:23
+PHST- 2025/02/04 00:00 [received]
+PHST- 2026/05/10 00:00 [revised]
+PHST- 2026/05/22 00:00 [accepted]
+PHST- 2026/06/16 13:50 [medline]
+PHST- 2026/06/16 13:49 [pubmed]
+PHST- 2026/06/16 06:23 [entrez]
+AID - 8708764 [pii]
+AID - 10.1093/biomtc/ujag105 [doi]
+PST - ppublish
+SO  - Biometrics. 2026 Apr 9;82(2):ujag105. doi: 10.1093/biomtc/ujag105.
+
+PMID- 42175748
+OWN - NLM
+STAT- Publisher
+LR  - 20260523
+IS  - 2047-4881 (Electronic)
+IS  - 2047-4873 (Linking)
+DP  - 2026 May 23
+TI  - A Practical Guide to Target Trial Emulation: Connecting Randomized Trials and 
+      Real-World Data in Cardiovascular Research.
+LID - zwag267 [pii]
+LID - 10.1093/eurjpc/zwag267 [doi]
+AB  - Randomized controlled trials (RCTs) remain the gold standard for causal inference 
+      in cardiovascular prevention but are often limited by cost, feasibility, and 
+      restricted generalizability. The rapid expansion of real-world data (RWD) offers 
+      new opportunities to address clinically relevant questions beyond the scope of 
+      RCTs, yet observational analyses remain highly susceptible to bias, particularly 
+      when study design is not aligned with the underlying causal question. Target 
+      trial emulation (TTE) is an increasingly adopted framework that improves the 
+      validity and interpretability of observational studies by explicitly specifying 
+      the protocol of the hypothetical randomized trial that would ideally answer the 
+      clinical question. This review provides a practical guide to TTE in 
+      cardiovascular prevention. We describe its conceptual foundations within the 
+      counterfactual framework, emphasizing the shift from a model-driven to a 
+      design-first approach, and outline the seven key components of the target trial 
+      protocol: eligibility criteria, treatment strategies, assignment procedures, time 
+      zero definition, outcomes, estimand, and statistical analysis plan. We clarify 
+      the role of analytical methods within TTE, including propensity score approaches, 
+      g-computation, and g-estimation, and provide guidance on selecting the 
+      appropriate method based on the estimand and treatment strategy. A step-by-step 
+      implementation framework is proposed, covering common pitfalls such as immortal 
+      time bias and prevalent user bias, the use of negative control analyses as 
+      diagnostic tools, and the handling of missing data. Illustrative examples from 
+      cardiovascular prevention demonstrate how TTE enhances causal interpretation 
+      across a range of clinical questions. TTE strengthens the credibility of 
+      real-world evidence by improving transparency, reducing avoidable design biases, 
+      and aligning analyses with clinically meaningful decisions. It does not eliminate 
+      residual confounding and should be viewed as complementary to, rather than a 
+      substitute for, randomized evidence.
+CI  - (c) The Author(s) 2026. Published by Oxford University Press on behalf of the 
+      European Society of Cardiology. All rights reserved. For commercial re-use, 
+      please contact reprints@oup.com for reprints and translation rights for reprints. 
+      All other permissions can be obtained through our RightsLink service via the 
+      Permissions link on the article page on our site-for further information please 
+      contact journals.permissions@oup.com.
+FAU - Fourati, Ahlem
+AU  - Fourati A
+AD  - Inserm U1094, IRD UMR270, Univ. Limoges, EpiMaCT - Epidemiology of chronic 
+      diseases in tropical zone, OmegaHealth, Limoges, France.
+AD  - CHU de Limoges, Clinical and Research Data Center.
+FAU - Vergonjeanne, Marion
+AU  - Vergonjeanne M
+AD  - Inserm U1094, IRD UMR270, Univ. Limoges, EpiMaCT - Epidemiology of chronic 
+      diseases in tropical zone, OmegaHealth, Limoges, France.
+AD  - CHU de Limoges, Clinical and Research Data Center.
+FAU - Gelle, Thibaut
+AU  - Gelle T
+AD  - Inserm U1094, IRD UMR270, Univ. Limoges, EpiMaCT - Epidemiology of chronic 
+      diseases in tropical zone, OmegaHealth, Limoges, France.
+FAU - Magne, Julien
+AU  - Magne J
+AUID- ORCID: 0000-0001-7598-8234
+AD  - Inserm U1094, IRD UMR270, Univ. Limoges, EpiMaCT - Epidemiology of chronic 
+      diseases in tropical zone, OmegaHealth, Limoges, France.
+AD  - CHU de Limoges, Clinical and Research Data Center.
+LA  - eng
+PT  - Journal Article
+DEP - 20260523
+PL  - England
+TA  - Eur J Prev Cardiol
+JT  - European journal of preventive cardiology
+JID - 101564430
+SB  - IM
+OTO - NOTNLM
+OT  - Bias
+OT  - Cardiovascular prevention
+OT  - Causal inference
+OT  - Comparative effectiveness research
+OT  - Epidemiologic methods
+OT  - Observational studies
+OT  - Pharmacoepidemiology
+OT  - Propensity score
+OT  - Real-world data
+OT  - Target trial emulation
+EDAT- 2026/05/23 06:33
+MHDA- 2026/05/23 06:33
+CRDT- 2026/05/23 05:42
+PHST- 2026/03/26 00:00 [received]
+PHST- 2026/05/03 00:00 [revised]
+PHST- 2026/05/23 06:33 [medline]
+PHST- 2026/05/23 06:33 [pubmed]
+PHST- 2026/05/23 05:42 [entrez]
+AID - 8691342 [pii]
+AID - 10.1093/eurjpc/zwag267 [doi]
+PST - aheadofprint
+SO  - Eur J Prev Cardiol. 2026 May 23:zwag267. doi: 10.1093/eurjpc/zwag267.
+
+PMID- 41307408
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20251127
+LR  - 20260313
+IS  - 1097-0258 (Electronic)
+IS  - 0277-6715 (Print)
+IS  - 0277-6715 (Linking)
+VI  - 44
+IP  - 28-30
+DP  - 2025 Dec
+TI  - A Tutorial for Propensity Score Weighting Methods Under Violations of the 
+      Positivity Assumption.
+PG  - e70329
+LID - 10.1002/sim.70329 [doi]
+LID - e70329
+AB  - Violations of the positivity assumption can render conventional causal estimands 
+      unidentifiable, including the average treatment effect (ATE), the average 
+      treatment effect on the treated (ATT), and the average treatment effect on the 
+      controls (ATC). Shifting the inferential focus to their alternative 
+      counterparts-the weighted ATE (WATE), the weighted ATT (WATT), and the weighted 
+      ATC (WATC)-offers valuable insights into treatment effects while preserving 
+      internal validity. In this tutorial, we provide a comprehensive review of recent 
+      advances in propensity score (PS) weighting methods, along with practical 
+      guidance on how to select a primary target estimand (while other estimands serve 
+      as supplementary analyses), implement the corresponding PS-weighted estimators, 
+      and conduct post-weighting diagnostic assessments. The tutorial is accompanied by 
+      a user-friendly R package, ChiPS. We demonstrate the pertinence of various 
+      estimators through extensive simulation studies. We illustrate the flow of the 
+      tutorial on two real-world case studies: (i) Effect of smoking on blood lead 
+      level using data from the 2007-2008 National Health and Nutrition Examination 
+      Survey (NHANES); and (ii) Impact of history of sex work on HIV status among 
+      transgender women in South Africa.
+CI  - (c) 2025 The Author(s). Statistics in Medicine published by John Wiley & Sons Ltd.
+FAU - Liu, Yi
+AU  - Liu Y
+AUID- ORCID: 0000-0002-0935-007X
+AD  - Department of Statistics, North Carolina State University, Raleigh, North 
+      Carolina, USA.
+AD  - Duke Clinical Research Institute, Durham, North Carolina, USA.
+FAU - Wang, Yuan
+AU  - Wang Y
+AD  - Department of Biostatistics and Bioinformatics, Duke University School of 
+      Medicine, Durham, North Carolina, USA.
+FAU - Gao, Ying
+AU  - Gao Y
+AD  - Department of Biostatistics and Bioinformatics, Duke University School of 
+      Medicine, Durham, North Carolina, USA.
+FAU - Poteat, Tonia
+AU  - Poteat T
+AUID- ORCID: 0000-0001-6541-3787
+AD  - School of Nursing, Duke University, Durham, North Carolina, USA.
+FAU - Matsouaka, Roland A
+AU  - Matsouaka RA
+AD  - Duke Clinical Research Institute, Durham, North Carolina, USA.
+AD  - Department of Biostatistics and Bioinformatics, Duke University School of 
+      Medicine, Durham, North Carolina, USA.
+LA  - eng
+GR  - P2C HD065563/HD/NICHD NIH HHS/United States
+GR  - T32HL079896/HL/NHLBI NIH HHS/United States
+PT  - Journal Article
+PL  - England
+TA  - Stat Med
+JT  - Statistics in medicine
+JID - 8215016
+SB  - IM
+MH  - *Propensity Score
+MH  - Humans
+MH  - Computer Simulation
+MH  - Nutrition Surveys
+MH  - Models, Statistical
+MH  - Data Interpretation, Statistical
+MH  - Smoking/adverse effects/blood
+MH  - Female
+PMC - PMC12659692
+OTO - NOTNLM
+OT  - causal inference
+OT  - overlap weights
+OT  - positivity
+OT  - target population
+OT  - unconfoundedness
+OT  - weighted average treatment effect
+COIS- The authors declare no conflicts of interest.
+EDAT- 2025/11/27 12:28
+MHDA- 2025/11/27 12:29
+PMCR- 2025/11/27
+CRDT- 2025/11/27 08:32
+PHST- 2025/11/03 00:00 [revised]
+PHST- 2025/06/03 00:00 [received]
+PHST- 2025/11/13 00:00 [accepted]
+PHST- 2025/11/27 12:29 [medline]
+PHST- 2025/11/27 12:28 [pubmed]
+PHST- 2025/11/27 08:32 [entrez]
+PHST- 2025/11/27 00:00 [pmc-release]
+AID - SIM70329 [pii]
+AID - 10.1002/sim.70329 [doi]
+PST - ppublish
+SO  - Stat Med. 2025 Dec;44(28-30):e70329. doi: 10.1002/sim.70329.
+
+PMID- 41123125
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20251228
+LR  - 20251228
+IS  - 1940-1183 (Electronic)
+IS  - 0022-4545 (Linking)
+VI  - 166
+IP  - 1
+DP  - 2026
+TI  - Investigating lived ostracism: valid causal inference requires articulating the 
+      causal estimand.
+PG  - 83-90
+LID - 10.1080/00224545.2025.2572657 [doi]
+AB  - The field of ostracism research is witnessing a growing interest in understanding 
+      ostracism - being excluded and ignored - as a lived experience outside of the 
+      laboratory context. How do researchers draw valid causal conclusions about 
+      naturally occurring experiences of ostracism without relying on experimental 
+      designs? In this article, we draw on insights from the well-established causal 
+      inference framework to emphasize a critical step for strengthening causal rigor: 
+      stating the causal estimand. Using an intuitive example, we illustrate what a 
+      causal estimand is, how to define it, and why it matters. With this article, we 
+      encourage readers to think clearly about causal estimands before conducting any 
+      data analysis. This conceptual step holds the potential for enhancing the rigor 
+      and precision of research studying ostracism as a naturally occurring phenomenon.
+FAU - Ren, Dongning
+AU  - Ren D
+AUID- ORCID: 0000-0001-7749-2419
+AD  - Maastricht University.
+FAU - Stavrova, Olga
+AU  - Stavrova O
+AUID- ORCID: 0000-0002-6079-4151
+AD  - University of Lubeck.
+AD  - Tilburg University.
+FAU - van Beest, Ilja
+AU  - van Beest I
+AD  - Tilburg University.
+FAU - van Dijk, Eric
+AU  - van Dijk E
+AD  - Leiden University.
+FAU - Loh, Wen Wei
+AU  - Loh WW
+AUID- ORCID: 0000-0001-7086-7281
+AD  - Maastricht University.
+LA  - eng
+PT  - Journal Article
+DEP - 20251022
+PL  - United States
+TA  - J Soc Psychol
+JT  - The Journal of social psychology
+JID - 0376372
+SB  - IM
+MH  - Humans
+MH  - *Social Isolation/psychology
+MH  - *Causality
+MH  - *Research Design
+OTO - NOTNLM
+OT  - Causal estimand
+OT  - causal inference
+OT  - effect of treatment on the treated (ETT)
+OT  - g-methods
+OT  - potential outcomes
+OT  - propensity score
+OT  - solitude seeking
+EDAT- 2025/10/22 12:31
+MHDA- 2025/12/28 18:30
+CRDT- 2025/10/22 07:33
+PHST- 2025/12/28 18:30 [medline]
+PHST- 2025/10/22 12:31 [pubmed]
+PHST- 2025/10/22 07:33 [entrez]
+AID - 10.1080/00224545.2025.2572657 [doi]
+PST - ppublish
+SO  - J Soc Psychol. 2026;166(1):83-90. doi: 10.1080/00224545.2025.2572657. Epub 2025 
+      Oct 22.
+
+PMID- 40960406
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20250917
+LR  - 20250919
+IS  - 1097-0258 (Electronic)
+IS  - 0277-6715 (Print)
+IS  - 0277-6715 (Linking)
+VI  - 44
+IP  - 20-22
+DP  - 2025 Sep
+TI  - The Estimand Framework in Diagnostic Accuracy Studies.
+PG  - e70248
+LID - 10.1002/sim.70248 [doi]
+LID - e70248
+AB  - Diagnostic accuracy studies evaluate how well a diagnostic test can detect or 
+      rule out a medical condition. Different events can interfere with the conduct of 
+      the test, affecting the test result. Before starting a diagnostic test accuracy 
+      study, the clinical question of interest should be precisely defined. Based on 
+      that, strategies can be chosen for dealing with the interfering event. We 
+      introduce six different strategies for how such events could be handled. We 
+      introduce the estimand concept for diagnostic accuracy studies, which consists of 
+      the attributes population, target condition, index test, accuracy measure, and 
+      the strategies for handling interfering events. The estimand determines which 
+      effect is estimated based on the study objective. To bridge the gap between the 
+      clinical study objective and the method for the estimation, we illustrate the 
+      necessary steps using a fictitious computed tomography scan study. The defined 
+      estimand improves the structure of the planning phase, enhances the 
+      interdisciplinary exchange, and supports the interpretation based on the study 
+      objective.
+CI  - (c) 2025 The Author(s). Statistics in Medicine published by John Wiley & Sons Ltd.
+FAU - Fierenz, Alexander
+AU  - Fierenz A
+AUID- ORCID: 0000-0002-5233-215X
+AD  - Institute of Medical Biometry and Epidemiology, University Medical Center 
+      Hamburg-Eppendorf, Hamburg, Germany.
+FAU - Akacha, Mouna
+AU  - Akacha M
+AD  - Clinical Development and Analytics, Novartis Pharma AG, Basel, Switzerland.
+FAU - Benda, Norbert
+AU  - Benda N
+AD  - Department of Medical Statistics, University Medical Center Gottingen, Gottingen, 
+      Germany.
+FAU - Badpa, Mahnaz
+AU  - Badpa M
+AD  - Institute of Medical Biometry and Epidemiology, University Medical Center 
+      Hamburg-Eppendorf, Hamburg, Germany.
+FAU - M M Bossuyt, Patrick
+AU  - M M Bossuyt P
+AD  - Department of Epidemiology and Data Science, Amsterdam University Medical Center, 
+      University of Amsterdam, Amsterdam, the Netherlands.
+FAU - Dendukuri, Nandini
+AU  - Dendukuri N
+AD  - Department of Epidemiology and Biostatistics, McGill University, Montreal, 
+      Quebec, Canada.
+FAU - Rackow, Britta
+AU  - Rackow B
+AD  - Institute of Medical Biometry and Epidemiology, University Medical Center 
+      Hamburg-Eppendorf, Hamburg, Germany.
+AD  - Institute of Health Economics and Health Care Research, University Medical Center 
+      Hamburg-Eppendorf, Hamburg, Germany.
+FAU - Zapf, Antonia
+AU  - Zapf A
+AUID- ORCID: 0000-0001-5339-2472
+AD  - Institute of Medical Biometry and Epidemiology, University Medical Center 
+      Hamburg-Eppendorf, Hamburg, Germany.
+LA  - eng
+GR  - ZA 687/6-1/Deutsche Forschungsgemeinschaft/
+PT  - Journal Article
+PL  - England
+TA  - Stat Med
+JT  - Statistics in medicine
+JID - 8215016
+SB  - IM
+MH  - Humans
+MH  - *Diagnostic Tests, Routine/standards/statistics & numerical data
+MH  - Tomography, X-Ray Computed
+MH  - Models, Statistical
+MH  - Data Interpretation, Statistical
+MH  - Computer Simulation
+PMC - PMC12442747
+OTO - NOTNLM
+OT  - ICH E9 addendum
+OT  - diagnostic accuracy study
+OT  - estimand
+OT  - index test
+OT  - interfering event
+OT  - missing values
+COIS- The authors declare no conflicts of interest.
+EDAT- 2025/09/17 12:45
+MHDA- 2025/09/17 12:46
+PMCR- 2025/09/17
+CRDT- 2025/09/17 10:02
+PHST- 2025/08/13 00:00 [revised]
+PHST- 2024/07/19 00:00 [received]
+PHST- 2025/08/19 00:00 [accepted]
+PHST- 2025/09/17 12:46 [medline]
+PHST- 2025/09/17 12:45 [pubmed]
+PHST- 2025/09/17 10:02 [entrez]
+PHST- 2025/09/17 00:00 [pmc-release]
+AID - SIM70248 [pii]
+AID - 10.1002/sim.70248 [doi]
+PST - ppublish
+SO  - Stat Med. 2025 Sep;44(20-22):e70248. doi: 10.1002/sim.70248.
+
+PMID- 40792445
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20250812
+LR  - 20260524
+IS  - 1539-1612 (Electronic)
+IS  - 1539-1604 (Print)
+IS  - 1539-1604 (Linking)
+VI  - 24
+IP  - 5
+DP  - 2025 Sep-Oct
+TI  - The Wilcoxon-Mann-Whitney Estimand Versus Differences in Medians or Means.
+PG  - e70036
+LID - 10.1002/pst.70036 [doi]
+AB  - There is a renewed interest in defining the target of estimation when designing 
+      randomized trials. Motivated by design work in trials of HIV-1 curative 
+      interventions, we compare the Wilcoxon-Mann-Whitney (WMW) estimand to a 
+      difference in medians or means in a two-arm study. First, we define each estimand 
+      along with an appropriate estimator. Then, we highlight relevant asymptotic 
+      relative efficiency (ARE) results for the estimators under normal distributions 
+      (ARE: WMW/mean = 3/pi , median/mean = 2/pi , median/WMW = 2/3 ), as well as normal 
+      mixtures. Measurement of outcomes related to HIV-1 cure involve laboratory assays 
+      with lower limits of quantification giving rise to left-censored data. In our 
+      simulation study, we compare the estimators in the presence of left-censored 
+      observations and at small sample sizes, illustrating that under a censored normal 
+      mixture distribution the WMW approach is unbiased, powerful, and has confidence 
+      intervals with nominal coverage. We apply our findings to a randomized trial 
+      designed to reduce HIV-1 reservoirs. We further expose several extensions of the 
+      WMW approach that allows for assessment of interactions between subgroups in a 
+      trial, adjustment for covariates, and general ranking methods for clinical 
+      outcomes in other disease areas. We end with a discussion summarizing the merits 
+      of a WMW based intervention effect estimate versus an estimate summarized on the 
+      scale the intervention was originally measured such as the difference in medians 
+      or means.
+CI  - (c) 2025 John Wiley & Sons Ltd.
+FAU - Harrison, Linda J
+AU  - Harrison LJ
+AUID- ORCID: 0000-0002-3170-0865
+AD  - Center for Biostatistics in AIDS Research, Department of Biostatistics, Harvard 
+      TH Chan School of Public Health, Boston, Massachusetts, USA.
+FAU - Bosch, Ronald J
+AU  - Bosch RJ
+AD  - Center for Biostatistics in AIDS Research, Department of Biostatistics, Harvard 
+      TH Chan School of Public Health, Boston, Massachusetts, USA.
+LA  - eng
+GR  - UM1 AI068634/AI/NIAID NIH HHS/United States
+GR  - UM1 AI068636/AI/NIAID NIH HHS/United States
+GR  - UM1 AI106701/AI/NIAID NIH HHS/United States
+PT  - Comparative Study
+PT  - Journal Article
+PL  - England
+TA  - Pharm Stat
+JT  - Pharmaceutical statistics
+JID - 101201192
+RN  - 0 (Anti-HIV Agents)
+SB  - IM
+MH  - Humans
+MH  - HIV Infections/drug therapy/virology
+MH  - *Randomized Controlled Trials as Topic/methods/statistics & numerical data
+MH  - HIV-1/drug effects
+MH  - Statistics, Nonparametric
+MH  - Anti-HIV Agents/therapeutic use
+MH  - Computer Simulation
+MH  - *Research Design/statistics & numerical data
+MH  - Data Interpretation, Statistical
+MH  - Sample Size
+PMC - PMC12379204
+MID - NIHMS2104067
+OTO - NOTNLM
+OT  - Mann-Whitney U
+OT  - Wilcoxon rank-sum
+OT  - least squares regression
+OT  - median regression
+OT  - tobit regression
+OT  - win probability
+COIS- The authors declare no potential conflicts of interests.
+EDAT- 2025/08/12 12:29
+MHDA- 2025/08/12 12:30
+PMCR- 2025/09/01
+CRDT- 2025/08/12 06:07
+PHST- 2025/04/04 00:00 [revised]
+PHST- 2025/04/04 00:00 [received]
+PHST- 2025/08/03 00:00 [accepted]
+PHST- 2025/08/12 12:30 [medline]
+PHST- 2025/08/12 12:29 [pubmed]
+PHST- 2025/08/12 06:07 [entrez]
+PHST- 2025/09/01 00:00 [pmc-release]
+AID - 10.1002/pst.70036 [doi]
+PST - ppublish
+SO  - Pharm Stat. 2025 Sep-Oct;24(5):e70036. doi: 10.1002/pst.70036.
+
+PMID- 39899793
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20250203
+LR  - 20250604
+IS  - 1526-632X (Electronic)
+IS  - 0028-3878 (Linking)
+VI  - 104
+IP  - 4
+DP  - 2025 Feb 25
+TI  - Distinguishing Description, Prediction, and Causal Inference: A Primer on 
+      Improving Congruence Between Research Questions and Methods.
+PG  - e210171
+LID - 10.1212/WNL.0000000000210171 [doi]
+AB  - This primer introduces the domains into which the aims of quantitative health 
+      research generally fall and provides tools to improve the methodological quality 
+      of observational clinical and population-based research articles-with a special 
+      focus on the field of neurology. Generally, research questions can be categorized 
+      into one of the following 3 data science domains: description, prediction, and 
+      causal inference. A descriptive question aims to quantify and describe the 
+      frequency and distribution of a given health condition in a certain population at 
+      or during a specific time. A predictive question aims to estimate either the 
+      probability of the presence of a given disease or health condition in an 
+      individual (diagnostic prediction) or the probability of an individual developing 
+      a disease of interest over a specified period (prognostic prediction). A causal 
+      question aims to estimate the causal effect of interest (estimand) of an exposure 
+      or intervention on an outcome in a given population. Depending on the research 
+      question, estimands could be the total causal effect, a mediated indirect effect, 
+      or effect (measure) modification by third variables, among others. Each of these 
+      domains comes with its own set of research methods, study designs, reporting 
+      guidelines, scientific language, strengths, and limitations, whereby the correct 
+      attribution of a research domain will have an impact in 3 ways: i) help authors 
+      to formulate appropriate research questions and choose and implement suitable 
+      study designs and methods; ii) allow reviewers and editors to assess studies with 
+      an increased focus on their clinical relevance, methodological advances, and 
+      novelty and quality of clinical evidence; and iii) facilitate clear communication 
+      of findings and clinical implications to the broader research community in 
+      neurology and related fields.
+FAU - Ito, Chisato
+AU  - Ito C
+AUID- ORCID: 0000-0002-8349-8224
+AD  - Institute of Public Health, Charite - Universitatsmedizin Berlin, Germany; and.
+FAU - Al-Hassany, Linda
+AU  - Al-Hassany L
+AUID- ORCID: 0000-0002-8699-7440
+AD  - Division of Vascular Medicine and Pharmacology, Department of Internal Medicine, 
+      Erasmus MC, University Medical Center Rotterdam, the Netherlands.
+FAU - Kurth, Tobias
+AU  - Kurth T
+AUID- ORCID: 0000-0001-7169-2620
+AD  - Institute of Public Health, Charite - Universitatsmedizin Berlin, Germany; and.
+FAU - Glatz, Toivo
+AU  - Glatz T
+AUID- ORCID: 0000-0002-8994-7860
+AD  - Institute of Public Health, Charite - Universitatsmedizin Berlin, Germany; and.
+LA  - eng
+PT  - Journal Article
+PT  - Review
+DEP - 20250203
+PL  - United States
+TA  - Neurology
+JT  - Neurology
+JID - 0401060
+SB  - IM
+MH  - Humans
+MH  - *Research Design/standards
+MH  - *Causality
+MH  - *Biomedical Research/methods
+EDAT- 2025/02/03 18:20
+MHDA- 2025/02/03 18:21
+CRDT- 2025/02/03 16:03
+PHST- 2025/02/03 18:21 [medline]
+PHST- 2025/02/03 18:20 [pubmed]
+PHST- 2025/02/03 16:03 [entrez]
+AID - 10.1212/WNL.0000000000210171 [doi]
+PST - ppublish
+SO  - Neurology. 2025 Feb 25;104(4):e210171. doi: 10.1212/WNL.0000000000210171. Epub 
+      2025 Feb 3.
+
+PMID- 38558147
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20251006
+LR  - 20260127
+IS  - 1433-8491 (Electronic)
+IS  - 0940-1334 (Print)
+IS  - 0940-1334 (Linking)
+VI  - 275
+IP  - 6
+DP  - 2025 Sep
+TI  - Lavender oil preparation Silexan is effective in mild-to-moderate major 
+      depression: a randomized, placebo- and reference-controlled trial.
+PG  - 1693-1703
+LID - 10.1007/s00406-024-01783-2 [doi]
+AB  - Anxiety and depressive disorders have overlapping symptoms and share common 
+      neurobiological pathways. Antidepressant drugs have been demonstrated to be 
+      efficacious in anxiety as well. Vice versa, it may also be promising to 
+      investigate the efficacy of anxiolytic drugs such as silexan in major depressive 
+      disorder (MDD). Patients with a mild or moderate, single or recurrent episode of 
+      MDD and a total score of 19-34 points on the Montgomery Asberg Depression Rating 
+      Scale (MADRS) were randomized to receive 1 x 80 mg/d silexan, 1 x 50 mg/d 
+      sertraline, or placebo double-blind, double-dummy for 56 days. The primary 
+      outcome measure was the MADRS total score change between baseline and treatment 
+      end. Treatment groups were compared using a treatment policy estimand. 498 
+      subjects (silexan 170, sertraline 171, placebo 157) were treated and analyzed. 
+      After 8 weeks, silexan and sertraline were superior to placebo for MADRS total 
+      score reduction, with absolute differences to placebo of 2.17 (95% confidence 
+      interval: 0.58; 3.76) points and 2.59 (1.02; 4.17) points, respectively 
+      (p < 0.01). Moreover, silexan was superior to placebo for alleviation of 
+      functional impairment according to the Sheehan Disability Scale with a difference 
+      of 2.40 (1.04; 3.76) points (p < 0.001). Both treatments were well tolerated; 
+      eructation was the most frequent adverse effect of silexan. The study confirms 
+      the antidepressant efficacy of silexan in mild or moderate MDD, including 
+      significant improvements in the subjects' functional capacity. The results for 
+      sertraline confirm the assay sensitivity of the trial. Both drugs were well 
+      tolerated.Trial registrationEudraCT2020-000688-22 first entered on 12/08/2020.
+CI  - (c) 2024. The Author(s).
+FAU - Kasper, Siegfried
+AU  - Kasper S
+AUID- ORCID: 0000-0001-8278-191X
+AD  - Center for Brain Research, Medical University of Vienna, Spitalgasse 4, 1090, 
+      Vienna, Austria. siegfried.kasper@meduniwien.ac.at.
+FAU - Volz, Hans-Peter
+AU  - Volz HP
+AD  - Wurzburg, Former Medical Director Hospital for Psychiatry, Psychotherapy and 
+      Psychosomatic Medicine Schloss Werneck, Werneck, Germany.
+FAU - Moller, Hans-Jurgen
+AU  - Moller HJ
+AD  - Clinic and Policlinic for Psychiatry and Psychotherapy, Ludwig Maximilian 
+      University, Munich, Germany.
+FAU - Schlafke, Sandra
+AU  - Schlafke S
+AD  - Department of Research and Development, Dr. Willmar Schwabe GmbH & Co. KG, 
+      Karlsruhe, Germany.
+FAU - Klement, Stephan
+AU  - Klement S
+AD  - Department of Research and Development, Dr. Willmar Schwabe GmbH & Co. KG, 
+      Karlsruhe, Germany.
+FAU - Anghelescu, Ion-George
+AU  - Anghelescu IG
+AD  - Clinic of Psychiatry and Psychotherapy, Mental Health Institute Berlin, Berlin, 
+      Germany.
+FAU - Seifritz, Erich
+AU  - Seifritz E
+AD  - Department of Psychiatry, Psychotherapy and Psychosomatics, Psychiatric Hospital, 
+      University of Zurich, Zurich, Switzerland.
+LA  - eng
+PT  - Journal Article
+PT  - Randomized Controlled Trial
+DEP - 20240401
+PL  - Germany
+TA  - Eur Arch Psychiatry Clin Neurosci
+JT  - European archives of psychiatry and clinical neuroscience
+JID - 9103030
+RN  - QUC7NX6WMB (Sertraline)
+RN  - ZBP1YXW0H8 (lavender oil)
+RN  - 0 (Oils, Volatile)
+RN  - 0 (Plant Oils)
+RN  - 0 (Antidepressive Agents)
+SB  - IM
+MH  - Humans
+MH  - *Major Depressive Disorder/drug therapy
+MH  - *Sertraline/pharmacology/administration & dosage
+MH  - Female
+MH  - Adult
+MH  - Male
+MH  - Middle Aged
+MH  - Double-Blind Method
+MH  - *Oils, Volatile/pharmacology/administration & dosage
+MH  - Lavandula
+MH  - *Plant Oils/pharmacology/administration & dosage
+MH  - *Antidepressive Agents/pharmacology/administration & dosage
+MH  - *Outcome Assessment, Health Care
+MH  - Young Adult
+MH  - Aged
+PMC - PMC12500811
+OTO - NOTNLM
+OT  - Clinical trial
+OT  - Depression
+OT  - Lavender
+OT  - Silexan
+OT  - Treatment efficacy
+COIS- Declarations. Conflict of interest: S. Ka. served in the past 3 years Dr Kasper 
+      as a consultant or on advisory boards for Angelini, Biogen, Boehringer, Esai, 
+      Janssen, IQVIA, Mylan, Recordati, Rovi, Sage and Schwabe; and he has served on 
+      speakers bureaus for Angelini, Aspen Farmaceutica S.A., Biogen, Janssen, 
+      Recordati, Schwabe, Servier, Sothema, and Sun Pharma. H.-P. V received 
+      grants/speaker honoraria from Lundbeck, Pfizer, Schwabe (Spitzner), Bayer, 
+      Janssen, neuraxpharm, AstraZeneca. H.-J. M. has received grant/research support, 
+      consulting fees and honoraria within the last years from AstraZeneca, Lundbeck, 
+      Otsuka, and Schwabe. S. S. and S. K. are employees of Dr. Willmar Schwabe GmbH & 
+      Co. KG, the sponsor of the study. I.G. A. served as a consultant, on advisory 
+      boards or as a speaker for Aristo Pharma, Dr. Wilmar Schwabe, Janssen 
+      Pharmaceutica, Merck Pharma, Recordati Pharma. E. S. received in the last three 
+      years grants from Swiss National Science Foundation and University of Zurich, and 
+      honoraria for advise and educational activities from Lundbeck, Schwabe, Janssen, 
+      Otsuka, Mepha Pharma, Otsuka Pharma, Recordati, OM Pharma, Takeda, Sunovion 
+      Pharma and Angelini.
+EDAT- 2024/04/01 18:42
+MHDA- 2025/10/06 12:31
+PMCR- 2024/04/01
+CRDT- 2024/04/01 16:24
+PHST- 2023/12/29 00:00 [received]
+PHST- 2024/02/16 00:00 [accepted]
+PHST- 2025/10/06 12:31 [medline]
+PHST- 2024/04/01 18:42 [pubmed]
+PHST- 2024/04/01 16:24 [entrez]
+PHST- 2024/04/01 00:00 [pmc-release]
+AID - 10.1007/s00406-024-01783-2 [pii]
+AID - 1783 [pii]
+AID - 10.1007/s00406-024-01783-2 [doi]
+PST - ppublish
+SO  - Eur Arch Psychiatry Clin Neurosci. 2025 Sep;275(6):1693-1703. doi: 
+      10.1007/s00406-024-01783-2. Epub 2024 Apr 1.
+
+PMID- 37429738
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20231122
+LR  - 20240510
+IS  - 1539-1612 (Electronic)
+IS  - 1539-1604 (Linking)
+VI  - 22
+IP  - 6
+DP  - 2023 Nov-Dec
+TI  - Two-sample inference procedures under nonproportional hazards.
+PG  - 1016-1030
+LID - 10.1002/pst.2324 [doi]
+AB  - We introduce a new two-sample inference procedure to assess the relative 
+      performance of two groups over time. Our model-free method does not assume 
+      proportional hazards, making it suitable for scenarios where nonproportional 
+      hazards may exist. Our procedure includes a diagnostic tau plot to identify 
+      changes in hazard timing and a formal inference procedure. The tau-based measures 
+      we develop are clinically meaningful and provide interpretable estimands to 
+      summarize the treatment effect over time. Our proposed statistic is a U-statistic 
+      and exhibits a martingale structure, allowing us to construct confidence 
+      intervals and perform hypothesis testing. Our approach is robust with respect to 
+      the censoring distribution. We also demonstrate how our method can be applied for 
+      sensitivity analysis in scenarios with missing tail information due to 
+      insufficient follow-up. Without censoring, Kendall's tau estimator we propose 
+      reduces to the Wilcoxon-Mann-Whitney statistic. We evaluate our method using 
+      simulations to compare its performance with the restricted mean survival time and 
+      log-rank statistics. We also apply our approach to data from several published 
+      oncology clinical trials where nonproportional hazards may exist.
+CI  - (c) 2023 John Wiley & Sons Ltd.
+FAU - Tai, Yi-Cheng
+AU  - Tai YC
+AUID- ORCID: 0000-0003-3298-0552
+AD  - Institute of Statistics, National Yang Ming Chiao Tung University, Hsin-Chu City, 
+      Taiwan, ROC.
+FAU - Wang, Weijing
+AU  - Wang W
+AUID- ORCID: 0000-0001-6569-083X
+AD  - Institute of Statistics, National Yang Ming Chiao Tung University, Hsin-Chu City, 
+      Taiwan, ROC.
+FAU - Wells, Martin T
+AU  - Wells MT
+AUID- ORCID: 0000-0002-9750-9529
+AD  - Department of Statistics and Data Science, Cornell University, Ithaca, New York, 
+      USA.
+LA  - eng
+GR  - R01GM135926/NH/NIH HHS/United States
+GR  - 1P01-AI159402/NH/NIH HHS/United States
+GR  - R01GM135926/NH/NIH HHS/United States
+GR  - 1P01-AI159402/NH/NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20230710
+PL  - England
+TA  - Pharm Stat
+JT  - Pharmaceutical statistics
+JID - 101201192
+SB  - IM
+MH  - Humans
+MH  - Proportional Hazards Models
+MH  - *Neoplasms
+MH  - Medical Oncology
+MH  - Research Design
+MH  - Survival Analysis
+OTO - NOTNLM
+OT  - IPCW
+OT  - Kendall's tau
+OT  - MaxCombo
+OT  - crossing survival functions
+OT  - delayed treatment effect
+OT  - interpretable estimand
+OT  - nonproportional hazards
+OT  - restricted mean survival time
+OT  - sensitivity analysis
+EDAT- 2023/07/11 01:08
+MHDA- 2023/11/22 06:43
+CRDT- 2023/07/10 21:37
+PHST- 2023/05/11 00:00 [revised]
+PHST- 2023/03/22 00:00 [received]
+PHST- 2023/06/23 00:00 [accepted]
+PHST- 2023/11/22 06:43 [medline]
+PHST- 2023/07/11 01:08 [pubmed]
+PHST- 2023/07/10 21:37 [entrez]
+AID - 10.1002/pst.2324 [doi]
+PST - ppublish
+SO  - Pharm Stat. 2023 Nov-Dec;22(6):1016-1030. doi: 10.1002/pst.2324. Epub 2023 Jul 
+      10.
+
+PMID- 35861622
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20231023
+LR  - 20231024
+IS  - 1468-4357 (Electronic)
+IS  - 1465-4644 (Linking)
+VI  - 24
+IP  - 4
+DP  - 2023 Oct 18
+TI  - A flexible approach for predictive biomarker discovery.
+PG  - 1085-1105
+LID - 10.1093/biostatistics/kxac029 [doi]
+AB  - An endeavor central to precision medicine is predictive biomarker discovery; they 
+      define patient subpopulations which stand to benefit most, or least, from a given 
+      treatment. The identification of these biomarkers is often the byproduct of the 
+      related but fundamentally different task of treatment rule estimation. Using 
+      treatment rule estimation methods to identify predictive biomarkers in clinical 
+      trials where the number of covariates exceeds the number of participants often 
+      results in high false discovery rates. The higher than expected number of false 
+      positives translates to wasted resources when conducting follow-up experiments 
+      for drug target identification and diagnostic assay development. Patient outcomes 
+      are in turn negatively affected. We propose a variable importance parameter for 
+      directly assessing the importance of potentially predictive biomarkers and 
+      develop a flexible nonparametric inference procedure for this estimand. We prove 
+      that our estimator is double robust and asymptotically linear under loose 
+      conditions in the data-generating process, permitting valid inference about the 
+      importance metric. The statistical guarantees of the method are verified in a 
+      thorough simulation study representative of randomized control trials with 
+      moderate and high-dimensional covariate vectors. Our procedure is then used to 
+      discover predictive biomarkers from among the tumor gene expression data of 
+      metastatic renal cell carcinoma patients enrolled in recently completed clinical 
+      trials. We find that our approach more readily discerns predictive from 
+      nonpredictive biomarkers than procedures whose primary purpose is treatment rule 
+      estimation. An open-source software implementation of the methodology, the 
+      uniCATE R package, is briefly introduced.
+CI  - (c) The Author 2022. Published by Oxford University Press. All rights reserved. For 
+      permissions, please e-mail: journals.permissions@oup.com.
+FAU - Boileau, Philippe
+AU  - Boileau P
+AUID- ORCID: 0000-0002-4850-2507
+AD  - Graduate Group in Biostatistics and Center for Computational Biology, University 
+      of California, Berkeley, Berkeley, CA 94720, USA.
+FAU - Qi, Nina Ting
+AU  - Qi NT
+AD  - Genentech Inc., 1 DNA Way, South San Francisco, CA 94080, USA.
+FAU - van der Laan, Mark J
+AU  - van der Laan MJ
+AD  - Division of Biostatistics, Department of Statistics, Center for Computational 
+      Biology, University of California, Berkeley, Berkeley, CA 94720, USA.
+FAU - Dudoit, Sandrine
+AU  - Dudoit S
+AD  - Division of Biostatistics, Department of Statistics, Center for Computational 
+      Biology, University of California, Berkeley, Berkeley, CA 94720, USA.
+FAU - Leng, Ning
+AU  - Leng N
+AD  - Genentech Inc., 1 DNA Way, South San Francisco, CA 94080, USA.
+LA  - eng
+PT  - Journal Article
+PT  - Randomized Controlled Trial
+PT  - Research Support, Non-U.S. Gov't
+PL  - England
+TA  - Biostatistics
+JT  - Biostatistics (Oxford, England)
+JID - 100897327
+RN  - 0 (Biomarkers)
+SB  - IM
+MH  - Humans
+MH  - *Carcinoma, Renal Cell/diagnosis/genetics
+MH  - *Kidney Neoplasms/diagnosis/genetics
+MH  - Biomarkers
+MH  - Computer Simulation
+MH  - *Biomedical Research
+OTO - NOTNLM
+OT  - Heterogeneous treatment effects
+OT  - High-dimensional data
+OT  - Nonparametric statistics
+OT  - Precision medicine
+OT  - Predictive biomarkers
+OT  - Variable importance
+EDAT- 2022/07/22 06:00
+MHDA- 2023/10/23 00:43
+CRDT- 2022/07/21 09:54
+PHST- 2022/02/07 00:00 [received]
+PHST- 2022/06/01 00:00 [revised]
+PHST- 2022/06/27 00:00 [accepted]
+PHST- 2023/10/23 00:43 [medline]
+PHST- 2022/07/22 06:00 [pubmed]
+PHST- 2022/07/21 09:54 [entrez]
+AID - 6647929 [pii]
+AID - 10.1093/biostatistics/kxac029 [doi]
+PST - ppublish
+SO  - Biostatistics. 2023 Oct 18;24(4):1085-1105. doi: 10.1093/biostatistics/kxac029.
+
+PMID- 33982316
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20211025
+LR  - 20221005
+IS  - 1097-0258 (Electronic)
+IS  - 0277-6715 (Print)
+IS  - 0277-6715 (Linking)
+VI  - 40
+IP  - 19
+DP  - 2021 Aug 30
+TI  - Propensity score weighting for causal subgroup analysis.
+PG  - 4294-4309
+LID - 10.1002/sim.9029 [doi]
+AB  - A common goal in comparative effectiveness research is to estimate treatment 
+      effects on prespecified subpopulations of patients. Though widely used in medical 
+      research, causal inference methods for such subgroup analysis (SGA) remain 
+      underdeveloped, particularly in observational studies. In this article, we 
+      develop a suite of analytical methods and visualization tools for causal SGA. 
+      First, we introduce the estimand of subgroup weighted average treatment effect 
+      and provide the corresponding propensity score weighting estimator. We show that 
+      balancing covariates within a subgroup bounds the bias of the estimator of 
+      subgroup causal effects. Second, we propose to use the overlap weighting (OW) 
+      method to achieve exact balance within subgroups. We further propose a method 
+      that combines OW and LASSO, to balance the bias-variance tradeoff in SGA. 
+      Finally, we design a new diagnostic graph-the Connect-S plot-for visualizing the 
+      subgroup covariate balance. Extensive simulation studies are presented to compare 
+      the proposed method with several existing methods. We apply the proposed methods 
+      to the patient-centered results for uterine fibroids (COMPARE-UF) registry data 
+      to evaluate alternative management options for uterine fibroids for relief of 
+      symptoms and quality of life.
+CI  - (c) 2021 The Authors. Statistics in Medicine published by John Wiley & Sons Ltd.
+FAU - Yang, Siyun
+AU  - Yang S
+AUID- ORCID: 0000-0003-2895-532X
+AD  - Department of Biostatistics and Bioinformatics, Duke University School of 
+      Medicine, Durham, North Carolina, USA.
+FAU - Lorenzi, Elizabeth
+AU  - Lorenzi E
+AD  - Berry Consultants, Austin, Texas, USA.
+FAU - Papadogeorgou, Georgia
+AU  - Papadogeorgou G
+AUID- ORCID: 0000-0002-1982-2245
+AD  - Department of Statistics, University of Florida, Gainesville, Florida, USA.
+FAU - Wojdyla, Daniel M
+AU  - Wojdyla DM
+AD  - Duke Clinical Research Institute, Duke University School of Medicine, Durham, 
+      North Carolina, USA.
+FAU - Li, Fan
+AU  - Li F
+AUID- ORCID: 0000-0002-0390-3673
+AD  - Department of Statistical Science, Duke University, Durham, North Carolina, USA.
+FAU - Thomas, Laine E
+AU  - Thomas LE
+AUID- ORCID: 0000-0002-5340-8742
+AD  - Department of Biostatistics and Bioinformatics, Duke University School of 
+      Medicine, Durham, North Carolina, USA.
+AD  - Duke Clinical Research Institute, Duke University School of Medicine, Durham, 
+      North Carolina, USA.
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+DEP - 20210512
+PL  - England
+TA  - Stat Med
+JT  - Statistics in medicine
+JID - 8215016
+SB  - IM
+MH  - Bias
+MH  - Causality
+MH  - Humans
+MH  - Propensity Score
+MH  - *Quality of Life
+MH  - *Research Design
+PMC - PMC8360075
+OTO - NOTNLM
+OT  - balancing weights
+OT  - causal inference
+OT  - covariate balance
+OT  - effect modification
+OT  - interaction
+OT  - overlap weights
+OT  - propensity score
+OT  - subgroup analysis
+EDAT- 2021/05/14 06:00
+MHDA- 2021/10/26 06:00
+PMCR- 2021/08/12
+CRDT- 2021/05/13 06:45
+PHST- 2021/03/20 00:00 [revised]
+PHST- 2020/10/12 00:00 [received]
+PHST- 2021/04/25 00:00 [accepted]
+PHST- 2021/05/14 06:00 [pubmed]
+PHST- 2021/10/26 06:00 [medline]
+PHST- 2021/05/13 06:45 [entrez]
+PHST- 2021/08/12 00:00 [pmc-release]
+AID - SIM9029 [pii]
+AID - 10.1002/sim.9029 [doi]
+PST - ppublish
+SO  - Stat Med. 2021 Aug 30;40(19):4294-4309. doi: 10.1002/sim.9029. Epub 2021 May 12.
+
+PMID- 33377537
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20220425
+LR  - 20220425
+IS  - 1521-4036 (Electronic)
+IS  - 0323-3847 (Linking)
+VI  - 64
+IP  - 2
+DP  - 2022 Feb
+TI  - Discussion on "Correct and logical causal inference for binary and time-to-event 
+      outcomes in randomized controlled trials" by Yi Liu, Bushi Wang, Miao Yang, 
+      Jianan Hui, Heng Xu, Siyoen Kil, and Jason C. Hsu.
+PG  - 225-234
+LID - 10.1002/bimj.202000320 [doi]
+AB  - In their paper, Liu et al. (2020) pointed out illogical discrepancies between 
+      subgroup and overall causal effects for some efficacy measures, in particular the 
+      odds and hazard ratios. As the authors show, the culprit is subgroups having 
+      prognostic effects within treatment arms. In response to their provocative 
+      findings, we found that the odds and hazard ratios are logic respecting when the 
+      subgroups are purely predictive, that is, the distribution of the potential 
+      outcome for the control treatment is homogeneous across subgroups. We also found 
+      that when we redefined the odds and hazards ratio causal estimands in terms of 
+      the joint distribution of the potential outcomes, the discrepancies are resolved 
+      under specific models in which the potential outcomes are conditionally 
+      independent. In response to other discussion points in the paper, we also provide 
+      remarks on association versus causation, confounding, statistical computing 
+      software, and dichotomania.
+CI  - (c) 2020 Wiley-VCH GmbH.
+FAU - Pennello, Gene
+AU  - Pennello G
+AUID- ORCID: 0000-0002-9779-1165
+AD  - Division of Imaging, Diagnostic and Software Reliability, Office of Science and 
+      Engineering Laboratories, Center for Devices and Radiological Health, U.S. Food 
+      and Drug Administration, Silver Spring, MD, USA.
+FAU - Xu, Dandan
+AU  - Xu D
+AD  - Division of Biostatistics, Office of Clinical Evidence and Analysis, Office of 
+      Product Evaluation and Quality, Center for Devices and Radiological Health, U.S. 
+      Food and Drug Administration, Silver Spring, MD, USA.
+LA  - eng
+PT  - Comment
+PT  - Journal Article
+DEP - 20201230
+PL  - Germany
+TA  - Biom J
+JT  - Biometrical journal. Biometrische Zeitschrift
+JID - 7708048
+RN  - 0 (Plant Extracts)
+RN  - 0 (bushi)
+SB  - IM
+CON - Biom J. 2022 Feb;64(2):198-224. doi: 10.1002/bimj.202000202. PMID: 35152457
+MH  - *Logic
+MH  - Plant Extracts
+MH  - Proportional Hazards Models
+MH  - Randomized Controlled Trials as Topic
+MH  - *Software
+OTO - NOTNLM
+OT  - causal inference
+OT  - companion diagnostic
+OT  - confounding
+OT  - estimand
+OT  - prognostic and predictive biomarkers
+OT  - subgroup analysis
+EDAT- 2020/12/31 06:00
+MHDA- 2022/04/26 06:00
+CRDT- 2020/12/30 08:36
+PHST- 2020/11/28 00:00 [revised]
+PHST- 2020/10/26 00:00 [received]
+PHST- 2020/11/28 00:00 [accepted]
+PHST- 2020/12/31 06:00 [pubmed]
+PHST- 2022/04/26 06:00 [medline]
+PHST- 2020/12/30 08:36 [entrez]
+AID - 10.1002/bimj.202000320 [doi]
+PST - ppublish
+SO  - Biom J. 2022 Feb;64(2):225-234. doi: 10.1002/bimj.202000320. Epub 2020 Dec 30.
+
+PMID- 31007315
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+LR  - 20250530
+IS  - 0162-1459 (Print)
+IS  - 1537-274X (Electronic)
+IS  - 0162-1459 (Linking)
+VI  - 113
+IP  - 522
+DP  - 2018
+TI  - Statistical Methods for Standard Membrane-Feeding Assays to Measure Transmission 
+      Blocking or Reducing Activity in Malaria.
+PG  - 534-545
+LID - 10.1080/01621459.2017.1356313 [doi]
+AB  - Transmission blocking vaccines for malaria are not designed to directly protect 
+      vaccinated people from malaria disease, but to reduce the probability of 
+      infecting other people by interfering with the growth of the malaria parasite in 
+      mosquitoes. Standard membrane-feeding assays compare the growth of parasites in 
+      mosquitoes from a test sample (using antibodies from a vaccinated person) 
+      compared to a control sample. There is debate about whether to estimate the 
+      transmission reducing activity (TRA) which compares the mean number of parasites 
+      between test and control samples, or transmission blocking activity (TBA) which 
+      compares the proportion of infected mosquitoes. TBA appears biologically more 
+      important since each mosquito with any parasites is potentially infective; 
+      however, TBA is less reproducible and may be an overly strict criterion for 
+      screening vaccine candidates. Through a statistical model, we show that the TBA 
+      estimand depends on mu (c) , the mean number of parasites in the control 
+      mosquitoes, a parameter not easily experimentally controlled. We develop a 
+      standardized TBA estimator based on the model and a given target value for mu (c) 
+      which has better mean squared error than alternative methods. We discuss types of 
+      statistical inference needed for using these assays for vaccine development.
+FAU - Swihart, Bruce J
+AU  - Swihart BJ
+AD  - Biostatistics Research Branch, NIAID, NIH, Rockville, MD.
+FAU - Fay, Michael P
+AU  - Fay MP
+AD  - Biostatistics Research Branch, NIAID, NIH, Rockville, MD.
+FAU - Miura, Kazutoyo
+AU  - Miura K
+AD  - National Institute of Allergy and Infectious Diseases, Laboratory of Malaria and 
+      Vector Research, National Institutes of Health, Rockville, MD.
+LA  - eng
+GR  - Z99 AI999999/ImNIH/Intramural NIH HHS/United States
+PT  - Journal Article
+DEP - 20180612
+PL  - United States
+TA  - J Am Stat Assoc
+JT  - Journal of the American Statistical Association
+JID - 01510020R
+PMC - PMC6469714
+MID - NIHMS1515013
+OTO - NOTNLM
+OT  - Plasmodium falciparum
+OT  - assay normalization
+OT  - negative binomial
+OT  - standardization
+OT  - zero inflation
+EDAT- 2018/01/01 00:00
+MHDA- 2018/01/01 00:01
+PMCR- 2019/06/12
+CRDT- 2019/04/23 06:00
+PHST- 2019/04/23 06:00 [entrez]
+PHST- 2018/01/01 00:00 [pubmed]
+PHST- 2018/01/01 00:01 [medline]
+PHST- 2019/06/12 00:00 [pmc-release]
+AID - 10.1080/01621459.2017.1356313 [doi]
+PST - ppublish
+SO  - J Am Stat Assoc. 2018;113(522):534-545. doi: 10.1080/01621459.2017.1356313. Epub 
+      2018 Jun 12.
+
+PMID- 29238650
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+LR  - 20240327
+IS  - 2193-3677 (Print)
+IS  - 2193-3685 (Electronic)
+IS  - 2193-3685 (Linking)
+VI  - 5
+IP  - 1
+DP  - 2017 Mar
+TI  - Identification of the joint effect of a dynamic treatment intervention and a 
+      stochastic monitoring intervention under the no direct effect assumption.
+LID - 20160015 [pii]
+LID - 10.1515/jci-2016-0015 [doi]
+AB  - The management of chronic conditions is characterized by frequent re-assessment 
+      of therapy decisions in response to the patient's changing condition over the 
+      course of the illness. Evidence most suitable to inform care thus often concerns 
+      the contrast of adaptive treatment strategies that repeatedly personalize 
+      treatment decisions over time using the latest accumulated data available from 
+      the patient's previous clinic visits such as laboratory exams (e.g., hemoglobin 
+      A1c measurements in diabetes care). The frequency at which such information is 
+      monitored implicitly defines the causal estimand that is typically evaluated in 
+      an observational or randomized study of such adaptive treatment strategies. 
+      Analytic control of monitoring with standard estimation approaches for 
+      time-varying interventions can therefore not only improve study generalizibility 
+      but also inform the optimal timing of clinical surveillance. Valid inference with 
+      these estimators requires the upholding of a positivity assumption that can 
+      hinder their applicability. To potentially weaken this requirement for monitoring 
+      control, we introduce identifiability results that will facilitate the derivation 
+      of alternate estimators of effects defined by general joint treatment and 
+      monitoring interventions in the context of time-to-event outcomes. These results 
+      are developed based on the nonparametric structural equation modeling framework 
+      using a no direct effect assumption originally introduced in a prior paper that 
+      inspired this work. The relevance and scope of the results presented here are 
+      illustrated with examples in diabetes comparative effectiveness research.
+FAU - Neugebauer, Romain
+AU  - Neugebauer R
+AD  - Division of Research, Kaiser Permanente Northern California, Oakland, CA.
+FAU - Schmittdiel, Julie A
+AU  - Schmittdiel JA
+AD  - Division of Research, Kaiser Permanente Northern California, Oakland, CA.
+FAU - Adams, Alyce S
+AU  - Adams AS
+AD  - Division of Research, Kaiser Permanente Northern California, Oakland, CA.
+FAU - Grant, Richard W
+AU  - Grant RW
+AD  - Division of Research, Kaiser Permanente Northern California, Oakland, CA.
+FAU - van der Laan, Mark J
+AU  - van der Laan MJ
+AD  - Division of Biostatistics, School of Public Health, University of California, 
+      Berkeley, CA.
+LA  - eng
+GR  - P30 DK092924/DK/NIDDK NIH HHS/United States
+GR  - R01 AI074345/AI/NIAID NIH HHS/United States
+PT  - Journal Article
+DEP - 20170118
+PL  - Germany
+TA  - J Causal Inference
+JT  - Journal of causal inference
+JID - 101628371
+PMC - PMC5724814
+MID - NIHMS873853
+OTO - NOTNLM
+OT  - counterfactual identifiability
+OT  - dynamic intervention
+OT  - effect of monitoring
+OT  - no direct effect assumption
+OT  - stochastic intervention
+OT  - time-varying treatment
+EDAT- 2017/12/15 06:00
+MHDA- 2017/12/15 06:01
+PMCR- 2017/12/11
+CRDT- 2017/12/15 06:00
+PHST- 2017/12/15 06:00 [entrez]
+PHST- 2017/12/15 06:00 [pubmed]
+PHST- 2017/12/15 06:01 [medline]
+PHST- 2017/12/11 00:00 [pmc-release]
+AID - 20160015 [pii]
+AID - 10.1515/jci-2016-0015 [doi]
+PST - ppublish
+SO  - J Causal Inference. 2017 Mar;5(1):20160015. doi: 10.1515/jci-2016-0015. Epub 2017 
+      Jan 18.
+
+PMID- 25954056
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+LR  - 20240322
+IS  - 0162-1459 (Print)
+IS  - 1537-274X (Electronic)
+IS  - 0162-1459 (Linking)
+VI  - 110
+IP  - 509
+DP  - 2015 Mar 1
+TI  - Estimating a structured covariance matrix from multi-lab measurements in 
+      high-throughput biology.
+PG  - 27-44
+AB  - We consider the problem of quantifying the degree of coordination between 
+      transcription and translation, in yeast. Several studies have reported a 
+      surprising lack of coordination over the years, in organisms as different as 
+      yeast and human, using diverse technologies. However, a close look at this 
+      literature suggests that the lack of reported correlation may not reflect the 
+      biology of regulation. These reports do not control for between-study biases and 
+      structure in the measurement errors, ignore key aspects of how the data connect 
+      to the estimand, and systematically underestimate the correlation as a 
+      consequence. Here, we design a careful meta-analysis of 27 yeast data sets, 
+      supported by a multilevel model, full uncertainty quantification, a suite of 
+      sensitivity analyses and novel theory, to produce a more accurate estimate of the 
+      correlation between mRNA and protein levels-a proxy for coordination. From a 
+      statistical perspective, this problem motivates new theory on the impact of 
+      noise, model mis-specifications and non-ignorable missing data on estimates of 
+      the correlation between high dimensional responses. We find that the correlation 
+      between mRNA and protein levels is quite high under the studied conditions, in 
+      yeast, suggesting that post-transcriptional regulation plays a less prominent 
+      role than previously thought.
+FAU - Franks, Alexander M
+AU  - Franks AM
+AD  - Department of Statistics at Harvard University.
+FAU - Csardi, Gabor
+AU  - Csardi G
+AD  - Department of Statistics at Harvard University.
+FAU - Drummond, D Allan
+AU  - Drummond DA
+AD  - Biochemistry and Molecular Biology at the University of Chicago.
+FAU - Airoldi, Edoardo M
+AU  - Airoldi EM
+AD  - Statistics at Harvard.
+LA  - eng
+GR  - P50 GM068763/GM/NIGMS NIH HHS/United States
+GR  - R01 GM088344/GM/NIGMS NIH HHS/United States
+GR  - R01 GM096193/GM/NIGMS NIH HHS/United States
+PT  - Journal Article
+PL  - United States
+TA  - J Am Stat Assoc
+JT  - Journal of the American Statistical Association
+JID - 01510020R
+PMC - PMC4418505
+MID - NIHMS632936
+OTO - NOTNLM
+OT  - high-dimensional inference
+OT  - high-throughput biology
+OT  - inter-laboratory comparisons
+OT  - measurement error
+OT  - non-ignorable missing data
+OT  - structured covariance
+EDAT- 2015/05/09 06:00
+MHDA- 2015/05/09 06:01
+PMCR- 2016/03/01
+CRDT- 2015/05/09 06:00
+PHST- 2015/05/09 06:01 [medline]
+PHST- 2015/05/09 06:00 [entrez]
+PHST- 2015/05/09 06:00 [pubmed]
+PHST- 2016/03/01 00:00 [pmc-release]
+AID - 10.1080/01621459.2014.964404 [doi]
+PST - ppublish
+SO  - J Am Stat Assoc. 2015 Mar 1;110(509):27-44. doi: 10.1080/01621459.2014.964404.
+
+PMID- 17943997
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20080911
+LR  - 20080505
+IS  - 0277-6715 (Print)
+IS  - 0277-6715 (Linking)
+VI  - 27
+IP  - 12
+DP  - 2008 May 30
+TI  - Accounting for within-patient correlation in assessing relative sensitivity of an 
+      adjunctive diagnostic test: application to lung cancer.
+PG  - 2110-26
+AB  - We address the comparison of results between two diagnostic tests applied 
+      multiple times to the same subjects. The estimand of interest is the sensitivity 
+      of the combined test (primary and adjunct) relative to a primary test. Analytical 
+      methods are first described that assume independence between the multiple 
+      observations within a subject. In order to account for the within-subject 
+      correlation introduced by the multiple measurements, analytical approaches for 
+      correlated, categorical response data are described. In the discussion of these 
+      methods, we pay particular attention to the presence of a structural zero which 
+      results from the decision rule for the combination of diagnostic tests. In a 
+      simulation study, we compare the finite sample performances of all analytical 
+      approaches in terms of confidence interval coverage rates and median lengths. Our 
+      methods are cast in the context of a diagnostic bronchoscopy technology for the 
+      detection of lung cancer.
+CI  - Copyright (c) 2007 John Wiley & Sons, Ltd.
+FAU - Scharfstein, Daniel O
+AU  - Scharfstein DO
+AD  - Department of Biostatistics, The Johns Hopkins Bloomberg School of Public Health, 
+      615 N. Wolfe Street, Baltimore, MD 21205-2179, U.S.A. dscharf@jhsph.edu
+FAU - Ryea, Jennifer L
+AU  - Ryea JL
+FAU - Caffo, Brian
+AU  - Caffo B
+LA  - eng
+PT  - Comparative Study
+PT  - Journal Article
+PL  - England
+TA  - Stat Med
+JT  - Statistics in medicine
+JID - 8215016
+SB  - IM
+MH  - Confidence Intervals
+MH  - Diagnostic Tests, Routine/*statistics & numerical data
+MH  - Humans
+MH  - Lung Neoplasms/*diagnosis
+MH  - Models, Statistical
+MH  - Observation
+MH  - Sensitivity and Specificity
+EDAT- 2007/10/19 09:00
+MHDA- 2008/09/13 09:00
+CRDT- 2007/10/19 09:00
+PHST- 2007/10/19 09:00 [pubmed]
+PHST- 2008/09/13 09:00 [medline]
+PHST- 2007/10/19 09:00 [entrez]
+AID - 10.1002/sim.3085 [doi]
+PST - ppublish
+SO  - Stat Med. 2008 May 30;27(12):2110-26. doi: 10.1002/sim.3085.

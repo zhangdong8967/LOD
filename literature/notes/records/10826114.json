@@ -1,0 +1,18 @@
+{
+  "pmid": "10826114",
+  "doi": "10.1081/ddc-100101281",
+  "title": "C a l i b r a t i o n   a n d   L O D / L O Q   e s t i m a t i o n   o f   a   c h e m i l u m i n e s c e n t   h y b r i d i z a t i o n   a s s a y   f o r   r e s i d u a l   D N A   i n   r e c o m b i n a n t   p r o t e i n   d r u g s   e x p r e s s e d   i n   E .   c o l i   u s i n g   a   f o u r - p a r a m e t e r   l o g i s t i c   m o d e l .",
+  "authors": "Lee K R; Dipaolo B; Ji X",
+  "year": "2000",
+  "journal": "Drug development and industrial pharmacy",
+  "blocks": "D",
+  "priority": "screen",
+  "abstract": "Calibration is the process of fitting a model based on reference data points (x, y), then using the model to estimate an unknown x based on a new measured response, y. In DNA assay, x is the concentration, and y is the measured signal volume. A four-parameter logistic model was used frequently for calibration of immunoassay when the response is optical density for enzyme-linked immunosorbent assay (ELISA) or adjusted radioactivity count for radioimmunoassay (RIA). Here, it is shown that the same model or a linearized version of the curve are equally useful for the calibration of a chemiluminescent hybridization assay for residual DNA in recombinant protein drugs and calculation of performance measures of the assay.",
+  "pmcid": "",
+  "pdf_path": "",
+  "pdf_source": "",
+  "download_status": "abstract_only",
+  "notes": "",
+  "pdf_text_chars": 0,
+  "pdf_text_preview": ""
+}

@@ -1,0 +1,18 @@
+{
+  "pmid": "42469224",
+  "doi": "10.1021/am405550j",
+  "title": "Microfluidic-optical integrated portable platform with handheld pump for wash-free plasmonic detection of thrombin and SARS-CoV-2 spike protein.",
+  "authors": "Kwon Da-In; Yoo Yeong-Eun; Jin Jae-Ho; Park Ji Hyo; Han Ga Eun; Kim Kwanoh; Yoon Jae Sung; Kang Seong Min",
+  "year": "2026",
+  "journal": "Microsystems & nanoengineering",
+  "blocks": "",
+  "priority": "screen",
+  "abstract": "Point-of-care testing (POCT) requires rapid, quantitative results without the complexity of laboratory instrumentation. Conventional assays like ELISA and PCR are often limited by long processing times, multiple washing procedures, and a dependence on bulky, external power-consuming pumps. To address these challenges, we developed a fully integrated, palm-sized platform validated with two high-impact biomarkers: thrombin, a critical regulator of blood coagulation for cardiovascular and renal diagnostics, and the SARS-CoV-2 spike protein, a primary antigen for rapid viral screening. The platform's innovation lies in its user-independent, electricity-free fluidic operation, featuring a manual suction pump with a compression spring that ensures high reproducibility (CV < 4.5%). Additionally, a serpentine microchannel design was incorporated to promote Dean flow-induced inertial mixing, accelerating aggregation kinetics for a true wash-free plasmonic assay. Our system provides real-time quantitative detection within 5 min, achieving sub-nanomolar limits of detection (LoD: 0.5 nM for thrombin and 0.4 nM for spike protein). Wireless connectivity allows for immediate data visualization on smartphones. By bridging the gap between sophisticated laboratory analysis and portable, manual operation, this platform offers a robust and scalable solution for decentralized clinical diagnostics.",
+  "pmcid": "PMC13379383",
+  "pdf_path": "",
+  "pdf_source": "",
+  "download_status": "abstract_only",
+  "notes": "",
+  "pdf_text_chars": 0,
+  "pdf_text_preview": ""
+}

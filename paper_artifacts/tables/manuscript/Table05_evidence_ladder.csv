@@ -1,0 +1,14 @@
+Evidence_tier,Dataset_ID,Result_family,Present,May_support_empirical_claim,Citation
+A,zenodo_mus_wt_qpcr,qpcr_cq_continuous,True,,Zenodo 12609243 — Mus WT qPCR LoD/LoQ (Cq vs copy number).
+A,zenodo_mus_multiplex_qpcr,qpcr_cq_continuous,True,,Zenodo 12609243 — multiplex tCRISPR/WT qPCR LoD/LoQ.
+A,analyseit_ep17_estradiol,immunoassay_continuous,True,,CLSI EP17-A2 Appendix A estradiol example (Analyse-it workbook): immunoassay continuous blank + low-level replicates.
+A,analyseit_ep17_probit,probit_hit_rate,True,,CLSI EP17-A2 Appendix C probit/hit-rate example (Analyse-it): concentration x detect outcomes.
+C,analyseit_ep17_troponin_precision,cardiac_precision_profile,True,,CLSI EP17-A2 Appendix D troponin I precision-profile pools (Analyse-it; generated to match target Mean/SD) — LoQ-style.
+B,zenodo_cation_ic_lod,analytical_chemistry_ic,True,,Dierendonck C. Cation LOD/LOQ (Zenodo 5909650). CC-BY-4.0.
+B,zenodo_anion_ic_lod,analytical_chemistry_ic,True,,Dierendonck C. Anion LOD/LOQ (Zenodo 5901444). CC-BY-4.0.
+A,mendeley_carobene_lombardy_eqa,clinical_chemistry_multilab,True,,"Carobene A. et al. Commutability of Lombardy Region EQA control materials for enzymes, calcium, and creatinine (Clin Chi"
+A,bioc_msstats_lobd_cptac,proteomics_blank_lob,True,,"CPTAC Assay Portal peptide spike-in (JHU_DChan_HZhang_ZZhang) via Bioconductor MSstatsLOBD::raw_data (Galitzine et al., "
+B,zenodo_radioimmuno_lod_summary,radioimmuno_summary,True,,Malkamäki et al. radioimmuno-dot-blot LOD summaries (Anal. Chem.; Zenodo 12664367). Tier B blank mean/SD summaries.
+A,zenodo_radioimmuno_precision,radioimmuno_precision_profile,True,,"Malkamäki et al., Anal. Chem. 10.1021/acs.analchem.4c03393; Zenodo 12664367 Precision.txt — per-sample replicate mean/SD"
+A,zenodo_radioimmuno_linearity,radioimmuno_linearity_continuous,True,,"Malkamäki et al., Anal. Chem.; Zenodo 12664367 Linearity_1.txt — concentration (ng) × DPM replicates (CC-BY-4.0)."
+A,zenodo_rmn_qualification,rmn_microneutralization_continuous,True,,"Sawant, Harit, Tomaras. RMN assay qualification dataset (Zenodo 10.5281/zenodo.17108929). Replicate ID50 by dilution; CC"

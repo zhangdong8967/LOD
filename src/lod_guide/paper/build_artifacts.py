@@ -1,0 +1,208 @@
+"""
+One-click paper artifact builder.
+
+Produces:
+  paper_artifacts/
+    captions/FIGURE_CAPTIONS.md, TABLE_CAPTIONS.md, id_map.json
+    figures/   (copies of numbered manuscript figures; no in-figure titles)
+    tables/    Table01…Table08 CSVs + manuscript/ readable copies
+    review/    INTERNAL_REVIEW_P1P6_EXACT.md
+    MANIFEST.json
+"""
+
+from __future__ import annotations
+
+import json
+import shutil
+from datetime import datetime, timezone
+from pathlib import Path
+
+from lod_guide import __version__
+from lod_guide.figures import (
+    generate_all_methodology_figures,
+    generate_challenge_figures,
+)
+from lod_guide.paper.internal_review import write_internal_review_memo
+from lod_guide.paper.main_figures import generate_main_figures
+from lod_guide.paper.loq_precision import build_loq_precision_tables
+from lod_guide.paper.manuscript_tables import build_manuscript_tables
+from lod_guide.paper.registry import FIGURES, MAIN_FIGURES, SUPPLEMENT_FIGURES, TABLES, FIG_SRC, PAPER, write_caption_files
+from lod_guide.research.continuous_figures import generate_continuous_model_figures
+from lod_guide.research.concentration_figures import generate_concentration_figures
+from lod_guide.research.decision_risk import evaluate_standard_scenarios
+from lod_guide.research.discrimination_figures import generate_discrimination_figures
+from lod_guide.research.empirical_tierA_extension import run_empirical_tierA_extension
+from lod_guide.research.evidence_stratified_report import build_evidence_stratified_report
+from lod_guide.research.one_proportion_coverage import run_one_proportion_coverage_study
+from lod_guide.research.precision_profile import run_precision_profile_study
+from lod_guide.research.tierA_meta_analysis import run_tierA_meta_analysis
+
+
+def _copy_figures(fig_dir: Path) -> list[dict]:
+    fig_dir.mkdir(parents=True, exist_ok=True)
+    copied = []
+    for f in FIGURES:
+        src = FIG_SRC / f.source_png
+        safe = f.manuscript_id.replace(" ", "")
+        dst = fig_dir / f"{safe}_{f.developer_id}{src.suffix if src.suffix else '.png'}"
+        status = "missing_source"
+        if src.exists():
+            shutil.copy2(src, dst)
+            pdf = src.with_suffix(".pdf")
+            if pdf.exists():
+                shutil.copy2(pdf, dst.with_suffix(".pdf"))
+            status = "copied"
+        copied.append(
+            {
+                "manuscript_id": f.manuscript_id,
+                "source": str(src),
+                "dest": str(dst),
+                "status": status,
+            }
+        )
+    return copied
+
+
+def _regen_all_figures() -> None:
+    generate_main_figures()
+    generate_all_methodology_figures()
+    generate_challenge_figures()
+    generate_discrimination_figures()
+    generate_concentration_figures()
+    try:
+        generate_continuous_model_figures(fine_build=False)
+    except Exception:  # noqa: BLE001
+        pass
+    from lod_guide.paper.journal_figures import generate_journal_figures
+
+    generate_journal_figures()
+
+
+def build_paper_artifacts(*, skip_heavy_exact: bool = False) -> dict:
+    PAPER.mkdir(parents=True, exist_ok=True)
+    captions = write_caption_files(PAPER / "captions")
+
+    try:
+        _regen_all_figures()
+        journal_fig_error = None
+    except Exception as exc:  # noqa: BLE001
+        journal_fig_error = str(exc)
+        try:
+            generate_main_figures()
+            from lod_guide.paper.journal_figures import generate_journal_figures
+
+            generate_journal_figures()
+        except Exception as exc2:  # noqa: BLE001
+            journal_fig_error = f"{journal_fig_error}; {exc2}"
+
+    try:
+        pp = run_precision_profile_study()
+    except Exception as exc:  # noqa: BLE001
+        pp = {"error": str(exc)}
+
+    figs = _copy_figures(PAPER / "figures")
+    missing = [c for c in figs if c["status"] == "missing_source"]
+    if missing:
+        try:
+            generate_all_methodology_figures()
+            generate_challenge_figures()
+            figs = _copy_figures(PAPER / "figures")
+            missing_note = None
+        except Exception as exc:  # noqa: BLE001
+            missing_note = str(exc)
+    else:
+        missing_note = None
+
+    loq = build_loq_precision_tables(out_dir=PAPER / "tables")
+
+    try:
+        emp = run_empirical_tierA_extension()
+    except Exception as exc:  # noqa: BLE001
+        emp = {"error": str(exc)}
+    try:
+        meta = run_tierA_meta_analysis()
+    except Exception as exc:  # noqa: BLE001
+        meta = {"error": str(exc)}
+    try:
+        g1cov = run_one_proportion_coverage_study()
+    except Exception as exc:  # noqa: BLE001
+        g1cov = {"error": str(exc)}
+    try:
+        risk = evaluate_standard_scenarios()
+    except Exception as exc:  # noqa: BLE001
+        risk = {"error": str(exc)}
+    try:
+        evrep = build_evidence_stratified_report(download=False)
+    except Exception as exc:  # noqa: BLE001
+        evrep = {"error": str(exc)}
+
+    review = write_internal_review_memo(force_exact=not skip_heavy_exact)
+    ms_tables = build_manuscript_tables()
+
+    manifest = {
+        "built_at_utc": datetime.now(timezone.utc).isoformat(),
+        "lod_guide_version": __version__,
+        "figures": figs,
+        "tables": [t.manuscript_id + " -> " + t.artifact_csv for t in TABLES],
+        "manuscript_tables": ms_tables,
+        "caption_files": {k: str(v) for k, v in captions.items()},
+        "loq_tables": {k: str(v) for k, v in loq.items()},
+        "review": {k: str(v) for k, v in review.items()},
+        "missing_figure_regen_error": missing_note,
+        "journal_figure_error": journal_fig_error,
+        "precision_profile": {
+            "loq20": (pp or {}).get("target_20", {}).get("loq") if isinstance(pp, dict) else None,
+            "path": (pp or {}).get("path") if isinstance(pp, dict) else None,
+        },
+        "empirical_tierA": emp if isinstance(emp, dict) else {},
+        "tierA_meta": meta if isinstance(meta, dict) else {},
+        "g1_coverage": g1cov if isinstance(g1cov, dict) else {},
+        "decision_risk": risk if isinstance(risk, dict) else {},
+        "evidence_stratified": evrep if isinstance(evrep, dict) else {},
+        "figure_policy": (
+            "Main text: 5 composite figures (Fig 1–5); supplement: Fig S1–S9. "
+            "No descriptive in-figure titles/suptitles; panel letters A/B/C only."
+        ),
+        "main_figure_count": len(MAIN_FIGURES),
+        "supplement_figure_count": len(SUPPLEMENT_FIGURES),
+        "publication_readiness": (
+            "Methods/supplement package with elevated decision-risk framing. "
+            "Not a claim that a full Clinical Chemistry research manuscript is complete."
+        ),
+    }
+    man_path = PAPER / "MANIFEST.json"
+    man_path.write_text(json.dumps(manifest, indent=2, default=str), encoding="utf-8")
+
+    readme = PAPER / "README.md"
+    readme.write_text(
+        "\n".join(
+            [
+                "# Paper artifacts (auto-generated)",
+                "",
+                "Build with: `make paper-artifacts` or `python examples/run_paper_artifacts.py`",
+                "",
+                "## Contents",
+                "",
+                "- `captions/` — unified Fig/Table captions, FIGURE_PLAN.md, and ID map",
+                "- `figures/` — main Fig 1–5 + supplement Fig S1–S9 (panel letters only)",
+                "- `tables/` — Table 1–8 CSVs (estimands, LoQ, exact vs asymp, P1–P8, evidence, Type I, tier-A meta, G1 coverage)",
+                "- `tables/manuscript/` — readable column names for drafting",
+                "- `review/` — internal statistical review memo",
+                "- `MANIFEST.json` — build stamp",
+                "",
+                "## Honest scope",
+                "",
+                "These files support a **methods / supplement** package with assumption-gated "
+                "decision-risk framing. They do not by themselves constitute a finished "
+                "Clinical Chemistry full research article.",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    manifest["manifest_path"] = str(man_path)
+    return manifest
+
+
+if __name__ == "__main__":
+    print(json.dumps(build_paper_artifacts(), indent=2, default=str))

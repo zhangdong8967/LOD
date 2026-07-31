@@ -1,0 +1,347 @@
+[
+  {
+    "dataset_id": "sim_normal_blanks",
+    "evidence_tier": "S",
+    "goal": "G1_VERIFY_LOD",
+    "model_path": "parametric_normal",
+    "parametric_ok": true,
+    "n_per_arm": 92,
+    "correction": "none",
+    "warnings_n": 3,
+    "challenges_folklore_n20": false,
+    "dgp": "values ~ N(0.05, 0.02^2); low ~ N(0.15, 0.03^2); 3 strata x 20"
+  },
+  {
+    "dataset_id": "sim_skewed_hetero_blanks",
+    "evidence_tier": "S",
+    "goal": "G1_VERIFY_LOD",
+    "model_path": "nonparametric_percentile",
+    "parametric_ok": false,
+    "n_per_arm": 71,
+    "correction": "failed_use_nonparametric",
+    "warnings_n": 7,
+    "challenges_folklore_n20": false,
+    "dgp": "batch i: Lognormal(mu=-0.5, sigma=s_i), s=(0.3,0.6,1.2,2.0), n=40 each"
+  },
+  {
+    "dataset_id": "sim_censored_floor",
+    "evidence_tier": "S",
+    "goal": "G1_VERIFY_LOD",
+    "model_path": "nonparametric_percentile",
+    "parametric_ok": false,
+    "n_per_arm": 72,
+    "correction": "failed_use_nonparametric",
+    "warnings_n": 7,
+    "challenges_folklore_n20": false,
+    "dgp": "latent ~ N(0,1); observed = max(latent, 0)"
+  },
+  {
+    "dataset_id": "sim_binary_reagents_90_vs_80",
+    "evidence_tier": "S",
+    "goal": "G2_COMPARE_REAGENTS",
+    "model_path": "binary_rate",
+    "parametric_ok": true,
+    "n_per_arm": 199,
+    "correction": "none",
+    "warnings_n": 1,
+    "challenges_folklore_n20": true,
+    "dgp": "Y_A ~ Bern(0.9), Y_B ~ Bern(0.8), n=200/arm independent"
+  },
+  {
+    "dataset_id": "sim_binary_low_p_lod",
+    "evidence_tier": "S",
+    "goal": "G1_VERIFY_LOD",
+    "model_path": "binary_rate",
+    "parametric_ok": true,
+    "n_per_arm": 1,
+    "correction": "none",
+    "warnings_n": 1,
+    "challenges_folklore_n20": false,
+    "dgp": "Y ~ Bern(0.1), n=100"
+  },
+  {
+    "dataset_id": "sim_poisson_count_hetero",
+    "evidence_tier": "S",
+    "goal": "G1_VERIFY_LOD",
+    "model_path": "nonparametric_bootstrap",
+    "parametric_ok": false,
+    "n_per_arm": 433,
+    "correction": "failed_use_nonparametric",
+    "warnings_n": 7,
+    "challenges_folklore_n20": false,
+    "dgp": "day d: X ~ Poisson(lambda_d), lambda=(0.3,1.0,2.5), n=40/day"
+  },
+  {
+    "dataset_id": "sim_multiclass_blood_type",
+    "evidence_tier": "S",
+    "goal": "G4_QUALITATIVE_KN",
+    "model_path": "binary_rate",
+    "parametric_ok": true,
+    "n_per_arm": 1,
+    "correction": "none",
+    "warnings_n": 0,
+    "challenges_folklore_n20": false,
+    "dgp": "class ~ Categorical([0.98, 0.007, 0.007, 0.006]); success=(class==0)"
+  },
+  {
+    "dataset_id": "sim_bimodal_weak_positive",
+    "evidence_tier": "S",
+    "goal": "G1_VERIFY_LOD",
+    "model_path": "nonparametric_percentile",
+    "parametric_ok": false,
+    "n_per_arm": 1032,
+    "correction": "failed_use_nonparametric",
+    "warnings_n": 7,
+    "challenges_folklore_n20": false,
+    "dgp": "0.7*N(0.1,0.05^2) + 0.3*N(0.8,0.15^2)"
+  },
+  {
+    "dataset_id": "zenodo_mus_wt_qpcr",
+    "evidence_tier": "A",
+    "assay_family": "qpcr",
+    "n_rows": 288,
+    "hit_summary_head": [
+      [
+        0.05,
+        0.020833333333333332,
+        48
+      ],
+      [
+        0.5,
+        0.25,
+        48
+      ],
+      [
+        5.0,
+        1.0,
+        48
+      ],
+      [
+        50.0,
+        1.0,
+        48
+      ],
+      [
+        500.0,
+        1.0,
+        48
+      ]
+    ],
+    "g2_from_hit_rates": {
+      "p_a": 1.0,
+      "p_b": 0.020833333333333332,
+      "n_per_arm": 3
+    }
+  },
+  {
+    "dataset_id": "zenodo_mus_multiplex_qpcr",
+    "evidence_tier": "A",
+    "assay_family": "qpcr",
+    "n_rows": 576,
+    "hit_summary_head": [
+      [
+        0.25,
+        0.19791666666666666,
+        96
+      ],
+      [
+        2.5,
+        0.875,
+        96
+      ],
+      [
+        25.0,
+        1.0,
+        96
+      ],
+      [
+        250.0,
+        1.0,
+        96
+      ],
+      [
+        2500.0,
+        1.0,
+        96
+      ]
+    ],
+    "g2_from_hit_rates": {
+      "p_a": 1.0,
+      "p_b": 0.19791666666666666,
+      "n_per_arm": 5
+    }
+  },
+  {
+    "dataset_id": "analyseit_ep17_estradiol",
+    "evidence_tier": "A",
+    "assay_family": "immunoassay_estradiol",
+    "goal": "G1_VERIFY_LOD",
+    "model_path": "nonparametric_percentile",
+    "parametric_ok": false,
+    "n_per_arm": 53,
+    "correction": "failed_use_nonparametric",
+    "warnings_n": 6,
+    "n_blank": 60,
+    "evidence_note": null
+  },
+  {
+    "dataset_id": "analyseit_ep17_probit",
+    "evidence_tier": "A",
+    "assay_family": "probit_hit",
+    "n_rows": 734,
+    "hit_summary_head": [
+      [
+        0.0,
+        0.0,
+        66
+      ],
+      [
+        0.006,
+        0.4787234042553192,
+        94
+      ],
+      [
+        0.014,
+        0.723404255319149,
+        94
+      ],
+      [
+        0.025,
+        0.8125,
+        96
+      ],
+      [
+        0.05,
+        0.96875,
+        96
+      ],
+      [
+        0.15,
+        1.0,
+        96
+      ]
+    ],
+    "g2_from_hit_rates": {
+      "p_a": 1.0,
+      "p_b": 0.0,
+      "n_per_arm": 2
+    }
+  },
+  {
+    "dataset_id": "analyseit_ep17_troponin_precision",
+    "evidence_tier": "C",
+    "assay_family": "cardiac_precision_profile",
+    "goal": "G1_VERIFY_LOD",
+    "model_path": "nonparametric_percentile",
+    "parametric_ok": false,
+    "n_per_arm": 270,
+    "correction": "failed_use_nonparametric",
+    "warnings_n": 7,
+    "n_blank": 210,
+    "evidence_note": "Tier C synthetic EP17 precision-profile demo"
+  },
+  {
+    "dataset_id": "zenodo_cation_ic_lod",
+    "evidence_tier": "B",
+    "assay_family": "analytical_chemistry_ic_cation",
+    "goal": "G1_VERIFY_LOD",
+    "model_path": "nonparametric_percentile",
+    "parametric_ok": false,
+    "n_per_arm": 53,
+    "correction": "failed_use_nonparametric",
+    "warnings_n": 6,
+    "n_blank": 5,
+    "evidence_note": "Small n IC LOD/LOQ replicates; diversity exemplar (tier B)"
+  },
+  {
+    "dataset_id": "zenodo_anion_ic_lod",
+    "evidence_tier": "B",
+    "assay_family": "analytical_chemistry_ic_anion",
+    "goal": "G1_VERIFY_LOD",
+    "model_path": "parametric_normal",
+    "parametric_ok": true,
+    "n_per_arm": 53,
+    "correction": "none",
+    "warnings_n": 2,
+    "n_blank": 5,
+    "evidence_note": "Small n IC LOD/LOQ replicates; diversity exemplar (tier B)"
+  },
+  {
+    "dataset_id": "mendeley_carobene_lombardy_eqa",
+    "evidence_tier": "A",
+    "assay_family": "clinical_chemistry_multilab_eqa",
+    "goal": "G1_VERIFY_LOD",
+    "model_path": "nonparametric_percentile",
+    "parametric_ok": false,
+    "n_per_arm": 53,
+    "correction": "failed_use_nonparametric",
+    "warnings_n": 6,
+    "n_blank": 63,
+    "evidence_note": "Multicenter routine chemistry raw replicates (Carobene et al., Clin Chim Acta 2025; Mendeley 10.17632/r4szpw8sn5). Precision/multi-lab DE \u2014 not blank-LoB EP17 design."
+  },
+  {
+    "dataset_id": "bioc_msstats_lobd_cptac",
+    "evidence_tier": "A",
+    "assay_family": "proteomics_cptac_msstats_lobd",
+    "goal": "G1_VERIFY_LOD",
+    "model_path": "parametric_lognormal",
+    "parametric_ok": true,
+    "n_per_arm": 53,
+    "correction": "log",
+    "warnings_n": 2,
+    "n_blank": 9,
+    "evidence_note": "CPTAC / MSstatsLOBD calibration_raw (43 peptides; blank Concentration=0 + spike grid). Proteomics blank\u2013LoB case study \u2014 not clinical chemistry analyzer LoB."
+  },
+  {
+    "dataset_id": "zenodo_radioimmuno_lod_summary",
+    "evidence_tier": "B",
+    "assay_family": "radioimmuno_summary",
+    "goal": "G1_VERIFY_LOD",
+    "model_path": "nonparametric_percentile",
+    "parametric_ok": false,
+    "n_per_arm": 53,
+    "correction": "failed_use_nonparametric",
+    "warnings_n": 6,
+    "n_blank": 15,
+    "evidence_note": "Summary blank mean/SD only \u2014 tier B evidence"
+  },
+  {
+    "dataset_id": "zenodo_radioimmuno_precision",
+    "evidence_tier": "A",
+    "assay_family": "radioimmuno_precision_profile",
+    "goal": "G1_VERIFY_LOD",
+    "model_path": "parametric_normal",
+    "parametric_ok": true,
+    "n_per_arm": 53,
+    "correction": "none",
+    "warnings_n": 2,
+    "n_blank": 15,
+    "evidence_note": "Published replicate-mean/SD table (Anal. Chem. / Zenodo 12664367)"
+  },
+  {
+    "dataset_id": "zenodo_radioimmuno_linearity",
+    "evidence_tier": "A",
+    "assay_family": "radioimmuno_linearity_continuous",
+    "goal": "G1_VERIFY_LOD",
+    "model_path": "parametric_normal",
+    "parametric_ok": true,
+    "n_per_arm": 53,
+    "correction": "none",
+    "warnings_n": 2,
+    "n_blank": 3,
+    "evidence_note": "Published linearity replicates ng\u00d7DPM (Zenodo 12664367)"
+  },
+  {
+    "dataset_id": "zenodo_rmn_qualification",
+    "evidence_tier": "A",
+    "assay_family": "rmn_microneutralization_continuous",
+    "goal": "G1_VERIFY_LOD",
+    "model_path": "nonparametric_percentile",
+    "parametric_ok": false,
+    "n_per_arm": 53,
+    "correction": "failed_use_nonparametric",
+    "warnings_n": 6,
+    "n_blank": 38,
+    "evidence_note": "Published RMN qualification replicates (Zenodo 17108929, CC-BY-4.0)"
+  }
+]

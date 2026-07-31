@@ -1,0 +1,643 @@
+
+PMID- 35980164
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20220919
+LR  - 20260107
+IS  - 1759-9679 (Electronic)
+IS  - 1759-9660 (Print)
+IS  - 1759-9660 (Linking)
+VI  - 14
+IP  - 35
+DP  - 2022 Sep 15
+TI  - Analysis of endogenous metabolites using multifunctional derivatization and 
+      capillary RPLC-MS.
+PG  - 3397-3404
+LID - 10.1039/d2ay01108e [doi]
+AB  - Heterogeneity in metabolite structure and charge state complicates their analysis 
+      in electrospray mass spectrometry (ESI-MS). Complications such as diminished 
+      signal response and quantitation can be reduced by sequential dual-stage 
+      derivatization and capillary RP LC-ESI-MS analysis. Our sequential dual-stage 
+      chemical derivatization reacts analyte primary amine and hydroxyl groups with a 
+      linear acyl chloride head containing a tertiary amine moiety. Analyte carboxylate 
+      groups are then coupled to a linear amine tag with a tertiary amine moiety. This 
+      increase in the number of tags on analytes increases analyte proton affinity and 
+      hydrophobicity. We derivatized 250 metabolite standards which on average improved 
+      signal to noise by >44-fold, with an average limit of detection of 66 nM and R(2) 
+      of 0.98. This system detected 107 metabolites from 18 BAECs, 111 metabolites from 
+      human urine, and 153 from human serum based on retention time, exact mass, and 
+      MS/MS matches from a derivatized standard library. As a proof of concept, aortic 
+      endothelial cells were treated with epinephrine and analyzed by the dual-stage 
+      derivatization. We observed changes in 32 metabolites with many increases related 
+      to energy metabolism, specifically in the TCA cycle. A decrease in lactate levels 
+      and corresponding increase in pyruvate levels suggest that epinephrine causes a 
+      movement away from glycolytic reliance on energy and a shift towards the more 
+      efficient TCA respiration for increasing energy.
+FAU - Agongo, Julius
+AU  - Agongo J
+AD  - Department of Chemistry and Biochemistry, Saint Louis University, 3501 Laclede 
+      Ave, St Louis, MO, 63103, USA. jim.edwards@slu.edu.
+FAU - Armbruster, Michael
+AU  - Armbruster M
+AUID- ORCID: 0000-0002-9453-3419
+AD  - Department of Chemistry and Biochemistry, Saint Louis University, 3501 Laclede 
+      Ave, St Louis, MO, 63103, USA. jim.edwards@slu.edu.
+FAU - Arnatt, Christopher
+AU  - Arnatt C
+AD  - Department of Chemistry and Biochemistry, Saint Louis University, 3501 Laclede 
+      Ave, St Louis, MO, 63103, USA. jim.edwards@slu.edu.
+FAU - Edwards, James
+AU  - Edwards J
+AUID- ORCID: 0000-0003-1063-7518
+AD  - Department of Chemistry and Biochemistry, Saint Louis University, 3501 Laclede 
+      Ave, St Louis, MO, 63103, USA. jim.edwards@slu.edu.
+LA  - eng
+GR  - R01 GM134081/GM/NIGMS NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, N.I.H., Extramural
+DEP - 20220915
+PL  - England
+TA  - Anal Methods
+JT  - Analytical methods : advancing methods and applications
+JID - 101519733
+RN  - 0 (Amines)
+RN  - 0 (Amino Acids)
+RN  - 0 (Chlorides)
+RN  - 0 (Lactates)
+RN  - 0 (Protons)
+RN  - 0 (Pyruvates)
+RN  - YKH834O4BH (Epinephrine)
+SB  - IM
+MH  - Amines/chemistry/metabolism
+MH  - Amino Acids/metabolism
+MH  - Chlorides
+MH  - Endothelial Cells/chemistry/metabolism
+MH  - Epinephrine
+MH  - Humans
+MH  - Lactates
+MH  - Protons
+MH  - Pyruvates
+MH  - *Spectrometry, Mass, Electrospray Ionization/methods
+MH  - *Tandem Mass Spectrometry/methods
+PMC - PMC12767609
+MID - NIHMS2127827
+COIS- Conflicts of interest There are no conflicts to declare.
+EDAT- 2022/08/19 06:00
+MHDA- 2022/09/20 06:00
+PMCR- 2026/01/05
+CRDT- 2022/08/18 08:53
+PHST- 2022/08/19 06:00 [pubmed]
+PHST- 2022/09/20 06:00 [medline]
+PHST- 2022/08/18 08:53 [entrez]
+PHST- 2026/01/05 00:00 [pmc-release]
+AID - 10.1039/d2ay01108e [doi]
+PST - epublish
+SO  - Anal Methods. 2022 Sep 15;14(35):3397-3404. doi: 10.1039/d2ay01108e.
+
+PMID- 34857138
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20211206
+LR  - 20230116
+IS  - 1873-4324 (Electronic)
+IS  - 0003-2670 (Print)
+IS  - 0003-2670 (Linking)
+VI  - 1190
+DP  - 2022 Jan 15
+TI  - Neutron encoded derivatization of endothelial cell lysates for quantitation of 
+      aldehyde metabolites using nESI-LC-HRMS.
+PG  - 339260
+LID - S0003-2670(21)01086-2 [pii]
+LID - 10.1016/j.aca.2021.339260 [doi]
+AB  - Biological aldehydes are difficult to analyze by electrospray ionization mass 
+      spectrometry due to their poor proton affinity and low biological concentrations. 
+      Chemical derivatization with stable isotope tags is used here for sample 
+      multiplexing, increased throughput, improved signal intensity, and quantitation. 
+      Nine quaternary amine tags with mass differences as low as 0.0058 Da had no 
+      observable chromatographic shifts, small amounts of ion suppression, and minimal 
+      matrix effects. Low concentration perfluoropentanoic acid was used as an ion 
+      pairing reagent to improve the retention of derivatized aldehydes. 
+      Perfluoropentanoic acid addition showed an average of three-fold improvement in 
+      limits of detection, 50% reduction in peak width, and 2.5 fold increase in 
+      analyte retention. Analysis of fifteen tagged aldehydes yielded an average of 
+      13 nM limit of detection, 9 %RSD, R(2) of 0.995, and linear dynamic range of 
+      40-1000 nM. In a single 20 min separation, absolute quantitative data was 
+      obtained for 11 reactive aldehydes across 8 aortic endothelial cell samples. High 
+      glucose treatment produced significant changes to malondialdehyde, decanal, and 
+      (2E)-hexadecenal. These changes are consistent with glucose-induced oxidative 
+      stress. This method demonstrates that neutron encoded tagging of aldehydes is 
+      suitable for the analysis of complex samples.
+CI  - Copyright (c) 2021 Elsevier B.V. All rights reserved.
+FAU - Armbruster, Michael
+AU  - Armbruster M
+AD  - Department of Chemistry and Biochemistry, Saint Louis University, 3501 Laclede 
+      Ave, St Louis, MO, 63103, USA.
+FAU - Grady, Scott
+AU  - Grady S
+AD  - Department of Chemistry and Biochemistry, Saint Louis University, 3501 Laclede 
+      Ave, St Louis, MO, 63103, USA.
+FAU - Agongo, Julius
+AU  - Agongo J
+AD  - Department of Chemistry and Biochemistry, Saint Louis University, 3501 Laclede 
+      Ave, St Louis, MO, 63103, USA.
+FAU - Arnatt, Christopher K
+AU  - Arnatt CK
+AD  - Department of Chemistry and Biochemistry, Saint Louis University, 3501 Laclede 
+      Ave, St Louis, MO, 63103, USA.
+FAU - Edwards, James L
+AU  - Edwards JL
+AD  - Department of Chemistry and Biochemistry, Saint Louis University, 3501 Laclede 
+      Ave, St Louis, MO, 63103, USA. Electronic address: jim.edwards@slu.edu.
+LA  - eng
+GR  - R01 GM134081/GM/NIGMS NIH HHS/United States
+PT  - Journal Article
+DEP - 20211109
+PL  - Netherlands
+TA  - Anal Chim Acta
+JT  - Analytica chimica acta
+JID - 0370534
+RN  - 0 (Aldehydes)
+SB  - IM
+MH  - *Aldehydes
+MH  - Chromatography, Liquid
+MH  - Endothelial Cells
+MH  - Neutrons
+MH  - *Spectrometry, Mass, Electrospray Ionization
+PMC - PMC8646956
+MID - NIHMS1756749
+OTO - NOTNLM
+OT  - Aldehyde
+OT  - Derivatization
+OT  - Multiplex
+OT  - NeuCode
+COIS- Declaration of competing interest The authors declare that they have no known 
+      competing financial interests or personal relationships that could have appeared 
+      to influence the work reported in this paper.
+EDAT- 2021/12/04 06:00
+MHDA- 2021/12/15 06:00
+PMCR- 2023/01/15
+CRDT- 2021/12/03 05:46
+PHST- 2021/09/13 00:00 [received]
+PHST- 2021/10/27 00:00 [revised]
+PHST- 2021/11/06 00:00 [accepted]
+PHST- 2021/12/03 05:46 [entrez]
+PHST- 2021/12/04 06:00 [pubmed]
+PHST- 2021/12/15 06:00 [medline]
+PHST- 2023/01/15 00:00 [pmc-release]
+AID - S0003-2670(21)01086-2 [pii]
+AID - 10.1016/j.aca.2021.339260 [doi]
+PST - ppublish
+SO  - Anal Chim Acta. 2022 Jan 15;1190:339260. doi: 10.1016/j.aca.2021.339260. Epub 
+      2021 Nov 9.
+
+PMID- 23227759
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20141113
+LR  - 20121211
+IS  - 0005-9366 (Print)
+IS  - 0005-9366 (Linking)
+VI  - 125
+IP  - 11-12
+DP  - 2012 Nov-Dec
+TI  - Antibiotic plasma levels in dogs with otitis externa treated routinely with 
+      various topical preparations.
+PG  - 441-8
+AB  - We aimed to determine whether, and at what levels, topical antibiotics applied to 
+      treat Otitis externa in dogs are absorbed systemically, leading to an increased 
+      risk of antibiotic resistance. 75 dogs brought to a veterinarian for Otitis 
+      externa were recruited for a non-interventional study. Selection criteria 
+      included diagnosis of Otitis externa and owner consent.The animals were divided 
+      into five groups of 15 dogs each. Each group received one of five commonly 
+      prescribed topical medications for up to 14 days according to the labeled 
+      instructions. Development and validation of low residue detection methods 
+      (HPLC-MS/MS) for all active substances studied was performed. Plasma 
+      concentrations were evaluated for gentamicin (Otomax, Easotic), marbofloxacin 
+      (Aurizon), orbifloxacin (Posatex) and polymyxin B (Surolan). Low-level plasma 
+      concentrations of the topically applied antibiotics were detected after multiple 
+      administrations. In several samples, the concentrations detected were less than 
+      the limit of detection (LOD) of the corresponding analytical method. However, at 
+      the end of the treatment period, mean plasma concentrations were in the low 
+      pmol/ml range and exceeded the LOD for gentamicin, marbofloxacin and 
+      orbifloxacin. None of the plasma samples examined for polymyxin showed levels 
+      above the LOD. After routine topical antibiotic use in the treatment of Otitis 
+      externa in dogs, low systemic plasma concentrations are likely to develop.This 
+      low-level exposure may facilitate cellular changes that lead to an increased 
+      possibility for antibiotic resistance. These findings should provoke veterinary 
+      clinicians to optimise therapy for Otitis externa in light of minimising the 
+      development of antibiotic resistance.
+FAU - Voget, Michael
+AU  - Voget M
+AD  - ECON AG - BERLIN Labs, Teltow, Germany. mv@econ-pharma.com
+FAU - Armbruster, Martin
+AU  - Armbruster M
+FAU - Meyer, Michael
+AU  - Meyer M
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, Non-U.S. Gov't
+PL  - Germany
+TA  - Berl Munch Tierarztl Wochenschr
+JT  - Berliner und Munchener tierarztliche Wochenschrift
+JID - 0003163
+RN  - 0 (Anti-Bacterial Agents)
+SB  - IM
+MH  - Administration, Topical
+MH  - Animals
+MH  - Anti-Bacterial Agents/administration & dosage/*blood/pharmacokinetics
+MH  - Dog Diseases/*blood/*drug therapy
+MH  - Dogs
+MH  - Drug Resistance, Bacterial
+MH  - Otitis Externa/blood/drug therapy/*veterinary
+EDAT- 2012/12/12 06:00
+MHDA- 2014/11/14 06:00
+CRDT- 2012/12/12 06:00
+PHST- 2012/12/12 06:00 [entrez]
+PHST- 2012/12/12 06:00 [pubmed]
+PHST- 2014/11/14 06:00 [medline]
+PST - ppublish
+SO  - Berl Munch Tierarztl Wochenschr. 2012 Nov-Dec;125(11-12):441-8.
+
+PMID- 19560450
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20091229
+LR  - 20191210
+IS  - 1873-2933 (Electronic)
+IS  - 0009-9120 (Linking)
+VI  - 42
+IP  - 15
+DP  - 2009 Oct
+TI  - Comparison of immunoturbidimetric and immunonephelometric assays for specific 
+      proteins.
+PG  - 1568-71
+LID - 10.1016/j.clinbiochem.2009.06.016 [doi]
+AB  - Immunoturbidimetric assays for specific proteins are available on "open system" 
+      clinical chemistry analyzers. The analytical performance of nine 
+      immunoturbidimetric specific protein assays (C3, C4, CRP, Haptoglobin, IgA, IgG, 
+      IgM, RF, and Transferrin) was compared to immunonephelometry. Testing was 
+      performed on the Abbott ARCHITECT ci8200 and the Dade Behring BNII nephelometer 
+      and evaluated for precision, linearity, limit of detection, prozone phenomenon, 
+      method comparison, workflow, and proficiency testing survey comparison. 
+      Immunoturbidimetric assays performance was satisfactory for total precision, 
+      linearity, limit of detection and the prozone effect was not observed. Method 
+      comparison was acceptable for the immunoglobulins, CRP and transferrin but less 
+      favorable for the other assays, likely due to methodology and antibody 
+      specificity differences. Immunourbidimetric specific protein assays allow for 
+      efficient test consolidation on a general purpose clinical chemistry analyzer.
+FAU - Mali, Bahera
+AU  - Mali B
+AD  - Regina General Hospital, SK, Canada. Bahera.Mali@rqhealth.ca
+FAU - Armbruster, David
+AU  - Armbruster D
+FAU - Serediak, Ernie
+AU  - Serediak E
+FAU - Ottenbreit, Tammy
+AU  - Ottenbreit T
+LA  - eng
+PT  - Evaluation Study
+PT  - Journal Article
+DEP - 20090626
+PL  - United States
+TA  - Clin Biochem
+JT  - Clinical biochemistry
+JID - 0133660
+RN  - 0 (Proteins)
+SB  - IM
+MH  - Humans
+MH  - Immunoassay/instrumentation/*methods
+MH  - Nephelometry and Turbidimetry/instrumentation/*methods
+MH  - Proteins/*metabolism
+MH  - Reproducibility of Results
+MH  - Sensitivity and Specificity
+EDAT- 2009/06/30 09:00
+MHDA- 2009/12/30 06:00
+CRDT- 2009/06/30 09:00
+PHST- 2008/12/05 00:00 [received]
+PHST- 2009/06/17 00:00 [revised]
+PHST- 2009/06/21 00:00 [accepted]
+PHST- 2009/06/30 09:00 [entrez]
+PHST- 2009/06/30 09:00 [pubmed]
+PHST- 2009/12/30 06:00 [medline]
+AID - S0009-9120(09)00277-X [pii]
+AID - 10.1016/j.clinbiochem.2009.06.016 [doi]
+PST - ppublish
+SO  - Clin Biochem. 2009 Oct;42(15):1568-71. doi: 10.1016/j.clinbiochem.2009.06.016. 
+      Epub 2009 Jun 26.
+
+PMID- 18852857
+OWN - NLM
+STAT- PubMed-not-MEDLINE
+DCOM- 20100623
+LR  - 20240109
+IS  - 0159-8090 (Print)
+IS  - 0159-8090 (Linking)
+VI  - 29 Suppl 1
+IP  - Suppl 1
+DP  - 2008 Aug
+TI  - Limit of blank, limit of detection and limit of quantitation.
+PG  - S49-52
+AB  - * Limit of Blank (LoB), Limit of Detection (LoD), and Limit of Quantitation (LoQ) 
+      are terms used to describe the smallest concentration of a measurand that can be 
+      reliably measured by an analytical procedure. * LoB is the highest apparent 
+      analyte concentration expected to be found when replicates of a blank sample 
+      containing no analyte are tested. LoB = mean(blank) + 1.645(SD(blank)). * LoD is 
+      the lowest analyte concentration likely to be reliably distinguished from the LoB 
+      and at which detection is feasible. LoD is determined by utilising both the 
+      measured LoB and test replicates of a sample known to contain a low concentration 
+      of analyte. * LoD = LoB + 1.645(SD (low concentration sample)). * LoQ is the 
+      lowest concentration at which the analyte can not only be reliably detected but 
+      at which some predefined goals for bias and imprecision are met. The LoQ may be 
+      equivalent to the LoD or it could be at a much higher concentration.
+FAU - Armbruster, David A
+AU  - Armbruster DA
+AD  - Global Scientific Affairs, Abbott Diagnostics, Abbott Park, IL 60064, USA. 
+      David.Armbruster@abbott.com
+FAU - Pry, Terry
+AU  - Pry T
+LA  - eng
+PT  - Journal Article
+PL  - Australia
+TA  - Clin Biochem Rev
+JT  - The Clinical biochemist. Reviews
+JID - 8215797
+PMC - PMC2556583
+EDAT- 2008/10/15 09:00
+MHDA- 2008/10/15 09:01
+PMCR- 2008/08/01
+CRDT- 2008/10/15 09:00
+PHST- 2008/10/15 09:00 [pubmed]
+PHST- 2008/10/15 09:01 [medline]
+PHST- 2008/10/15 09:00 [entrez]
+PHST- 2008/08/01 00:00 [pmc-release]
+AID - cbr29_s_pgs49 [pii]
+PST - ppublish
+SO  - Clin Biochem Rev. 2008 Aug;29 Suppl 1(Suppl 1):S49-52.
+
+PMID- 16777083
+OWN - NLM
+STAT- MEDLINE
+DCOM- 20061222
+LR  - 20220408
+IS  - 0009-8981 (Print)
+IS  - 0009-8981 (Linking)
+VI  - 373
+IP  - 1-2
+DP  - 2006 Nov
+TI  - Sample to sample carryover: a source of analytical laboratory error and its 
+      relevance to integrated clinical chemistry/immunoassay systems.
+PG  - 37-43
+AB  - BACKGROUND: Integrated systems that combine clinical chemistry and immunoassay 
+      analyzers are used routinely. Sample to sample carryover is an inherent risk and 
+      can cause erroneously high patient test results for immunoassays. IVD 
+      manufacturers and laboratories must be aware of this phenomenon and guard against 
+      it. METHODS: We used a sample carryover protocol that directs the clinical 
+      chemistry module to process samples with very high immunoassay analyte 
+      concentrations followed by samples with very low concentrations for the same 
+      analyte. Low concentration samples were then tested by the immunoassay module to 
+      determine if the clinical chemistry module caused primary sample tube to primary 
+      sample tube carryover of the immunoassay analyte. RESULTS: Sample carryover was 
+      assessed on the Abbott ci8200 for HBsAg, AFP, beta-hCG, and PSA. Observed HBsAg 
+      carryover met the design specification of <0.1 ppm. Carryover for the other 
+      analytes was <0.1 ppm or below the assay limit of detection. CONCLUSIONS: IVD 
+      manufacturers must design integrated systems to minimize primary specimen tube 
+      carryover and avoid analytical laboratory error that can impact patient safety. 
+      Carryover testing is difficult for clinical laboratories to perform in order to 
+      verify system performance. Laboratories must consider the potential for specimen 
+      carryover and its impact on results whether moving primary sample tubes between 
+      separate analyzers or using an integrated system.
+FAU - Armbruster, David A
+AU  - Armbruster DA
+AD  - Scientific Affairs, Abbott Laboratories, 100 Abbott Park Road, Abbott Park, IL 
+      60046, USA. david.armbruster@abbott.com
+FAU - Alexander, Debra B
+AU  - Alexander DB
+LA  - eng
+PT  - Journal Article
+DEP - 20060614
+PL  - Netherlands
+TA  - Clin Chim Acta
+JT  - Clinica chimica acta; international journal of clinical chemistry
+JID - 1302422
+SB  - IM
+MH  - Clinical Chemistry Tests/instrumentation/*methods/standards
+MH  - *Diagnostic Errors/prevention & control
+MH  - Humans
+MH  - Immunoassay/instrumentation/*methods/standards
+MH  - Laboratories/*standards
+MH  - Quality Control
+MH  - Reproducibility of Results
+MH  - Safety
+MH  - Sensitivity and Specificity
+MH  - Specimen Handling
+EDAT- 2006/06/17 09:00
+MHDA- 2006/12/23 09:00
+CRDT- 2006/06/17 09:00
+PHST- 2006/02/15 00:00 [received]
+PHST- 2006/04/21 00:00 [revised]
+PHST- 2006/04/21 00:00 [accepted]
+PHST- 2006/06/17 09:00 [pubmed]
+PHST- 2006/12/23 09:00 [medline]
+PHST- 2006/06/17 09:00 [entrez]
+AID - S0009-8981(06)00249-X [pii]
+AID - 10.1016/j.cca.2006.04.022 [doi]
+PST - ppublish
+SO  - Clin Chim Acta. 2006 Nov;373(1-2):37-43. doi: 10.1016/j.cca.2006.04.022. Epub 
+      2006 Jun 14.
+
+PMID- 9323528
+OWN - NLM
+STAT- MEDLINE
+DCOM- 19971119
+LR  - 20190512
+IS  - 0146-4760 (Print)
+IS  - 0146-4760 (Linking)
+VI  - 21
+IP  - 6
+DP  - 1997 Oct
+TI  - Marijuana-positive urine test results from consumption of hemp seeds in food 
+      products.
+PG  - 476-81
+AB  - Commercially available snack bars and other foodstuffs prepared from pressed hemp 
+      seeds were ingested by volunteers. Urine specimens were collected for 24 h after 
+      ingestion of the foodstuffs containing hemp seeds and tested for marijuana using 
+      an EMIT immunoassay and gas chromatography-mass spectrometry (GC-MS). Specimens 
+      from individuals who ate one hemp seed bar demonstrated little marijuana 
+      immunoreactivity, and only one specimen screened positive at a 20-ng/mL cutoff. 
+      Specimens from individuals who ate two hemp seed bars showed increased 
+      immunoreactivity, and five specimens screened positive at a 20-ng/mL cutoff. A 
+      single specimen yielded a quantitative GC-MS value (0.6 ng/mL), but it failed to 
+      meet reporting criteria. Several specimens from individuals who ate three cookies 
+      made from hemp seed flour and butter screened positive at both 50- and 20-ng/mL 
+      cutoffs. Two specimens produced quantitative GC-MS values (0.7 and 3.1 ng/mL), 
+      but they failed to meet reporting criteria. Several specimens also tested 
+      positive with an FDA-approved on-site marijuana-screening device. Hemp seeds 
+      similar to those used in the foodstuffs did not demonstrate the presence of 
+      marijuana when tested by GC-MS. In this study, ingestion of hemp seed food 
+      products resulted in urine specimens that screened positive for marijuana. No 
+      specimens gave a GC-MS quantitative value above the limit of detection for 
+      marijuana.
+FAU - Fortner, N
+AU  - Fortner N
+AD  - PharmChem Laboratories, Inc., Menlo Park, California 94025, USA.
+FAU - Fogerson, R
+AU  - Fogerson R
+FAU - Lindman, D
+AU  - Lindman D
+FAU - Iversen, T
+AU  - Iversen T
+FAU - Armbruster, D
+AU  - Armbruster D
+LA  - eng
+PT  - Clinical Trial
+PT  - Controlled Clinical Trial
+PT  - Journal Article
+PL  - England
+TA  - J Anal Toxicol
+JT  - Journal of analytical toxicology
+JID - 7705085
+RN  - 0 (Hallucinogens)
+RN  - 7J8897W37S (Dronabinol)
+SB  - IM
+MH  - Adult
+MH  - Cannabis/*chemistry
+MH  - Dronabinol/pharmacokinetics/*urine
+MH  - Enzyme Multiplied Immunoassay Technique
+MH  - Female
+MH  - Food
+MH  - Gas Chromatography-Mass Spectrometry
+MH  - Hallucinogens/pharmacokinetics/*urine
+MH  - Humans
+MH  - Immunoassay
+MH  - Male
+MH  - Marijuana Abuse/*urine
+MH  - Middle Aged
+MH  - Seeds/chemistry
+MH  - Substance Abuse Detection/*methods
+EDAT- 1997/11/05 00:00
+MHDA- 1997/11/05 00:01
+CRDT- 1997/11/05 00:00
+PHST- 1997/11/05 00:00 [pubmed]
+PHST- 1997/11/05 00:01 [medline]
+PHST- 1997/11/05 00:00 [entrez]
+AID - 10.1093/jat/21.6.476 [doi]
+PST - ppublish
+SO  - J Anal Toxicol. 1997 Oct;21(6):476-81. doi: 10.1093/jat/21.6.476.
+
+PMID- 10166357
+OWN - NLM
+STAT- MEDLINE
+DCOM- 19970514
+LR  - 20131121
+IS  - 0894-959X (Print)
+IS  - 0894-959X (Linking)
+VI  - 10
+IP  - 2
+DP  - 1997 Mar-Apr
+TI  - Non-pretreatment digoxin assays and developments in immunoanalyzers.
+PG  - 87-91
+AB  - OBJECTIVE: The performance of a new, non-pretreatment digoxin assay for the 
+      Abbott IMx analyzer (Abbott Park IL) was evaluated to determine its reliability 
+      and suitability for routine clinical use. The operational characteristics of 1st, 
+      2nd and 3rd generation immunoanalyzers are compared and contrasted. DESIGN: 
+      Within-run and day-to-day precision of the assay was determined, as well as its 
+      limit of detection. The effect of digoxin-like immunoreactive factors and 
+      carryover were evaluated. Serum from patients receiving digoxin was analyzed 
+      using the Dade Stratus II (Miami FL) digoxin test as the reference method and the 
+      IMx digoxin test as the comparison method. SETTING: An independent reference 
+      laboratory specializing in serving long-term care facilities. PATIENT POPULATION: 
+      Specimens were analyzed from geriatric patients in long-term care facilities who 
+      receive digoxin as a therapeutic drug for cardiac arrhythmias. Specimens were 
+      also tested from individuals in this same population, not receiving digoxin but 
+      demonstrating the presence of digoxin-like immunoreactive factors. MAIN OUTCOME 
+      MEASURE: Comparability of results from a new nonpretreatment digoxin with the 
+      standard digoxin assay (Stratus II) was used to determine the suitability of the 
+      new test for routine clinical use. RESULTS: The limit of detection is 0.27 ng/mL; 
+      day-to-day precision ranges from 3.4% CV to 5.9% CV. Linear regression analysis 
+      generated the following equation: IMx = 0.968 Stratus + 0.1043, r = 0.9776, n = 
+      237. No significant interference from digitoxin-like immunoreactive factors was 
+      noted. CONCLUSION: The IMx nonpretreatment digoxin assay's performance matches 
+      the manufacturer's claims, compares favorably with another common automated 
+      digoxin test, and is suitable for routine clinical use.
+FAU - Armbruster, D A
+AU  - Armbruster DA
+AD  - LTC Medical Laboratories, Dallas TX, USA.
+LA  - eng
+PT  - Journal Article
+PL  - United States
+TA  - Clin Lab Sci
+JT  - Clinical laboratory science : journal of the American Society for Medical 
+      Technology
+JID - 8806547
+RN  - 73K4184T59 (Digoxin)
+MH  - Aged
+MH  - Digoxin/*blood
+MH  - Humans
+MH  - Immunoenzyme Techniques/*instrumentation
+EDAT- 1997/02/06 00:00
+MHDA- 1997/02/06 00:01
+CRDT- 1997/02/06 00:00
+PHST- 1997/02/06 00:00 [pubmed]
+PHST- 1997/02/06 00:01 [medline]
+PHST- 1997/02/06 00:00 [entrez]
+PST - ppublish
+SO  - Clin Lab Sci. 1997 Mar-Apr;10(2):87-91.
+
+PMID- 8013092
+OWN - NLM
+STAT- MEDLINE
+DCOM- 19940728
+LR  - 20250505
+IS  - 0009-9147 (Print)
+IS  - 0009-9147 (Linking)
+VI  - 40
+IP  - 7 Pt 1
+DP  - 1994 Jul
+TI  - Limit of detection (LQD)/limit of quantitation (LOQ): comparison of the empirical 
+      and the statistical methods exemplified with GC-MS assays of abused drugs.
+PG  - 1233-8
+AB  - The limit of detection (LOD) for any analytical procedure, the point at which 
+      analysis is just feasible, may be determined by a statistical approach based on 
+      measuring replicate blank (negative) samples or by an empirical approach, 
+      consisting of measuring progressively more dilute concentrations of analyte. The 
+      limit of quantitation (LOQ), or concentration at which quantitative results can 
+      be reported with a high degree of confidence, may likewise be determined by 
+      either approach. We used both methods to determine LOD and LOQ for forensic gas 
+      chromatographic-mass spectrometric (GC-MS) analyses of abused drugs. The 
+      statistically determined LOD and LOQ values for these assays underestimated the 
+      LOD because of the large imprecision associated with blank measurements and the 
+      inability of blank samples to meet typical GC-MS acceptance criteria. The 
+      empirical method provided much more realistic LOD values, supported by reasonable 
+      experimental data, and are 0.5-0.03 the magnitude of the corresponding 
+      statistical LODs. The empirical LODs and LOQs are identical for these GC-MS 
+      assays. The observations made here about the LOD/LOQ for specific forensic GC-MS 
+      procedures are generally applicable to any type of analysis.
+FAU - Armbruster, D A
+AU  - Armbruster DA
+AD  - Armstrong Laboratory Drug Testing Division, Human Systems Center (AFMC), Brooks 
+      AFB, TX 78235-5240.
+FAU - Tillman, M D
+AU  - Tillman MD
+FAU - Hubbs, L M
+AU  - Hubbs LM
+LA  - eng
+PT  - Comparative Study
+PT  - Journal Article
+PL  - England
+TA  - Clin Chem
+JT  - Clinical chemistry
+JID - 9421549
+SB  - IM
+CIN - Clin Chem. 1994 Jul;40(7 Pt 1):1218-9. PMID: 8013089
+MH  - Gas Chromatography-Mass Spectrometry/*statistics & numerical data
+MH  - Humans
+MH  - Sensitivity and Specificity
+MH  - Substance Abuse Detection/*statistics & numerical data
+EDAT- 1994/07/01 00:00
+MHDA- 1994/07/01 00:01
+CRDT- 1994/07/01 00:00
+PHST- 1994/07/01 00:00 [pubmed]
+PHST- 1994/07/01 00:01 [medline]
+PHST- 1994/07/01 00:00 [entrez]
+PST - ppublish
+SO  - Clin Chem. 1994 Jul;40(7 Pt 1):1233-8.

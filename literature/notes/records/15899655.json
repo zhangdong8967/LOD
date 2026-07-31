@@ -1,0 +1,18 @@
+{
+  "pmid": "15899655",
+  "doi": "10.1515/cclm.2005.071",
+  "title": "Estimation of the limit of detection with a bootstrap-derived standard error by a partly non-parametric approach. Application to HPLC drug assays.",
+  "authors": "Linnet Kristian",
+  "year": "2005",
+  "journal": "Clinical chemistry and laboratory medicine",
+  "blocks": "C",
+  "priority": "screen",
+  "abstract": "A recently proposed procedure for estimating the limit of detection (LoD) of an assay using a partly non-parametric approach is applied to five HPLC drug assays. The non-parametrically determined 95th percentile of the blank measurements (LoB) is obtained as the value of the N (95/100) + 0.5 ordered observations. The LoD is the lowest level of analyte that is likely to yield a measured result exceeding the LoB. The LoD equals LoB + c(beta) x SD(S), where SD S is the analytical SD at low concentrations, and c(beta) = z(1-beta)/(1-1/(4 x f )) (f = degrees of freedom). c(beta) approximately 1.65 for a type II error of 5%. The blank distributions deviated significantly from normality for four of the five assays because of skewness to the right. The estimated LoB ranged from 3.3 to 10.2 nmol/L. The LoDs were in the interval from 7.8 to 17.2 nmol/L. A new procedure for estimation of the standard error (SE) of the estimated LoD that is partly based on the bootstrap principle showed good performance in simulation studies. In conclusion, the partly non-parametric procedure for estimation of the LoD of typical HPLC drug assays was found to be a suitable approach.",
+  "pmcid": "",
+  "pdf_path": "",
+  "pdf_source": "",
+  "download_status": "abstract_only",
+  "notes": "",
+  "pdf_text_chars": 0,
+  "pdf_text_preview": ""
+}

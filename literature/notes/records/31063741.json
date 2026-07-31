@@ -1,0 +1,18 @@
+{
+  "pmid": "31063741",
+  "doi": "10.1016/j.clinbiochem.2019.05.001",
+  "title": "Analytical characterization of the Siemens Dimension EXL high-sensitivity cardiac troponin I assay.",
+  "authors": "Kavsak Peter A; MacCuish Jackie; Boreyko Jill; Roy Chantele; Lamers Shana; Clark Lorna",
+  "year": "2019",
+  "journal": "Clinical biochemistry",
+  "blocks": "C",
+  "priority": "screen",
+  "abstract": "Siemens Healthcare Diagnostics has four commercially available assays on different analytical platforms using different methodologies to generate signal. We assessed the analytical performance of the Dimension EXL hs-cTnI assay (LOCI method) across different matrices and compared it to two different acridinium ester-based hs-cTnI assays (ADVIA Centaur and Abbott ARCHITECT). The analytical sensitivity and precision below the 99th-percentile was determined for the Dimension EXL hs-cTnI assay. Method comparisons were performed between the Dimension EXL contemporary cTnI and the hs-cTnI assays, between different matrices for the EXL hs-cTnI assay (serum, lithium heparin and EDTA plasma), and between different hs-cTnI assays (EXL versus ADVIA Centaur or Abbott ARCHITECT) using non-parametric analyses. The limit of blank and detection were 0.9 ng/L and 1.7 ng/L, respectively, with imprecision of 5.8% at 8.6 ng/L and 3.2% at 47.5 ng/L. Comparison between the EXL contemporary cTnI and hs-cTnI assay (range: 2.6-4214 ng/L) yielded proportional lower concentrations for the hs-cTnI assay (slope = 0.86; 95%CI: 0.81 to 0.96, n = 40); however, there was no difference in concentrations below 100 ng/L between the assays (median difference = -2.7 ng/L; 95%CI: -9.8 to 9.3). Passing-Bablok regression analysis with EDTA plasma yielded proportionally higher concentrations with the EXL hs-cTnI versus Abbott hs-cTnI (slope = 1.45; 95%CI: 1.02-1.86, n = 40) with proportionally lower concentrations with EDTA versus lithium heparin plasma with the EXL hs-cTnI assay alone (slope = 0.93; 95%CI: 0.90 to 0.99, n = 40). Comparison with Abbott hs-cTnI concentrations below 100 ng/L in the three matrices, indicated that the EXL hs-cTnI assay yielded higher concentrations (median difference range: 3.4-9.4 ng/L), with differences also evident when comparing the EXL hs-cTnI assay to the ADVIA Centaur hs-cTnI assay. The Siemens EXL hs-cTnI assay meets the analytical criteria for a high-sensitivity assay, with assay specific cutoffs important to maximize clinical performance.",
+  "pmcid": "",
+  "pdf_path": "",
+  "pdf_source": "",
+  "download_status": "abstract_only",
+  "notes": "",
+  "pdf_text_chars": 0,
+  "pdf_text_preview": ""
+}
