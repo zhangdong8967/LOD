@@ -1,0 +1,24 @@
+DISCUSSION - 精简版（Clinical Chemistry ≤3500词）
+===========================================
+
+Discussion
+
+We scored fixed replicate counts against exact, author-specified operating characteristics. Exact Fisher power at 20 replicates per arm stayed below 20% in 61% of 1,225 equally spaced lattice pairs. As a 10-point example, 90%/80% had power about 0.07 and n* about 199 per arm. That 61% belongs to the design grid. It is not a laboratory failure rate, and it clusters at differences of 10 percentage points or less. Gaps larger than 20 points were rarely underpowered at n=20. The 20-435 range in Fig. 1C is a display scale for plotted n*. Cells with a 1-percentage-point gap sit outside it. A 19-of-20 result is a binomial pass event (pass probability 73.6% when p=0.95). It is not confirmation of a 95% detection benchmark under the study Clopper-Pearson rule. Reported replicate counts in a convenience audit of 16 publicly accessible rows were smaller than the Table 1 requirements. Those files had not stated an 80% power target. Replicate number has meaning only with the claim it is meant to support.
+
+CLSI EP17-A2 specifies a minimal verification design and allows additional measurements when greater power is desired. The minimum number of observations needed to perform a procedure is not necessarily the number needed to detect a particular departure from the claim. Vaks et al. showed that pass probability for claimed-LoD verification depends on replicate number and on the relationship between claimed and actual LoD.[5] The present calculations extend that idea to two-arm hit-rate contrasts and keep pass rules separate from benchmark confirmation. The 19-of-20 criterion remains a qualitative acceptance rule, not a synonym for the EP17-A2 verification procedure, and does not revise the CLSI definition of LoD.
+
+Quantitative reagent-lot studies make a related practical point. Algeciras-Schimnich et al., Katzman et al., and Kim et al. found that fixed protocols can miss lot differences and that EP26-type requirements vary by analyte.[6-8] Near the LoD the outcomes here are binary. Evidentiary value still follows the written claim and its operating characteristics rather than a fixed sample count.
+
+Exact Fisher power was more than 0.05 below the pooled asymptotic calculation in 778 of 1,225 cells, so small-sample approximations need care near detection boundaries.[11] The retrospective audit supplies heterogeneous examples. The repeated claim-versus-n pattern supports using the lattice to quantify design consequences, without implying an incorrect clinical decision in any specific laboratory.
+
+Resolve sample size when the claim is written. Lock the estradiol worksheet’s 19-of-20 sentence as a pass rule and n* is 21; lock it as Clopper-Pearson confirmation and n* is 53; lock it as a 90%/80% two-arm contrast and n* is 199. Protocols can separate a minimal EP17-A2 verification from a benchmark-confirmation objective or a two-arm comparison. Equivalence or noninferiority still needs an explicit margin.
+
+A two-arm plan near 90%/80% that returns n*≈199 per arm need not be treated as a mandate. Laboratories can rewrite the claim as a pass rule or as benchmark confirmation, specify an equivalence margin instead of testing H₀: θ₂=0, restrict the comparison to a larger Δp that n=20 can support, or keep n=20 and report the exact power. The selected n has to be interpretable against the claim that will be signed.
+
+Limitations
+
+The audit is small (16 publicly accessible rows) and mixes replicate-level with aggregate data. Source files that omitted rates received assigned p₀=0.95 or the 90%/80% pair. No source stated 80% power, so Table 1 targets are author-specified. The 1,225-cell lattice is equally spaced and is not a prevalence of lot differences. We did not run a prospective, claim-locked verification on a laboratory specimen panel. Primary analyses assume independent Bernoulli outcomes with equal allocation. Logistic curves used to obtain p(c*) did not propagate fit uncertainty through the lattice. Binary hit-rate claims are in scope; blank-SD LoB/LoD, probit concentration estimation, and EP26 quantitative lot tests are not. The benchmark-confirmation rule is study-specific rather than a restatement of EP17-A2 decision criteria. Clustering entered only as a design-effect sensitivity analysis.
+
+A nominal replicate count such as 20 only records how much data were collected. It does not give the probability that a prespecified claim will be detected, confirmed, or rejected. Across a broad detection-probability range we report exact operating characteristics for three binary hit-rate claim structures. EP17 continuous detection-capability procedures remain in place. The next practical test is routine hit-rate verification under a locked claim.
+
+===========================================

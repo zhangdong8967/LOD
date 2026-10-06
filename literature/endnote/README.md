@@ -10,6 +10,9 @@
 |------|----------|----------------|
 | `pubmed_blocks_A-E-H-I.nbib` | **300 records** — deduplicated union of Blocks A, B, C, D, E, H, I (first 200 hits each where >200) | File → Import → File → Import Option: **PubMed (NLM)** |
 | `pubmed_seed_BFG_A2.nbib` | **134 records** — author seeds (Linnet/Kondratovich), Blocks F & G, Armbruster | Same import; EndNote will merge duplicates if DOI/PMID match |
+| [`manuscript_references/manuscript_refs_pubmed.nbib`](manuscript_references/manuscript_refs_pubmed.nbib) | **10 records** — main-text journal PMIDs (verified 2026-08-02) | PubMed (NLM) |
+| [`manuscript_references/manuscript_refs_manual.enw`](manuscript_references/manuscript_refs_manual.enw) | **27 records** — standards, books, CrossRef classics, Zenodo datasets | EndNote Import |
+| [`manuscript_references/README.md`](manuscript_references/README.md) | Manuscript Vancouver list + import steps | — |
 | `scholar_citation_chase.md` | Manual Scholar steps (not auto-exported) | Add selected hits via Scholar **Cite → EndNote** or DOI lookup |
 
 After import, run **Library → Find Duplicates** (match on DOI, PMID, title).

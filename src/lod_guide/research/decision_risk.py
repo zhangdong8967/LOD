@@ -1,5 +1,5 @@
 """
-Assumption-gated decision risk for LoD evaluation (G1–G4).
+Assumption-gated decision risk for LoD evaluation (E1–E3).
 
 Defines a transparent weighted loss that makes S0–S7 path selection a
 risk-minimization problem rather than a folklore SOP checklist:
@@ -17,6 +17,7 @@ from pathlib import Path
 
 import numpy as np
 
+from lod_guide.research.comparison_grid_export import FOLKLORE_N, REF_PAIRS, pair_slug
 from lod_guide.s4_models import lob_nonparametric, lob_parametric_normal
 from lod_guide.s5_sample_size import design_effect, power_two_proportions, sample_size_two_proportions
 from lod_guide.theory.exact_tests import exact_power_two_proportions
@@ -74,51 +75,62 @@ def _parametric_mismatch_exp(alpha: float = 0.05, n: int = 200, seed: int = 1) -
     return rate_p, rate_np, float(lob_p), float(lob_np)
 
 
+    return rate_p, rate_np, float(lob_p), float(lob_np)
+
+
+def _g2_pair_scenarios(
+    pa: float,
+    pb: float,
+    lab: str,
+    w: RiskWeights,
+) -> tuple[ScenarioRisk, ScenarioRisk]:
+    """Folklore n=20 and powered n* decision-risk rows for one (p_A, p_B) pair."""
+    slug = pair_slug(lab)
+    beta_asym = 1.0 - power_two_proportions(pa, pb, FOLKLORE_N)
+    beta_fish = 1.0 - exact_power_two_proportions(pa, pb, FOLKLORE_N, test="fisher")
+    n_star = int(np.ceil(sample_size_two_proportions(pa, pb)))
+    beta_pow = 1.0 - power_two_proportions(pa, pb, n_star)
+    folk = ScenarioRisk(
+        f"E2_folklore_n20_{slug}",
+        "E2",
+        type_i=0.05,
+        beta=float(beta_fish),
+        mismatch=0.0,
+        de_penalty=0.0,
+        loss=loss(type_i=0.05, beta=float(beta_fish), mismatch=0.0, weights=w),
+        notes=f"{lab} @ n={FOLKLORE_N}; Fisher miss β; asym β={beta_asym:.3f}; n*≈{n_star}",
+    )
+    powered = ScenarioRisk(
+        f"E2_powered_nstar_{slug}",
+        "E2",
+        type_i=0.05,
+        beta=float(beta_pow),
+        mismatch=0.0,
+        de_penalty=0.0,
+        loss=loss(type_i=0.05, beta=float(beta_pow), mismatch=0.0, weights=w),
+        notes=f"{lab} n*={n_star}; beta from asymptotic at design n*",
+    )
+    return folk, powered
+
+
 def evaluate_standard_scenarios(weights: RiskWeights | None = None) -> dict:
     w = weights or RiskWeights()
     rows: list[ScenarioRisk] = []
 
-    # G2 folklore n=20 for 90 vs 80
-    beta_asym = 1.0 - power_two_proportions(0.90, 0.80, 20)
-    beta_fish = 1.0 - exact_power_two_proportions(0.90, 0.80, 20, test="fisher")
-    n_star = int(np.ceil(sample_size_two_proportions(0.90, 0.80)))
-    rows.append(
-        ScenarioRisk(
-            "G2_folklore_n20_90vs80",
-            "G2",
-            type_i=0.05,
-            beta=float(beta_fish),
-            mismatch=0.0,
-            de_penalty=0.0,
-            loss=loss(type_i=0.05, beta=float(beta_fish), mismatch=0.0, weights=w),
-            notes=f"Fisher miss β; asym β={beta_asym:.3f}; n*≈{n_star}",
-        )
-    )
-    rows.append(
-        ScenarioRisk(
-            "G2_powered_nstar_90vs80",
-            "G2",
-            type_i=0.05,
-            beta=float(1.0 - power_two_proportions(0.90, 0.80, n_star)),
-            mismatch=0.0,
-            de_penalty=0.0,
-            loss=loss(
-                type_i=0.05,
-                beta=float(1.0 - power_two_proportions(0.90, 0.80, n_star)),
-                mismatch=0.0,
-                weights=w,
-            ),
-            notes=f"n*={n_star}; beta from asymptotic at design n* (exact enumeration infeasible at this n)",
-        )
-    )
+    g2_ratios: dict[str, float] = {}
+    for pa, pb, lab in REF_PAIRS:
+        folk, powered = _g2_pair_scenarios(pa, pb, lab, w)
+        rows.extend([folk, powered])
+        if powered.loss:
+            g2_ratios[lab] = folk.loss / powered.loss
 
-    # parametric mismatch on Exp blanks
+    beta_fish_90_80 = 1.0 - exact_power_two_proportions(0.90, 0.80, FOLKLORE_N, test="fisher")
     rate_p, rate_np, lob_p, lob_np = _parametric_mismatch_exp()
     mismatch_cost = min(1.0, abs(rate_p - 0.05) / 0.05)
     rows.append(
         ScenarioRisk(
-            "G1_parametric_LoB_on_Exp",
-            "G1",
+            "E1_parametric_LoB_on_Exp",
+            "E1",
             type_i=float(rate_p),
             beta=0.0,
             mismatch=float(mismatch_cost),
@@ -129,8 +141,8 @@ def evaluate_standard_scenarios(weights: RiskWeights | None = None) -> dict:
     )
     rows.append(
         ScenarioRisk(
-            "G1_nonparametric_LoB_on_Exp",
-            "G1",
+            "E1_nonparametric_LoB_on_Exp",
+            "E1",
             type_i=float(rate_np),
             beta=0.0,
             mismatch=0.0,
@@ -144,22 +156,21 @@ def evaluate_standard_scenarios(weights: RiskWeights | None = None) -> dict:
     de = design_effect(0.2, 5)
     rows.append(
         ScenarioRisk(
-            "G2_ignored_ICC_DE",
-            "G2",
+            "E2_ignored_ICC_DE",
+            "E2",
             type_i=0.05,
-            beta=float(beta_fish),
+            beta=float(beta_fish_90_80),
             mismatch=0.0,
             de_penalty=float(de - 1.0),
-            loss=loss(type_i=0.05, beta=float(beta_fish), mismatch=0.0, de=de, weights=w),
-            notes=f"DE={de} if ICC=0.2, m=5 ignored",
+            loss=loss(type_i=0.05, beta=float(beta_fish_90_80), mismatch=0.0, de=de, weights=w),
+            notes=f"DE={de} if ICC=0.2, m=5 ignored (90/80 @ n={FOLKLORE_N})",
         )
     )
 
-    # folklore vs gated comparison
-    folklore = next(r for r in rows if r.scenario_id == "G2_folklore_n20_90vs80")
-    powered = next(r for r in rows if r.scenario_id == "G2_powered_nstar_90vs80")
-    para = next(r for r in rows if r.scenario_id == "G1_parametric_LoB_on_Exp")
-    nonpar = next(r for r in rows if r.scenario_id == "G1_nonparametric_LoB_on_Exp")
+    folklore = next(r for r in rows if r.scenario_id == "E2_folklore_n20_90_vs_80")
+    powered = next(r for r in rows if r.scenario_id == "E2_powered_nstar_90_vs_80")
+    para = next(r for r in rows if r.scenario_id == "E1_parametric_LoB_on_Exp")
+    nonpar = next(r for r in rows if r.scenario_id == "E1_nonparametric_LoB_on_Exp")
 
     payload = {
         "study_id": "DECISION-RISK-v1",
@@ -169,8 +180,10 @@ def evaluate_standard_scenarios(weights: RiskWeights | None = None) -> dict:
         "weights": asdict(w),
         "scenarios": [asdict(r) for r in rows],
         "comparisons": {
-            "G2_loss_ratio_folklore_over_powered": folklore.loss / powered.loss if powered.loss else None,
-            "G1_loss_ratio_parametric_over_nonparametric": para.loss / nonpar.loss if nonpar.loss else None,
+            "E2_loss_ratio_folklore_over_powered": folklore.loss / powered.loss if powered.loss else None,
+            "E2_loss_ratio_by_pair": g2_ratios,
+            "E2_median_folklore_over_powered": float(np.median(list(g2_ratios.values()))) if g2_ratios else None,
+            "E1_loss_ratio_parametric_over_nonparametric": para.loss / nonpar.loss if nonpar.loss else None,
         },
         "interpretation": (
             "Under equal weights, folklore n=20 for 90 vs 80 incurs substantially higher "

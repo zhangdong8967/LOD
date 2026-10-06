@@ -27,9 +27,9 @@ def test_figure_table_ids_unique_and_ordered():
     assert fig_ids == sorted(fig_ids, key=_figure_sort_key)
     assert tab_ids == sorted(tab_ids, key=lambda s: int(s.split()[1]))
     assert len(fig_ids) == len(set(fig_ids))
-    assert len(MAIN_FIGURES) == 5
-    assert len(SUPPLEMENT_FIGURES) == 10
-    assert len(FIGURES) == 15
+    assert len(MAIN_FIGURES) == 2
+    assert len(SUPPLEMENT_FIGURES) == 0
+    assert len(FIGURES) == 2
     assert len(TABLES) >= 5
     assert all(f.caption and len(f.caption) > 40 for f in FIGURES)
     assert all(t.caption and len(t.caption) > 40 for t in TABLES)
@@ -63,7 +63,7 @@ def test_captions_write(tmp_path):
     paths = write_caption_files(tmp_path)
     fig_text = paths["figures"].read_text(encoding="utf-8")
     assert "Fig 1" in fig_text
-    assert "Fig S1" in fig_text
+    assert "Fig 2" in fig_text
     assert paths["plan"].exists()
     assert "Table 2" in paths["tables"].read_text(encoding="utf-8")
 
@@ -80,24 +80,42 @@ def test_build_paper_artifacts_smoke(tmp_path, monkeypatch):
     import lod_guide.paper.loq_precision as lp
     import lod_guide.paper.internal_review as ir
     import lod_guide.paper.manuscript_tables as mt
+    import lod_guide.paper.theory_research as tr
+    import lod_guide.paper.theory_audit as ta
 
     monkeypatch.setattr(ba, "PAPER", tmp_path)
     monkeypatch.setattr(reg, "PAPER", tmp_path)
     monkeypatch.setattr(mt, "PAPER", tmp_path)
+    monkeypatch.setattr(tr, "PAPER_TABLES", tmp_path / "tables")
+    monkeypatch.setattr(tr, "PAPER_AUDIT", tmp_path / "audit")
+    monkeypatch.setattr(tr, "PAPER_REVIEW", tmp_path / "review")
+    monkeypatch.setattr(ta, "PAPER_AUDIT", tmp_path / "audit")
+    monkeypatch.setattr(
+        ta,
+        "PAPER_TABLE4",
+        tmp_path / "tables" / "manuscript" / "Table04_propositions_P1_P18.csv",
+    )
+    monkeypatch.setattr(
+        ta,
+        "PAPER_DEFECTS",
+        tmp_path / "audit" / "D1_D3_verification_defects.json",
+    )
     monkeypatch.setattr(lp, "OUT", tmp_path / "tables")
     monkeypatch.setattr(ir, "PAPER", tmp_path)
     monkeypatch.setattr(ir, "TABLES", tmp_path / "tables")
     monkeypatch.setattr(ir, "REVIEW", tmp_path / "review")
 
-    man = build_paper_artifacts(skip_heavy_exact=False)
+    man = build_paper_artifacts(skip_heavy_exact=False, skip_heavy_theory=False)
     assert (tmp_path / "MANIFEST.json").exists()
     assert (tmp_path / "captions" / "FIGURE_CAPTIONS.md").exists()
     assert (tmp_path / "tables" / "Table02_loq_precision_main.csv").exists()
     assert (tmp_path / "tables" / "Table03_exact_vs_asymptotic.csv").exists()
     assert (tmp_path / "tables" / "Table04_propositions_P1_P6.csv").exists()
-    assert (tmp_path / "review" / "INTERNAL_REVIEW_P1P6_EXACT.md").exists()
+    assert (tmp_path / "tables" / "manuscript" / "Table04_propositions_P1_P18.csv").exists()
+    assert (tmp_path / "review" / "INTERNAL_REVIEW_THEORY.md").exists()
     assert "publication_readiness" in man
     assert "figure_policy" in man
-    assert man.get("main_figure_count") == 5
-    assert len(FIGURES) == 15
+    assert man.get("main_figure_count") == 2
+    assert man.get("supplement_figure_count") == 0
+    assert len(FIGURES) == 2
     assert len(TABLES) >= 8

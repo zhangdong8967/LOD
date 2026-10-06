@@ -6,13 +6,14 @@ data/audit/*
 !data/audit/.gitkeep
 data/research/*
 !data/research/.gitkeep
+src/data/
 __pycache__/
 *.egg-info/
 .pytest_cache/
 .tools/
 .DS_Store
 
-# Generated figures and manuscript build outputs (rebuild via make paper-artifacts / fig1-tikz)
+# Generated figures (rebuild with python -m lod_guide.paper.main_figures)
 figures/methodology/
 paper_artifacts/figures/
 manuscript/*.aux
@@ -22,3 +23,9 @@ manuscript/figures_tex/*.aux
 manuscript/figures_tex/*.log
 manuscript/missfont.log
 manuscript/THEORY_MONOGRAPH.pdf
+manuscript/*.ai_detect_report.json
+manuscript/*.ai_detect_report.md
+*.npz
+.venv/
+venv/
+/Clinical_Chemistry_submission.docx

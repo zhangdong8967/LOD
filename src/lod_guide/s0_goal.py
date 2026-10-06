@@ -1,7 +1,7 @@
 """
 S0 — Fix the scientific goal (estimand) before any formula.
 
-Locked goals G1–G4 (do not invent ad-hoc goals without extending this enum).
+Locked goals E1–E3 (do not invent ad-hoc goals without extending this enum).
 """
 
 from __future__ import annotations
@@ -13,32 +13,32 @@ from enum import Enum
 class Goal(str, Enum):
     """Primary scientific goal for an LoD evaluation episode."""
 
-    G1_VERIFY_LOD = "G1_VERIFY_LOD"
+    E1_VERIFY_LOD = "E1_VERIFY_LOD"
     """Single-method LoD verification (rate or concentration claim)."""
 
-    G2_COMPARE_REAGENTS = "G2_COMPARE_REAGENTS"
+    E2_COMPARE_REAGENTS = "E2_COMPARE_REAGENTS"
     """Compare two reagents / lots (Δp or ΔLoD)."""
 
-    G3_LOQ_PRECISION = "G3_LOQ_PRECISION"
+    LOQ_PRECISION = "LOQ_PRECISION"
     """LoQ / precision claim (CV or CI width)."""
 
-    G4_QUALITATIVE_KN = "G4_QUALITATIVE_KN"
+    E3_QUALITATIVE_KN = "E3_QUALITATIVE_KN"
     """Qualitative k/n detection claim."""
 
 
 GOAL_DESCRIPTIONS: dict[Goal, str] = {
-    Goal.G1_VERIFY_LOD: (
+    Goal.E1_VERIFY_LOD: (
         "Verify a single claimed LoD (parametric concentration, "
         "hit-rate / detection probability, or nonparametric percentile)."
     ),
-    Goal.G2_COMPARE_REAGENTS: (
+    Goal.E2_COMPARE_REAGENTS: (
         "Compare LoD-related performance between two reagents or lots; "
         "requires powered contrast on observed rates or LoD estimates."
     ),
-    Goal.G3_LOQ_PRECISION: (
+    Goal.LOQ_PRECISION: (
         "Establish or verify LoQ via precision profile (target CV% or total error)."
     ),
-    Goal.G4_QUALITATIVE_KN: (
+    Goal.E3_QUALITATIVE_KN: (
         "Qualitative claim that at least k of n replicates are positive "
         "at a stated concentration / LoD level."
     ),
@@ -47,13 +47,13 @@ GOAL_DESCRIPTIONS: dict[Goal, str] = {
 
 # Primary lab use-cases mapped to goals (frozen for v0.1)
 PRIMARY_USE_CASES: dict[str, Goal] = {
-    "verify_manufacturer_lod_claim": Goal.G1_VERIFY_LOD,
-    "ldt_lod_establishment": Goal.G1_VERIFY_LOD,
-    "kit_a_vs_kit_b_near_lod": Goal.G2_COMPARE_REAGENTS,
-    "lot_to_lot_lod_check": Goal.G2_COMPARE_REAGENTS,
-    "functional_sensitivity_loq": Goal.G3_LOQ_PRECISION,
-    "nat_hit_rate_kn": Goal.G4_QUALITATIVE_KN,
-    "immunoassay_qualitative_cutoff": Goal.G4_QUALITATIVE_KN,
+    "verify_manufacturer_lod_claim": Goal.E1_VERIFY_LOD,
+    "ldt_lod_establishment": Goal.E1_VERIFY_LOD,
+    "kit_a_vs_kit_b_near_lod": Goal.E2_COMPARE_REAGENTS,
+    "lot_to_lot_lod_check": Goal.E2_COMPARE_REAGENTS,
+    "functional_sensitivity_loq": Goal.LOQ_PRECISION,
+    "nat_hit_rate_kn": Goal.E3_QUALITATIVE_KN,
+    "immunoassay_qualitative_cutoff": Goal.E3_QUALITATIVE_KN,
 }
 
 

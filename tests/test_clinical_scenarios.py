@@ -36,4 +36,4 @@ def test_demo_single_and_compare():
 
 def test_get_scenario():
     s = get_scenario("CS07_LOT_TO_LOT")
-    assert s.goal.value == "G2_COMPARE_REAGENTS"
+    assert s.goal.value == "E2_COMPARE_REAGENTS"

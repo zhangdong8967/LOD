@@ -11,7 +11,7 @@ Linnet Kristian; Kondratovich Marina. P a r t l y   n o n p a r a m e t r i c   
 - **Full text:** abstract_only → `(abstract only)`
 - **Blocks:** B|C | **Priority:** core
 
-**Manuscript hooks:** Sample size / verification power (G2, C1, P8); Nonparametric LoB, skew, censoring (S2–S4, P5)
+**Manuscript hooks:** Sample size / verification power (E2, C1, P8); Nonparametric LoB, skew, censoring (S2–S4, P5)
 **Use in our paper:** Cite when stating prior art; contrast with assumption-gated S0–S7 + explicit decision risk L.
 
 **Problem / gap:**

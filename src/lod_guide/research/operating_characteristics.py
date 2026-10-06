@@ -16,6 +16,9 @@ from scipy.stats import norm
 
 from lod_guide.s5_sample_size import sample_size_two_proportions
 
+from lod_guide.research.comparison_grid_export import REF_PAIRS
+from lod_guide.research.e2_planning_constants import ILLUSTRATIVE_PAIR
+
 OUT_DIR = Path(__file__).resolve().parents[3] / "data" / "research"
 
 
@@ -79,50 +82,44 @@ def run_operating_characteristics(
                 )
             )
 
-    # Power: 0.90 vs 0.80
-    n_star = int(np.ceil(sample_size_two_proportions(0.90, 0.80)))
-    for n, tag in ((20, "folklore_n20"), (50, "n50"), (100, "n100"), (n_star, "n_star")):
-        rows.append(
-            run_oc_cell(
-                0.90,
-                0.80,
-                n,
-                n_sims=n_sims,
-                seed=seed + 10_000 + n,
-                setting=f"power_90v80_{tag}",
+    # Power: representative pairs from REF_PAIRS lattice anchors (not a single effect size)
+    power_pairs: list[tuple[float, float, str]] = [
+        (pa, pb, lab) for pa, pb, lab in REF_PAIRS
+    ]
+    n_star_illustrative = int(np.ceil(sample_size_two_proportions(*ILLUSTRATIVE_PAIR[:2])))
+    for pa, pb, lab in power_pairs:
+        slug = lab.replace("/", "v")
+        n_star = int(np.ceil(sample_size_two_proportions(pa, pb)))
+        for n, tag in ((20, "folklore_n20"), (n_star, "n_star")):
+            rows.append(
+                run_oc_cell(
+                    pa,
+                    pb,
+                    n,
+                    n_sims=n_sims,
+                    seed=seed + int(10_000 * pa) + int(1000 * pb) + n,
+                    setting=f"power_{slug}_{tag}",
+                )
             )
-        )
-
-    # Power: smaller delta 0.90 vs 0.85
-    n_star2 = int(np.ceil(sample_size_two_proportions(0.90, 0.85)))
-    for n, tag in ((20, "folklore_n20"), (n_star2, "n_star")):
-        rows.append(
-            run_oc_cell(
-                0.90,
-                0.85,
-                n,
-                n_sims=n_sims,
-                seed=seed + 20_000 + n,
-                setting=f"power_90v85_{tag}",
-            )
-        )
 
     payload = {
         "n_sims": n_sims,
         "seed_base": seed,
-        "n_star_90_80": n_star,
-        "n_star_90_85": n_star2,
+        "n_star_illustrative_90_80": n_star_illustrative,
+        "power_pairs": [lab for _, _, lab in power_pairs],
         "rows": [asdict(r) for r in rows],
         "summary": {
             "typeI_folklore_mean": float(
                 np.mean([r.reject_rate for r in rows if r.truth == "H0" and r.n == 20])
             ),
-            "power_90v80_n20": next(
-                r.reject_rate for r in rows if r.setting == "power_90v80_folklore_n20"
-            ),
-            "power_90v80_n_star": next(
-                r.reject_rate for r in rows if r.setting.startswith("power_90v80_n_star")
-            ),
+            "power_pairs_at_n20": {
+                lab: next(
+                    r.reject_rate
+                    for r in rows
+                    if r.setting == f"power_{lab.replace('/', 'v')}_folklore_n20"
+                )
+                for _, _, lab in power_pairs
+            },
         },
     }
     path = OUT_DIR / "operating_characteristics.json"
@@ -133,4 +130,4 @@ def run_operating_characteristics(
 if __name__ == "__main__":
     out = run_operating_characteristics()
     print(json.dumps(out["summary"], indent=2))
-    print("n* 90vs80 =", out["n_star_90_80"])
+    print("n* illustrative 90/80 =", out["n_star_illustrative_90_80"])

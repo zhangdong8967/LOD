@@ -152,7 +152,7 @@ def analyze_dataset(path: Path, dataset_id: str) -> dict:
     blanks = np.asarray(parsed["blank_values"], dtype=float)
     strata = np.asarray(parsed["blank_strata"]) if parsed["blank_strata"] else None
     g1 = run_guidance(
-        goal=Goal.G1_VERIFY_LOD,
+        goal=Goal.E1_VERIFY_LOD,
         result_type="continuous",
         values=blanks if blanks.size else np.array([45.0]),
         strata=strata if strata is not None and strata.size == blanks.size else None,
@@ -176,7 +176,7 @@ def analyze_dataset(path: Path, dataset_id: str) -> dict:
         n = np.array([t.n for t in pos], dtype=float)
         lod_fits[target] = fit_logistic_lod(sq, rate, n, target_p=0.95)
 
-    # G2 between two lowest positive SQ hit rates if available
+    # E2 between two lowest positive SQ hit rates if available
     g2 = None
     all_pos = [r for r in rows if r.sq > 0]
     if all_pos:
@@ -195,7 +195,7 @@ def analyze_dataset(path: Path, dataset_id: str) -> dict:
             pa, pb = max(p1, p2), min(p1, p2)
             if abs(pa - pb) > 0.01 and min(n1, n2) >= 5:
                 g2_res = run_guidance(
-                    goal=Goal.G2_COMPARE_REAGENTS,
+                    goal=Goal.E2_COMPARE_REAGENTS,
                     result_type="binary",
                     use_case="kit_a_vs_kit_b_near_lod",
                     p_a=pa,

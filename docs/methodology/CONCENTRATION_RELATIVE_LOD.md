@@ -59,7 +59,7 @@ Exact numbers are deposited in `data/research/concentration_relative_lod.json`.
 
 ## 5. Algorithm checklist (labs)
 
-1. Declare target estimand (G1 verify vs G2 compare).  
+1. Declare target estimand (E1 verify vs E2 compare).  
 2. Declare intended \(r=c/\mathrm{LoD}\) (or absolute \(c\) + claimed LoD).  
 3. Run `CONC-REL-LOD-EVAL-v1` (or pilot \(p\) at that \(c\)).  
 4. Choose \(n\) from S5 **at that operating point**, not from folklore.  

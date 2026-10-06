@@ -8,6 +8,7 @@ from dataclasses import asdict, dataclass, field
 from typing import Any
 
 from lod_guide.challenge import POSITIONING_STATEMENT
+from lod_guide.theory.detection_limit_semantics import DualFivePercentFrame, format_semantics_markdown
 
 
 @dataclass
@@ -70,8 +71,9 @@ class GuidanceReport:
             "## S5 Sample size",
         ]
         multilevel = self.sample_size.get("multilevel_lod_design")
+        exact_confirm = self.sample_size.get("exact_confirmation")
         for k, v in self.sample_size.items():
-            if k == "multilevel_lod_design":
+            if k in ("multilevel_lod_design", "exact_confirmation"):
                 continue
             lines.append(f"- **{k}**: {v}")
         if multilevel:
@@ -96,6 +98,16 @@ class GuidanceReport:
                     f"- Minimax vs folklore (worst-case SE ratio): "
                     f"{multilevel['improvement_worst_case_ratio']:.2f}×"
                 )
+        if exact_confirm:
+            lines += ["", "## S6 Exact confirmation (at planned n)"]
+            for k, v in exact_confirm.items():
+                if isinstance(v, float):
+                    lines.append(f"- **{k}**: {v:.6g}")
+                else:
+                    lines.append(f"- **{k}**: {v}")
+        semantics = (self.sample_size.get("details") or {}).get("lod95_semantics")
+        if semantics:
+            lines += ["", format_semantics_markdown(DualFivePercentFrame(**semantics))]
         lines += ["", "## Assumptions passed"]
         lines += [f"- {a}" for a in self.assumptions_passed] or ["- (none)"]
         lines += ["", "## Assumptions failed"]

@@ -114,7 +114,7 @@ def asymptotic_lod_se_log10(
     return {
         "se_log10_lod": se_x,
         "cv_lod_approx": float(se_x * np.log(10)),
-        "info_ok": rank == 2 and np.isfinite(se_x),
+        "info_ok": bool(rank == 2 and np.isfinite(se_x)),
         "info_rank": rank,
         "total_n": int(n.sum()),
         "n_levels": int(c.size),

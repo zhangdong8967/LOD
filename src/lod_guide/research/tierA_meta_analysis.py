@@ -33,7 +33,7 @@ def _safe_guidance_continuous(values: list[float], low: list[float] | None = Non
     if low_a is not None:
         low_a = low_a[np.isfinite(low_a)]
     guide = run_guidance(
-        goal=Goal.G1_VERIFY_LOD,
+        goal=Goal.E1_VERIFY_LOD,
         result_type="continuous",
         values=v,
         low_level=low_a if low_a is not None and low_a.size else None,
@@ -187,12 +187,27 @@ def _summarize_dataset(dataset_id: str) -> dict:
                 ]
             )
             row["loq_at_cv20"] = ps["loq_at_cv20"]
-    # hit-rate / probit / qPCR: primary LoD planning = G2 reference discrimination n*
+    # Hit-rate / probit / qPCR deposits without a written (p_A, p_B) pair are scored
+    # at the declared illustrative pair, not at the lattice-wide median n*.
     if "probit" in meta.result_family or "qpcr" in meta.result_family:
-        n_star = int(np.ceil(sample_size_two_proportions(0.90, 0.80)))
+        from lod_guide.research.e2_planning_constants import ILLUSTRATIVE_PAIR
+
+        pa, pb, lab = ILLUSTRATIVE_PAIR
+        g = run_guidance(
+            goal=Goal.E2_COMPARE_REAGENTS,
+            result_type="binary",
+            use_case="kit_a_vs_kit_b_near_lod",
+            p_a=pa,
+            p_b=pb,
+            run_sensitivity=False,
+        )
+        n_star = int(g.sample_size.n_per_arm)
         row["guidance_n"] = n_star
         row["n_ratio_vs_folklore"] = n_star / 20.0
-        row["notes"] = (row["notes"] + f"; LoD G2 ref n*(90vs80)={n_star}").strip("; ")
+        row["notes"] = (
+            row["notes"]
+            + f"; two-arm n* for assigned {lab} pair (n*={n_star}; not lattice-wide median)"
+        ).strip("; ")
 
     return row
 

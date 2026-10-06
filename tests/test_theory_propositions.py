@@ -5,11 +5,10 @@ from __future__ import annotations
 from lod_guide.theory.audit import new_audit, sha256_hex
 from lod_guide.theory.estimands import EstimandID, estimand_for_goal
 from lod_guide.theory.exact import clopper_pearson_interval, wilson_interval
-from lod_guide.theory.propositions import verify_all_propositions, verify_by_layer
 
 
-def test_all_propositions_pass():
-    certs = verify_all_propositions()
+def test_all_propositions_pass(theory_certs):
+    certs = theory_certs
     assert len(certs) == 22
     failed = [c for c in certs if not c.passed]
     assert not failed, [(c.result_id, c.details) for c in failed]
@@ -20,22 +19,22 @@ def test_all_propositions_pass():
     assert "P18_folklore_pareto_dominated" in ids
 
 
-def test_layer_a_theorems_pass():
-    layer_a = verify_by_layer("A")
+def test_layer_a_theorems_pass(theory_by_layer):
+    layer_a = theory_by_layer("A")
     assert len(layer_a) >= 6
     assert all(c.passed for c in layer_a)
     assert all(c.proof_sketch and c.proof_sketch != "Numerical certificate via enumeration/Monte Carlo." for c in layer_a)
 
 
-def test_theory_result_has_layer():
-    certs = verify_all_propositions()
+def test_theory_result_has_layer(theory_certs):
+    certs = theory_certs
     layers = {c.layer for c in certs}
     assert layers == {"A", "B", "C"}
 
 
 def test_estimands_locked():
-    e = estimand_for_goal("G2_COMPARE_REAGENTS")
-    assert e.id == EstimandID.G2_RATE_DIFFERENCE
+    e = estimand_for_goal("E2_COMPARE_REAGENTS")
+    assert e.id == EstimandID.E2_RATE_DIFFERENCE
     assert "NOT 1-(1-p)^n" in " ".join(e.identification_assumptions)
 
 
@@ -47,7 +46,7 @@ def test_intervals_nested_well():
 
 
 def test_audit_hash_stable_for_same_payload():
-    est = estimand_for_goal("G1_VERIFY_LOD").to_dict()
+    est = estimand_for_goal("E1_VERIFY_LOD").to_dict()
     a = new_audit("TEST-PROTOCOL", est)
     a.final = {"x": 1}
     d1 = a.to_dict()

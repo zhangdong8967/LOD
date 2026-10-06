@@ -1,0 +1,2 @@
+source_id,pathogen,c_star,n,hits,rate,protocol_quote,quote_source,citation_doi
+scirep_jiang2025_mp,Mycoplasma pneumoniae,5 copies/µL (LoD-adjacent dilution),20,19,0.95,"Each dilution was assessed using the established assay in 20 replicates. The limit of detection (LoD) was determined by probit analysis, defined as the concentration detectable with ≥95% probability (Table 1).","Jiang Y et al. Sci Rep 2025; Shaanxi Provincial Hospital clinical validation",10.1038/s41598-025-16434-2

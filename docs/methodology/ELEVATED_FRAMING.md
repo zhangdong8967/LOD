@@ -19,7 +19,7 @@
 
 **一句话：** EP17 有定义和路径菜单；验证方案里的 **claim** 很少被翻译成 **n 和路径**——我们补的是这一步前瞻性设计。
 
-**逻辑顺序：** claim → estimand G1–G4 → S2–S3 诊断 → S4 路径 → S5 的 n → 精确确认 → 分层证据。
+**逻辑顺序：** claim → estimand E1–E3 → S2–S3 诊断 → S4 路径 → S5 的 n → 精确确认 → 分层证据。
 
 **勿用：** 三层/Layer、决策编译器、可证伪对象、inferential contract。  
 **详稿：** [`研究深度阐述.md`](研究深度阐述.md)、[`SIGNIFICANCE_AND_DEPTH.md`](../../manuscript/SIGNIFICANCE_AND_DEPTH.md)。
@@ -50,11 +50,11 @@ S0–S7 不是流程装饰，而是使 \(L\) 可计算、可审计的路径图�
 
 ## 主结果预告（Results 骨架）
 
-1. **Table 7** — tier-A public deposits’ gate / LoQ / \(n\) vs folklore 汇总（禁止并入 C/S；当前 A=9）。  
+1. **Table 7** — tier-A public deposits’ gate / LoQ / \(n\) vs folklore 汇总（禁止并入 C/S；当前 A=10）。  
 2. **Fig 4** — 全阳陷阱：\(p^n\) 与 \(n/n\) 后的 CP 下界 / 后验风险（图内无标题，仅 A/B）。  
 3. **Table 3 + P8** — folklore \(n=20\) 下渐近功效高估精确 Fisher 功效。  
 4. **Fig 8** — radioimmuno 精度剖面 LoQ@CV20%（tier A）。  
-5. **Table 8** — G1 Wilson vs Clopper–Pearson 覆盖（堵住“只做了 G2 exact”）。
+5. **Table 8** — E1 Wilson vs Clopper–Pearson 覆盖（堵住“只做了 E2 exact”）。
 
 英文短文草稿与 Supplement 嵌入：`manuscript/METHODS_BRIEF.md`、`manuscript/SUPPLEMENT.md`。
 

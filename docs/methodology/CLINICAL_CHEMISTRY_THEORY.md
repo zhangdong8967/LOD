@@ -42,10 +42,10 @@ An LoD study without a declared estimand is not a statistical problem; it is a n
 
 | ID | Estimand (mathematical object) | Decision functional |
 |----|--------------------------------|---------------------|
-| G1 | \(\theta_1=p(c^\star)\) or \(\theta_1^{\mathrm{conc}}=\mathrm{LoD}_\alpha\) | Verify claim / CI coverage |
-| G2 | \(\theta_2=p_A(c^\star)-p_B(c^\star)\) | Test \(H_0:\theta_2=0\) at level \(\alpha\) with power \(1-\beta\) at \(\theta_2=\Delta^\star\) |
-| G3 | \(\theta_3=\mathrm{CV}(c)\) or quantile precision | \(\theta_3\le \tau\) |
-| G4 | \(\theta_4=P(S_n\ge k)\), \(S_n\sim\mathrm{Bin}(n,p)\) | \(\theta_4\ge \gamma\) |
+| E1 | \(\theta_1=p(c^\star)\) or \(\theta_1^{\mathrm{conc}}=\mathrm{LoD}_\alpha\) | Verify claim / CI coverage |
+| E2 | \(\theta_2=p_A(c^\star)-p_B(c^\star)\) | Test \(H_0:\theta_2=0\) at level \(\alpha\) with power \(1-\beta\) at \(\theta_2=\Delta^\star\) |
+| LoQ | \(\theta_3=\mathrm{CV}(c)\) or quantile precision | \(\theta_3\le \tau\) |
+| E3 | \(\theta_4=P(S_n\ge k)\), \(S_n\sim\mathrm{Bin}(n,p)\) | \(\theta_4\ge \gamma\) |
 
 **Identification assumptions** are stated per path (S4a/S4b) and are **audited**, not assumed silently.
 
@@ -218,7 +218,7 @@ Absence of any item fails our internal “Clinical Chemistry bar.”
 
 **Propositions P15–P18 (theory depth).** P15–P16: LoD identifiability vs saturation trap (**Layer A**). P18: folklore \(n=20\) Pareto-inadmissible under exact Fisher OC (**Layer B**). P12–P14, P17: c-optimal design, minimax slope robustness, gated LoB selective inflation (**Layer C**).
 
-Full three-layer map: [manuscript/THEORY_MONOGRAPH.md](../../manuscript/THEORY_MONOGRAPH.md).
+Full three-layer map: [archive/manuscript_retired/THEORY_MONOGRAPH.md](../../archive/manuscript_retired/THEORY_MONOGRAPH.md).
 
 **Decision risk.** Path selection under S2–S5 minimizes a transparent weighted loss (see `lod_guide.research.decision_risk`). Equal-weight exhibits show folklore \(n=20\) for 90 vs 80 incurs substantially higher \(L\) than powered \(n^\star\), and parametric LoB on exponential blanks incurs higher \(L\) than the nonparametric path.
 

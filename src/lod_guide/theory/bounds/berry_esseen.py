@@ -72,8 +72,10 @@ def berry_esseen_power_gap_lower_bound(
     Analytic lower bound on Power_asym - Power_Fisher via Berry–Esseen.
 
     If the pooled-z test uses Φ critical values, perturbing the CDF by at most
-    ε_n at the decision boundary changes two-sided power by at most 2 ε_n φ(z*),
-    where z* is the effective standardised boundary under H1.
+    ε_n at the decision boundary changes two-sided power by at most ε_n φ(z*),
+    where z* is the effective standardised boundary under H1 (one-sided
+    Lipschitz sensitivity; the factor 2 is not applied because the asym–Fisher
+    gap is a signed discrepancy, not a symmetric worst case).
 
     Under H1, non-centrality κ = |Δ| √(n/v). The boundary in standardised units
     is approximately z_{1-α/2} - κ (one-sided contribution to two-sided gap).
@@ -84,9 +86,9 @@ def berry_esseen_power_gap_lower_bound(
     z_crit = float(norm.ppf(1.0 - alpha / 2.0))
     kappa = delta * math.sqrt(n / v) if v > 0 else 0.0
 
-    # Lipschitz sensitivity of two-sided normal power to CDF perturbation.
+    # One-sided Lipschitz sensitivity at the effective boundary.
     phi_at_boundary = float(norm.pdf(z_crit - kappa))
-    gap_lb = 2.0 * eps * phi_at_boundary
+    gap_lb = eps * phi_at_boundary
 
     # Underpowered scale: when κ < z_crit, normal approximation error dominates.
     underpowered = kappa < z_crit and n * delta * delta / max(v, 1e-12) < 8.0

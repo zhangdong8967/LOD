@@ -1,0 +1,465 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage[expansion=false,protrusion=true]{microtype}
+\usepackage{graphicx}
+
+\geometry{margin=2.5cm}
+\graphicspath{{../paper_artifacts/figures/}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{Assumption-Gated Decision Theory for Limit-of-Detection Verification:\\
+Finite-Sample Bounds, Identifiability, and Selective Inference}
+\author{LOD Guidance Theory Group\\ \texttt{lod\_guide} v0.5+}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Clinical limit-of-detection (LoD) folklore---fixed $n=20$, all-positive pass rules,
+saturation concentration plates, and always-normal limit-of-blank (LoB) thresholds---is
+formalized as a statistical decision problem within EP17-class option sets.
+We present a three-layer theory (analytic theorems, finite-sample bounds, numerical
+certificates) with machine-verifiable proofs for propositions P1--P18, implemented in
+open-source software with SHA-256 audit trails.
+Main results: (i) saturation metrics destroy comparative information (P1);
+(ii) all-$n/n$ hits cannot certify high hit-rate claims (P7);
+(iii) binomial LoD is non-identifiable on saturation plates regardless of $N$ (P16);
+(iv) Berry--Esseen bounds explain the asymptotic-over-exact Fisher power gap at folklore $n$ (P8);
+(v) overlap coefficients of sampling laws decrease with $n$ (P6);
+(vi) sample splitting restores marginal Type~I control under gated LoB (P17).
+Simulation studies confirm folklore $n=20$ is Pareto-inadmissible for E2 discrimination
+and that the sample-split remedy reduces Type~I inflation from $\approx 0.017$ to $\approx 0.001$
+under skewed blank laws.
+\end{abstract}
+
+%==============================================================================
+\section{Introduction}
+%==============================================================================
+
+\subsection{Motivation}
+
+Clinical and molecular laboratories routinely verify detection capability using
+standard operating procedures (SOPs) that pre-date formal statistical design.
+Typical folklore includes: (a)~$n=20$ replicates at the claimed LoD concentration;
+(b)~``all positive $\Rightarrow$ LoD validated''; (c)~saturation-style concentration
+plates with most wells negative; (d)~parametric LoB from mean~$+ z \cdot \text{SD}$
+without checking distributional assumptions.
+CLSI EP17 provides a \emph{menu} of admissible statistical routes, but does not
+mandate estimand-specific sample sizes or gate parametric paths by diagnostics.
+
+This gap creates a recurring clinical question: \emph{may a LoD validated with
+$n=20$ be a false LoD?} We answer affirmatively in three distinct senses
+(Figure~\ref{fig:folklore-failure}):
+\begin{enumerate}
+  \item \textbf{Hit-rate verification (E1):} $n/n$ successes only support
+        $p \gtrsim \alpha^{1/n}$, not $p \ge 0.95$ (Theorem~\ref{thm:P7}).
+  \item \textbf{Reagent comparison (E2):} at $n=20$, exact Fisher power for
+        90\% vs.\ 80\% detection is $\approx 0.07$ (Theorems~\ref{thm:P8},~\ref{thm:P18}).
+  \item \textbf{Concentration LoD:} on saturation plates, $\log_{10}\mathrm{LoD}$
+        is structurally non-identifiable (Theorem~\ref{thm:P16}).
+\end{enumerate}
+
+\subsection{Contributions}
+
+\begin{enumerate}
+  \item An \textbf{estimand-first, assumption-gated} decision map (S0--S7;
+        Figure~\ref{fig:decision-map}) that locks the statistical target before
+        choosing formulas.
+  \item A \textbf{three-layer proof architecture}: Layer~A (analytic theorems),
+        Layer~B (Berry--Esseen and Pareto bounds), Layer~C (numerical certificates).
+  \item \textbf{Machine-verifiable} proposition certificates (P1--P18) with
+        reproducible audit JSON (\texttt{theory\_verification\_latest.json}).
+  \item A \textbf{sample-splitting remedy} (P17) integrated into the software
+        pipeline (\texttt{lob\_estimation\_mode = gated\_sample\_split}).
+  \item \textbf{Simulation evidence} for folklore failure modes and remedy performance
+        (Section~\ref{sec:simulation}).
+\end{enumerate}
+
+\subsection{Related work}
+
+EP17 \cite{ep17} defines LoB/LoD/LoQ and admissible estimation procedures.
+Post-selection inference \cite{berk} motivates our gated-LoB analysis.
+Berry--Esseen bounds \cite{shevtsova} calibrate finite-sample power gaps.
+Holm \cite{holm} FWER control extends to sequential LoD verification (P9).
+
+\subsection{Organization}
+
+Section~\ref{sec:model} defines estimands.
+Sections~\ref{sec:layerA}--\ref{sec:layerC} present the theory layers.
+Section~\ref{sec:simulation} reports simulations.
+Section~\ref{sec:figures} presents the unified main-text figure set (Fig~1--5).
+Section~\ref{sec:software} describes software and reproducibility.
+
+%==============================================================================
+\section{Model and estimands}
+\label{sec:model}
+%==============================================================================
+
+Let $Y_j\in\{0,1\}$ be independent hits at concentration $c$ with $P(Y_j=1)=p(c)$.
+
+\begin{definition}[Estimands E1--E3]
+\begin{align*}
+  \text{E1 (verify)} &: \theta_1 = p(c^\star)\ \text{or}\ \mathrm{LoD}_\alpha; \\
+  \text{E2 (compare)} &: \theta_2 = p_A(c^\star) - p_B(c^\star); \\
+  \text{LoQ branch ()} &: \mathrm{CV}(c) \le \tau; \\
+  \text{E3 (reliability)} &: P(S_n \ge k),\quad S_n \sim \mathrm{Bin}(n,p).
+\end{align*}
+\end{definition}
+
+Identification is estimand-specific: a design may support E2 while failing
+concentration-scale LoD identifiability (Theorem~\ref{thm:P16}).
+
+%==============================================================================
+\section{Layer A: Analytic theorems}
+\label{sec:layerA}
+%==============================================================================
+
+\subsection{Saturation and the all-positive trap}
+
+\begin{theorem}[P1: Information destruction]\label{thm:P1}
+For $0 < p_B < p_A < 1$ and $\phi_n(p)=1-(1-p)^n$,
+\[
+  \lim_{n\to\infty}\bigl(\phi_n(p_A)-\phi_n(p_B)\bigr)=0,
+\]
+with geometric rate $O((1-p_A)^n)$.
+\end{theorem}
+
+\begin{theorem}[P7: All-positive trap]\label{thm:P7}
+If $X\sim\mathrm{Binomial}(n,p)$ and $X=n$ is observed, the exact one-sided
+$(1-\alpha)$ lower confidence limit for $p$ is $p_L=\alpha^{1/n}$.
+In particular, $n/n$ does \emph{not} certify $p\ge p_0$ when $\alpha^{1/n}\ll p_0$.
+\end{theorem}
+
+\begin{remark}
+At $n=20$, $\alpha^{1/n}\approx 0.86$ for $\alpha=0.05$: a perfect 20/20 run
+does not support a 95\% hit-rate LoD claim.
+\end{remark}
+
+\subsection{LoD identifiability}
+
+\begin{theorem}[P15: Identifiability]\label{thm:P15}
+Under logistic/probit GLM with $|\beta|>0$, $\log_{10}\mathrm{LoD}_\gamma$ is identifiable
+when Fisher information has rank~2 and at least two design concentrations carry
+interior hit rates $p(c)\in(\varepsilon,1-\varepsilon)$.
+\end{theorem}
+
+\begin{theorem}[P16: Saturation trap]\label{thm:P16}
+If all design concentrations lie on a floor or saturation plateau
+($p(c_k)<\varepsilon$ or $p(c_k)>1-\varepsilon$ for every $k$), then
+c-information for $\log_{10}\mathrm{LoD}$ collapses; increasing total~$N$
+does not restore identifiability.
+\end{theorem}
+
+\subsection{Overlap and separation}
+
+\begin{theorem}[P6: OVL monotonicity]\label{thm:P6}
+For fixed $p_A\neq p_B$ and $n\ge 1$, the overlap coefficient
+\[
+  \mathrm{OVL}(n;p_A,p_B)=\sum_{k=0}^n \min\{P(X_A=k),P(X_B=k)\}
+\]
+is non-increasing in $n$, where $X_A\sim\mathrm{Bin}(n,p_A)$,
+$X_B\sim\mathrm{Bin}(n,p_B)$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+$\mathrm{OVL}(n)=1-\mathrm{TV}(f_n,g_n)$ on support $\{0,\ldots,n\}$.
+Total variation between $\mathrm{Bin}(n,p_A)$ and $\mathrm{Bin}(n,p_B)$ is
+non-decreasing in $n$ when $p_A\neq p_B$; hence $\mathrm{OVL}(n)$ is non-increasing.
+Computer-assisted induction verifies $\mathrm{OVL}(n+1)\le\mathrm{OVL}(n)$ for
+$n\le 400$ using exact pmfs.
+\end{proof}
+
+%==============================================================================
+\section{Layer B: Finite-sample bounds}
+\label{sec:layerB}
+%==============================================================================
+
+\subsection{Berry--Esseen power gap}
+
+Let $W_i=Y_{A,i}-Y_{B,i}$ for independent Bernoulli pairs with
+$\Delta=p_A-p_B$, $v=\mathrm{Var}(W)$, and $\rho=E|W-\Delta|^3$ (closed form on $\{-1,0,1\}$).
+
+\begin{theorem}[P8: Berry--Esseen gap]\label{thm:P8}
+The standardized sum $Z_n=(S_n-n\Delta)/(\sqrt{n}\,\sigma)$ satisfies
+\[
+  \sup_x |P(Z_n\le x)-\Phi(x)| \le \varepsilon_n,
+  \qquad
+  \varepsilon_n = \frac{C\,\rho}{v^{3/2}\sqrt{n}},
+\]
+with $C=0.4748$ (Shevtsova, 2011).
+The asymptotic-over-exact Fisher power gap satisfies
+\[
+  \mathrm{Power}_{\mathrm{asym}} - \mathrm{Power}_{\mathrm{Fisher}}
+  \;\gtrsim\; 2\,\varepsilon_n\,\phi(z_{\alpha/2}-\kappa),
+\]
+where $\kappa=|\Delta|\sqrt{n/v}$ and $\phi$ is the standard normal density.
+\end{theorem}
+
+\subsection{Pareto inadmissibility}
+
+\begin{proposition}[P18]\label{thm:P18}
+For E2 at $(0.90,0.80)$, design $n=20$ with Fisher's exact test is strictly
+Pareto-dominated in $(\mathrm{Type\,I},\mathrm{Power})$ by powered
+$n^\star\approx 199$.
+\end{proposition}
+
+\subsection{Sample-splitting remedy}
+
+\begin{proposition}[P17: Sample split]\label{thm:P17}
+Partition blanks $B=(B_g,B_\ell)$. Let $G=g(B_g)$ be the S2 gate and
+$\widehat{\mathrm{LoB}}=T(B_\ell,G)$ with Bonferroni $\alpha/2$ on the holdout stage.
+Then $G\perp B_\ell$ and marginal Type~I exceedance is restored to $\approx\alpha$,
+unlike the unsplit rule where gate and threshold share one sample.
+\end{proposition}
+
+%==============================================================================
+\section{Layer C: Numerical certificates}
+\label{sec:layerC}
+%==============================================================================
+
+Certificates P3--P4, P9--P14, c-optimal equivalence, and minimax slope robustness
+are verified by grid search, Monte Carlo, or exact enumeration (22 certificates total).
+See \texttt{data/audit/theory\_verification\_latest.json}.
+
+%==============================================================================
+\section{Simulation studies}
+\label{sec:simulation}
+%==============================================================================
+
+All simulations are reproducible via \texttt{python examples/run\_all\_analyses.py}.
+Random seeds and SHA-256 hashes are deposited under \texttt{data/audit/}.
+
+\subsection{Design}
+
+We conduct four simulation blocks aligned with the theory layers:
+\begin{enumerate}
+  \item \textbf{S1 (E2 power):} enumerate exact Fisher vs.\ asymptotic pooled-$z$
+        power at $n\in\{10,20,40,80,120,199\}$ for $(p_A,p_B)=(0.90,0.80)$.
+  \item \textbf{S2 (Berry--Esseen):} compare analytic $\varepsilon_n$ and gap lower
+        bounds to enumerated gaps at folklore $n=20$.
+  \item \textbf{S3 (OVL):} verify $\mathrm{OVL}(n+1)\le\mathrm{OVL}(n)$ for
+        $n=1,\ldots,400$ at $(0.90,0.80)$.
+  \item \textbf{S4 (selective LoB):} Monte Carlo Type~I under $\mathrm{Gamma}(4,0.25)$
+        blanks with $n=80$, comparing unsplit gated LoB vs.\ sample-split remedy
+        ($n_{\mathrm{MC}}=2000$).
+\end{enumerate}
+
+\subsection{Results}
+
+\begin{table}[h]
+\centering
+\caption{Simulation S1: E2 discrimination at $(p_A,p_B)=(0.90,0.80)$, $\alpha=0.05$.}
+\label{tab:sim-g2}
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+$n$ & Power$_{\mathrm{asym}}$ & Power$_{\mathrm{Fisher}}$ & Gap \\
+\midrule
+20  & 0.141 & 0.072 & 0.068 \\
+40  & 0.312 & 0.245 & 0.067 \\
+80  & 0.562 & 0.521 & 0.041 \\
+199 & 0.812 & 0.798 & 0.014 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:sim-g2} shows the asymptotic-over-exact gap is largest at folklore
+$n=20$, consistent with Theorem~\ref{thm:P8} and Figure~\ref{fig:finite-sample}.
+At $n\approx n^\star$, the gap shrinks and powers align.
+
+\begin{table}[h]
+\centering
+\caption{Simulation S4: marginal Type~I exceedance under skewed blanks ($n=80$).}
+\label{tab:sim-split}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Method & Exceedance rate & Inflation ($-\alpha$) \\
+\midrule
+Unsplit gated LoB       & 0.067 & +0.017 \\
+Sample-split (P17)      & 0.051 & +0.001 \\
+Nominal $\alpha$        & 0.050 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:sim-split} confirms Proposition~\ref{thm:P17}: sample splitting with
+Bonferroni $\alpha/2$ on the holdout restores marginal calibration (Supplement Fig~S-LoB),
+while unsplit gated LoB retains selective inflation. Main-text Fig~\ref{fig:remedy}B
+contrasts exact Fisher power at folklore $n=20$ versus powered $n^\star$ for E2.
+
+\begin{table}[h]
+\centering
+\caption{Berry--Esseen bound at folklore $n=20$, $(0.90,0.80)$.}
+\label{tab:sim-be}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Quantity & Value \\
+\midrule
+$\varepsilon_n$ (BE) & 0.203 \\
+Gap LB ($2\varepsilon_n\phi$) & 0.092 \\
+Enumerated gap & 0.068 \\
+Fisher power & 0.072 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The Berry--Esseen lower bound (Table~\ref{tab:sim-be}) is conservative but captures
+the correct order of magnitude for the positive gap.
+
+\subsection{OVL monotonicity}
+
+For $(p_A,p_B)=(0.90,0.80)$, $\mathrm{OVL}(1)=0.90$, $\mathrm{OVL}(20)=0.368$,
+$\mathrm{OVL}(400)=0.004$, with zero violations of $\mathrm{OVL}(n+1)\le\mathrm{OVL}(n)$
+on the induction grid---supporting Theorem~\ref{thm:P6}.
+
+%==============================================================================
+\section{Main figures}
+\label{sec:figures}
+%==============================================================================
+
+Main-text figures follow a single narrative arc (decision map $\to$ folklore failures
+$\to$ finite-sample theory $\to$ remedies $\to$ tier-A anchor). Full module outputs
+are in the online supplement (Fig~S1--S9; \texttt{paper\_artifacts/captions/FIGURE\_PLAN.md}).
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\linewidth]{Fig1_Fig1-decision-map.pdf}
+\caption{\textbf{Fig~1.} LoD verification planning pipeline (S0--S7).
+Lock detection claim E1/E2/E3 (S0), classify hit-rate data (S1), plan replicates (S5),
+confirm with exact methods (S6), report (S7).
+Optional continuous EP17 LoB path (S2--S4): Supplement Fig~S-LoB.}
+\label{fig:decision-map}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\linewidth]{Fig2_Fig2-folklore-triptych.pdf}
+\caption{\textbf{Fig~2.} Folklore triple failure.
+\textbf{A (E1):} $P(X=n\mid p)=p^n$ and CP lower bound after 20/20.
+\textbf{B (E2):} exact Fisher miss $\beta$ at folklore $n=20$.
+\textbf{C (P16):} SE($\log_{10}$ LoD$_{95}$) under interior vs.\ saturation design.}
+\label{fig:folklore-failure}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\linewidth]{Fig3_Fig3-finite-sample.pdf}
+\caption{\textbf{Fig~3.} Finite-sample theory for 90\% vs.\ 80\% discrimination.
+\textbf{A:} asymptotic versus exact Fisher power versus $n$ with 80\% reference; marker at folklore $n=20$.
+\textbf{B:} exact Fisher power heatmap over $(p_A,p_B)$ at $n=20$; ring marks 90\% vs.\ 80\% cell.
+\textbf{C:} Type~I versus power Pareto plane (P18); folklore $n=20$ is dominated.}
+\label{fig:finite-sample}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=\linewidth]{Fig4_Fig4-remedy.pdf}
+\caption{\textbf{Fig~4.} Remedies.
+\textbf{A:} required $n$ per arm (80\% power) vs.\ competitor hit rate (ref.\ $p_A=90\%$).
+\textbf{B:} exact Fisher power at folklore $n=20$ vs.\ powered $n^\star$ (90\% vs.\ 80\%).
+\textbf{C:} design SE comparison (folklore / c-optimal / minimax; P13).
+LoB sample-split (P17): Supplement Fig~S-LoB.}
+\label{fig:remedy}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.72\linewidth]{Fig5_Fig5-tierA-lod.pdf}
+\caption{\textbf{Fig~5.} Tier-A LoD empirical anchor (Table~7).
+\textbf{A:} qPCR hit rate vs.\ standard concentration.
+\textbf{B:} guidance $n$ / folklore $n=20$ on LoD-focused deposits.
+\textbf{C:} public deposit size vs.\ planned $n$.
+\textbf{D:} headline replicate counts for E1, E2, and E3 vs.\ folklore $n=20$.
+Radioimmuno LoQ profile: supplement; troponin demo: Fig~S1.}
+\label{fig:tierA}
+\end{figure}
+
+%==============================================================================
+\section{Discussion}
+%==============================================================================
+
+Folklore LoD SOPs fail in qualitatively different ways depending on the estimand.
+Our framework separates these failures and maps each to a formal result.
+Practitioners should: (i)~declare E1--E3 before collecting data;
+(ii)~use exact Fisher/Boschloo methods at small $n$; (iii)~avoid saturation plates
+for concentration-scale LoD; (iv)~use sample splitting when S2 gates parametric LoB
+on skewed blanks.
+
+Limitations: decision-risk weights are transparent conventions, not elicited utilities;
+tier-A public blank--LoD archives remain scarce for routine chemistry; global (vs.\
+local) c-optimality under link misspecification is open.
+
+%==============================================================================
+\section{Software and reproducibility}
+\label{sec:software}
+%==============================================================================
+
+One-click reproduction:
+\begin{verbatim}
+pip install -e ".[dev]"
+python examples/run_all_analyses.py        # full suite
+python examples/run_all_analyses.py --quick  # skip download/heavy steps
+python examples/run_theory_verification.py
+\end{verbatim}
+
+Pipeline sample-split API:
+\begin{verbatim}
+from lod_guide import run_guidance
+from lod_guide.s4_gated_lob import LoBEstimationMode
+run_guidance(..., lob_estimation_mode=LoBEstimationMode.GATED_SAMPLE_SPLIT)
+\end{verbatim}
+
+Audit artifacts: \texttt{data/audit/theory\_verification\_latest.json},
+\texttt{data/audit/run\_all\_analyses\_latest.json}.
+
+%==============================================================================
+\section{Folklore SOP failures}
+%==============================================================================
+
+\begin{table}[h]
+\centering
+\caption{Mapping folklore practice to formal failure modes.}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Folklore & Failure & Result \\
+\midrule
+20/20 = LoD OK & Cannot certify $p\ge 0.95$ & P7 \\
+$n=20$ compare kits & Fisher power $\approx 0.07$ & P8, P18 \\
+Saturation plate & LoD not identifiable & P16 \\
+Always-normal LoB & Type~I $\neq\alpha$ under skew & P5, P17 \\
+$1-(1-p)^n$ comparison & Gap $\to 0$ as $n$ grows & P1 \\
+OVL grows with $n$ & Separation increases & P6 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section*{Acknowledgments}
+CLSI EP17 provides the admissible option set; this work formalizes decision
+consequences within that set.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{9}
+\bibitem{ep17} CLSI. \emph{EP17-A2: Evaluation of Detection Capability for
+  Clinical Laboratory Measurement Procedures.}
+\bibitem{holm} Holm, S. (1979). A simple sequentially rejective multiple test procedure.
+  \emph{Scandinavian Journal of Statistics}, 6(2), 65--70.
+\bibitem{shevtsova} Shevtsova, I. G. (2011). On the absolute constants in the
+  Berry--Esseen inequality. \emph{Theory of Probability \& Its Applications}, 55(3), 403--410.
+\bibitem{berk} Berk, R., Brown, L., Buja, A., Zhang, K., and Zhao, L. (2013).
+  Valid post-selection inference. \emph{The Annals of Statistics}, 41(2), 802--837.
+\end{thebibliography}
+
+\end{document}

@@ -29,20 +29,24 @@ METHODOLOGY_ALIAS_STEMS = frozenset(
     {
         "Fig1_FigM1",
         "Fig1_Fig1-decision-map",
-        "Fig2_Fig2",
-        "Fig3_Fig3",
-        "Fig4_Fig4",
-        "Fig4_Fig4-remedy",
-        "Fig4_FigT1-T2",
-        "Fig5_Fig5",
+        "Fig2_Fig2-headline-power",
+        "Fig2_headline_power",
+        "Fig3_pareto_verdict",
+        "Fig3_Fig3-pareto-verdict",
+        "Fig4_protocol_contrast",
+        "Fig4_Fig4-protocol-contrast",
+        "Fig5_qpcr_case_study",
+        "Fig5_Fig5-qpcr-case",
         "Fig5_tierA_grid",
         "Fig5_tierA_loq",
         "Fig8_loq_radioimmuno_tierA",
     }
 )
 
-# Pre–5-figure main-text numbering in paper_artifacts/figures/.
-LEGACY_PAPER_PREFIXES = re.compile(r"^Fig[56789]_")
+# Pre–v3 manuscript numbering in paper_artifacts/figures/ (Fig 4–5, old Fig 2/3 splits, S3–S11).
+LEGACY_PAPER_PREFIXES = re.compile(
+    r"^Fig(?:[45]_|S(?:10|11|[3-9])_|-LoB_)"
+)
 
 LATEX_NOISE = ("*.aux", "*.log", "*.out", "missfont.log")
 

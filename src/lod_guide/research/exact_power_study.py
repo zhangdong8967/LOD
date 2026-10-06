@@ -17,11 +17,15 @@ OUT = Path(__file__).resolve().parents[3] / "data" / "research"
 
 def run_exact_power_study(*, include_boschloo_demo: bool = True) -> dict:
     table = compare_asymptotic_vs_exact()
+    row_by_label = {r["label"]: r for r in table["rows"]}
     # exact n* for the easy discrimination case (feasible enumeration)
     n_star_90_50 = sample_size_exact_search(0.90, 0.50, test="fisher", n_max=80)
-    # Fisher power at folklore n for hard case (exact n* deferred when asym large)
-    fisher_90_80_n20 = exact_power_two_proportions(0.90, 0.80, 20, test="fisher")
-    fisher_90_80_n199 = exact_power_two_proportions(0.90, 0.80, 199, test="fisher")
+    # Reuse table rows — avoid recomputing expensive n=199 Fisher enumeration.
+    fisher_90_80_n20 = row_by_label.get("90_vs_80_n20", {}).get("power_exact_fisher")
+    fisher_90_80_n199 = row_by_label.get("90_vs_80_n199", {}).get("power_exact_fisher")
+    if fisher_90_80_n20 is None or fisher_90_80_n199 is None:
+        fisher_90_80_n20 = exact_power_two_proportions(0.90, 0.80, 20, test="fisher")
+        fisher_90_80_n199 = exact_power_two_proportions(0.90, 0.80, 199, test="fisher")
 
     demo = None
     if include_boschloo_demo:

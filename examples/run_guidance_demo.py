@@ -1,4 +1,4 @@
-"""End-to-end demos for G1–G4 guidance runs."""
+"""End-to-end demos for E1–E3 guidance runs."""
 
 from __future__ import annotations
 
@@ -16,10 +16,10 @@ from lod_guide.s0_goal import Goal
 
 def demo_g2_compare_reagents() -> None:
     print("=" * 60)
-    print("G2: Compare reagents p=0.90 vs 0.80")
+    print("E2: Compare reagents p=0.90 vs 0.80")
     print("=" * 60)
     res = run_guidance(
-        goal=Goal.G2_COMPARE_REAGENTS,
+        goal=Goal.E2_COMPARE_REAGENTS,
         result_type="binary",
         use_case="kit_a_vs_kit_b_near_lod",
         p_a=0.90,
@@ -38,7 +38,7 @@ def demo_continuous_skewed() -> None:
     values = rng.lognormal(mean=0.0, sigma=1.0, size=80)
     strata = np.repeat(np.arange(4), 20)
     res = run_guidance(
-        goal=Goal.G1_VERIFY_LOD,
+        goal=Goal.E1_VERIFY_LOD,
         result_type="continuous",
         values=values,
         strata=strata,
@@ -52,10 +52,10 @@ def demo_continuous_skewed() -> None:
 
 def demo_g4_kn() -> None:
     print("=" * 60)
-    print("G4: qualitative k/n")
+    print("E3: qualitative k/n")
     print("=" * 60)
     res = run_guidance(
-        goal=Goal.G4_QUALITATIVE_KN,
+        goal=Goal.E3_QUALITATIVE_KN,
         result_type="binary",
         use_case="nat_hit_rate_kn",
         p=0.95,

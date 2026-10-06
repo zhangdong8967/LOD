@@ -16,7 +16,7 @@ Vancouver-style drafts. Expand after running the queries in [`SEARCH_PROTOCOL.md
 | S4 | CLSI. *Evaluation of Precision of Quantitative Measurement Procedures*; EP05-A3. | Precision profile / LoQ linkage | CLSI (purchase) |
 | S5 | International Organization for Standardization. ISO 11843 series (*Capability of detection*). | Theoretical α/β framing cited by Linnet et al. | ISO (purchase) |
 | S6 | U.S. FDA. Recognized Consensus Standard: CLSI EP17-A2. | Regulatory context | See S1 FDA link |
-| S7 | ICH. *E9(R1) Statistical Principles for Clinical Trials: Addendum on Estimands and Sensitivity Analysis*. 2020. | Estimand-first framing (G1–G4) | [ICH E9(R1)](https://database.ich.org/) |
+| S7 | ICH. *E9(R1) Statistical Principles for Clinical Trials: Addendum on Estimands and Sensitivity Analysis*. 2020. | Estimand-first framing (E1–E3) | [ICH E9(R1)](https://database.ich.org/) |
 
 ---
 
@@ -25,10 +25,10 @@ Vancouver-style drafts. Expand after running the queries in [`SEARCH_PROTOCOL.md
 | ID | Reference | Maps to | DOI / PMC |
 |----|-----------|---------|-----------|
 | P1 | Linnet K, Kondratovich M. Partly nonparametric approach for determining the limit of detection. *Clin Chem*. 2004;50(4):732-740. | Non-Gaussian LoB; order statistics; LoD sample size | [10.1373/clinchem.2003.029983](https://doi.org/10.1373/clinchem.2003.029983) |
-| P2 | Kondratovich M, Linnet K. Verification of claimed limit of detection in molecular diagnostics. *J Appl Lab Med*. 2017;1(4):429-438. | EP17 verification pass/fail probability; n=20 behavior | [10.1373/jalm.2016.020735](https://doi.org/10.1373/jalm.2016.020735) |
-| P3 | Armbruster DA, Pry T. Limit of blank, limit of detection and limit of quantitation. *Clin Lab Med*. 2008;29(1):49-52. | Introductory LoB/LoD/LoQ; manufacturer 60 vs lab 20 | [PMC2556583](https://pmc.ncbi.nlm.nih.gov/articles/PMC2556583/) → `papers/armbruster2008_lob_lod_loq_clinlab.pdf` |
+| P2 | Vaks JE, Hemyari P, Rullkoetter M, et al. Verification of claimed limit of detection in molecular diagnostics. *J Appl Lab Med*. 2016;1(3):260-270. | EP17 verification pass/fail probability; n=20 behavior (extends Linnet 2004) | [10.1373/jalm.2016.020735](https://doi.org/10.1373/jalm.2016.020735) |
+| P3 | Armbruster DA, Pry T. Limit of blank, limit of detection and limit of quantitation. *Clin Biochem Rev*. 2008;29 Suppl 1:S49-S52. | Introductory LoB/LoD/LoQ; manufacturer 60 vs lab 20 | PMID [18852857](https://pubmed.ncbi.nlm.nih.gov/18852857/) |
 | P4 | Galitzine C, et al. Nonlinear regression improves accuracy of characterization of multiplexed mass spectrometric assays. *Mol Cell Proteomics*. 2018;17(1):3-12. | MSstatsLOBD; tier-A CPTAC data | [10.1074/mcp.RA117.000322](https://doi.org/10.1074/mcp.RA117.000322) |
-| P5 | Boschloo RD. Raised conditional level of significance for the 2×2 table when testing the hypothesis of independence in an contingency table. *Stat Neerl*. 1970;24(2):191-199. | Exact confirmation layer (G2) | — |
+| P5 | Boschloo RD. Raised conditional level of significance for the 2×2 table when testing the hypothesis of independence in an contingency table. *Stat Neerl*. 1970;24(2):191-199. | Exact confirmation layer (E2) | — |
 | P6 | Malkamäki S, et al. Radioimmuno-dot-blot (Anal Chem 2024). | Tier-A precision/linearity deposits | [10.1021/acs.analchem.4c03393](https://doi.org/10.1021/acs.analchem.4c03393) |
 | P7 | Carobene A, et al. Commutability of Lombardy Region EQA control materials. *Clin Chim Acta*. 2025. | Tier-A multilab chemistry (precision / DE, not blank–LoB) | [10.17632/r4szpw8sn5](https://data.mendeley.com/datasets/r4szpw8sn5) |
 
@@ -38,7 +38,7 @@ Vancouver-style drafts. Expand after running the queries in [`SEARCH_PROTOCOL.md
 
 | ID | Reference | Maps to |
 |----|-----------|---------|
-| T1 | Fleiss JL, Levin B, Paik MC. *Statistical Methods for Rates and Proportions*. 3rd ed. Wiley; 2003. Ch. 4. | G2 sample size (Fleiss–Chow) |
+| T1 | Fleiss JL, Levin B, Paik MC. *Statistical Methods for Rates and Proportions*. 3rd ed. Wiley; 2003. Ch. 4. | E2 sample size (Fleiss–Chow) |
 | T2 | Chow SC, Shao J, Wang H. *Sample Size Calculations in Clinical Research*. 2nd ed. CRC; 2008. | Two-proportion power; exact vs asymptotic |
 | T3 | Agresti A. *Categorical Data Analysis*. 3rd ed. Wiley; 2013. | Fisher, Boschloo, Wilson, Clopper–Pearson |
 
@@ -59,7 +59,7 @@ Vancouver-style drafts. Expand after running the queries in [`SEARCH_PROTOCOL.md
 
 | Claim | Standard allows | Our formalization | Search theme |
 |-------|-----------------|-------------------|--------------|
-| C1 Fixed n=20 for all LoD tasks | EP17 verification designs | G2 powered n; P8 exact–asymptotic gap | Block B |
+| C1 Fixed n=20 for all LoD tasks | EP17 verification designs | E2 powered n; P8 exact–asymptotic gap | Block B |
 | C2 Always-normal LoB | EP17 nonparametric path | S2 gate; P5 mismatch | Block A + C |
 | C3 Ignore ICC / pooling | EP05 / design effect | S2 ICC; P4 design effect | Block E |
 | C4 Compare via 1−(1−p)^n | Not EP17 comparative estimand | P1 saturation | Block B |

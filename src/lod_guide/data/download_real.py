@@ -186,6 +186,21 @@ REMOTE_DATASETS: tuple[RemoteDataset, ...] = (
         evidence_tier="A",
     ),
     RemoteDataset(
+        dataset_id="plos_bzdok2024_trec_lod",
+        filename="plos_bzdok2024_trec_lod_s3.xlsx",
+        url=(
+            "https://journals.plos.org/plosone/article/file"
+            "?type=supplementary&id=10.1371/journal.pone.0306329.s003"
+        ),
+        citation=(
+            "Bzdok J et al. TREC qPCR LoD raw Cq dilution series (PLOS ONE 2024; "
+            "S3 Dataset; Dr von Hauner Children's Hospital newborn screening). CC BY 4.0."
+        ),
+        result_family="hospital_qpcr_lod_replicates",
+        license_note="CC BY 4.0",
+        evidence_tier="A",
+    ),
+    RemoteDataset(
         dataset_id="zenodo_rmn_qualification",
         filename="RMN_Assay_Qualification_Dataset_v1.xlsx",
         url="https://zenodo.org/api/records/17108929/files/RMN_Assay_Qualification_Dataset_v1.xlsx/content",

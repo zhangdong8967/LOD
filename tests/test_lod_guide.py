@@ -21,14 +21,14 @@ from lod_guide.pipeline import run_guidance
 
 def test_frozen_goals_and_use_cases():
     assert set(Goal) == {
-        Goal.G1_VERIFY_LOD,
-        Goal.G2_COMPARE_REAGENTS,
-        Goal.G3_LOQ_PRECISION,
-        Goal.G4_QUALITATIVE_KN,
+        Goal.E1_VERIFY_LOD,
+        Goal.E2_COMPARE_REAGENTS,
+        Goal.LOQ_PRECISION,
+        Goal.E3_QUALITATIVE_KN,
     }
-    assert PRIMARY_USE_CASES["kit_a_vs_kit_b_near_lod"] == Goal.G2_COMPARE_REAGENTS
+    assert PRIMARY_USE_CASES["kit_a_vs_kit_b_near_lod"] == Goal.E2_COMPARE_REAGENTS
     with pytest.raises(ValueError):
-        declare_goal(Goal.G1_VERIFY_LOD, use_case="kit_a_vs_kit_b_near_lod")
+        declare_goal(Goal.E1_VERIFY_LOD, use_case="kit_a_vs_kit_b_near_lod")
 
 
 def test_multiclass_requires_success_definition():
@@ -82,21 +82,21 @@ def test_design_effect():
 
 def test_recommend_g2():
     res = recommend_sample_size(
-        Goal.G2_COMPARE_REAGENTS, p_a=0.9, p_b=0.8, power=0.8
+        Goal.E2_COMPARE_REAGENTS, p_a=0.9, p_b=0.8, power=0.8
     )
     assert res.n_per_arm >= 190
     assert any("n=20" in w for w in res.warnings)
 
 
 def test_recommend_g4():
-    res = recommend_sample_size(Goal.G4_QUALITATIVE_KN, p=0.95, k=1, power=0.95)
+    res = recommend_sample_size(Goal.E3_QUALITATIVE_KN, p=0.95, k=1, power=0.95)
     assert res.n_per_arm >= 1
     assert detect_prob_at_least_one(0.95, res.n_per_arm) >= 0.95
 
 
 def test_pipeline_g2_binary():
     out = run_guidance(
-        goal="G2_COMPARE_REAGENTS",
+        goal="E2_COMPARE_REAGENTS",
         result_type="binary",
         use_case="kit_a_vs_kit_b_near_lod",
         p_a=0.9,
@@ -104,8 +104,14 @@ def test_pipeline_g2_binary():
         run_sensitivity=True,
     )
     assert out.sample_size.n_per_arm >= 190
+    ec = out.report.sample_size["exact_confirmation"]
+    assert ec["confirmation_engine"] == "exact_fisher_enumeration"
+    assert 0.0 < ec["power_exact_fisher_at_planned_n"] <= 1.0
+    assert ec["power_exact_fisher_at_n20"] < ec["power_exact_fisher_at_planned_n"]
     md = out.report.to_markdown()
-    assert "G2_COMPARE_REAGENTS" in md
+    assert "E2_COMPARE_REAGENTS" in md
+    assert "S6 Exact confirmation" in md
+    assert "power_exact_fisher_at_planned_n" in md
     assert "Challenge-oriented" in md or "folklore" in md.lower()
 
 
@@ -113,7 +119,7 @@ def test_pipeline_continuous():
     rng = np.random.default_rng(3)
     values = rng.normal(1.0, 0.2, size=60)
     out = run_guidance(
-        goal=Goal.G1_VERIFY_LOD,
+        goal=Goal.E1_VERIFY_LOD,
         result_type="continuous",
         values=values,
         use_case="ldt_lod_establishment",

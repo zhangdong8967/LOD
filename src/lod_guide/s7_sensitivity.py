@@ -56,7 +56,7 @@ def sensitivity_compare_reagents(
     by_icc = []
     for icc in icc_grid:
         res = recommend_sample_size(
-            Goal.G2_COMPARE_REAGENTS,
+            Goal.E2_COMPARE_REAGENTS,
             p_a=p_a,
             p_b=p_a - 0.10,
             alpha=alpha,

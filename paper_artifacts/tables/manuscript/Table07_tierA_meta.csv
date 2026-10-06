@@ -1,10 +1,11 @@
-dataset_id,evidence_tier,result_family,parametric_candidate,model_path,guidance_n,folklore_n,n_ratio_vs_folklore,loq_at_cv20,allowed_claim
-zenodo_mus_wt_qpcr,A,qpcr_cq_continuous,False,nonparametric_percentile,199,20,9.95,,primary_empirical_illustration
-zenodo_mus_multiplex_qpcr,A,qpcr_cq_continuous,False,nonparametric_percentile,199,20,9.95,,primary_empirical_illustration
-analyseit_ep17_estradiol,A,immunoassay_continuous,False,nonparametric_percentile,53,20,2.65,,primary_empirical_illustration
-analyseit_ep17_probit,A,probit_hit_rate,,,199,20,9.95,,primary_empirical_illustration
-mendeley_carobene_lombardy_eqa,A,clinical_chemistry_multilab,False,nonparametric_percentile,53,20,,0.6666666666666666,primary_empirical_illustration
-bioc_msstats_lobd_cptac,A,proteomics_blank_lob,False,parametric_lognormal,53,20,2.65,,primary_empirical_illustration
-zenodo_radioimmuno_precision,A,radioimmuno_precision_profile,True,parametric_normal,53,20,2.65,346.2666667,primary_empirical_illustration
-zenodo_radioimmuno_linearity,A,radioimmuno_linearity_continuous,,,,20,,631.7333333333333,primary_empirical_illustration
-zenodo_rmn_qualification,A,rmn_microneutralization_continuous,False,nonparametric_percentile,53,20,2.65,5.495444143579495,primary_empirical_illustration
+dataset_id,evidence_tier,result_family,parametric_candidate,model_path,guidance_n,folklore_n,n_ratio_vs_folklore,loq_at_cv20,allowed_claim,citation
+zenodo_mus_wt_qpcr,A,qpcr_cq_continuous,False,nonparametric_percentile,199,20,9.95,,primary_empirical_illustration,Zenodo 12609243 — Mus WT qPCR LoD/LoQ (Cq vs copy number).
+zenodo_mus_multiplex_qpcr,A,qpcr_cq_continuous,False,nonparametric_percentile,199,20,9.95,,primary_empirical_illustration,Zenodo 12609243 — multiplex tCRISPR/WT qPCR LoD/LoQ.
+analyseit_ep17_estradiol,A,immunoassay_continuous,False,nonparametric_percentile,53,20,2.65,,primary_empirical_illustration,CLSI EP17-A2 Appendix A estradiol example (Analyse-it workbook): immunoassay continuous blank + low-level replicates.
+analyseit_ep17_probit,A,probit_hit_rate,,,199,20,9.95,,primary_empirical_illustration,CLSI EP17-A2 Appendix C probit/hit-rate example (Analyse-it): concentration x detect outcomes.
+mendeley_carobene_lombardy_eqa,A,clinical_chemistry_multilab,False,nonparametric_percentile,53,20,,0.6666666666666666,primary_empirical_illustration,"Carobene A. et al. Commutability of Lombardy Region EQA control materials for enzymes, calcium, and creatinine (Clin ..."
+bioc_msstats_lobd_cptac,A,proteomics_blank_lob,False,parametric_lognormal,53,20,2.65,,primary_empirical_illustration,CPTAC Assay Portal peptide spike-in (JHU_DChan_HZhang_ZZhang) via Bioconductor MSstatsLOBD::raw_data (Galitzine et al...
+zenodo_radioimmuno_precision,A,radioimmuno_precision_profile,True,parametric_normal,53,20,2.65,346.2666667,primary_empirical_illustration,"Malkamäki et al., Anal. Chem. 10.1021/acs.analchem.4c03393; Zenodo 12664367 Precision.txt — per-sample replicate mean..."
+zenodo_radioimmuno_linearity,A,radioimmuno_linearity_continuous,,,,20,,631.7333333333333,primary_empirical_illustration,"Malkamäki et al., Anal. Chem.; Zenodo 12664367 Linearity_1.txt — concentration (ng) × DPM replicates (CC-BY-4.0)."
+plos_bzdok2024_trec_lod,A,hospital_qpcr_lod_replicates,True,parametric_normal,199,20,9.95,,primary_empirical_illustration,Bzdok J et al. TREC qPCR LoD raw Cq dilution series (PLOS ONE 2024; S3 Dataset; Dr von Hauner Children's Hospital new...
+zenodo_rmn_qualification,A,rmn_microneutralization_continuous,False,nonparametric_percentile,53,20,2.65,5.495444143579495,primary_empirical_illustration,"Sawant, Harit, Tomaras. RMN assay qualification dataset (Zenodo 10.5281/zenodo.17108929). Replicate ID50 by dilution;..."

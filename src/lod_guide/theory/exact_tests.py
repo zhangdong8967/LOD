@@ -26,11 +26,15 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from functools import lru_cache
+from pathlib import Path
 
 import numpy as np
 from scipy.stats import binom, fisher_exact, norm
 
 from lod_guide.s5_sample_size import power_two_proportions, sample_size_two_proportions
+
+_CACHE_DIR = Path(__file__).resolve().parents[3] / "data" / "research" / "cache"
+_REJECT_MEM: dict[tuple[str, int, float], np.ndarray] = {}
 
 
 @dataclass(frozen=True)
@@ -63,6 +67,65 @@ def fisher_pvalue(a: int, n_a: int, b: int, n_b: int) -> float:
     table = [[a, n_a - a], [b, n_b - b]]
     _, p = fisher_exact(table, alternative="two-sided")
     return float(p)
+
+
+def _reject_cache_path(kind: str, n: int, alpha: float) -> Path:
+    _CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    return _CACHE_DIR / f"{kind}_reject_n{n}_a{alpha:.4f}.npz"
+
+
+def _rejection_region(
+    n: int,
+    alpha: float,
+    *,
+    test: str,
+    n_grid: int = 101,
+) -> np.ndarray:
+    """Equal-arm rejection region on (n+1)×(n+1) success counts; cached in memory and on disk."""
+    key = (test, n, alpha)
+    cached = _REJECT_MEM.get(key)
+    if cached is not None:
+        return cached
+
+    path = _reject_cache_path(test, n, alpha)
+    if path.is_file():
+        reject = np.load(path)["reject"]
+        _REJECT_MEM[key] = reject
+        return reject
+
+    if n >= 40:
+        print(
+            f"  [exact_tests] building {test} rejection region n={n} "
+            f"(first run ~{(n + 1) ** 2 // 2000}s, then cached)...",
+            flush=True,
+        )
+
+    reject = np.zeros((n + 1, n + 1), dtype=bool)
+    step = max(1, (n + 1) // 10)
+    if test == "fisher":
+        for i in range(n + 1):
+            if n >= 40 and i % step == 0:
+                print(f"  [exact_tests]   Fisher n={n}: {100 * i // (n + 1)}%", flush=True)
+            for j in range(n + 1):
+                reject[i, j] = fisher_pvalue(i, n, j, n) < alpha
+    elif test == "pooled_z":
+        for i in range(n + 1):
+            for j in range(n + 1):
+                reject[i, j] = pooled_z_pvalue(i, n, j, n) < alpha
+    elif test == "boschloo":
+        for i in range(n + 1):
+            for j in range(n + 1):
+                reject[i, j] = boschloo_pvalue(i, n, j, n, n_grid=n_grid) < alpha
+    elif test == "barnard_diff":
+        for i in range(n + 1):
+            for j in range(n + 1):
+                reject[i, j] = barnard_difference_pvalue(i, n, j, n, n_grid=n_grid) < alpha
+    else:
+        raise ValueError(f"Unknown test={test}")
+
+    np.savez_compressed(path, reject=reject)
+    _REJECT_MEM[key] = reject
+    return reject
 
 
 @lru_cache(maxsize=256)
@@ -180,26 +243,7 @@ def exact_power_two_proportions(
     if test in {"boschloo", "barnard_diff"} and n > 25:
         test = "fisher"
 
-    # Precompute rejection region for Fisher / pooled_z once
-    reject = np.zeros((n + 1, n + 1), dtype=bool)
-    if test == "fisher":
-        for i in range(n + 1):
-            for j in range(n + 1):
-                reject[i, j] = fisher_pvalue(i, n, j, n) < alpha
-    elif test == "pooled_z":
-        for i in range(n + 1):
-            for j in range(n + 1):
-                reject[i, j] = pooled_z_pvalue(i, n, j, n) < alpha
-    elif test == "boschloo":
-        for i in range(n + 1):
-            for j in range(n + 1):
-                reject[i, j] = boschloo_pvalue(i, n, j, n, n_grid=n_grid) < alpha
-    elif test == "barnard_diff":
-        for i in range(n + 1):
-            for j in range(n + 1):
-                reject[i, j] = barnard_difference_pvalue(i, n, j, n, n_grid=n_grid) < alpha
-    else:
-        raise ValueError(f"Unknown test={test}")
+    reject = _rejection_region(n, alpha, test=test, n_grid=n_grid)
 
     px = binom.pmf(np.arange(n + 1), n, p_a)
     py = binom.pmf(np.arange(n + 1), n, p_b)
@@ -265,22 +309,16 @@ def compare_asymptotic_vs_exact(
     Transparent audit table: asymptotic power vs exact Fisher power vs MC pooled-z.
     """
     if scenarios is None:
-        scenarios = [
-            ("90_vs_80_n20", 0.90, 0.80, 20),
-            ("90_vs_80_n30", 0.90, 0.80, 30),
-            ("90_vs_80_n50", 0.90, 0.80, 50),
-            ("90_vs_80_n199", 0.90, 0.80, 199),
-            ("90_vs_85_n20", 0.90, 0.85, 20),
-            ("90_vs_50_n20", 0.90, 0.50, 20),
-            ("80_vs_70_n20", 0.80, 0.70, 20),
-            ("95_vs_85_n30", 0.95, 0.85, 30),
-            ("95_vs_90_n40", 0.95, 0.90, 40),
-        ]
+        from lod_guide.research.comparison_grid_export import compare_asymptotic_scenarios
+
+        scenarios = compare_asymptotic_scenarios()
 
     from lod_guide.s5_sample_size import simulate_power_two_proportions
 
     rows = []
     for label, pa, pb, n in scenarios:
+        if n >= 80:
+            print(f"  [exact_power] scenario {label} (n={n})...", flush=True)
         # For large n, skip full exact n* search in default study (slow);
         # still compute exact power at the stated n.
         asym = power_two_proportions(pa, pb, n, alpha)

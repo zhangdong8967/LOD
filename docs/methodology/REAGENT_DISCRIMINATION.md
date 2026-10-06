@@ -12,7 +12,7 @@ when a true difference exists. That error rate is the **Type II error**
 \beta(n; p_A,p_B,\alpha)=1-\mathrm{Power}(n; p_A,p_B,\alpha).
 \]
 
-Our Goal **G2** evaluation algorithm (`G2-DISCRIM-EVAL-v1`) exists precisely to compute \(n^\star\) and \(\beta(n)\) before laboratories declare equivalence.
+Our Goal **E2** evaluation algorithm (`E2-DISCRIM-EVAL-v1`) exists precisely to compute \(n^\star\) and \(\beta(n)\) before laboratories declare equivalence.
 
 ---
 

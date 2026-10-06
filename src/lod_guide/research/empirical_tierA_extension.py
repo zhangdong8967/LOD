@@ -69,7 +69,7 @@ def _continuous_blank_low(blank: list[float], low: list[float], *, label: str, t
         return {"label": label, "evidence_tier": tier, "error": "insufficient blank n"}
     diag = run_diagnostics(b)
     guide = run_guidance(
-        goal=Goal.G1_VERIFY_LOD,
+        goal=Goal.E1_VERIFY_LOD,
         result_type="continuous",
         values=b,
         low_level=low_a if low_a.size else None,

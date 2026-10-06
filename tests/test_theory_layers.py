@@ -5,26 +5,25 @@ from __future__ import annotations
 from lod_guide.theory.bounds.finite_sample import bound_p8_asymptotic_fisher_gap
 from lod_guide.theory.design.equivalence import check_c_optimal_equivalence
 from lod_guide.theory.design.minimax import SlopeUncertaintySet, minimax_theorem_certificate
-from lod_guide.theory.propositions import verify_all_propositions, verify_by_layer
 from lod_guide.theory.selective.gated_error import selective_error_decomposition
 from lod_guide.theory.theorems.analytic import theorem_p7_all_positive_cp_lower
 from lod_guide.theory.theorems.identification import theorem_p16_saturation_non_identifiable
 from lod_guide.theory.types import TheoryResult
 
 
-def test_layer_counts():
-    all_c = verify_all_propositions()
-    a = verify_by_layer("A")
-    b = verify_by_layer("B")
-    c = verify_by_layer("C")
+def test_layer_counts(theory_certs, theory_by_layer):
+    all_c = theory_certs
+    a = theory_by_layer("A")
+    b = theory_by_layer("B")
+    c = theory_by_layer("C")
     assert len(a) + len(b) + len(c) == len(all_c)
     assert len(a) >= 6
     assert len(b) >= 2
     assert len(c) >= 10
 
 
-def test_layer_a_has_proof_sketches():
-    for r in verify_by_layer("A"):
+def test_layer_a_has_proof_sketches(theory_by_layer):
+    for r in theory_by_layer("A"):
         assert isinstance(r, TheoryResult)
         assert r.layer == "A"
         assert len(r.proof_sketch) > 50

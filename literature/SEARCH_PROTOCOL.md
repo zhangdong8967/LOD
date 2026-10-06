@@ -35,12 +35,12 @@ Each **Block** maps to Introduction/Methods/Discussion needs in `lod_guide`.
 | Block | Theme | Manuscript hook |
 |-------|-------|-----------------|
 | **A** | EP17 / LoB / LoD / LoQ / detection capability | Standards framing, vocabulary |
-| **B** | Sample size, power, two proportions, verification n=20 | G2, C1, Table 3, P8 |
+| **B** | Sample size, power, two proportions, verification n=20 | E2, C1, Table 3, P8 |
 | **C** | Parametric vs nonparametric LoB; skew; left censoring | S2–S4, P5, tier S |
 | **D** | Probit / logistic hit-rate; dose–response LoD design | EP17 Example 4, c-optimal, minimax |
-| **E** | Precision profile, LoQ, CV%, heterogeneity, ICC | G3, EP05, Carobene DE |
-| **F** | Exact tests: Fisher, Boschloo, Barnard; Wilson/CP intervals | G1/G2 confirmation |
-| **G** | Estimands, pre-specification, decision analysis | G1–G4, risk \(L\), ICH E9(R1) |
+| **E** | Precision profile, LoQ, CV%, heterogeneity, ICC | LoQ, EP05, Carobene DE |
+| **F** | Exact tests: Fisher, Boschloo, Barnard; Wilson/CP intervals | E1/E2 confirmation |
+| **G** | Estimands, pre-specification, decision analysis | E1–E3, risk \(L\), ICH E9(R1) |
 | **H** | Molecular / qPCR / digital PCR LoD | Tier-A Zenodo, CS10 |
 | **I** | Proteomics / MS LoB–LoD (MSstatsLOBD) | Tier-A CPTAC |
 | **J** | Software & SOP audits (Analyse-it, commercial LIMS) | Prior art, not competitors |
@@ -127,7 +127,7 @@ OR TS=(EP17 OR "CLSI EP17")
 
 ---
 
-### Block B — Sample size & verification (C1, G2, n=20 folklore)
+### Block B — Sample size & verification (C1, E2, n=20 folklore)
 
 **PubMed:**
 
@@ -150,7 +150,7 @@ AND (English[Language])
 **Web of Science (cited reference search):**
 
 - Forward citations of: Linnet & Kondratovich 2004 (*Clin Chem* DOI 10.1373/clinchem.2003.029983)  
-- Forward citations of: Kondratovich & Linnet 2017 JALM (DOI 10.1373/jalm.2016.020735)
+- Forward citations of: Vaks et al. 2016 JALM (DOI 10.1373/jalm.2016.020735)
 
 ---
 
@@ -209,7 +209,7 @@ OR
 
 ---
 
-### Block F — Exact binomial methods (G1/G2 confirmation)
+### Block F — Exact binomial methods (E1/E2 confirmation)
 
 **PubMed:**
 
@@ -319,7 +319,7 @@ AND (proteomics[Title/Abstract] OR "mass spectromet*"[Title/Abstract] OR peptid*
 
 **Done (2026-07-30):**
 
-1. PubMed Blocks A, B, C, D, E, H, I + seeds B2, F1, G1, A2 via E-utilities  
+1. PubMed Blocks A, B, C, D, E, H, I + seeds B2, F1, E1, A2 via E-utilities  
 2. Exported → `endnote/pubmed_blocks_A-E-H-I.nbib` (300 records), `endnote/pubmed_seed_BFG_A2.nbib` (134 records), `endnote/pubmed_core_seed.nbib` (5 core PMIDs)  
 3. Logged hits → `search_log.csv`; initial screen → `screening.csv` (301 rows)
 

@@ -628,6 +628,38 @@ def load_radioimmuno_lod_txt(path: Path) -> dict:
     }
 
 
+def load_plos_trec_lod_xlsx(path: Path) -> dict:
+    """PLOS ONE S3 — TREC qPCR LoD-adjacent Cp replicates (Munich newborn screening)."""
+    from openpyxl import load_workbook
+
+    wb = load_workbook(path, read_only=True)
+    ws = wb["(3)"]
+    rows = list(ws.iter_rows(values_only=True))[1:]
+    low_cq: list[float] = []
+    hits_by_label: dict[str, list[int]] = {}
+    for label, cp, _conc in rows:
+        if not label:
+            continue
+        key = str(label).strip()
+        detected = isinstance(cp, (int, float))
+        hits_by_label.setdefault(key, []).append(1 if detected else 0)
+        if detected and "1:100" in key:
+            low_cq.append(float(cp))
+    hit_summary = {
+        k: {"n": len(v), "hits": int(sum(v)), "rate": float(sum(v) / len(v)) if v else 0.0}
+        for k, v in sorted(hits_by_label.items())
+    }
+    return {
+        "assay_family": "hospital_qpcr_lod_replicates",
+        "path": str(path),
+        "hit_summary": hit_summary,
+        "low_level_values": low_cq,
+        "blank_values": low_cq[: max(5, len(low_cq) // 3)] if low_cq else [],
+        "n_rows": len(rows),
+        "evidence_note": "Hospital newborn-screening TREC LoD replicates (PLOS ONE 2024 S3; CC BY 4.0)",
+    }
+
+
 def parse_real_dataset(dataset_id: str, path: Path) -> dict:
     if dataset_id.startswith("zenodo_mus"):
         return load_zenodo_qpcr_cq(path)
@@ -653,6 +685,8 @@ def parse_real_dataset(dataset_id: str, path: Path) -> dict:
         return load_radioimmuno_linearity_txt(path)
     if dataset_id == "zenodo_rmn_qualification":
         return load_rmn_qualification_xlsx(path)
+    if dataset_id == "plos_bzdok2024_trec_lod":
+        return load_plos_trec_lod_xlsx(path)
     raise KeyError(f"No parser for {dataset_id}")
 
 

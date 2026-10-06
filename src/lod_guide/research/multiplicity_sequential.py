@@ -1,8 +1,8 @@
 """
 Multiplicity and sequential LoD verification.
 
-1) Multi-reagent / multi-lot G2: Holm–Bonferroni on Boschloo (or Fisher) p-values.
-2) Sequential G1 hit-rate looks: Pocock and O'Brien–Fleming style α-spending
+1) Multi-reagent / multi-lot E2: Holm–Bonferroni on Boschloo (or Fisher) p-values.
+2) Sequential E1 hit-rate looks: Pocock and O'Brien–Fleming style α-spending
    approximations for K interim analyses of a binomial claim.
 
 These close the algorithm gap on family-wise error when labs test many kits

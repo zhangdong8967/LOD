@@ -33,7 +33,7 @@ Source: `literature/endnote/blocks/block_B.nbib` (200 PubMed hits). Full screen:
 - Spiked sample evaluation confirmed detection capability in complex biological matrices, though reduced band clarity was observed at lower concentrations.
 
 **Manuscript hook:**
-- Supports C1/G2: sample size or power explicit for LoD context.
+- Supports C1/E2: sample size or power explicit for LoD context.
 
 ---
 
@@ -48,7 +48,7 @@ Source: `literature/endnote/blocks/block_B.nbib` (200 PubMed hits). Full screen:
 - Serum samples underwent reduction, alkylation, lysyl endopeptidase/trypsin digestion, and proteotypic peptide purification.
 
 **Manuscript hook:**
-- Supports C1/G2: sample size or power explicit for LoD context.
+- Supports C1/E2: sample size or power explicit for LoD context.
 
 ---
 
@@ -138,7 +138,7 @@ Source: `literature/endnote/blocks/block_B.nbib` (200 PubMed hits). Full screen:
 - Stimulant exposure was defined as any non-prescribed stimulant use in the past 3 months and/or a reactive urine toxicology screen, creating four HIV-by-stimulant use groups (i.e., HIV+Stim + , HIV+Stim-, HIV-Stim + , and HIV-Stim-).
 
 **Manuscript hook:**
-- Supports C1/G2: sample size or power explicit for LoD context.
+- Supports C1/E2: sample size or power explicit for LoD context.
 
 ---
 
@@ -183,7 +183,7 @@ Source: `literature/endnote/blocks/block_B.nbib` (200 PubMed hits). Full screen:
 - The platform's innovation lies in its user-independent, electricity-free fluidic operation, featuring a manual suction pump with a compression spring that ensures high reproducibility (CV < 4.5%).
 
 **Manuscript hook:**
-- Supports C1/G2: sample size or power explicit for LoD context.
+- Supports C1/E2: sample size or power explicit for LoD context.
 
 ---
 

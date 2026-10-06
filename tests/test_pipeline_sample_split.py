@@ -15,13 +15,13 @@ def test_pipeline_sample_split_modes():
     blank = np.asarray(ds.values, dtype=float)
 
     std = run_guidance(
-        goal=Goal.G1_VERIFY_LOD,
+        goal=Goal.E1_VERIFY_LOD,
         result_type="continuous",
         values=blank,
         lob_estimation_mode=LoBEstimationMode.STANDARD,
     )
     split = run_guidance(
-        goal=Goal.G1_VERIFY_LOD,
+        goal=Goal.E1_VERIFY_LOD,
         result_type="continuous",
         values=blank,
         lob_estimation_mode=LoBEstimationMode.GATED_SAMPLE_SPLIT,

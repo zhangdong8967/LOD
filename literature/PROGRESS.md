@@ -39,7 +39,7 @@ PubMed + Google Scholar → **EndNote** | Scripts in `literature/scripts/`
 | Armbruster & Pry 2008 LoB/LoD/LoQ | **18852857** | Yes — `papers/pdfs/18852857_*.pdf` |
 | Galitzine 2018 MSstatsLOBD | **29438992** | Yes — PMC OA |
 | Linnet & Kondratovich 2004 | **14764644** | **No** (Clin Chem paywall) — abstract in `notes/records/` |
-| Kondratovich & Linnet JALM 2017 | **33626838** | **No** (JALM paywall) — abstract only |
+| Vaks et al. 2016 JALM | **33626838** | **No** (JALM paywall) — abstract only |
 
 Paywalled core papers: use **institutional PDF** → save to `literature/papers/pdfs/` → re-run fetch or set `full_text_path` in `screening.csv`.
 
@@ -74,7 +74,7 @@ python literature/scripts/literature_summarize.py --blocks B2,C
 ## Next steps (recommended order)
 
 1. Import `endnote/blocks/block_*.nbib` into EndNote; dedupe.
-2. Attach institutional PDFs for Linnet 2004 + Kondratovich 2017 if available.
+2. Attach institutional PDFs for Linnet 2004 + Vaks et al. 2016 if available.
 3. Screen Block **B** hits (sample size) — mark 10–15 `include=yes` in `screening.csv`.
 4. Scholar chase from 4 core DOIs (Fleiss, Chow, Agresti books).
 5. Pull quotes/page numbers from PDFs into `CORE_READING_NOTES.md` before citing.

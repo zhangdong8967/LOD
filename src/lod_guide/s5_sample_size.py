@@ -168,9 +168,9 @@ def recommend_sample_size(
             f"Design effect DE={deff:.2f} from ICC={icc:.3f}, cluster_size={cluster_size}."
         )
 
-    if goal == Goal.G2_COMPARE_REAGENTS:
+    if goal == Goal.E2_COMPARE_REAGENTS:
         if p_a is None or p_b is None:
-            raise ValueError("G2 requires p_a and p_b")
+            raise ValueError("E2 requires p_a and p_b")
         n_cont = sample_size_two_proportions(p_a, p_b, alpha, power)
         n = inflate_n(n_cont, deff)
         method = SampleSizeMethod.ANALYTIC_TWO_PROPORTION
@@ -199,7 +199,7 @@ def recommend_sample_size(
             warnings=warnings,
         )
 
-    if goal == Goal.G1_VERIFY_LOD:
+    if goal == Goal.E1_VERIFY_LOD:
         # Prefer one-proportion vs claim p0 if provided; else precision of p
         if p is None:
             p = 0.95
@@ -212,7 +212,7 @@ def recommend_sample_size(
         n = inflate_n(n_cont, deff)
         # EP17-style floor for continuous establishment often larger; keep analytic + note
         warnings.append(
-            "G1 uses one-proportion power vs claim; align concentrations with EP17 materials."
+            "E1 uses one-proportion power vs claim; align concentrations with EP17 materials."
         )
         return SampleSizeResult(
             n_per_arm=n,
@@ -224,7 +224,7 @@ def recommend_sample_size(
             warnings=warnings,
         )
 
-    if goal == Goal.G3_LOQ_PRECISION:
+    if goal == Goal.LOQ_PRECISION:
         if target_cv_pct is None or sigma_over_mu is None:
             if sd is not None and ci_half_width is not None:
                 n = inflate_n(sample_size_mean_ci(sd, ci_half_width, alpha), deff)
@@ -237,7 +237,7 @@ def recommend_sample_size(
                     details={"sd": sd, "half_width": ci_half_width},
                     warnings=warnings,
                 )
-            raise ValueError("G3 requires (target_cv_pct & sigma_over_mu) or (sd & ci_half_width)")
+            raise ValueError("LoQ requires (target_cv_pct & sigma_over_mu) or (sd & ci_half_width)")
         n = inflate_n(sample_size_cv_precision(target_cv_pct, sigma_over_mu), deff)
         return SampleSizeResult(
             n_per_arm=n,
@@ -249,7 +249,7 @@ def recommend_sample_size(
             warnings=warnings,
         )
 
-    if goal == Goal.G4_QUALITATIVE_KN:
+    if goal == Goal.E3_QUALITATIVE_KN:
         if p is None:
             p = 0.95
         # Find minimal n such that P(X>=k) >= power (here power re-used as target probability)
@@ -261,7 +261,7 @@ def recommend_sample_size(
                 break
         if n_found is None:
             n_found = 10_000
-            warnings.append("G4 search hit n=10000 cap.")
+            warnings.append("E3 search hit n=10000 cap.")
         n = inflate_n(n_found, deff)
         return SampleSizeResult(
             n_per_arm=n,
@@ -274,6 +274,92 @@ def recommend_sample_size(
         )
 
     raise ValueError(f"Unsupported goal: {goal}")
+
+
+def exact_confirmation_ledger(
+    goal: Goal,
+    *,
+    n_per_arm: int,
+    alpha: float = 0.05,
+    p_a: float | None = None,
+    p_b: float | None = None,
+    p0: float | None = None,
+    p: float | None = None,
+    p_alt: float | None = None,
+    k: int = 1,
+    folklore_n: int = 20,
+) -> dict:
+    """
+    S6 exact confirmation ledger at the prespecified planned n (main-text S6).
+
+    Pairs asymptotic S5 planning outputs with exact binomial / Fisher enumeration
+  at the same n for audit reports (Theorem T2; Supplement §S2f).
+    """
+    n = max(int(n_per_arm), 1)
+    n20 = max(int(folklore_n), 1)
+
+    if goal == Goal.E2_COMPARE_REAGENTS:
+        if p_a is None or p_b is None:
+            raise ValueError("E2 exact confirmation requires p_a and p_b")
+        pw_ex = power_two_proportions_exact(p_a, p_b, n, alpha, test="fisher")
+        pw_asy = power_two_proportions(p_a, p_b, n, alpha)
+        pw_ex_20 = power_two_proportions_exact(p_a, p_b, n20, alpha, test="fisher")
+        return {
+            "confirmation_engine": "exact_fisher_enumeration",
+            "n_per_arm_planned": n,
+            "power_exact_fisher_at_planned_n": float(pw_ex),
+            "miss_beta_exact_fisher_at_planned_n": float(1.0 - pw_ex),
+            "power_asymptotic_pooled_z_at_planned_n": float(pw_asy),
+            "asymptotic_minus_exact_gap_at_planned_n": float(pw_asy - pw_ex),
+            "power_exact_fisher_at_n20": float(pw_ex_20),
+            "folklore_n_per_arm": n20,
+        }
+
+    if goal == Goal.E3_QUALITATIVE_KN:
+        p_plan = 0.95 if p is None else float(p)
+        pr_n = float(detect_prob_at_least_k(p_plan, n, k))
+        pr_20 = float(detect_prob_at_least_k(p_plan, n20, k))
+        return {
+            "confirmation_engine": "exact_binomial_enumeration",
+            "n_planned": n,
+            "k_rule": int(k),
+            "planning_p": p_plan,
+            "P_pass_k_of_n_at_planned_n": pr_n,
+            "P_pass_k_of_n_at_n20": pr_20,
+            "folklore_n": n20,
+        }
+
+    if goal == Goal.E1_VERIFY_LOD:
+        from scipy.stats import binom
+
+        from lod_guide.theory.exact import clopper_pearson_interval
+
+        claim = 0.95 if p0 is None else float(p0)
+        p_plan = float(p_alt if p_alt is not None else (p if p is not None else claim))
+
+        def _cp_claim_pass(p_true: float, n_trials: int) -> float:
+            ok = 0.0
+            for x in range(n_trials + 1):
+                low, _ = clopper_pearson_interval(x, n_trials, alpha=alpha)
+                if low >= claim:
+                    ok += float(binom.pmf(x, n_trials, p_true))
+            return ok
+
+        return {
+            "confirmation_engine": "exact_clopper_pearson_enumeration",
+            "n_planned": n,
+            "claim_p0": claim,
+            "planning_p": p_plan,
+            "P_cp_lower_ge_claim_at_planned_n": _cp_claim_pass(p_plan, n),
+            "P_cp_lower_ge_claim_at_n20": _cp_claim_pass(p_plan, n20),
+            "folklore_n": n20,
+        }
+
+    return {
+        "confirmation_engine": "not_applicable",
+        "n_planned": n,
+        "note": f"Exact confirmation ledger not defined for goal {goal.value}",
+    }
 
 
 def power_two_proportions_exact(

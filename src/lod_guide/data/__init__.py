@@ -106,7 +106,7 @@ def run_guidance_on_entry(entry: CatalogueEntry) -> dict[str, Any]:
 
         if entry.dataset_id == "sim_binary_reagents_90_vs_80":
             res = run_guidance(
-                goal=Goal.G2_COMPARE_REAGENTS,
+                goal=Goal.E2_COMPARE_REAGENTS,
                 result_type="binary",
                 use_case="kit_a_vs_kit_b_near_lod",
                 p_a=meta["p_a"],
@@ -115,7 +115,7 @@ def run_guidance_on_entry(entry: CatalogueEntry) -> dict[str, Any]:
             )
         elif entry.dataset_id == "sim_binary_low_p_lod":
             res = run_guidance(
-                goal=Goal.G1_VERIFY_LOD,
+                goal=Goal.E1_VERIFY_LOD,
                 result_type="binary",
                 use_case="ldt_lod_establishment",
                 p=meta["p"],
@@ -124,7 +124,7 @@ def run_guidance_on_entry(entry: CatalogueEntry) -> dict[str, Any]:
             )
         elif entry.dataset_id == "sim_multiclass_blood_type":
             res = run_guidance(
-                goal=Goal.G4_QUALITATIVE_KN,
+                goal=Goal.E3_QUALITATIVE_KN,
                 result_type="multiclass",
                 n_classes=meta["n_classes"],
                 success_definition=meta["success_definition"],
@@ -135,7 +135,7 @@ def run_guidance_on_entry(entry: CatalogueEntry) -> dict[str, Any]:
             )
         elif rt == "count":
             res = run_guidance(
-                goal=Goal.G1_VERIFY_LOD,
+                goal=Goal.E1_VERIFY_LOD,
                 result_type="count",
                 values=values,
                 strata=strata,
@@ -147,7 +147,7 @@ def run_guidance_on_entry(entry: CatalogueEntry) -> dict[str, Any]:
             )
         else:
             res = run_guidance(
-                goal=Goal.G1_VERIFY_LOD,
+                goal=Goal.E1_VERIFY_LOD,
                 result_type="continuous",
                 values=values,
                 strata=strata,
@@ -178,7 +178,7 @@ def run_guidance_on_entry(entry: CatalogueEntry) -> dict[str, Any]:
         low_list = parsed.get("low_level_values") or []
         low = np.asarray(low_list, dtype=float) if low_list else None
 
-        # Probit / hit-rate family: G2 from two concentration tiers if available
+        # Probit / hit-rate family: E2 from two concentration tiers if available
         hit_summary = parsed.get("hit_summary") or {}
         if hit_summary:
             rates = [(sq, info["rate"], info["n"]) for sq, info in hit_summary.items() if float(sq) >= 0]
@@ -193,7 +193,7 @@ def run_guidance_on_entry(entry: CatalogueEntry) -> dict[str, Any]:
             # still run continuous blank guidance if blanks exist and non-trivial
             if values.size >= 5 and float(np.nanstd(values)) > 0:
                 res = run_guidance(
-                    goal=Goal.G1_VERIFY_LOD,
+                    goal=Goal.E1_VERIFY_LOD,
                     result_type="continuous",
                     values=values,
                     strata=strata,
@@ -216,7 +216,7 @@ def run_guidance_on_entry(entry: CatalogueEntry) -> dict[str, Any]:
                 p_lo = rates[0][1]
                 if abs(p_hi - p_lo) > 0.02:
                     cmp = run_guidance(
-                        goal=Goal.G2_COMPARE_REAGENTS,
+                        goal=Goal.E2_COMPARE_REAGENTS,
                         result_type="binary",
                         use_case="kit_a_vs_kit_b_near_lod",
                         p_a=max(p_hi, p_lo),
@@ -231,7 +231,7 @@ def run_guidance_on_entry(entry: CatalogueEntry) -> dict[str, Any]:
             return out
 
         res = run_guidance(
-            goal=Goal.G1_VERIFY_LOD,
+            goal=Goal.E1_VERIFY_LOD,
             result_type="continuous",
             values=values if values.size else np.array([0.0]),
             strata=strata,

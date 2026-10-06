@@ -1,5 +1,5 @@
 """
-Internal referee-style review: P1–P6 certificates + exact vs asymptotic table.
+Internal referee-style review: P1–P18 certificates + exact vs asymptotic table.
 
 Writes Markdown memo + CSV tables under paper_artifacts/.
 """
@@ -10,27 +10,41 @@ import csv
 import json
 from pathlib import Path
 
+from lod_guide.paper.theory_audit import load_theory_certificates, refresh_flag, theory_audit_ok
+from lod_guide.paper.theory_research import VERIFICATION_DEFECTS, build_defects_bundle
+from lod_guide.research.comparison_grid_export import export_comparison_grid_tables, grid_csv_rows
 from lod_guide.research.exact_power_study import run_exact_power_study
-from lod_guide.theory.propositions import verify_all_propositions
 
 ROOT = Path(__file__).resolve().parents[3]
 PAPER = ROOT / "paper_artifacts"
 TABLES = PAPER / "tables"
 REVIEW = PAPER / "review"
+THEORY_AUDIT = ROOT / "data" / "audit" / "theory_verification_latest.json"
+EXACT_JSON = ROOT / "data" / "research" / "exact_vs_asymptotic_power.json"
 
 
-def _write_propositions_csv(path: Path) -> list[dict]:
-    certs = verify_all_propositions()
-    rows = []
-    for c in certs:
-        rows.append(
-            {
-                "proposition_id": c.proposition_id,
-                "statement": c.statement,
-                "passed": c.passed,
-                "details_json": json.dumps(c.details, default=str),
-            }
-        )
+def _load_proposition_rows(*, force_verify: bool) -> tuple[list[dict], str]:
+    certs = load_theory_certificates(force_verify=force_verify)
+    source = (
+        "live verify_all_propositions()"
+        if force_verify or refresh_flag("LOD_REFRESH_THEORY") or not theory_audit_ok()
+        else str(THEORY_AUDIT)
+    )
+
+    rows = [
+        {
+            "proposition_id": c.proposition_id,
+            "statement": c.statement,
+            "passed": c.passed,
+            "details_json": json.dumps(c.details, default=str),
+        }
+        for c in certs
+    ]
+    return rows, source
+
+
+def _write_propositions_csv(path: Path, *, force_verify: bool) -> list[dict]:
+    rows, _ = _load_proposition_rows(force_verify=force_verify)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=["proposition_id", "statement", "passed", "details_json"])
@@ -39,8 +53,23 @@ def _write_propositions_csv(path: Path) -> list[dict]:
     return rows
 
 
-def _write_exact_csv(path: Path) -> dict:
-    study = run_exact_power_study()
+def _load_exact_study(*, force_exact: bool) -> dict:
+    if (
+        not force_exact
+        and not refresh_flag("LOD_REFRESH_EXACT")
+        and EXACT_JSON.is_file()
+    ):
+        print(
+            "[paper] internal review: exact power from data/research/exact_vs_asymptotic_power.json "
+            "(set LOD_REFRESH_EXACT=1 to rerun)",
+            flush=True,
+        )
+        return json.loads(EXACT_JSON.read_text(encoding="utf-8"))
+    print("[paper] internal review: running run_exact_power_study()...", flush=True)
+    return run_exact_power_study()
+
+
+def _write_exact_csv(path: Path, study: dict) -> dict:
     rows = study["rows"]
     path.parent.mkdir(parents=True, exist_ok=True)
     if not rows:
@@ -54,24 +83,42 @@ def _write_exact_csv(path: Path) -> dict:
     return study
 
 
-def write_internal_review_memo(*, force_exact: bool = True) -> dict[str, Path]:
+def write_internal_review_memo(
+    *,
+    force_exact: bool = False,
+    force_theory_verify: bool = False,
+) -> dict[str, Path]:
     TABLES.mkdir(parents=True, exist_ok=True)
     REVIEW.mkdir(parents=True, exist_ok=True)
 
     prop_csv = TABLES / "Table04_propositions_P1_P6.csv"
     exact_csv = TABLES / "Table03_exact_vs_asymptotic.csv"
-    prop_rows = _write_propositions_csv(prop_csv)
-    study = _write_exact_csv(exact_csv) if force_exact else json.loads(
-        (ROOT / "data" / "research" / "exact_vs_asymptotic_power.json").read_text()
-    )
+    prop_rows = _write_propositions_csv(prop_csv, force_verify=force_theory_verify)
+    build_defects_bundle(force_verify=force_theory_verify)
+    study = _load_exact_study(force_exact=force_exact)
+    _write_exact_csv(exact_csv, study)
+    grid_tables = export_comparison_grid_tables(TABLES)
 
     # Referee memo
     fails = [r for r in prop_rows if not r["passed"]]
     memo_lines = [
         "# Internal statistical review memo",
         "",
-        "**Scope.** Machine certificates P1–P8 and exact vs asymptotic discrimination power (Table 3–4).",
+        "**Scope.** Machine certificates **P1–P18** (plus supplementary results), "
+        "verification defects **D1–D3** (Supplement §S2b), and exact vs asymptotic "
+        "discrimination power (Table 3–4).",
         "",
+        "## Verification defects (D1–D3)",
+        "",
+    ]
+    for defect_id, meta in VERIFICATION_DEFECTS.items():
+        memo_lines.append(f"### {defect_id} — {meta['title']}")
+        memo_lines.append("")
+        memo_lines.append(meta["summary"])
+        memo_lines.append("")
+        memo_lines.append(f"Certificates: {', '.join(meta['certificate_ids'])}")
+        memo_lines.append("")
+    memo_lines += [
         "## Verdict on propositions",
         "",
         f"- Certificates run: **{len(prop_rows)}**; failures: **{len(fails)}**.",
@@ -81,9 +128,9 @@ def write_internal_review_memo(*, force_exact: bool = True) -> dict[str, Path]:
         memo_lines.append(f"- `{r['proposition_id']}` — **{status}**: {r['statement']}")
     memo_lines += [
         "",
-        "### Referee notes (P1–P8)",
+        "### Referee notes (P1–P8 core)",
         "",
-        "- **P1 (saturation):** Correct and central; φ_n must not be used for G2.",
+        "- **P1 (saturation):** Correct and central; φ_n must not be used for E2.",
         "- **P2 (binomial identity):** Algebraic; keep as sanity certificate.",
         "- **P3 (Fleiss–Chow):** Asymptotic n* calibrates pooled-z MC power near target; "
         "at folklore n=20, **exact Fisher power is materially lower** than asymptotic "
@@ -92,9 +139,20 @@ def write_internal_review_memo(*, force_exact: bool = True) -> dict[str, Path]:
         "- **P4 (design effect):** Standard compound-symmetry DE; state ICC estimation uncertainty.",
         "- **P5 (parametric LoB mismatch):** Strong counterexample (Exp); supports S2/S3 gate.",
         "- **P6 (OVL):** Separation on a denser n-grid; not a substitute for power calculations.",
-        "- **P7 (all-positive trap):** n/n does not certify high LoD claims (α^(1/n) << claim).",
+        "- **P7 (all-positive trap):** n/n does not certify high LoD claims (α^(1/n) << claim). **Headline D1.**",
         "- **P8 (exact vs asymptotic gap):** At folklore n for close alternatives, asymptotic "
-        "power overstates exact Fisher power — design surface ≠ confirmation.",
+        "power overstates exact Fisher power — design surface ≠ confirmation. **Headline D2.**",
+        "",
+        "### Referee notes (P9–P18 extensions)",
+        "",
+        "- **P9 (Holm FWER):** MC sketch for multi-arm gates; corroborates S4 multiplicity policy.",
+        "- **P10 (weight scale):** L is homogeneous in weights — audit ledger, not utility optimum.",
+        "- **P11 (Tobit):** Agreement with naive mean+z·SD when uncensored; supports parametric LoB path.",
+        "- **P12–P14 (c-optimal / minimax / efficiency):** Multilevel **estimation** branch; "
+        "not required for E1–E3 verification at c* but documents design dominance over equal-log folklore.",
+        "- **P15–P16 (identification):** LoD identifiable on interior hit-rate grid; saturation plates break identifiability.",
+        "- **P17 (gated LoB inflation):** Pre-test model selection can inflate Type I; sample-split remedy in supplementary certificate.",
+        "- **P18 (folklore inadmissible):** n=20 Pareto-dominated on exact Fisher OC plane. **Headline D3.**",
         "",
         "## Exact vs asymptotic (Table 3)",
         "",
@@ -107,6 +165,11 @@ def write_internal_review_memo(*, force_exact: bool = True) -> dict[str, Path]:
     for k, v in hl.items():
         memo_lines.append(f"- **{k}:** `{json.dumps(v, default=str)}`")
     memo_lines += [
+        "",
+        "### Table 3 extensions (full E2 grid @ n=20)",
+        "",
+        f"- **reference pairs:** `{grid_tables.get('reference_pairs', '')}`",
+        f"- **full grid ({len(grid_csv_rows())} cells):** `{grid_tables.get('full_grid', '')}`",
         "",
         "### Reporting policy (locked)",
         "",
@@ -122,17 +185,29 @@ def write_internal_review_memo(*, force_exact: bool = True) -> dict[str, Path]:
         "paper complete (need narrative manuscript; LoQ engine + estradiol analysis now present as supplements).",
         "",
     ]
-    memo_path = REVIEW / "INTERNAL_REVIEW_P1P6_EXACT.md"
-    memo_path.write_text("\n".join(memo_lines), encoding="utf-8")
-
-    # also write estimands + evidence quick tables
-    est_csv = TABLES / "Table01_estimands_G1_G4.csv"
+    memo_path = REVIEW / "INTERNAL_REVIEW_THEORY.md"
+    est_csv = TABLES / "Table01_estimands_E1_E3.csv"
     with est_csv.open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["goal", "estimand_symbol", "definition", "sample_size_engine"])
-        w.writerow(["G1", "p(c*) or LoD claim", "Single-method LoD verification", "one-proportion vs p0"])
-        w.writerow(["G2", "p_A-p_B at c*", "Compare reagents/lots at LoD concentration", "two-proportion / exact Fisher-Boschloo"])
-        w.writerow(["G4", "P(X>=k)", "Qualitative k/n at detection limit", "binomial cumulative search"])
+        w.writerow([
+            "E1",
+            "p(c*) >= p0",
+            "Benchmark confirmation: hit rate at c* meets IFU benchmark (typically p0=0.95); one-sided Clopper-Pearson limits",
+            "one-proportion vs p0",
+        ])
+        w.writerow([
+            "E2",
+            "p_A(c*) - p_B(c*)",
+            "Two-arm contrast at c*: lot/reagent discrimination theta2; exact Fisher primary (Boschloo optional confirmatory)",
+            "two-proportion exact Fisher-Boschloo",
+        ])
+        w.writerow([
+            "E3",
+            "P(X>=k)",
+            "Qualitative pass rule (e.g. 19/20): operating event {X>=k}; binomial pass probability distinct from E1 confirmation",
+            "binomial cumulative search",
+        ])
 
     from lod_guide.data.download_real import REMOTE_DATASETS, RAW_DIR
 
@@ -167,11 +242,15 @@ def write_internal_review_memo(*, force_exact: bool = True) -> dict[str, Path]:
         "",
     ]
     memo_path.write_text("\n".join(memo_lines), encoding="utf-8")
+    legacy_memo = REVIEW / "INTERNAL_REVIEW_P1P6_EXACT.md"
+    legacy_memo.write_text(memo_path.read_text(encoding="utf-8"), encoding="utf-8")
 
     return {
         "memo": memo_path,
         "propositions_csv": prop_csv,
         "exact_csv": exact_csv,
+        "grid_reference_csv": Path(grid_tables.get("reference_pairs", "")),
+        "grid_full_csv": Path(grid_tables.get("full_grid", "")),
         "estimands_csv": est_csv,
         "evidence_csv": ev_csv,
         "type1_csv": type1_csv,

@@ -127,18 +127,18 @@ def run_decision_weight_axioms(*, n_per_axis: int = 3) -> dict:
             )
             for c in comps
         }
-        folklore = losses["G2_folklore_n20_90vs80"]
-        powered = losses["G2_powered_nstar_90vs80"]
-        para = losses["G1_parametric_LoB_on_Exp"]
-        nonpar = losses["G1_nonparametric_LoB_on_Exp"]
+        folklore = losses["E2_folklore_n20_90_vs_80"]
+        powered = losses["E2_powered_nstar_90_vs_80"]
+        para = losses["E1_parametric_LoB_on_Exp"]
+        nonpar = losses["E1_nonparametric_LoB_on_Exp"]
         profile_rows.append(
             {
                 "name": pref.name,
                 "description": pref.description,
                 "weights": asdict(pref.weights),
                 "losses": losses,
-                "G2_ratio_folklore_over_powered": folklore / powered if powered else None,
-                "G1_ratio_para_over_nonpar": para / nonpar if nonpar else None,
+                "E2_ratio_folklore_over_powered": folklore / powered if powered else None,
+                "E1_ratio_para_over_nonpar": para / nonpar if nonpar else None,
                 "prefers_powered_over_folklore": folklore > powered,
                 "prefers_nonpar_over_para_on_Exp": para > nonpar,
             }
@@ -149,15 +149,15 @@ def run_decision_weight_axioms(*, n_per_axis: int = 3) -> dict:
     ranking_votes = 0
     for w in grid:
         lf = loss(
-            type_i=next(c["type_i"] for c in comps if c["scenario_id"] == "G2_folklore_n20_90vs80"),
-            beta=next(c["beta"] for c in comps if c["scenario_id"] == "G2_folklore_n20_90vs80"),
+            type_i=next(c["type_i"] for c in comps if c["scenario_id"] == "E2_folklore_n20_90_vs_80"),
+            beta=next(c["beta"] for c in comps if c["scenario_id"] == "E2_folklore_n20_90_vs_80"),
             mismatch=0.0,
             de=1.0,
             weights=w,
         )
         lp = loss(
-            type_i=next(c["type_i"] for c in comps if c["scenario_id"] == "G2_powered_nstar_90vs80"),
-            beta=next(c["beta"] for c in comps if c["scenario_id"] == "G2_powered_nstar_90vs80"),
+            type_i=next(c["type_i"] for c in comps if c["scenario_id"] == "E2_powered_nstar_90_vs_80"),
+            beta=next(c["beta"] for c in comps if c["scenario_id"] == "E2_powered_nstar_90_vs_80"),
             mismatch=0.0,
             de=1.0,
             weights=w,

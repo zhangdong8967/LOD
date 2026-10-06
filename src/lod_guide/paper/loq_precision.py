@@ -1,5 +1,5 @@
 """
-LoQ / precision main table (G3) for paper artifacts.
+LoQ / precision main table (LoQ) for paper artifacts.
 
 Provides:
   1) Analytic design rows: n for target CV% of the mean; n for CI half-width.
@@ -47,7 +47,7 @@ def design_rows_cv_and_ci(
                     "n_required": n_cv,
                     "alpha": alpha,
                     "formula": "n=ceil((100*sigma_over_mu/target_CV_pct)^2)",
-                    "note": "G3 precision claim at a fixed low concentration",
+                    "note": "LoQ precision claim at a fixed low concentration",
                 }
             )
         for frac in half_width_frac_grid:
@@ -62,7 +62,7 @@ def design_rows_cv_and_ci(
                     "n_required": n_ci,
                     "alpha": alpha,
                     "formula": "n=ceil((z_{1-a/2}*sd/half_width)^2), mu=1 scale",
-                    "note": "Alternative G3 precision statement",
+                    "note": "Alternative LoQ precision statement",
                 }
             )
     return rows
@@ -182,7 +182,7 @@ def build_loq_precision_tables(*, out_dir: Path | None = None) -> dict[str, Path
         "n_design_rows": len(design),
         "n_pool_rows": 0 if pools and "error" in pools[0] else len(pools),
         "interpretation": (
-            "Use design rows for G3 sample-size planning; troponin pools are tier-C "
+            "Use design rows for LoQ sample-size planning; troponin pools are tier-C "
             "illustrations of precision-profile structure, not clinical truth."
         ),
     }

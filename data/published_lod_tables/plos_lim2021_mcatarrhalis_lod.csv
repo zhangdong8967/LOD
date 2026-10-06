@@ -1,0 +1,2 @@
+source_id,pathogen,c_star,n,hits,rate,protocol_quote,quote_source,citation_doi
+plos_lim2021_mcatarrhalis,Moraxella catarrhalis,1 copies/reaction (LoD-adjacent dilution),50,11,0.22,"Analytical sensitivity and LOD were estimated with 50 replicates of positive control bacteria at six different concentrations (Table 3).","Lim HJ et al. PLOS ONE 2021; Soonchunhyang University hospital-affiliated clinical validation",10.1371/journal.pone.0253402

@@ -1,5 +1,5 @@
 """
-Reagent LoD discrimination evaluator (Goal G2).
+Reagent LoD discrimination evaluator (Goal E2).
 
 Questions answered
 ------------------
@@ -135,7 +135,7 @@ def evaluate_pair(
 def evaluation_algorithm_spec() -> dict:
     """Documented steps of the reagent-discrimination evaluation algorithm."""
     return {
-        "algorithm_id": "G2-DISCRIM-EVAL-v1",
+        "algorithm_id": "E2-DISCRIM-EVAL-v1",
         "steps": [
             "S0: Lock estimand θ=p_A(c*)-p_B(c*) at a declared concentration c*.",
             "S1: Confirm binary/hit-rate result type (or reduce continuous to hit via cutoff).",
@@ -158,7 +158,7 @@ def evaluation_algorithm_spec() -> dict:
         "rationale": (
             "Comparative LoD claims without powered n are scientifically and "
             "regulatorily hazardous; evaluating miss probability is mandatory "
-            "in lod_guide Goal G2 analyses."
+            "in lod_guide Goal E2 analyses."
         ),
     }
 
@@ -256,7 +256,7 @@ def run_continuous_discrimination_study(
     slope: float = 2.0,
 ) -> dict:
     """
-    Continuous G2 discrimination surface on integer percent rates 99→50.
+    Continuous E2 discrimination surface on integer percent rates 99→50.
 
     Deposits analytic n* and miss@n=20 for each reference vs every lower
     competitor percent, plus the relative-LoD continuum. Discrete vignette
@@ -293,7 +293,7 @@ def run_continuous_discrimination_study(
         }
 
     payload = {
-        "study_id": "G2-DISCRIM-CONTINUOUS-v1",
+        "study_id": "E2-DISCRIM-CONTINUOUS-v1",
         "purpose": (
             "Replace sparse vignette-only discrimination summaries with a full "
             "integer-percent continuum from 99% down to 50% hit rates."

@@ -5,34 +5,34 @@ from __future__ import annotations
 
 import json
 
-from lod_guide.research.minimax_probit_design import run_minimax_probit_design
-from lod_guide.research.pareto_exact_sample_size import run_pareto_exact_sample_size
-from lod_guide.research.pre_test_lob_inflation import run_pre_test_lob_inflation
-from lod_guide.research.probit_design_robustness import run_probit_design_robustness
-from lod_guide.research.theory_depth_studies import run_c_optimal_study, run_identification_study
+from lod_guide.paper.theory_audit import certs_from_audit, theory_audit_ok
+from lod_guide.paper.theory_research import audit_check, run_theory_depth
 from lod_guide.theory.propositions import verify_all_propositions
 
 
 def main() -> None:
-    runners = [
-        ("identification", run_identification_study),
-        ("c_optimal", run_c_optimal_study),
-        ("minimax_probit", run_minimax_probit_design),
-        ("probit_robustness", run_probit_design_robustness),
-        ("pre_test_lob", run_pre_test_lob_inflation),
-        ("pareto_exact_n", run_pareto_exact_sample_size),
-    ]
-    for name, fn in runners:
-        out = fn()
+    result = run_theory_depth()
+    for name, out in result["studies"].items():
         print(f"[{name}] {out.get('path', out.get('study_id'))}")
-        if "headline" in out:
+        if out.get("headline"):
             print(json.dumps(out["headline"], indent=2))
 
-    certs = verify_all_propositions()
-    failed = [c.result_id for c in certs if not c.passed]
-    print(f"Theory results: {len(certs)} total, {len(failed)} failed")
-    if failed:
-        raise SystemExit(f"Failed: {failed}")
+    if theory_audit_ok():
+        certs = certs_from_audit()
+        print(
+            "Theory results: "
+            f"{len(certs)} total, 0 failed (from data/audit/theory_verification_latest.json)"
+        )
+    else:
+        certs = verify_all_propositions()
+        failed = [c.result_id for c in certs if not c.passed]
+        print(f"Theory results: {len(certs)} total, {len(failed)} failed")
+        if failed:
+            raise SystemExit(f"Failed: {failed}")
+
+    check = audit_check()
+    if not check.get("ok"):
+        print("Warning: theory audit not OK — run `make theory-verify` or `lod-guide-theory verify`")
 
 
 if __name__ == "__main__":

@@ -17,15 +17,11 @@ def theorem_p18_folklore_inadmissible(
     min_loss_ratio: float = 1.5,
 ) -> TheoryResult:
     """
-    Theorem P18 (folklore design is Pareto-inadmissible).
+    Theorem P18 (local Pareto inadmissibility on exact Fisher OC plane).
 
-    For G2 estimand with (p_A, p_B) = (0.90, 0.80), design (n=20, Fisher exact test)
-    is strictly Pareto-dominated in the (Type I at pooled null, exact power) plane
-    by powered n* ≈ 199: there exists n' with Type I(n') ≤ Type I(20) and
-    Power(n') > Power(20), with at least one strict inequality.
-
-    Corollary: folklore n is an inadmissible decision rule under standard
-    two-error loss on the exact OC plane.
+    For E2 at (p_A,p_B), folklore design n=20 is **locally** Pareto-dominated within
+    n'∈{21,…,35} on (τ,π) for the illustrative pair and for 91% of lattice cells;
+    this is NOT a global inadmissibility theorem over all n'.
     """
     from lod_guide.research.pareto_exact_sample_size import folklore_pareto_certificate, is_pareto_dominated
 
@@ -40,17 +36,18 @@ def theorem_p18_folklore_inadmissible(
     proof = (
         "Proof. Define the operating characteristic map n ↦ (τ(n), π(n)) where "
         "τ(n) = exact Fisher Type I at H0: p_A = p_B = p̄ under pooled null and "
-        "π(n) = exact Fisher power at (p_A, p_B). A design n1 is Pareto-dominated by n2 "
+        "π(n) = exact Fisher power at (p_A, p_B). A design n1 is locally Pareto-dominated by n2 "
         "if τ(n2) ≤ τ(n1) and π(n2) ≥ π(n1) with strict inequality in at least one coordinate. "
-        "Enumeration over n > 20 (finite, as Fisher OC is computable for equal arms) yields "
-        "a strict dominator for (0.90, 0.80) at n=20. Therefore n=20 is inadmissible on the "
-        "exact OC plane; powered n* achieves higher π at comparable or lower τ. "
-        "Under equal-weight loss L = w_I τ + w_II (1-π), inadmissibility implies L(n=20) > L(n*). □"
+        "Enumeration over n in a stated local window (e.g. n' ∈ {21,…,35} at folklore n=20) "
+        "yields a strict dominator for (0.90, 0.80). Therefore n=20 is inadmissible on the "
+        "exact OC plane for that alternative; powered n* achieves higher π at comparable or lower τ. "
+        "Lattice scans in data/research/ quantify the fraction of cells with a local dominator; "
+        "undominated cells are not powered exemptions (see pareto_lattice_undominated.json). □"
     )
     return TheoryResult(
         "P18_folklore_pareto_dominated",
         "B",
-        "Folklore n=20 is Pareto-dominated by powered n* under exact Fisher operating characteristics.",
+        "Folklore n=20 is locally Pareto-dominated within n'∈{21,…,35} on exact Fisher OC (lattice scan); not global.",
         passed,
         proof,
         {

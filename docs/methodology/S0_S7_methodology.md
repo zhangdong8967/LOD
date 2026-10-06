@@ -8,14 +8,14 @@ See [CHALLENGE_MANIFESTO.md](CHALLENGE_MANIFESTO.md). Machine constants: `lod_gu
 
 ---
 
-## S0 — Goals (frozen estimands G1–G4)
+## S0 — Goals (frozen estimands E1–E3)
 
 | ID | Goal | Primary use-cases |
 |----|------|-------------------|
-| G1 | Single-method LoD verification | `verify_manufacturer_lod_claim`, `ldt_lod_establishment` |
-| G2 | Compare two reagents / lots | `kit_a_vs_kit_b_near_lod`, `lot_to_lot_lod_check` |
-| G3 | LoQ / precision claim | `functional_sensitivity_loq` |
-| G4 | Qualitative \(k/n\) claim | `nat_hit_rate_kn`, `immunoassay_qualitative_cutoff` |
+| E1 | Single-method LoD verification | `verify_manufacturer_lod_claim`, `ldt_lod_establishment` |
+| E2 | Compare two reagents / lots | `kit_a_vs_kit_b_near_lod`, `lot_to_lot_lod_check` |
+| LoQ | LoQ / precision claim | `functional_sensitivity_loq` |
+| E3 | Qualitative \(k/n\) claim | `nat_hit_rate_kn`, `immunoassay_qualitative_cutoff` |
 
 Mixing goals is forbidden in a single run: sample-size formulae differ.
 
@@ -65,10 +65,10 @@ Never use \(1-(1-p)^n\) to *compare* reagents (saturation trap).
 
 | Goal | Engine |
 |------|--------|
-| G2 | Two-proportion Fleiss/Chow \(n\) + optional MC power; exact Fisher/Boschloo layer for small \(n\) (see [EXACT_SMALL_SAMPLE.md](EXACT_SMALL_SAMPLE.md)) |
-| G1 | One-proportion vs claim \(p_0\) |
-| G3 | CV-of-mean or CI half-width for mean |
-| G4 | Minimal \(n\) with \(P(X\ge k)\ge\) target |
+| E2 | Two-proportion Fleiss/Chow \(n\) + optional MC power; exact Fisher/Boschloo layer for small \(n\) (see [EXACT_SMALL_SAMPLE.md](EXACT_SMALL_SAMPLE.md)) |
+| E1 | One-proportion vs claim \(p_0\) |
+| LoQ | CV-of-mean or CI half-width for mean |
+| E3 | Minimal \(n\) with \(P(X\ge k)\ge\) target |
 
 Design effect: \(n \leftarrow n\cdot[1+(m-1)\rho]\).
 

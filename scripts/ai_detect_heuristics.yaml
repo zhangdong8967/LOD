@@ -1,0 +1,7 @@
+ai_detection:
+  providers:
+    - local
+  llm_assist: false
+  llm_weight: 0.0
+  warn_threshold: 0.55
+  fail_threshold: 0.72

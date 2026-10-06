@@ -24,9 +24,10 @@ from lod_guide.s4_models import (
     estimate_lob_lod,
     select_model_path,
 )
-from lod_guide.s5_sample_size import SampleSizeResult, recommend_sample_size
+from lod_guide.s5_sample_size import SampleSizeResult, exact_confirmation_ledger, recommend_sample_size
 from lod_guide.s6_report import GuidanceReport
 from lod_guide.s7_sensitivity import sensitivity_compare_reagents
+from lod_guide.theory.detection_limit_semantics import dual_five_percent_frame
 
 
 @dataclass
@@ -124,7 +125,7 @@ def run_guidance(
         icc=icc,
         cluster_size=cluster_size,
         parametric_ok=parametric_ok,
-        use_simulation=not parametric_ok and goal_spec.goal == Goal.G2_COMPARE_REAGENTS,
+        use_simulation=not parametric_ok and goal_spec.goal == Goal.E2_COMPARE_REAGENTS,
     )
 
     multilevel: Any | None = None
@@ -191,7 +192,7 @@ def run_guidance(
         passed.append("diagnostics_skipped_for_result_type")
 
     sens = None
-    if run_sensitivity and goal_spec.goal == Goal.G2_COMPARE_REAGENTS and p_a and p_b:
+    if run_sensitivity and goal_spec.goal == Goal.E2_COMPARE_REAGENTS and p_a and p_b:
         sens = sensitivity_compare_reagents(p_a=p_a, deltas=[abs(p_a - p_b), 0.05, 0.15])
 
     diag_summary: dict[str, Any] = {}
@@ -220,13 +221,40 @@ def run_guidance(
                 f"allocation={multilevel.recommended_design['allocation']})."
             )
 
+    p_alt = ss.details.get("p_alt") if ss.details else None
+    try:
+        exact_confirm = exact_confirmation_ledger(
+            goal_spec.goal,
+            n_per_arm=ss.n_per_arm,
+            alpha=alpha,
+            p_a=p_a,
+            p_b=p_b,
+            p0=p0,
+            p=p,
+            p_alt=p_alt,
+            k=k,
+        )
+    except ValueError:
+        exact_confirm = {
+            "confirmation_engine": "unavailable",
+            "note": "Exact confirmation ledger could not be built (missing inputs).",
+        }
+
+    details_with_exact = dict(ss.details)
+    details_with_exact["s6_exact_confirmation"] = exact_confirm
+    claim_p0 = p0 if p0 is not None else ss.details.get("claim_p0", 0.95)
+    details_with_exact["lod95_semantics"] = dual_five_percent_frame(
+        p0=float(claim_p0), alpha=alpha
+    ).to_dict()
+
     sample_size_report = {
         "n_per_arm": ss.n_per_arm,
         "n_total": ss.n_total,
         "method": ss.method.value,
         "expected_power_or_precision": ss.expected_power_or_precision,
         "design_effect": ss.design_effect,
-        "details": ss.details,
+        "details": details_with_exact,
+        "exact_confirmation": exact_confirm,
     }
     if multilevel is not None:
         sample_size_report["multilevel_lod_design"] = multilevel.to_dict()

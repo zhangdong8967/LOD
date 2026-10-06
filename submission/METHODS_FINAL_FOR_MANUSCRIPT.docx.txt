@@ -1,0 +1,40 @@
+METHODS - 精简版（Clinical Chemistry ≤3500词）
+===============================================
+
+Methods
+
+Study Design and Definition of Detection Claims
+
+Binary hit-rate detection verification was analyzed with a prespecified computational sample-size plan and then applied to archived validation records. We did not execute a redesigned protocol on a prospective specimen panel. Replicates were independent Bernoulli trials (detected or not). Continuous EP17 LoB/LoD estimators and EP26 quantitative lot tests stayed out of scope. Work was organized by three study-specific claim structures: benchmark confirmation, two-arm difference testing, and qualitative pass criteria. Those labels name inferential structure, not CLSI nomenclature.
+
+For benchmark confirmation, detection probability at a verification concentration c* was compared with a benchmark p₀ (typically 0.95). Estimand: p(c*). We treated the claim as supported when the lower one-sided 95% Clopper-Pearson confidence limit for p(c*) reached at least p₀. That confirmation rule is study-specific. It is not a restatement of EP17-A2 decision criteria. Power equaled the chance of meeting that criterion under a prespecified alternative p_alt. If an archived protocol omitted an alternative, we scored its exact operating characteristic and did not invent an unreported power target. The 80% power target used throughout is an author-specified operating characteristic (Table 1), not a requirement quoted from the source documents.
+
+Two-arm difference testing concerned lot-to-lot or material-to-material differences in detection probability at the LoD. The estimand was θ₂ = p_A(c*) − p_B(c*). The primary test was 2-sided Fisher exact of H₀: θ₂=0 at α=0.05, with power defined as the probability of rejecting H₀ under a prespecified pair (p_A, p_B). Equal allocation was used for the primary lattice. A written “equivalent” was treated as formal equivalence only when a margin was explicit. “No significant lot difference” was scored as a discrimination claim, not as equivalence inferred from a nonsignificant p-value.
+
+Qualitative pass criteria were fixed acceptance rules such as at least k positives among n replicates (commonly 19 of 20). The operating characteristic was the binomial pass probability P(X≥k|n,p), kept separate from benchmark confirmation. Primary assumptions were independent replicates, α=0.05, and 80% target power (β=0.20). Required sample size was the smallest integer meeting the prespecified operating characteristic; for two-arm comparisons, n* is the per-arm requirement.
+
+Sample Size Planning and Exact Operating Characteristics
+
+Sample-size planning used an asymptotic approximation followed by exact enumeration. For equal-allocation two-arm comparisons, the initial approximation (Eq. 2) was:
+
+n* = [z_{α/2}√(2p̄(1-p̄)) + z_{1-β}√(p_A(1-p_A)+p_B(1-p_B))]² / (p_A-p_B)²
+
+where
+
+p̄=(p_A+p_B)/2.
+
+The smallest integer n that met the exact Fisher power target was then found by search. We enumerated all 1,225 unique pairs on a 1-percentage-point grid {(p_A, p_B): 50 ≤ p_B < p_A ≤ 99}. Cells are equally spaced by construction. They are not weighted by how often laboratories encounter each Δp. Exact Fisher power followed Casagrande et al.[11] Conventional n=20 was retained as a fixed comparator; β>0.80 (power <20%) marked secondary underpowering.
+
+Sample-size search for benchmark confirmation tracked the chance that a lower one-sided 95% Clopper-Pearson limit met or exceeded p₀ under p_alt.[9] Pass-rule calculations used the binomial probability of the stated k-of-n criterion. Two-arm inference relied on Fisher exact tests. Boschloo exact testing was sensitivity analysis only.[13] Clustering prompted a look at design-effect inflation DE=1+(m-1)ρ; primary runs kept DE=1. Logistic dose-response fits on the log-concentration scale supplied p(c*) for retrospective curves and never defined the primary lattice.
+
+Retrospective Audit of Validation Records
+
+Sixteen publicly accessible document-level records were audited: 10 protocol or dataset deposits, 3 institutional replicate panels, and 3 published LoD tables (Supplementary Table 7b). Extracted fields were the LoD or lot-verification sentence, the reported replicate count, any k-of-n acceptance rule, and whether more than one lot, material, or target was compared. Four phrase rules assigned claims. A stated k-of-n or 19-of-20 pass rule was qualitative pass criteria. A two-lot, two-material, or two-target contrast at the LoD, or a multi-lot detect grid, was two-arm comparison. “Equivalent” without a numeric margin was discrimination, not TOST. A single-method 95% detection claim, LoD confirmation sentence, or low-level replicate series without a pass rule or two-arm contrast was benchmark confirmation, as were hospital and published x/n tables lacking a two-arm sentence.
+
+Detection-probability inputs were taken from the source when written. Missing p₀ for benchmark confirmation was set to 0.95. Missing (p_A, p_B) for two-arm records was set to the Introduction planning pair 0.90 versus 0.80; that pair is a scoring default, not a measured hit rate in those files. When only a concentration-response series was available, p(c*) came from a logistic curve on the log-concentration scale. Replicate counts were never imputed. One linearity record had neither a detection-probability target nor a usable curve, so n* was omitted. No source document stated an 80% power target; every 80% calculation is an author-specified operating characteristic from Table 1. Verbatim quotes, mapped claim, assigned rates, archived n, and n* are listed in Supplementary Table 7b.
+
+Public Data Sources and Reproducibility
+
+The public-data component comprised ten openly accessible replicate-level datasets from clinical chemistry and related applications. Institutional and published records added document-level evidence (Supplementary Table 7b; [16-29]). We ran calculations in Python 3.10 with lod_guide v0.5.0 and deterministic exact procedures. Source data, scripts, and the audit ledger remain available for reconstruction. The online supplement holds mapping rules, Δp-stratified lattice margins, confirmation and pass-rule tables, and the 16-row audit ledger. Methods follow CLSI EP17-A2 and EP26 plus exact binomial procedures for one- and two-proportion claims.[1,2,9-12,14,15]
+
+===============================================

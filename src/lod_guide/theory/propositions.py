@@ -83,14 +83,30 @@ prop17_gated_lob_inflation = certificate_p17_gated_inflation
 prop18_folklore_pareto_dominated = theorem_p18_folklore_inadmissible
 
 
-def verify_all_propositions() -> list[TheoryResult]:
+_VERIFY_CACHE: list[TheoryResult] | None = None
+
+
+def verify_all_propositions(*, force: bool = False) -> list[TheoryResult]:
     """Run all P1–P18 plus supplementary c-optimal equivalence and selective inflation."""
+    global _VERIFY_CACHE
+    if not force and _VERIFY_CACHE is not None:
+        return list(_VERIFY_CACHE)
+
     from lod_guide.theory.design.equivalence import theorem_c_optimal_equivalence
     from lod_guide.theory.design.minimax import minimax_theorem_certificate
     from lod_guide.theory.selective.gated_error import theorem_selective_inflation
     from lod_guide.theory.selective.sample_split import theorem_p17_sample_split_remedy
+    from lod_guide.theory.theorems.acceptance_events import (
+        theorem_t1_e3_pass_fisher_separation,
+        theorem_t5_tost_vs_e2_non_nested,
+    )
+    from lod_guide.theory.theorems.design_confirmation import (
+        theorem_t2a_pooled_z_fisher_distinct,
+        theorem_t2b_berry_esseen_design_scale,
+    )
+    from lod_guide.theory.theorems.sample_size_asymptotics import theorem_t4_fleiss_nstar_delta_scaling
 
-    return [
+    _VERIFY_CACHE = [
         prop1_saturation(),
         prop2_binomial_identity(),
         prop3_fleiss_chow_certificate(),
@@ -109,11 +125,17 @@ def verify_all_propositions() -> list[TheoryResult]:
         prop16_saturation_non_identifiable(),
         prop17_gated_lob_inflation(),
         prop18_folklore_pareto_dominated(),
+        theorem_t1_e3_pass_fisher_separation(),
+        theorem_t2a_pooled_z_fisher_distinct(),
+        theorem_t2b_berry_esseen_design_scale(),
+        theorem_t4_fleiss_nstar_delta_scaling(),
+        theorem_t5_tost_vs_e2_non_nested(),
         theorem_c_optimal_equivalence(),
         theorem_selective_inflation(),
         theorem_p17_sample_split_remedy(),
         minimax_theorem_certificate(),
     ]
+    return list(_VERIFY_CACHE)
 
 
 def verify_by_layer(layer: str) -> list[TheoryResult]:

@@ -17,7 +17,7 @@ CHALLENGE_CLAIMS: list[dict[str, str]] = [
             "Sample size is estimand-dependent. Comparing 90% vs 80% detection "
             "rates needs ~199 replicates/arm for 80% power; n=20 yields ~14% power."
         ),
-        "algorithm_response": "S0 locks goal G1–G4; S5 returns powered/precision-based n.",
+        "algorithm_response": "S0 locks goal E1–E3; S5 returns powered/precision-based n.",
     },
     {
         "id": "C2",
@@ -38,7 +38,7 @@ CHALLENGE_CLAIMS: list[dict[str, str]] = [
         "id": "C4",
         "target": "Using 1-(1-p)^n to compare reagents",
         "problem": "Metric saturates near 1 for both p=0.9 and p=0.8; differences vanish.",
-        "algorithm_response": "G2 uses observed rates hat{p} and two-proportion power only.",
+        "algorithm_response": "E2 uses observed rates hat{p} and two-proportion power only.",
     },
     {
         "id": "C5",
@@ -51,7 +51,7 @@ CHALLENGE_CLAIMS: list[dict[str, str]] = [
 # Locked one-sentence product intent (blueprint).
 POSITIONING_STATEMENT = (
     "lod_guide is an assumption-gated, estimand-specific sample-size framework for "
-    "clinical LoD verification (detection-limit claims G1/G2/G4): it plans replicate "
+    "clinical LoD verification (detection-limit claims E1/E2/E3): it plans replicate "
     "number and confirmation tests inside EP17-class workflows, complements consensus "
     "documents, challenges folklore SOPs (fixed n, saturated comparative metrics), and "
     "does not claim to supersede EP17 / YY / WS / manufacturer IFU as legal standards. "

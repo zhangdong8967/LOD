@@ -45,7 +45,7 @@ def analyze_reagent(blank: np.ndarray, low: np.ndarray, *, label: str) -> dict:
     boot_par = bootstrap_parametric_lob(blank, n_boot=1500, seed=19)
 
     guide = run_guidance(
-        goal=Goal.G1_VERIFY_LOD,
+        goal=Goal.E1_VERIFY_LOD,
         result_type="continuous",
         values=blank,
         low_level=low if low.size else None,

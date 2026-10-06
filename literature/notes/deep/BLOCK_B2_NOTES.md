@@ -11,7 +11,7 @@ Vaks Jeffrey E; Hemyari Parichehr; Rullkoetter Matthias; Santulli Michael J; Sch
 - **Full text:** ok → `literature/papers/pdfs/33626838_v_e_r_i_f_i_c_a_t_i_o_n_o_f_c_l_a_i_m_e_d_l_i_m_i_t_o_f_d_e_.pdf`
 - **Blocks:** B|B2 | **Priority:** core
 
-**Manuscript hooks:** Sample size / verification power (G2, C1, P8); Linnet/Kondratovich EP17 verification probability
+**Manuscript hooks:** Sample size / verification power (E2, C1, P8); Linnet/Kondratovich EP17 verification probability
 **Use in our paper:** Cite when stating prior art; contrast with assumption-gated S0–S7 + explicit decision risk L.
 
 **Problem / gap:**

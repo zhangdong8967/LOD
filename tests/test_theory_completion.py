@@ -13,7 +13,6 @@ from lod_guide.research.probit_design_robustness import run_probit_design_robust
 from lod_guide.research.s2_risk_calibrated_thresholds import run_s2_risk_calibrated_thresholds
 from lod_guide.research.variance_function_loq import fit_rocke_lorenzato, loq_from_variance_function, run_variance_function_loq_study
 from lod_guide.theory.exact_tests import analyze_two_proportions_exact, barnard_difference_pvalue
-from lod_guide.theory.propositions import verify_all_propositions
 
 
 def test_barnard_diff_and_analyze_fields():
@@ -70,8 +69,8 @@ def test_probit_robustness_and_s2_calibration():
     assert "calibrated_skew_fail" in s["headline"]
 
 
-def test_propositions_include_p9_p18():
-    certs = verify_all_propositions()
+def test_propositions_include_p9_p18(theory_certs):
+    certs = theory_certs
     ids = {c.result_id for c in certs}
     assert "P9_holm_fwer" in ids
     assert "P10_weight_scale_invariance" in ids

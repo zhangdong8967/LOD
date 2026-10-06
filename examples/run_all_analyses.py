@@ -72,13 +72,18 @@ def _import_run(module_path: str, func_name: str = "main") -> dict:
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Run all LOD project analyses")
     p.add_argument("--quick", action="store_true", help="Skip download, heavy MC, paper build")
-    p.add_argument("--skip-tests", action="store_true", help="Skip pytest")
+    p.add_argument("--skip-tests", action="store_true", help="Skip theory audit check / pytest")
+    p.add_argument(
+        "--full-tests",
+        action="store_true",
+        help="Run full pytest theory suite (~30–40s) instead of fast audit check",
+    )
     p.add_argument(
         "--only",
         type=str,
         default="",
         help="Comma-separated subset: theory,theory-depth,tests,pipeline-demo,deep-research,"
-        "scenarios,transparent,benchmark,paper,download",
+        "scenarios,transparent,benchmark,paper,download (theory-depth is an alias for theory)",
     )
     return p.parse_args()
 
@@ -99,29 +104,72 @@ def main() -> None:
 
     records: list[dict] = []
 
-    if want("theory"):
-        records.append(_script("theory verification", "examples/run_theory_verification.py"))
+    if want("theory") or want("theory-depth"):
 
-    if want("theory-depth"):
-        records.append(_script("theory depth studies", "examples/run_theory_depth.py"))
+        def run_theory_suite() -> None:
+            from lod_guide.paper.theory_research import ensure_theory_research
+
+            result = ensure_theory_research(force=False, depth=True)
+            if result.get("skipped"):
+                print(
+                    "  theory bundle OK (audit + paper_artifacts/audit in sync)",
+                    flush=True,
+                )
+
+        records.append(
+            _run_step("theory research (P1–P18 + depth + Table 4)", run_theory_suite)
+        )
 
     if want("tests") and not args.skip_tests:
-        records.append(
-            _shell(
-                "pytest (theory suite)",
-                [
-                    sys.executable,
-                    "-m",
-                    "pytest",
-                    "-q",
-                    "tests/test_theory_propositions.py",
-                    "tests/test_theory_depth.py",
-                    "tests/test_theory_layers.py",
-                    "tests/test_theory_extensions.py",
-                    "tests/test_theory_completion.py",
-                ],
+        if args.full_tests:
+            print(
+                "[run_all] pytest theory suite (may take ~30s; set --skip-tests to skip)...",
+                flush=True,
             )
-        )
+            records.append(
+                _shell(
+                    "pytest (theory suite)",
+                    [
+                        sys.executable,
+                        "-m",
+                        "pytest",
+                        "-q",
+                        "--tb=short",
+                        "tests/test_theory_propositions.py",
+                        "tests/test_theory_depth.py",
+                        "tests/test_theory_layers.py",
+                        "tests/test_theory_extensions.py",
+                        "tests/test_theory_completion.py",
+                        "tests/test_theory_research.py",
+                    ],
+                )
+            )
+        else:
+
+            def fast_theory_audit_check() -> None:
+                from lod_guide.paper.theory_audit import (
+                    THEORY_AUDIT,
+                    certs_from_audit,
+                    theory_bundle_ok,
+                )
+
+                if not theory_bundle_ok():
+                    raise AssertionError(
+                        "Theory bundle missing or stale; run theory research first "
+                        f"({THEORY_AUDIT} + paper_artifacts/audit/)"
+                    )
+                certs = certs_from_audit()
+                failed = [c.result_id for c in certs if not c.passed]
+                if failed:
+                    raise AssertionError(f"Audit contains failures: {failed}")
+                if len(certs) < 27:
+                    raise AssertionError(f"Expected ≥27 certificates, got {len(certs)}")
+                print(
+                    f"  theory bundle OK: {len(certs)} certificates ({THEORY_AUDIT.name})",
+                    flush=True,
+                )
+
+            records.append(_run_step("theory bundle check (fast)", fast_theory_audit_check))
 
     if want("pipeline-demo"):
 
@@ -141,7 +189,7 @@ def main() -> None:
                 LoBEstimationMode.GATED_SAMPLE_SPLIT,
             ):
                 res = run_guidance(
-                    goal=Goal.G1_VERIFY_LOD,
+                    goal=Goal.E1_VERIFY_LOD,
                     result_type="continuous",
                     values=blank,
                     use_case="skew_blank_lob_demo",
@@ -177,6 +225,7 @@ def main() -> None:
         "created_utc": datetime.now(UTC).isoformat(),
         "quick": args.quick,
         "skip_tests": args.skip_tests,
+        "full_tests": args.full_tests,
         "only": sorted(only) if only else "all",
         "n_steps": len(records),
         "n_ok": n_ok,

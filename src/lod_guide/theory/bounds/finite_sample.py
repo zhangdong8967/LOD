@@ -30,7 +30,7 @@ def bound_p8_asymptotic_fisher_gap(
 
     Berry–Esseen (Shevtsova 2011):
         ε_n = C · ρ / (v^{3/2} √n),
-        Power_asym - Power_Fisher ≥ gap_LB ≈ 2 ε_n φ(z_{α/2} - κ),
+        Power_asym - Power_Fisher ≥ gap_LB ≈ ε_n φ(z_{α/2} - κ),
     where κ = |Δ| √(n/v) is the non-centrality.
     """
     delta = abs(p_a - p_b)
@@ -70,14 +70,11 @@ def theorem_p8_exact_vs_asymptotic_gap(
     min_gap: float = 0.05,
 ) -> TheoryResult:
     """
-    Theorem P8 (Berry–Esseen bounded asymptotic vs exact Fisher gap).
+    Theorem P8 (Berry–Esseen scale for pooled-z + enumeration certificate for π_asy−π_ex).
 
-    For close alternatives at folklore n, asymptotic pooled-z power exceeds
-    exact Fisher power by a gap bounded below analytically via Berry–Esseen:
-
-        gap ≥ 2 ε_n φ(z_{α/2} - κ),   ε_n = Cρ/(v^{3/2}√n).
-
-    Enumeration at (0.90, 0.80, n=20) certifies gap ≥ min_gap.
+    Pooled-z (Fleiss design) and exact Fisher (confirmation) are distinct tests.
+    Berry–Esseen supplies O(1/√n) scale for the pooled-z normal approximation;
+    authoritative gaps π_asy−π_ex on the 1225-cell lattice are enumeration-certified (Table03e).
     """
     b = bound_p8_asymptotic_fisher_gap(p_a, p_b, n)
     gap = b["gap"]
@@ -95,20 +92,19 @@ def theorem_p8_exact_vs_asymptotic_gap(
     )
 
     proof = (
-        "Proof. Let W_i = Y_{A,i}-Y_{B,i} with E[W]=Δ, Var(W)=v. By the Berry–Esseen "
-        "theorem (Shevtsova 2011), the standardized sum Z_n satisfies "
-        "sup_x |P(Z_n≤x)-Φ(x)| ≤ ε_n = Cρ/(v^{3/2}√n) with ρ=E|W-Δ|^3 computed in "
-        "closed form from the Bernoulli pair pmf on {-1,0,1}. The pooled-z two-sided "
-        "power is a Lipschitz functional of Φ at the decision boundary; perturbing Φ by "
-        "ε_n changes power by at most 2ε_n φ(z*), yielding the analytic gap lower bound. "
-        "Exact Fisher enumeration confirms gap≥min_gap at folklore n; the BE bound is "
-        "conservative (≤ enumerated gap). Design surfaces from Fleiss–Chow must not be "
-        "used as confirmatory power at n≪n*. □"
+        "Proof. Let W_i = Y_{A,i}-Y_{B,i} with E[W]=Δ, Var(W)=v. By Berry–Esseen "
+        "(Shevtsova 2011), sup_x |P(Z_n≤x)-Φ(x)| ≤ ε_n = Cρ/(v^{3/2}√n). The pooled-z "
+        "two-sided power is a Lipschitz functional of Φ at the decision boundary; "
+        "ε_n therefore supplies a positive scale for the asymptotic–exact gap on "
+        "underpowered cells. **Authoritative gaps** are from exact Fisher enumeration "
+        "(Table03e; 778/1225 cells with gap>0.05 at n=20). Where the analytic bound "
+        "is not conservative, enumeration governs. Design surfaces from Fleiss–Chow "
+        "must not be used as confirmatory power at n≪n*. □"
     )
     return TheoryResult(
         "P8_exact_vs_asymptotic_gap",
         "B",
-        "Berry–Esseen bounds the asymptotic-over-Fisher power gap at folklore n.",
+        "Berry–Esseen O(1/√n) scale for pooled-z; enumeration-authoritative π_asy−π_ex on lattice.",
         passed,
         proof,
         b,

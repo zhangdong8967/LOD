@@ -26,9 +26,9 @@ Exactly one primary estimand per analysis run, from `lod_guide.theory.estimands`
 
 | Analysis block | Estimand |
 |----------------|----------|
-| A1 Reagent discrimination | G2: \(\theta_2=p_A-p_B\), \(\Delta^\star=0.10\), \(p_A=0.90\), \(p_B=0.80\) |
-| A2 Skewed blanks | G1 concentration/LoB path under continuous type |
-| A3 Real qPCR (Zenodo) | G1 on NTC blanks + optional G2 on hit rates by SQ |
+| A1 Reagent discrimination | E2: \(\theta_2=p_A-p_B\), \(\Delta^\star=0.10\), \(p_A=0.90\), \(p_B=0.80\) |
+| A2 Skewed blanks | E1 concentration/LoB path under continuous type |
+| A3 Real qPCR (Zenodo) | E1 on NTC blanks + optional E2 on hit rates by SQ |
 | A4 Proposition battery | P1–P6 machine certificates |
 
 ---
@@ -36,7 +36,7 @@ Exactly one primary estimand per analysis run, from `lod_guide.theory.estimands`
 ## 3. Error rates and power
 
 - Two-sided \(\alpha=0.05\) unless noted.  
-- Target power \(1-\beta=0.80\) for G2.  
+- Target power \(1-\beta=0.80\) for E2.  
 - Diagnostic thresholds: `DiagnosticThresholds` v0.1.0 (frozen).
 
 ---
@@ -60,7 +60,7 @@ Monte Carlo seeds: `seed=0` for proposition power checks unless audit overrides.
 ## 6. Success criteria (confirmatory)
 
 1. All of P1–P6 certificates `passed=True`.  
-2. G2 A1 reports \(n^\star\in[190,210]\) and warns that \(n=20\) power \(<0.25\).  
+2. E2 A1 reports \(n^\star\in[190,210]\) and warns that \(n=20\) power \(<0.25\).  
 3. Skewed/hetero simulation selects nonparametric path or failed correction.  
 4. Audit file exists with `sha256_content` and matching recomputation.
 

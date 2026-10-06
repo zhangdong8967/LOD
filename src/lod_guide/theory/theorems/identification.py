@@ -72,7 +72,7 @@ def theorem_p16_saturation_non_identifiable(
       - rank(I(α,β)) < 2 or c-information I_c(LoD) = 0;
       - increasing total sample size N does not restore identifiability of log10(LoD).
 
-    This is a structural failure distinct from underpowered G2 comparison.
+    This is a structural failure distinct from underpowered E2 comparison.
     """
     truth = default_synthetic_truth()
     lod = truth.lod()

@@ -1,0 +1,645 @@
+PMID- 14764644
+OWN  - NLM
+STAT  - MEDLINE
+DCOM  - 20040428
+LR  - 20190722
+IS  - 0009-9147 (Print)
+IS  - 0009-9147 (Linking)
+VI  - 50
+IP  - 4
+DP  - 2004 Apr
+TI  - Partly nonparametric approach for determining the limit of detection.
+PG  - 732-40
+AB  - BACKGROUND: According to recent International Organization for Standardization
+FAU  - Linnet, Kristian
+FAU  - Kondratovich, Marina
+AU  - Linnet K
+AU  - Kondratovich M
+AD  - Laboratory of Clinical Biochemistry, Psychiatric University Hospital, Risskov,
+LA  - eng
+PT  - Journal Article
+PL  - England
+TA  - Clin Chem
+JT  - Clinical chemistry
+SB  - IM
+MH  - Calibration
+MH  - Chemistry, Clinical/*statistics & numerical data
+MH  - Research Design/statistics & numerical data
+MH  - *Sensitivity and Specificity
+MH  - Statistics, Nonparametric
+AID - clinchem.2003.029983 [pii]
+AID - 10.1373/clinchem.2003.029983 [doi]
+SO  - Clin Chem. 2004 Apr;50(4):732-40. doi: 10.1373/clinchem.2003.029983. Epub 2004
+
+PMID- 33626838
+OWN  - NLM
+STAT  - PubMed-not-MEDLINE
+LR  - 20210225
+IS  - 2576-9456 (Print)
+IS  - 2475-7241 (Linking)
+VI  - 1
+IP  - 3
+DP  - 2016 Nov 1
+TI  - Verification of Claimed Limit of Detection in Molecular Diagnostics.
+PG  - 260-270
+LID - 10.1373/jalm.2016.020735 [doi]
+AB  - BACKGROUND: Limit of detection (LOD) is an important performance characteristic
+FAU  - Vaks, Jeffrey E
+FAU  - Hemyari, Parichehr
+FAU  - Rullkoetter, Matthias
+FAU  - Santulli, Michael J
+FAU  - Schoenbrunner, Nancy
+AU  - Vaks JE
+AU  - Hemyari P
+AU  - Rullkoetter M
+AU  - Santulli MJ
+AU  - Schoenbrunner N
+AD  - Biometrics Department, Roche Molecular Systems, Inc., Pleasanton, CA.
+AD  - Biometrics Department, Roche Molecular Systems, Inc., Pleasanton, CA.
+AD  - Assay Development, Roche Molecular Systems, Inc., Rotkreuz, Switzerland.
+AD  - Biometrics Department, Roche Molecular Systems, Inc., Pleasanton, CA.
+AD  - Chemistry Research, Roche Molecular Systems, Inc., Marlboro, CA.
+LA  - eng
+PT  - Journal Article
+PL  - England
+TA  - J Appl Lab Med
+JT  - The journal of applied laboratory medicine
+SB  - IM
+AID - 5587331 [pii]
+AID - 10.1373/jalm.2016.020735 [doi]
+SO  - J Appl Lab Med. 2016 Nov 1;1(3):260-270. doi: 10.1373/jalm.2016.020735.
+
+PMID- 29438992
+OWN  - NLM
+STAT  - MEDLINE
+DCOM  - 20190308
+LR  - 20210217
+IS  - 1535-9484 (Electronic)
+IS  - 1535-9476 (Print)
+IS  - 1535-9476 (Linking)
+VI  - 17
+IP  - 5
+DP  - 2018 May
+TI  - Nonlinear Regression Improves Accuracy of Characterization of Multiplexed Mass
+PG  - 913-924
+LID - 10.1074/mcp.RA117.000322 [doi]
+AB  - The need for assay characterization is ubiquitous in quantitative mass
+FAU  - Galitzine, Cyril
+FAU  - Egertson, Jarrett D
+FAU  - Abbatiello, Susan
+FAU  - Henderson, Clark M
+FAU  - Pino, Lindsay K
+FAU  - MacCoss, Michael
+FAU  - Hoofnagle, Andrew N
+FAU  - Vitek, Olga
+AU  - Galitzine C
+AU  - Egertson JD
+AU  - Abbatiello S
+AU  - Henderson CM
+AU  - Pino LK
+AU  - MacCoss M
+AU  - Hoofnagle AN
+AU  - Vitek O
+AD  - From the double daggerCollege of Science, Northeastern University, Boston, Massachusetts
+AD  - section signDepartment of Genome Sciences, University of Washington, Seattle, Washington
+AD  - paragraph signThermo Fisher Scientific, Cambridge, Massachusetts 02139.
+AD  - ||Department of Laboratory Medicine, University of Washington, Seattle, Washington
+AD  - section signDepartment of Genome Sciences, University of Washington, Seattle, Washington
+AD  - section signDepartment of Genome Sciences, University of Washington, Seattle, Washington
+AD  - ||Department of Laboratory Medicine, University of Washington, Seattle, Washington
+AD  - **Department of Medicine, University of Washington, Seattle, Washington 98195.
+AD  - From the double daggerCollege of Science, Northeastern University, Boston, Massachusetts
+AD  - double daggerdouble daggerCollege of Computer and Information Science, Northeastern University, Boston,
+LA  - eng
+PT  - Journal Article
+PT  - Research Support, U.S. Gov't, Non-P.H.S.
+PL  - United States
+TA  - Mol Cell Proteomics
+JT  - Molecular & cellular proteomics : MCP
+SB  - IM
+MH  - Amino Acid Sequence
+MH  - Biological Assay
+MH  - Calibration
+MH  - Humans
+MH  - Limit of Detection
+MH  - Mass Spectrometry/*methods
+MH  - Models, Theoretical
+MH  - *Nonlinear Dynamics
+MH  - Peptides/chemistry
+MH  - Regression Analysis
+AID - S1535-9476(20)32467-1 [pii]
+AID - RA117.000322 [pii]
+AID - 10.1074/mcp.RA117.000322 [doi]
+SO  - Mol Cell Proteomics. 2018 May;17(5):913-924. doi: 10.1074/mcp.RA117.000322. Epub
+
+PMID- 18852857
+OWN  - NLM
+STAT  - PubMed-not-MEDLINE
+DCOM  - 20100623
+LR  - 20240109
+IS  - 0159-8090 (Print)
+IS  - 0159-8090 (Linking)
+VI  - 29 Suppl 1
+IP  - Suppl 1
+DP  - 2008 Aug
+TI  - Limit of blank, limit of detection and limit of quantitation.
+PG  - S49-52
+AB  - * Limit of Blank (LoB), Limit of Detection (LoD), and Limit of Quantitation (LoQ)
+FAU  - Armbruster, David A
+FAU  - Pry, Terry
+AU  - Armbruster DA
+AU  - Pry T
+AD  - Global Scientific Affairs, Abbott Diagnostics, Abbott Park, IL 60064, USA.
+LA  - eng
+PT  - Journal Article
+PL  - Australia
+TA  - Clin Biochem Rev
+JT  - The Clinical biochemist. Reviews
+AID - cbr29_s_pgs49 [pii]
+SO  - Clin Biochem Rev. 2008 Aug;29 Suppl 1(Suppl 1):S49-52.
+
+PMID- 15899655
+OWN  - NLM
+STAT  - MEDLINE
+DCOM  - 20050901
+LR  - 20161018
+IS  - 1434-6621 (Print)
+IS  - 1434-6621 (Linking)
+VI  - 43
+IP  - 4
+DP  - 2005
+TI  - Estimation of the limit of detection with a bootstrap-derived standard error by a
+PG  - 394-9
+AB  - A recently proposed procedure for estimating the limit of detection (LoD) of an
+FAU  - Linnet, Kristian
+AU  - Linnet K
+AD  - Laboratory of Clinical Biochemistry, Psychiatric University Hospital, Risskov,
+LA  - eng
+PT  - Journal Article
+PL  - Germany
+TA  - Clin Chem Lab Med
+JT  - Clinical chemistry and laboratory medicine
+SB  - IM
+MH  - Antidepressive Agents/*analysis
+MH  - Antipsychotic Agents/*analysis
+MH  - Chromatography, High Pressure Liquid/methods/*statistics & numerical data
+MH  - Computer Simulation
+MH  - Confidence Intervals
+MH  - Normal Distribution
+MH  - Reproducibility of Results
+MH  - Sensitivity and Specificity
+MH  - Statistics, Nonparametric
+AID - 10.1515/CCLM.2005.071 [doi]
+SO  - Clin Chem Lab Med. 2005;43(4):394-9. doi: 10.1515/CCLM.2005.071.
+
+PMID- 41308721
+OWN  - NLM
+STAT  - MEDLINE
+DCOM  - 20251209
+LR  - 20260101
+IS  - 1873-3492 (Electronic)
+IS  - 0009-8981 (Linking)
+VI  - 580
+DP  - 2026 Jan 30
+TI  - Evaluation of the commutability of lombardy region EQA control materials for
+PG  - 120745
+LID - S0009-8981(25)00624-2 [pii]
+LID - 10.1016/j.cca.2025.120745 [doi]
+AB  - BACKGROUND: External Quality Assessment (EQA) is essential for ensuring
+FAU  - Carobene, Anna
+FAU  - Vidali, Matteo
+FAU  - Ceriotti, Ferruccio
+FAU  - Alberghini, Antonella
+FAU  - Arcangeli, Adele
+FAU  - Bellandi, Walter
+FAU  - Cappelletti, Paola
+FAU  - Cerutti, Lorenzo
+FAU  - Cotellessa, Alice
+FAU  - Dolci, Alberto
+FAU  - Ena, Sara
+FAU  - Bogetto, Stefano Ferrero
+FAU  - Freddi, Cristina
+FAU  - Fortunato, Antonio
+FAU  - Grassini, Angelo
+FAU  - Hoxha, Eneida
+FAU  - Kullmann, Cristina
+FAU  - Locatelli, Massimo
+FAU  - Pasqualetti, Sara
+FAU  - Ruvolo, Andrea
+FAU  - Straface, Maria Cristina
+FAU  - Tili, Emily
+FAU  - Valaperta, Serenella
+FAU  - Zaccaria, Barbara
+FAU  - Moriello, Giuseppe
+FAU  - Liga, Giuseppa
+FAU  - Pasotti, Fabio
+FAU  - Da Molin, Simona
+FAU  - Buoro, Sabrina
+AU  - Carobene A
+AU  - Vidali M
+AU  - Ceriotti F
+AU  - Alberghini A
+AU  - Arcangeli A
+AU  - Bellandi W
+AU  - Cappelletti P
+AU  - Cerutti L
+AU  - Cotellessa A
+AU  - Dolci A
+AU  - Ena S
+AU  - Bogetto SF
+AU  - Freddi C
+AU  - Fortunato A
+AU  - Grassini A
+AU  - Hoxha E
+AU  - Kullmann C
+AU  - Locatelli M
+AU  - Pasqualetti S
+AU  - Ruvolo A
+AU  - Straface MC
+AU  - Tili E
+AU  - Valaperta S
+AU  - Zaccaria B
+AU  - Moriello G
+AU  - Liga G
+AU  - Pasotti F
+AU  - Da Molin S
+AU  - Buoro S
+AD  - IRCCS San Raffaele Hospital, Milan, Italy. Electronic address:
+AD  - Fondazione IRCCS Ca' Granda Ospedale Maggiore Policlinico, Milan, Italy.
+AD  - Fondazione IRCCS Ca' Granda Ospedale Maggiore Policlinico, Milan, Italy.
+AD  - Department of Biomedical, Surgical and Dental Sciences, University of Milan,
+AD  - AST Ascoli Piceno, Ascoli Piceno, Italy.
+AD  - ASST Crema, Cremona, Italy.
+AD  - Engles Profili Fabriano Hospital, Ancona, Italy.
+AD  - ASST Lodi, Lodi, Italy.
+AD  - IRCCS San Raffaele Hospital, Milan, Italy.
+AD  - ASST Fatebenefratelli Sacco, Milan, Italy and Department of Clinical and
+AD  - ASST Santi Paolo e Carlo, Milan, Italy.
+AD  - Department of Biomedical, Surgical and Dental Sciences, University of Milan,
+AD  - ASST Papa Giovanni XIII, Bergamo, Italy.
+AD  - AST Ascoli Piceno, Ascoli Piceno, Italy.
+AD  - ASST Crema, Cremona, Italy.
+AD  - Synlab Italia, Brescia, Italy.
+AD  - Synlab Italia, Brescia, Italy.
+AD  - IRCCS San Raffaele Hospital, Milan, Italy.
+AD  - ASST Fatebenefratelli Sacco, Milan, Italy and Department of Clinical and
+AD  - ASST Lodi, Lodi, Italy.
+AD  - ASST Santi Paolo e Carlo, Milan, Italy.
+AD  - Engles Profili Fabriano Hospital, Ancona, Italy.
+AD  - ASST Papa Giovanni XIII, Bergamo, Italy.
+AD  - Regional Coordination Center for Laboratory Medicine of Lombardy Region, Milan,
+AD  - Regional Coordination Center for Laboratory Medicine of Lombardy Region, Milan,
+AD  - Regional Coordination Center for Laboratory Medicine of Lombardy Region, Milan,
+AD  - Regional Coordination Center for Laboratory Medicine of Lombardy Region, Milan,
+AD  - Regional Coordination Center for Laboratory Medicine of Lombardy Region, Milan,
+AD  - Regional Coordination Center for Laboratory Medicine of Lombardy Region, Milan,
+LA  - eng
+PT  - Evaluation Study
+PT  - Journal Article
+PT  - Multicenter Study
+PL  - Netherlands
+TA  - Clin Chim Acta
+JT  - Clinica chimica acta; international journal of clinical chemistry
+SB  - IM
+MH  - Humans
+MH  - *Calcium/blood
+MH  - *Creatinine/blood
+MH  - Cross-Sectional Studies
+MH  - *Enzymes/blood
+MH  - Quality Control
+AID - S0009-8981(25)00624-2 [pii]
+AID - 10.1016/j.cca.2025.120745 [doi]
+SO  - Clin Chim Acta. 2026 Jan 30;580:120745. doi: 10.1016/j.cca.2025.120745. Epub 2025
+
+PMID- 39763364
+OWN  - NLM
+STAT  - MEDLINE
+DCOM  - 20250429
+LR  - 20250520
+IS  - 1520-6882 (Electronic)
+IS  - 0003-2700 (Print)
+IS  - 0003-2700 (Linking)
+VI  - 97
+IP  - 2
+DP  - 2025 Jan 21
+TI  - Specific Protein Quantification by Radioimmuno-Dot-Blot Assay for Complex Mixture
+PG  - 1087-1096
+LID - 10.1021/acs.analchem.4c03393 [doi]
+AB  - Accurately quantifying specific proteins from complex mixtures like cell lysates,
+FAU  - Malkamaki, Maaria
+FAU  - Gandier, Julie-Anne
+FAU  - Meinander, Kristoffer
+FAU  - Linder, Markus B
+AU  - Malkamaki M
+AU  - Gandier JA
+AU  - Meinander K
+AU  - Linder MB
+AD  - Department of Bioproducts and Biosystems, School of Chemical Engineering, Aalto
+AD  - The Centre of Excellence in Life Inspired Hybrid Materials (LIBER), Aalto
+AD  - Department of Bioproducts and Biosystems, School of Chemical Engineering, Aalto
+AD  - The Centre of Excellence in Life Inspired Hybrid Materials (LIBER), Aalto
+AD  - Department of Bioproducts and Biosystems, School of Chemical Engineering, Aalto
+AD  - The Centre of Excellence in Life Inspired Hybrid Materials (LIBER), Aalto
+AD  - Department of Bioproducts and Biosystems, School of Chemical Engineering, Aalto
+AD  - The Centre of Excellence in Life Inspired Hybrid Materials (LIBER), Aalto
+LA  - eng
+PT  - Journal Article
+PL  - United States
+TA  - Anal Chem
+JT  - Analytical chemistry
+SB  - IM
+MH  - *Tritium/chemistry
+MH  - Animals
+MH  - Recombinant Proteins/analysis
+AID - 10.1021/acs.analchem.4c03393 [doi]
+SO  - Anal Chem. 2025 Jan 21;97(2):1087-1096. doi: 10.1021/acs.analchem.4c03393. Epub
+
+PMID- 42012909
+OWN  - NLM
+STAT  - MEDLINE
+DCOM  - 20260701
+LR  - 20260701
+IS  - 2576-9456 (Print)
+IS  - 2475-7241 (Linking)
+VI  - 11
+IP  - 4
+DP  - 2026 Jul 1
+TI  - Performance Evaluation of an Automated Neurofilament Light Chain Immunoassay.
+PG  - 844-856
+LID - 10.1093/jalm/jfag041 [doi]
+AB  - BACKGROUND: Increased neurofilament light chain (NfL) in cerebrospinal fluid and
+FAU  - Ray, Sarmistha
+FAU  - Fayyad, Rana
+FAU  - Lange, Sascha
+FAU  - Abou-Diwan, Charbel
+FAU  - Kukkaro, Petra
+FAU  - Haring, Dieter A
+FAU  - Gee, Matthew
+FAU  - Wilson, JoDell E
+FAU  - Merabet, Eddine
+AU  - Ray S
+AU  - Fayyad R
+AU  - Lange S
+AU  - Abou-Diwan C
+AU  - Kukkaro P
+AU  - Haring DA
+AU  - Gee M
+AU  - Wilson JE
+AU  - Merabet E
+AD  - Department of Research & Development, Siemens Healthcare Diagnostics Inc.,
+AD  - Department of Medical Affairs, Siemens Healthcare Diagnostics Inc., Tarrytown,
+AD  - Department of Medical Affairs, Siemens Healthcare Diagnostics Inc., Tarrytown,
+AD  - Department of Medical Affairs, Siemens Healthcare Diagnostics Inc., Tarrytown,
+AD  - Novartis Pharma AG, Clinical Development and Biostatistics Neuroscience, Basel,
+AD  - Novartis Pharma AG, Clinical Development and Biostatistics Neuroscience, Basel,
+AD  - Department of Medical Affairs, Siemens Healthcare Diagnostics Inc., Tarrytown,
+AD  - Department of Medical Affairs, Siemens Healthcare Diagnostics Inc., Tarrytown,
+AD  - Department of Research & Development, Siemens Healthcare Diagnostics Inc.,
+LA  - eng
+PT  - Evaluation Study
+PT  - Journal Article
+PL  - England
+TA  - J Appl Lab Med
+JT  - The journal of applied laboratory medicine
+SB  - IM
+MH  - Humans
+MH  - *Neurofilament Proteins/blood/cerebrospinal fluid
+MH  - Immunoassay/methods/instrumentation/standards
+MH  - Reproducibility of Results
+MH  - Biomarkers/blood
+MH  - Female
+MH  - Adult
+MH  - Male
+MH  - Middle Aged
+MH  - Limit of Detection
+MH  - *Multiple Sclerosis/blood/diagnosis
+AID - 8660267 [pii]
+AID - 10.1093/jalm/jfag041 [doi]
+SO  - J Appl Lab Med. 2026 Jul 1;11(4):844-856. doi: 10.1093/jalm/jfag041.
+
+PMID- 42201254
+OWN  - NLM
+STAT  - MEDLINE
+DCOM  - 20260705
+LR  - 20260705
+IS  - 1530-8561 (Electronic)
+IS  - 0009-9147 (Linking)
+VI  - 72
+IP  - 7
+DP  - 2026 Jul 6
+TI  - Development and Analytical Validation of a Multiplex LC-MRM-MS-Based Reference
+PG  - 776-790
+LID - 10.1093/clinchem/hvag041 [doi]
+AB  - BACKGROUND: Medical results from regulated in vitro diagnostic devices should be
+FAU  - Diederiks, Nina M
+FAU  - Romijn, Fred P H T M
+FAU  - van Neer, Nicolaas J M
+FAU  - Pieterse, Mervin
+FAU  - Dittrich, Julia
+FAU  - Ceglarek, Uta
+FAU  - Cobbaert, Christa M
+FAU  - Ruhaak, L Renee
+AU  - Diederiks NM
+AU  - Romijn FPHTM
+AU  - van Neer NJM
+AU  - Pieterse M
+AU  - Dittrich J
+AU  - Ceglarek U
+AU  - Cobbaert CM
+AU  - Ruhaak LR
+AD  - Department of Clinical Chemistry and Laboratory Medicine, Leiden University
+AD  - Department of Clinical Chemistry and Laboratory Medicine, Leiden University
+AD  - Department of Clinical Chemistry and Laboratory Medicine, Leiden University
+AD  - Department of Clinical Chemistry and Laboratory Medicine, Leiden University
+AD  - Institute of Laboratory Medicine, Clinical Chemistry and Molecular Diagnostics,
+AD  - Institute of Laboratory Medicine, Clinical Chemistry and Molecular Diagnostics,
+AD  - Department of Clinical Chemistry and Laboratory Medicine, Leiden University
+AD  - Department of Clinical Chemistry and Laboratory Medicine, Leiden University
+LA  - eng
+PT  - Journal Article
+PT  - Validation Study
+PL  - England
+TA  - Clin Chem
+JT  - Clinical chemistry
+SB  - IM
+MH  - Humans
+MH  - *Apolipoprotein A-I/blood
+MH  - *Liquid Chromatography-Mass Spectrometry/methods/standards
+MH  - Reference Standards
+MH  - *Apolipoproteins B/blood
+MH  - Calibration
+MH  - Chromatography, High Pressure Liquid
+MH  - Chromatography, Liquid/methods
+MH  - Reproducibility of Results
+MH  - Mass Spectrometry/methods
+AID - 8696147 [pii]
+AID - 10.1093/clinchem/hvag041 [doi]
+SO  - Clin Chem. 2026 Jul 6;72(7):776-790. doi: 10.1093/clinchem/hvag041.
+
+PMID- 20287826
+OWN  - NLM
+STAT  - MEDLINE
+DCOM  - 20100318
+LR  - 20220321
+IS  - 0006-3444 (Print)
+IS  - 0006-3444 (Linking)
+VI  - 34
+IP  - 1-2
+DP  - 1947
+TI  - Significance tests for 2 X 2 tables.
+PG  - 123-38
+FAU  - BARNARD, G A
+AU  - BARNARD GA
+LA  - eng
+PT  - Journal Article
+PL  - England
+TA  - Biometrika
+JT  - Biometrika
+SB  - OM
+MH  - *Biometry
+MH  - Humans
+MH  - *Statistics as Topic
+AID - 10.1093/biomet/34.1-2.123 [doi]
+SO  - Biometrika. 1947;34(1-2):123-38. doi: 10.1093/biomet/34.1-2.123.
+
+PMID- 28932796
+OWN  - NLM
+STAT  - PubMed-not-MEDLINE
+LR  - 20201001
+IS  - 2352-5517 (Print)
+IS  - 2352-5517 (Electronic)
+IS  - 2352-5517 (Linking)
+VI  - 1
+DP  - 2015 Apr 1
+TI  - A practical approach for the validation and clinical implementation of a
+PG  - 28-34
+LID - 10.1016/j.plabm.2015.02.001 [doi]
+AB  - OBJECTIVES: Despite several publications on the analytical performance of
+FAU  - Kavsak, Peter A
+FAU  - Beattie, John
+FAU  - Pickersgill, Robin
+FAU  - Ford, Lynn
+FAU  - Caruso, Nadia
+FAU  - Clark, Lorna
+AU  - Kavsak PA
+AU  - Beattie J
+AU  - Pickersgill R
+AU  - Ford L
+AU  - Caruso N
+AU  - Clark L
+AD  - Department of Pathology and Molecular Medicine, McMaster University, Hamilton,
+AD  - Juravinski Hospital and Cancer Centre, Hamilton, Canada.
+AD  - Hamilton Regional Laboratory Medicine Program, Canada.
+AD  - Hamilton Regional Laboratory Medicine Program, Canada.
+AD  - Hamilton General Hospital, Hamilton, Canada.
+AD  - Hamilton Regional Laboratory Medicine Program, Canada.
+AD  - St. Joseph׳s Hospital, Hamilton, Canada.
+AD  - Hamilton Regional Laboratory Medicine Program, Canada.
+AD  - McMaster Children׳s Hospital, Hamilton, Canada.
+AD  - Hamilton Regional Laboratory Medicine Program, Canada.
+AD  - Hamilton General Hospital, Hamilton, Canada.
+AD  - Juravinski Hospital and Cancer Centre, Hamilton, Canada.
+AD  - Hamilton Regional Laboratory Medicine Program, Canada.
+LA  - eng
+PT  - Journal Article
+PL  - Netherlands
+TA  - Pract Lab Med
+JT  - Practical laboratory medicine
+AID - S2352-5517(15)00002-5 [pii]
+AID - 10.1016/j.plabm.2015.02.001 [doi]
+SO  - Pract Lab Med. 2015 Mar 3;1:28-34. doi: 10.1016/j.plabm.2015.02.001. eCollection
+
+PMID- 41427577
+OWN  - NLM
+STAT  - MEDLINE
+DCOM  - 20260221
+LR  - 20260710
+IS  - 1437-4331 (Electronic)
+IS  - 1434-6621 (Linking)
+VI  - 64
+IP  - 4
+DP  - 2026 Mar 26
+TI  - Analytical verification and comparative assessment of the new Atellica IM
+PG  - 913-921
+LID - 10.1515/cclm-2025-1431 [doi]
+AB  - OBJECTIVES: Despite standardization efforts, significant inter-assay variability
+FAU  - Filella, Xavier
+FAU  - Gonzalez-Escribano, Cristina
+FAU  - Rodriguez-Garcia, Maria
+FAU  - Medina-Esteban, Nuria
+FAU  - Fernandez-Galan, Esther
+AU  - Filella X
+AU  - Gonzalez-Escribano C
+AU  - Rodriguez-Garcia M
+AU  - Medina-Esteban N
+AU  - Fernandez-Galan E
+AD  - Biochemistry and Molecular Genetics Department, 16493 Hospital Clinic ,
+AD  - CORE Laboratory (CDB), Hospital Clinic de Barcelona, Barcelona, Spain.
+AD  - Bioquimica y Genetica Molecular, Hospital Clinic de Barcelona, Barcelona, Spain.
+AD  - Biochemistry and Molecular Genetics Department, 16493 Hospital Clinic ,
+AD  - Department of Biochemistry and Molecular Genetics, Biomedical Diagnostic Centre
+LA  - eng
+PT  - Comparative Study
+PT  - Journal Article
+PL  - Germany
+TA  - Clin Chem Lab Med
+JT  - Clinical chemistry and laboratory medicine
+SB  - IM
+MH  - Humans
+MH  - *Prostate-Specific Antigen/blood
+MH  - Male
+MH  - *Prostatic Neoplasms/blood/diagnosis
+MH  - Limit of Detection
+MH  - Immunoassay/methods
+MH  - Sensitivity and Specificity
+AID - cclm-2025-1431 [pii]
+AID - 10.1515/cclm-2025-1431 [doi]
+SO  - Clin Chem Lab Med. 2025 Dec 23;64(4):913-921. doi: 10.1515/cclm-2025-1431. Print
+
+PMID- 42459884
+OWN  - NLM
+STAT  - PubMed-not-MEDLINE
+DCOM  - 20260716
+LR  - 20260716
+IS  - 1664-302X (Print)
+IS  - 1664-302X (Electronic)
+IS  - 1664-302X (Linking)
+VI  - 17
+DP  - 2026
+TI  - Analytical validation of a multiplex PCR assay for differentiation of five
+PG  - 1858530
+LID - 10.3389/fmicb.2026.1858530 [doi]
+LID - 1858530
+AB  - BACKGROUND: In TB endemic areas, accurate identification of non-tuberculous
+FAU  - Gaikwad, Shaina
+FAU  - Tiwari, Antisha
+FAU  - Agrawal, Falguni
+FAU  - Singh, Jitendra
+FAU  - Khadanga, Sagar
+FAU  - Khurana, Alkesh
+FAU  - Purwar, Shashank
+FAU  - Maurya, Anand Kumar
+AU  - Gaikwad S
+AU  - Tiwari A
+AU  - Agrawal F
+AU  - Singh J
+AU  - Khadanga S
+AU  - Khurana A
+AU  - Purwar S
+AU  - Maurya AK
+AD  - Department of Microbiology, All India Institute of Medical Sciences, Bhopal,
+AD  - Department of Microbiology, All India Institute of Medical Sciences, Bhopal,
+AD  - Department of Microbiology, All India Institute of Medical Sciences, Bhopal,
+AD  - Department of Translational Medicine, All India Institute of Medical Sciences,
+AD  - Department of General Medicine, All India Institute of Medical Sciences, Bhopal,
+AD  - Department of Pulmonary Medicine, All India Institute of Medical Sciences,
+AD  - Department of Microbiology, All India Institute of Medical Sciences, Bhopal,
+AD  - Department of Microbiology, All India Institute of Medical Sciences, Bhopal,
+LA  - eng
+PT  - Journal Article
+PL  - Switzerland
+TA  - Front Microbiol
+JT  - Frontiers in microbiology
+AID - 10.3389/fmicb.2026.1858530 [doi]
+SO  - Front Microbiol. 2026 Jul 1;17:1858530. doi: 10.3389/fmicb.2026.1858530.
+

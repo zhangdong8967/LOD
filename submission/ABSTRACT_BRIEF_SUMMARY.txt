@@ -1,0 +1,13 @@
+ABSTRACT_BRIEF - Clinical Chemistry limits (Abstract ≤250; Brief Summary ≤100)
+==========================================
+
+ABSTRACT
+Background. Twenty-replicate designs are common for low-concentration and reagent-lot verification, yet a fixed replicate count does not ensure adequate power for a prespecified claim. CLSI EP17-A2 defines detection capability in terms of detection probability and does not establish 20 as a universal sample size. We quantified operating characteristics of fixed-size designs for binary hit-rate claims and scored a convenience sample of archived records.
+Methods. Exact binomial methods supplied sample-size requirements for three hit-rate detection claims. Power was mapped over 1,225 equally spaced detection-probability pairs (50%-99%), a design lattice rather than a survey of laboratory lot differences. Ten archived validation protocols and 16 verification records were scored against author-specified operating characteristics (α=0.05; 80% power). No source document stated that power target.
+Results. At 20 replicates per arm, β exceeded 0.80 (power <0.20) in 61% of lattice cells, including every cell with a ≤10 percentage-point gap. As a 10-point worked example (90%/80%), power was about 0.07 and n*≈199 per arm. A 19-of-20 rule at true p=0.95 had pass probability 73.6%. Nine of 10 archived protocols needed more than 20 replicates under those targets (ratios 2.65-9.95).
+Conclusions. A fixed replicate count may miss the operating characteristics implied by a written claim. Set n from the claim, acceptance rule, and desired power before testing. If that n is impractical, rewrite the claim, set a margin, or report exact power at the n that will be used.
+
+BRIEF_SUMMARY
+Laboratory LoD worksheets often freeze about 20 replicates without sizing the claim. Exact Fisher surfaces on 1,225 equally spaced hit-rate pairs (a design lattice, not a field survey) and a 16-record convenience audit are reported (Supplementary Table 7b). At n=20 per arm, 61% of lattice cells leave β>0.8; n* tracked Δp (~2,900 at 1-5 pp; 32 above 20 pp). A 19/20 rule at p=0.95 passes with probability 0.74. Audit ratios versus 20 commonly span 2.6-10× under author-specified targets.
+
+==========================================

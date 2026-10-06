@@ -1,0 +1,2 @@
+source_id,pathogen,c_star,n,hits,rate,protocol_quote,quote_source,citation_doi
+jcm_hansen2020_abbott,SARS-CoV-2 (Abbott m2000),316 copies/mL,20,16,0.80,"Direct comparison of SARS-CoV-2 analytical limits of detection across seven molecular assays (Table 1: detected/tested at stated concentration).","Hansen G et al. J Clin Microbiol 2020; CDC/clinical laboratory comparison",10.1128/JCM.01535-20

@@ -1,5 +1,5 @@
 """
-EP17-style precision-profile / LoQ engine (G3).
+EP17-style precision-profile / LoQ engine (LoQ).
 
 Given multi-pool replicates (concentration ≈ pool mean), estimate:
   - per-pool mean, SD, CV%

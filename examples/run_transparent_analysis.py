@@ -44,11 +44,11 @@ def main() -> None:
     if not all(c.passed for c in certs):
         raise SystemExit("Proposition battery failed — stop confirmatory analysis.")
 
-    # ---- A1 G2 discrimination ----
-    est_g2 = estimand_for_goal(Goal.G2_COMPARE_REAGENTS.value)
+    # ---- A1 E2 discrimination ----
+    est_g2 = estimand_for_goal(Goal.E2_COMPARE_REAGENTS.value)
     audit = new_audit(PROTOCOL_ID, est_g2.to_dict())
     res_g2 = run_guidance(
-        goal=Goal.G2_COMPARE_REAGENTS,
+        goal=Goal.E2_COMPARE_REAGENTS,
         result_type="binary",
         use_case="kit_a_vs_kit_b_near_lod",
         p_a=0.90,
@@ -60,7 +60,7 @@ def main() -> None:
     audit.add_step(
         AuditStep(
             "A1",
-            "G2_reagent_discrimination",
+            "E2_reagent_discrimination",
             inputs={"p_a": 0.90, "p_b": 0.80, "alpha": 0.05, "power": 0.80},
             outputs={
                 "n_per_arm": res_g2.sample_size.n_per_arm,
@@ -85,10 +85,10 @@ def main() -> None:
     )
 
     # ---- A2 skewed blanks ----
-    est_g1 = estimand_for_goal(Goal.G1_VERIFY_LOD.value)
+    est_g1 = estimand_for_goal(Goal.E1_VERIFY_LOD.value)
     skewed = sim_skewed_hetero_blanks(seed=1)
     res_sk = run_guidance(
-        goal=Goal.G1_VERIFY_LOD,
+        goal=Goal.E1_VERIFY_LOD,
         result_type="continuous",
         values=skewed.values,
         strata=skewed.strata,

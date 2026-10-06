@@ -40,7 +40,7 @@ def test_saturation_plateau_blocked():
 
 def test_pipeline_multilevel_lod_flag():
     out = run_guidance(
-        goal=Goal.G1_VERIFY_LOD,
+        goal=Goal.E1_VERIFY_LOD,
         result_type=ResultType.BINARY,
         p=0.95,
         p0=0.95,

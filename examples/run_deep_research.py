@@ -42,14 +42,51 @@ from lod_guide.research import (
 from lod_guide.research.all_positive_figures import generate_all_positive_trap_figures
 from lod_guide.research.continuous_figures import generate_continuous_model_figures
 from lod_guide.research.discrimination_figures import generate_discrimination_figures
-from lod_guide.theory.propositions import verify_all_propositions
+
+
+def _theory_audit_ok() -> bool:
+    """True when run_theory_verification.py already produced a clean audit."""
+    audit = ROOT / "data" / "audit" / "theory_verification_latest.json"
+    if not audit.is_file():
+        return False
+    try:
+        payload = json.loads(audit.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return False
+    return payload.get("n_failed", 1) == 0
+
+
+def _exact_power_cached() -> dict | None:
+    """Reuse prior exact-power JSON when rejection regions are already on disk."""
+    import os
+
+    if os.environ.get("LOD_REFRESH_EXACT", "").strip().lower() in {"1", "true", "yes"}:
+        return None
+    path = ROOT / "data" / "research" / "exact_vs_asymptotic_power.json"
+    if not path.is_file():
+        return None
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return None
+    highlights = payload.get("highlights") or {}
+    required = ("fisher_power_90vs80_n20", "fisher_power_90vs80_n199", "exact_n_star_90vs50_fisher")
+    if not all(k in highlights for k in required):
+        return None
+    payload["path"] = str(path)
+    return payload
 
 
 def main() -> None:
     print("=" * 72)
-    print("0) Theory certificates P1–P8")
-    for c in verify_all_propositions():
-        print(("PASS" if c.passed else "FAIL"), c.result_id, c.details)
+    if _theory_audit_ok():
+        print("0) Theory certificates — skipped (clean audit in data/audit/theory_verification_latest.json)")
+    else:
+        from lod_guide.theory.propositions import verify_all_propositions
+
+        print("0) Theory certificates P1–P8 (no prior audit; running verify_all_propositions)")
+        for c in verify_all_propositions():
+            print(("PASS" if c.passed else "FAIL"), c.result_id, c.details)
 
     print("=" * 72)
     print("0b) All-positive trap (n/n ≠ reliable LoD)")
@@ -97,9 +134,15 @@ def main() -> None:
 
     print("=" * 72)
     print("0f) Exact vs asymptotic small-sample power (Fisher / Boschloo)")
-    exact = run_exact_power_study()
-    print(json.dumps(exact["highlights"], indent=2))
-    print(json.dumps(exact["reporting_policy"], indent=2))
+    exact = _exact_power_cached()
+    if exact is not None:
+        print("  skipped recompute (use LOD_REFRESH_EXACT=1 to rebuild; see exact_vs_asymptotic_power.json)")
+        print(json.dumps(exact["highlights"], indent=2))
+        print(json.dumps(exact.get("reporting_policy", {}), indent=2))
+    else:
+        exact = run_exact_power_study()
+        print(json.dumps(exact["highlights"], indent=2))
+        print(json.dumps(exact["reporting_policy"], indent=2))
 
     print("=" * 72)
     print("0f2) Tier-A empirical extension (radioimmuno precision/linearity + RMN) + stratified report")
@@ -109,13 +152,13 @@ def main() -> None:
     print("evidence counts", ev.get("counts"))
 
     print("=" * 72)
-    print("0f3) Decision risk + tier-A meta + G1 coverage + S2 threshold sens + probit grid")
+    print("0f3) Decision risk + tier-A meta + E1 coverage + S2 threshold sens + probit grid")
     risk = evaluate_standard_scenarios()
     print("decision risk comparisons", risk.get("comparisons"))
     meta = run_tierA_meta_analysis()
     print("tierA meta n=", meta.get("n_datasets"), "para false=", meta.get("parametric_candidate_false"))
     g1 = run_one_proportion_coverage_study()
-    print("G1 coverage table", g1.get("table"))
+    print("E1 coverage table", g1.get("table"))
     s2s = run_s2_threshold_sensitivity()
     print("S2 threshold sensitivity", json.dumps(s2s.get("headline"), indent=2))
     pgrid = run_probit_design_grid()

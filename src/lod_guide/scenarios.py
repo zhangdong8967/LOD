@@ -1,7 +1,7 @@
 """
 Clinical scenario catalogue for lod_guide.
 
-Maps real laboratory needs → Goal (G1–G4) → result type → runner entry.
+Maps real laboratory needs → Goal (E1–E3) → result type → runner entry.
 Coverage status is honest: covered | partial | planned.
 """
 
@@ -55,7 +55,7 @@ SCENARIOS: tuple[ClinicalScenario, ...] = (
         "Verify a single reagent LoD hit-rate claim",
         "At the claimed LoD concentration, is detection probability ≥ p0 (e.g. 95%)?",
         ClinicalDomain.GENERAL,
-        Goal.G1_VERIFY_LOD,
+        Goal.E1_VERIFY_LOD,
         ResultType.BINARY,
         "verify_manufacturer_lod_claim",
         Coverage.COVERED,
@@ -68,7 +68,7 @@ SCENARIOS: tuple[ClinicalScenario, ...] = (
         "Establish / verify continuous LoB–LoD (clinical chemistry style)",
         "From blank and low-level continuous signals, what LoB/LoD and which path (parametric vs nonparametric)?",
         ClinicalDomain.CLINICAL_CHEMISTRY,
-        Goal.G1_VERIFY_LOD,
+        Goal.E1_VERIFY_LOD,
         ResultType.CONTINUOUS,
         "ldt_lod_establishment",
         Coverage.COVERED,
@@ -81,7 +81,7 @@ SCENARIOS: tuple[ClinicalScenario, ...] = (
         "Qualitative k/n LoD claim (e.g. NAT)",
         "What n is needed so P(at least k positives) ≥ target at assumed p?",
         ClinicalDomain.MOLECULAR,
-        Goal.G4_QUALITATIVE_KN,
+        Goal.E3_QUALITATIVE_KN,
         ResultType.BINARY,
         "nat_hit_rate_kn",
         Coverage.COVERED,
@@ -94,7 +94,7 @@ SCENARIOS: tuple[ClinicalScenario, ...] = (
         "Small-n 100% detection illusion",
         "We saw 5/5 or 10/10 positives — does that prove a 95% LoD?",
         ClinicalDomain.GENERAL,
-        Goal.G1_VERIFY_LOD,
+        Goal.E1_VERIFY_LOD,
         ResultType.BINARY,
         "verify_manufacturer_lod_claim",
         Coverage.COVERED,
@@ -108,12 +108,12 @@ SCENARIOS: tuple[ClinicalScenario, ...] = (
         "Compare two kits with modest LoD gap (90% vs 80%)",
         "How many replicates to detect Δp=0.10? What is miss probability at n=20?",
         ClinicalDomain.GENERAL,
-        Goal.G2_COMPARE_REAGENTS,
+        Goal.E2_COMPARE_REAGENTS,
         ResultType.BINARY,
         "kit_a_vs_kit_b_near_lod",
         Coverage.COVERED,
         "examples/scenarios/cs05_compare_kits_90_vs_80.py",
-        "Core G2 challenge to folklore n=20.",
+        "Core E2 challenge to folklore n=20.",
         ("research.reagent_discrimination",),
     ),
     ClinicalScenario(
@@ -121,7 +121,7 @@ SCENARIOS: tuple[ClinicalScenario, ...] = (
         "Compare two kits with large LoD gap (90% vs 50%)",
         "How many replicates to detect Δp=0.40? Relative concentration vs LoD95?",
         ClinicalDomain.GENERAL,
-        Goal.G2_COMPARE_REAGENTS,
+        Goal.E2_COMPARE_REAGENTS,
         ResultType.BINARY,
         "kit_a_vs_kit_b_near_lod",
         Coverage.COVERED,
@@ -134,7 +134,7 @@ SCENARIOS: tuple[ClinicalScenario, ...] = (
         "Lot-to-lot LoD consistency check",
         "Do two lots differ in near-LoD hit rate enough to matter?",
         ClinicalDomain.GENERAL,
-        Goal.G2_COMPARE_REAGENTS,
+        Goal.E2_COMPARE_REAGENTS,
         ResultType.BINARY,
         "lot_to_lot_lod_check",
         Coverage.COVERED,
@@ -147,12 +147,12 @@ SCENARIOS: tuple[ClinicalScenario, ...] = (
         "Audit risk of false 'no difference' conclusions",
         "For planned n, how often will we miss a true reagent gap?",
         ClinicalDomain.GENERAL,
-        Goal.G2_COMPARE_REAGENTS,
+        Goal.E2_COMPARE_REAGENTS,
         ResultType.BINARY,
         "kit_a_vs_kit_b_near_lod",
         Coverage.COVERED,
         "examples/scenarios/cs08_miss_probability_audit.py",
-        "Mandatory companion to any G2 study.",
+        "Mandatory companion to any E2 study.",
         ("research.reagent_discrimination", "research.operating_characteristics"),
     ),
     # ----- LoQ / precision -----
@@ -161,7 +161,7 @@ SCENARIOS: tuple[ClinicalScenario, ...] = (
         "LoQ / functional sensitivity (precision claim)",
         "At low concentration, what n yields CV or CI width meeting acceptance?",
         ClinicalDomain.CLINICAL_CHEMISTRY,
-        Goal.G3_LOQ_PRECISION,
+        Goal.LOQ_PRECISION,
         ResultType.CONTINUOUS,
         "functional_sensitivity_loq",
         Coverage.PARTIAL,
@@ -175,7 +175,7 @@ SCENARIOS: tuple[ClinicalScenario, ...] = (
         "Molecular qPCR LoD from hit-rate vs concentration",
         "From multi-level standards, estimate logistic LoD95 and blank path.",
         ClinicalDomain.MOLECULAR,
-        Goal.G1_VERIFY_LOD,
+        Goal.E1_VERIFY_LOD,
         ResultType.CONTINUOUS,
         "ldt_lod_establishment",
         Coverage.COVERED,
@@ -188,7 +188,7 @@ SCENARIOS: tuple[ClinicalScenario, ...] = (
         "Hematology / particle low-count detection",
         "Poisson/NB counts near zero — detection probability and replicate plan.",
         ClinicalDomain.HEMATOLOGY,
-        Goal.G1_VERIFY_LOD,
+        Goal.E1_VERIFY_LOD,
         ResultType.COUNT,
         "ldt_lod_establishment",
         Coverage.PARTIAL,
@@ -201,12 +201,12 @@ SCENARIOS: tuple[ClinicalScenario, ...] = (
         "Qualitative immunoassay cutoff / reactive claim",
         "k/n or hit-rate verification at cutoff / LoD material.",
         ClinicalDomain.IMMUNOASSAY,
-        Goal.G4_QUALITATIVE_KN,
+        Goal.E3_QUALITATIVE_KN,
         ResultType.BINARY,
         "immunoassay_qualitative_cutoff",
         Coverage.COVERED,
         "examples/scenarios/cs12_immunoassay_qualitative.py",
-        "Shares G4 engine with NAT-style claims.",
+        "Shares E3 engine with NAT-style claims.",
         ("pipeline",),
     ),
     ClinicalScenario(
@@ -214,7 +214,7 @@ SCENARIOS: tuple[ClinicalScenario, ...] = (
         "Blood-bank multiclass (e.g. ABO) near decision boundary",
         "Success = correct class; how many replicates for reliability?",
         ClinicalDomain.BLOOD_BANK,
-        Goal.G4_QUALITATIVE_KN,
+        Goal.E3_QUALITATIVE_KN,
         ResultType.MULTICLASS,
         "immunoassay_qualitative_cutoff",
         Coverage.PARTIAL,
@@ -227,7 +227,7 @@ SCENARIOS: tuple[ClinicalScenario, ...] = (
         "Skewed / heterogeneous blanks force nonparametric path",
         "When near-LoD data fail normality/poolability, what does the algorithm do?",
         ClinicalDomain.CLINICAL_CHEMISTRY,
-        Goal.G1_VERIFY_LOD,
+        Goal.E1_VERIFY_LOD,
         ResultType.CONTINUOUS,
         "ldt_lod_establishment",
         Coverage.COVERED,
@@ -240,7 +240,7 @@ SCENARIOS: tuple[ClinicalScenario, ...] = (
         "Challenge material below / at / above LoD",
         "How does c/LoD change single-kit pass rates and kit-comparison miss β?",
         ClinicalDomain.GENERAL,
-        Goal.G2_COMPARE_REAGENTS,
+        Goal.E2_COMPARE_REAGENTS,
         ResultType.BINARY,
         "kit_a_vs_kit_b_near_lod",
         Coverage.COVERED,
@@ -285,7 +285,7 @@ def run_scenario_demo(scenario_id: str) -> dict[str, Any]:
 
     if scenario_id == "CS01_VERIFY_SINGLE_HITRATE":
         res = run_guidance(
-            goal=Goal.G1_VERIFY_LOD,
+            goal=Goal.E1_VERIFY_LOD,
             result_type="binary",
             use_case=s.use_case,
             p=0.90,
@@ -302,7 +302,7 @@ def run_scenario_demo(scenario_id: str) -> dict[str, Any]:
         rng = np.random.default_rng(0)
         values = rng.normal(0.05, 0.02, size=60)
         res = run_guidance(
-            goal=Goal.G1_VERIFY_LOD,
+            goal=Goal.E1_VERIFY_LOD,
             result_type="continuous",
             values=values,
             use_case=s.use_case,
@@ -314,7 +314,7 @@ def run_scenario_demo(scenario_id: str) -> dict[str, Any]:
 
     elif scenario_id in {"CS03_QUALITATIVE_KN", "CS12_IMMUNOASSAY_QUALITATIVE"}:
         res = run_guidance(
-            goal=Goal.G4_QUALITATIVE_KN,
+            goal=Goal.E3_QUALITATIVE_KN,
             result_type="binary",
             use_case=s.use_case,
             p=0.95,
@@ -352,7 +352,7 @@ def run_scenario_demo(scenario_id: str) -> dict[str, Any]:
 
     elif scenario_id == "CS09_LOQ_PRECISION":
         res = run_guidance(
-            goal=Goal.G3_LOQ_PRECISION,
+            goal=Goal.LOQ_PRECISION,
             result_type="continuous",
             use_case=s.use_case,
             target_cv_pct=20.0,
@@ -389,7 +389,7 @@ def run_scenario_demo(scenario_id: str) -> dict[str, Any]:
 
         ds = sim_poisson_counts(seed=5)
         res = run_guidance(
-            goal=Goal.G1_VERIFY_LOD,
+            goal=Goal.E1_VERIFY_LOD,
             result_type="count",
             values=ds.values,
             strata=ds.strata,
@@ -402,7 +402,7 @@ def run_scenario_demo(scenario_id: str) -> dict[str, Any]:
 
     elif scenario_id == "CS13_BLOOD_BANK_MULTICLASS":
         res = run_guidance(
-            goal=Goal.G4_QUALITATIVE_KN,
+            goal=Goal.E3_QUALITATIVE_KN,
             result_type="multiclass",
             n_classes=4,
             success_definition="correct_class",
@@ -419,7 +419,7 @@ def run_scenario_demo(scenario_id: str) -> dict[str, Any]:
 
         ds = sim_skewed_hetero_blanks(seed=1)
         res = run_guidance(
-            goal=Goal.G1_VERIFY_LOD,
+            goal=Goal.E1_VERIFY_LOD,
             result_type="continuous",
             values=ds.values,
             strata=ds.strata,

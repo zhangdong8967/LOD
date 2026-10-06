@@ -1,0 +1,261 @@
+%0 Standard
+%T Evaluation of Detection Capability for Clinical Laboratory Measurement Procedures; Approved Guideline—Second Edition (EP17-A2)
+%A Clinical and Laboratory Standards Institute
+%D 2012
+%I CLSI
+%C Wayne, PA
+%U https://clsi.org/standards/products/method-evaluation/documents/EP17/
+%K clsi-ep17-a2
+%0 Book
+%T Statistical Methods for Rates and Proportions
+%A Fleiss, Joseph L
+%A Levin, Bruce
+%A Paik, Myunghee Cho
+%D 2003
+%I Wiley
+%C Hoboken, NJ
+%7 3rd ed
+%K fleiss-2003
+%0 Book
+%T Sample Size Calculations in Clinical Research
+%A Chow, Shein-Chung
+%A Shao, Jun
+%A Wang, Hansheng
+%D 2008
+%I Chapman & Hall/CRC
+%C Boca Raton, FL
+%7 2nd ed
+%K chow-2008
+%0 Book
+%T Categorical Data Analysis
+%A Agresti, Alan
+%D 2013
+%I Wiley
+%C Hoboken, NJ
+%7 3rd ed
+%X Fisher exact and Boschloo-related contingency methods.
+%K agresti-2013
+%0 Journal Article
+%T Raised conditional level of significance for the 2 × 2‐table when testing the equality of two probabilities
+%A Boschloo, R. D.
+%D 1970
+%J Statistica Neerlandica
+%V 24
+%N 1
+%P 1-9
+%R 10.1111/j.1467-9574.1970.tb00104.x
+%U https://doi.org/10.1111/j.1467-9574.1970.tb00104.x
+%K doi:10.1111/j.1467-9574.1970.tb00104.x
+%0 Journal Article
+%T The Logic of Inductive Inference
+%A Fisher, R. A.
+%D 1935
+%J Journal of the Royal Statistical Society
+%V 98
+%N 1
+%P 39
+%R 10.2307/2342435
+%U https://doi.org/10.2307/2342435
+%K doi:10.2307/2342435
+%0 Journal Article
+%T Probable Inference, the Law of Succession, and Statistical Inference
+%A Wilson, Edwin B.
+%D 1927
+%J Journal of the American Statistical Association
+%V 22
+%N 158
+%P 209-212
+%R 10.1080/01621459.1927.10502953
+%U https://doi.org/10.1080/01621459.1927.10502953
+%K doi:10.1080/01621459.1927.10502953
+%0 Journal Article
+%T THE USE OF CONFIDENCE OR FIDUCIAL LIMITS ILLUSTRATED IN THE CASE OF THE BINOMIAL
+%A CLOPPER, C. J.
+%A PEARSON, E. S.
+%D 1934
+%J Biometrika
+%V 26
+%N 4
+%P 404-413
+%R 10.1093/biomet/26.4.404
+%U https://doi.org/10.1093/biomet/26.4.404
+%K doi:10.1093/biomet/26.4.404
+%0 Journal Article
+%T A simple sequentially rejective multiple test procedure
+%A Holm, Sture
+%D 1979
+%J Scandinavian Journal of Statistics
+%V 6
+%N 2
+%P 65-70
+%X Holm step-down multiplicity correction (Supplement).
+%K holm-1979
+%0 Journal Article
+%T A network algorithm for performing Fisher's exact test in r x c contingency tables
+%A Mehta, Cyrus R
+%A Patel, Nitin R
+%D 1983
+%J Journal of the American Statistical Association
+%V 78
+%N 382
+%P 427-434
+%X Exact contingency-table inference; cited via Agresti (2013) for G2 confirmation methods.
+%K mehta-patel-1983
+%0 Journal Article
+%T Estimation of Relationships for Limited Dependent Variables
+%A Tobin, James
+%D 1958
+%J Econometrica
+%V 26
+%N 1
+%P 24
+%R 10.2307/1907382
+%U https://doi.org/10.2307/1907382
+%K doi:10.2307/1907382
+%0 Journal Article
+%T A Two-Component Model for Measurement Error in Analytical Chemistry
+%A Rocke, David M.
+%A Lorenzato, Stefan
+%D 1995
+%J Technometrics
+%V 37
+%N 2
+%P 176-184
+%R 10.1080/00401706.1995.10484302
+%U https://doi.org/10.1080/00401706.1995.10484302
+%K doi:10.1080/00401706.1995.10484302
+%0 Book
+%T Statistical Method in Biological Assay
+%A Finney, David J
+%D 1978
+%I Charles Griffin
+%C London
+%7 3rd ed
+%K finney-1978
+%0 Journal Article
+%T The Method of Probits
+%A Bliss, C. I.
+%D 1934
+%J Science
+%V 79
+%N 2037
+%P 38-39
+%R 10.1126/science.79.2037.38
+%U https://doi.org/10.1126/science.79.2037.38
+%K doi:10.1126/science.79.2037.38
+%0 Standard
+%T Capability of detection—Part 2: Methodology in the linear calibration case (ISO 11843-2)
+%A International Organization for Standardization
+%D 2000
+%I ISO
+%C Geneva
+%K iso-11843-2
+%0 Report
+%T Guidance for the Characterisation and Reporting of Measurement Uncertainty in Analytical Methods: Detection Capability (Eurachem Guide)
+%A Eurachem
+%D 2016
+%U https://www.eurachem.org/index.php/publications/guides/detect
+%K eurachem-detect-2016
+%0 Report
+%T Validation of Analytical Procedures: Text and Methodology Q2(R1)
+%A International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use
+%D 2005
+%U https://database.ich.org/sites/default/files/Q2%28R1%29%20Guideline.pdf
+%K ich-q2r1
+%0 Generic
+%T Building an eDNA surveillance toolkit for invasive rodents on islands: Can we detect wild-type and gene drive Mus musculus?
+%A Piaggio, Antoinette
+%D 2024
+%I Zenodo
+%R 10.5281/zenodo.12609243
+%U https://doi.org/10.5281/zenodo.12609243
+%X Dataset record; verify reuse license before publication.
+%K zenodo:12609243
+%0 Generic
+%T Underlying dataset for the manuscript titled "Qualification of a reporter virus microneutralization assay for evaluation of influenza specific antibodies in human clinical trials"
+%A Sawant, Sheetal
+%A Harit, Dimple
+%A Tomaras, Georgia
+%D 2025
+%I Zenodo
+%R 10.5281/zenodo.17108929
+%U https://doi.org/10.5281/zenodo.17108929
+%X Dataset record; verify reuse license before publication.
+%K zenodo:17108929
+%0 Generic
+%T Cation concentrations for LOD/LOQ determination
+%A Dierendonck, Cameron
+%D 2022
+%I Zenodo
+%R 10.5281/zenodo.5909650
+%U https://doi.org/10.5281/zenodo.5909650
+%X Dataset record; verify reuse license before publication.
+%K zenodo:5909650
+%0 Generic
+%T Anion concentrations for LOD/LOQ determination
+%A Dierendonck, Cameron
+%D 2022
+%I Zenodo
+%R 10.5281/zenodo.5901444
+%U https://doi.org/10.5281/zenodo.5901444
+%X Dataset record; verify reuse license before publication.
+%K zenodo:5901444
+%0 Generic
+%T Data for publication: Specific protein quantification by radioimmuno-dot-blot assay for complex mixture samples utilizing Strep-tag and tritium-labeled StrepTactin
+%A Malkamäki, Maaria
+%A Gandier, Julie-Anne
+%A Meinander, Kristoffer
+%A Linder, Markus B.
+%D 2024
+%I Zenodo
+%R 10.5281/zenodo.12664367
+%U https://doi.org/10.5281/zenodo.12664367
+%X Dataset record; verify reuse license before publication.
+%K zenodo:12664367
+%0 Electronic Article
+%T EP17 Detection Capability — worked examples (CLSI EP17-A2 workbooks)
+%A Analyse-it Software Ltd
+%D 2026
+%U https://analyse-it.com/docs/statistics/reference/ep17
+%X Accessed 2026-08-02.
+%K analyseit-ep17
+%0 Computer Program
+%T MSstatsLOBD: limit of blank and limit of detection estimation for targeted proteomics
+%A Choi, Meena
+%A Galitzine, Cyril
+%A Vitek, Olga
+%D 2024
+%U https://bioconductor.org/packages/MSstatsLOBD
+%X R/Bioconductor package; algorithm described in Galitzine et al., MCP 2018.
+%K msstatslobd
+%0 Standard
+%T Evaluation of Precision of Quantitative Measurement Procedures; Approved Guideline—Third Edition (EP05-A3)
+%A Clinical and Laboratory Standards Institute
+%D 2014
+%I CLSI
+%C Wayne, PA
+%U https://clsi.org/standards/products/method-evaluation/documents/ep05/
+%K clsi-ep05-a3
+%0 Standard
+%T Evaluation of Detection Capability for Clinical Laboratory Measurement Procedures; Interim Guidance (EP17-Ed2/EP17IG)
+%A Clinical and Laboratory Standards Institute
+%D 2021
+%I CLSI
+%C Wayne, PA
+%U https://clsi.org/standards/products/method-evaluation/documents/EP17/
+%K clsi-ep17ig-2021
+%0 Journal Article
+%T Trace analyses for wastewaters
+%A Glaser, John A.
+%A Foerst, Denis L.
+%A McKee, Gerald D.
+%A Quave, Stephan A.
+%A Budde, William L.
+%D 1981
+%J Environmental Science &amp; Technology
+%V 15
+%N 12
+%P 1426-1435
+%R 10.1021/es00094a002
+%U https://doi.org/10.1021/es00094a002
+%K doi:10.1021/es00094a002

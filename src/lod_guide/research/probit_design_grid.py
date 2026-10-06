@@ -11,7 +11,7 @@ LoD_γ solves p(c)=γ (default γ=0.95). Designs are scored by the delta-method
 asymptotic SE of log10(LoD) from the expected binomial information matrix —
 a transparent planning surface, not a claim of finite-sample exact optimality.
 
-Also reports one-level verification n* for a claimed concentration (G1).
+Also reports one-level verification n* for a claimed concentration (E1).
 """
 
 from __future__ import annotations
@@ -202,7 +202,7 @@ def run_probit_design_grid() -> dict:
         )
     )
 
-    # G1 verification n: alternative p=0.80 vs reference claim p0=0.95
+    # E1 verification n: alternative p=0.80 vs reference claim p0=0.95
     n_g1 = int(np.ceil(sample_size_one_proportion(0.80, 0.95, alpha=0.05, power=0.80)))
 
     ep17_truth = truth_from_ep17_probit()

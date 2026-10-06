@@ -9,7 +9,7 @@ Use Scholar **only** for forward/backward chaining PubMed misses. English source
 | Seed | Scholar query | Target |
 |------|---------------|--------|
 | Linnet & Kondratovich 2004 | `10.1373/clinchem.2003.029983` | Nonparametric LoD; sample size |
-| Kondratovich & Linnet JALM | `10.1373/jalm.2016.020735` | EP17 verification probability; n=20 |
+| Vaks et al. 2016 JALM | `10.1373/jalm.2016.020735` | EP17 verification probability; n=20 |
 | Galitzine 2018 MCP | `10.1074/mcp.RA117.000322` | MSstatsLOBD; proteomics LoB/LoD |
 | Armbruster & Pry 2008 | `PMC2556583` or title | Introductory LoB/LoD/LoQ |
 | CLSI EP17-A2 | `"Evaluation of Detection Capability" EP17` | Grey lit citing the standard |

@@ -227,7 +227,7 @@ def main() -> int:
         if r["pmid"] in {"33626838", "14764644"}:
             lines.append("- Core prior art — verification probability / nonparametric LoD (see CORE_READING_NOTES).")
         elif re.search(r"sample size|power|replicate", ab, re.I):
-            lines.append("- Supports C1/G2: sample size or power explicit for LoD context.")
+            lines.append("- Supports C1/E2: sample size or power explicit for LoD context.")
         elif re.search(r"verification|validate", ab, re.I):
             lines.append("- EP17-style verification case study; cite for practice not powered comparison.")
         else:

@@ -8,7 +8,7 @@
 |------|----------|-----------|
 | 18852857 | Armbruster DA, Pry T. LoB/LoD/LoQ. *Clin Biochem Rev* 2008;29 Suppl:S49–52 | Yes |
 | 14764644 | Linnet K, Kondratovich M. *Clin Chem* 2004;50:732–740 | Abstract only |
-| 33626838 | Kondratovich M, Linnet K. *J Appl Lab Med* 2017;1(4):429–438 (DOI 10.1373/jalm.2016.020735) | Abstract only |
+| 33626838 | Vaks JE, et al. *J Appl Lab Med* 2016;1(3):260-270 (DOI 10.1373/jalm.2016.020735) | Abstract only |
 | 29438992 | Galitzine C et al. *Mol Cell Proteomics* 2018;17:913–924 | Yes (PMC) |
 
 ---
@@ -34,7 +34,7 @@
 
 Armbruster explains *what* EP17 says and the 60 vs 20 split but does **not**:
 
-- Give powered \(n\) for **comparative** LoD claims (G2).
+- Give powered \(n\) for **comparative** LoD claims (E2).
 - Formalize **diagnostic gating** before parametric LoB.
 - Quantify folklore risk under an explicit loss \(L\).
 
@@ -63,14 +63,14 @@ ISO-style LoD procedures assume **Gaussian blanks**, Gaussian low samples, linea
 
 ### Gap we fill
 
-- Single-path **estimation** paper; no estimand menu (G1–G4), no **two-proportion** kit comparison, no exact Fisher confirmation layer.
+- Single-path **estimation** paper; no estimand menu (E1–E3), no **two-proportion** kit comparison, no exact Fisher confirmation layer.
 - Sample-size discussion is for **establishment**, not folklore verification of comparative claims.
 
 **Manuscript use:** Methods §2.3 continuous LoB — “when S2 rejects normality, follow Linnet-type nonparametric LoB (EP17-aligned).” Cite for **P5** parametric mismatch motivation.
 
 ---
 
-## 3. Kondratovich & Linnet 2017 JALM (PMID 33626838) — EP17 verification probability
+## 3. Vaks et al. 2016 JALM (PMID 33626838) — EP17 verification probability
 
 **DOI:** 10.1373/jalm.2016.020735 | **PDF:** paywalled (Oxford/JALM)
 
@@ -89,12 +89,12 @@ EP17 verification: test claimed LoD concentration; **pass** if 95% CI for detect
 - Detecting difference between claimed vs actual LoD **increases with \(n\)**.
 - Provides **planning tables/graphs** for molecular diagnostics.
 
-### Direct support for our C1 / G2 / Table 3 narrative
+### Direct support for our C1 / E2 / Table 3 narrative
 
 - Closest prior art to “**n=20 is not neutral**” for verification — but focused on **single-method EP17 pass/fail**, not **90% vs 80% reagent discrimination**.
 - We extend: exact Fisher/Boschloo, decision risk ratio (~3.9× folklore vs powered), operating-characteristic Monte Carlo.
 
-**Manuscript use:** Results §3.1 — “Prior work quantified EP17 verification pass probability (Kondratovich 2017); we generalize to comparative estimands and exact small-sample confirmation.”
+**Manuscript use:** Results §3.1 — “Prior work quantified EP17 verification pass probability (Vaks et al., 2016); we generalize to comparative estimands and exact small-sample confirmation.”
 
 ---
 
@@ -132,9 +132,9 @@ Linear/logistic fit for intensity–concentration curves **underestimates** LoB/
 
 | Prior contribution | What they solve | What we add |
 |--------------------|-----------------|-------------|
-| EP17 / Armbruster | Legal LoB/LoD/LoQ options | Executable S0–S7 + estimand lock (G1–G4) |
+| EP17 / Armbruster | Legal LoB/LoD/LoQ options | Executable S0–S7 + estimand lock (E1–E3) |
 | Linnet 2004 | Nonparametric LoD under skew | S2 gate + auditable path + P5 mismatch |
-| Kondratovich 2017 | Verification pass probability at claimed LoD | G2 two-proportion power; exact Fisher; loss \(L\) |
+| Vaks et al. 2016 | Verification pass probability at claimed LoD | E2 two-proportion power; exact Fisher; loss \(L\) |
 | Galitzine 2018 | MS LoB/LoD nonlinear fit | Tier-A proteomics case; not pooled with chemistry |
 | Folklore n=20 | — | P7 all-positive trap; P8 exact–asymptotic gap; ~3.9× risk ratio |
 
@@ -161,7 +161,8 @@ Armbruster DA, Pry T. Limit of blank, limit of detection and limit of quantitati
 Linnet K, Kondratovich M. Partly nonparametric approach for determining the limit of detection.
   Clin Chem. 2004;50(4):732-740. doi:10.1373/clinchem.2003.029983.
 
-Kondratovich M, Linnet K. Verification of claimed limit of detection in molecular diagnostics.
+Vaks JE, Hemyari P, Rullkoetter M, et al. Verification of claimed limit of detection in molecular diagnostics.
+  J Appl Lab Med. 2016;1(3):260-270. doi:10.1373/jalm.2016.020735.
   J Appl Lab Med. 2017;1(4):429-438. doi:10.1373/jalm.2016.020735.
 
 Galitzine C, et al. Nonlinear regression improves accuracy of characterization of multiplexed

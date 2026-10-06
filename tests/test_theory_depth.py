@@ -12,11 +12,10 @@ from lod_guide.research.theory_depth_studies import run_c_optimal_study, run_ide
 from lod_guide.theory.c_optimal_lod_design import compare_to_reference_designs
 from lod_guide.theory.identification import lod_identifiability_certificate
 from lod_guide.theory.lod_dose_response import default_synthetic_truth
-from lod_guide.theory.propositions import verify_all_propositions
 
 
-def test_all_propositions_p12_p18():
-    certs = verify_all_propositions()
+def test_all_propositions_p12_p18(theory_certs):
+    certs = theory_certs
     ids = {c.result_id for c in certs}
     for pid in (
         "P12_c_optimal_efficiency",

@@ -1,106 +1,53 @@
-# LoD Laboratory Guidance Algorithm
+# lod-guide
 
-**Target:** *Clinical Chemistry*–grade methodology.  
-**Locked stance:** Complement and operationalize EP17-class documents; challenge folklore SOPs; **do not** supersede EP17 as a legal/standards document.
-
-**Thesis:** Estimand-gated, assumption-gated LoD **design** is the missing operational layer above LoB/LoD/LoQ vocabulary—making underpowered folklore verification scientifically indefensible without inventing a competing legal LoD definition.
-
-## Theoretical core
-
-| Document | Content |
-|----------|---------|
-| [manuscript/THEORY_MONOGRAPH.md](manuscript/THEORY_MONOGRAPH.md) | **Three-layer theory (A/B/C):** P1–P18 theorems, bounds, certificates |
-| [docs/methodology/CLINICAL_CHEMISTRY_THEORY.md](docs/methodology/CLINICAL_CHEMISTRY_THEORY.md) | Estimands, Propositions P1–P8 with proofs, decision map |
-| [docs/methodology/ANALYSIS_PROTOCOL.md](docs/methodology/ANALYSIS_PROTOCOL.md) | Pre-specified confirmatory protocol `LOD-GUIDE-CC-2026-v1` |
-| [docs/methodology/CHALLENGE_MANIFESTO.md](docs/methodology/CHALLENGE_MANIFESTO.md) | Challenge claims C1–C5 |
-
-Machine-checkable certificates live in `lod_guide.theory` (three layers under `theory/theorems/`, `theory/bounds/`, `theory/certificates/`).
-
-## One-click run (recommended)
-
-```bash
-chmod +x run.sh    # first time only
-./run.sh           # full: theory + research + tests + paper + Fig1 TikZ + theory PDF
-./run.sh --quick   # skip download, benchmark, paper build
-make run           # same as ./run.sh
-```
-
-Master log: `data/audit/run_all_analyses_latest.json`.  
-Layout map: [`docs/PROJECT_LAYOUT.md`](docs/PROJECT_LAYOUT.md) · generated outputs: [`outputs/README.md`](outputs/README.md).
-
-### Sample-split LoB in S0–S7 pipeline (P17)
-
-```python
-from lod_guide import run_guidance
-from lod_guide.s4_gated_lob import LoBEstimationMode
-
-run_guidance(
-    goal="G1_VERIFY_LOD",
-    result_type="continuous",
-    values=blank_array,
-    lob_estimation_mode=LoBEstimationMode.GATED_SAMPLE_SPLIT,
-)
-```
-
-Modes: `standard` | `gated_unsplit` | `gated_sample_split`.
-
-Theory only:
-
-```bash
-python examples/run_theory_verification.py
-```
+Claim-specific sample-size planning for binary hit-rate LoD verification. Python package `lod_guide` plus the Clinical Chemistry ScholarOne bundle.
 
 ## Install
 
 ```bash
 pip install -e ".[dev]"
+PYTHONPATH=src pytest -q
 ```
 
-## Clinical scenarios (lab needs → scripts)
+Requires Python 3.10+.
 
-See [docs/methodology/CLINICAL_SCENARIOS.md](docs/methodology/CLINICAL_SCENARIOS.md).
+## Regenerating main figures
 
 ```bash
-python examples/run_clinical_scenarios.py          # catalogue + all demos
-python examples/scenarios/cs01_verify_single_hitrate.py
-python examples/scenarios/cs05_compare_kits_90_vs_80.py
-python examples/scenarios/cs08_miss_probability_audit.py
+PYTHONPATH=src python -m lod_guide.paper.main_figures
 ```
 
-**Covered core needs:** single-reagent LoD verify (CS01–CS04), kit/lot comparison including 90↔80 / 90↔50 and miss-β (CS05–CS08), molecular qPCR (CS10), skew gate (CS14).  
-**Partial:** LoQ profile (CS09), hematology (CS11), multiclass (CS13).
+TIFF copies for upload live in `manuscript/figures/` (600 dpi, RGB).
 
-## What must convince a statistician
+## ScholarOne package
 
-1. **Estimand locked before formula** (G1–G4).  
-2. **Proofs** for saturation, binomial identity, Fleiss–Chow operating characteristics, design effect, parametric LoB mismatch.  
-3. **Diagnostics gate** with versioned thresholds before parametric LoB.  
-4. **Audit JSON + SHA-256** for every confirmatory run.  
-5. **Diverse evidence:** multi-assay public ladder (qPCR, EP17 immunoassay/probit, IC) + audited stress DGPs + exact Fisher/Boschloo layer — see docs/methodology/EVIDENCE_LADDER.md.
+Assembled files are in `manuscript/`:
 
-## Paper artifacts (figures / tables / review)
+| File | Role |
+|------|------|
+| `Cover_letter.docx` | Cover letter |
+| `Clinical_Chemistry_submission.docx` | Main text |
+| `figures/Fig1_lod_replicate_planning.tif` | Figure 1 |
+| `figures/Fig2_tierA_calibration.tif` | Figure 2 |
+| `Figure_legends.docx` | Legends |
+| `Tables_main.docx` | Tables 1–3 |
+| `Online_Supplement.pdf` | Supplement |
+
+Rebuild the Word bundle:
 
 ```bash
-make paper-artifacts
+PYTHONPATH=src python scripts/assemble_manuscript_submission.py
 ```
 
-Writes `paper_artifacts/` with manuscript **Fig 1–5** + supplement **Fig S1–S9**, Table 1–8, captions, and internal review.
+Sources for that assemble step are under `submission/`.
 
-Project layout (source vs generated, cleanup): [`docs/PROJECT_LAYOUT.md`](docs/PROJECT_LAYOUT.md).
+## What the analysis is
 
-**Methods brief + Supplement (embeds those artifacts):**
+Exact Fisher operating characteristics on a 1,225-cell equally spaced hit-rate lattice (50–99%), not a survey of laboratory lot differences. `n*` is a function of Δp. The 90%/80% pair is a worked example (`n*≈199` per arm), not a default for every protocol. Missing two-arm rates in the convenience audit are scored at that assigned pair.
 
-- [`manuscript/METHODS_BRIEF.md`](manuscript/METHODS_BRIEF.md)
-- [`manuscript/SUPPLEMENT.md`](manuscript/SUPPLEMENT.md)
+## One-click research run
 
-See [docs/methodology/PUBLICATION_READINESS.md](docs/methodology/PUBLICATION_READINESS.md) and [docs/methodology/RESEARCH_STATUS.md](docs/methodology/RESEARCH_STATUS.md) §6.
-
-## Package map
-
-```
-src/lod_guide/
-  theory/     estimands, propositions, audit, exact intervals
-  s0…s7       guidance algorithm
-  data/       real download + simulate + catalogue
-  pipeline.py figures.py challenge.py
+```bash
+chmod +x run.sh
+./run.sh --quick
 ```

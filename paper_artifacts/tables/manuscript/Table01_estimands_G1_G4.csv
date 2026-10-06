@@ -1,4 +1,0 @@
-Estimand,Symbol,Definition,Sample_size_engine
-G1,p(c*) or LoD claim,Single-method LoD verification,one-proportion vs p0
-G2,p_A-p_B at c*,Compare reagents/lots at LoD concentration,two-proportion / exact Fisher-Boschloo
-G4,P(X>=k),Qualitative k/n at detection limit,binomial cumulative search

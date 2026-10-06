@@ -40,7 +40,7 @@ def test_challenge_manifesto_present():
 
 def test_s6_report_uses_locked_positioning():
     rep = GuidanceReport(
-        goal="G1",
+        goal="E1",
         use_case=None,
         result_type="binary",
         diagnostics_summary={},
@@ -68,7 +68,7 @@ def test_skewed_triggers_nonparametric_path():
 
     raw = sim_skewed_hetero_blanks(seed=99)
     res = run_guidance(
-        goal=Goal.G1_VERIFY_LOD,
+        goal=Goal.E1_VERIFY_LOD,
         result_type="continuous",
         values=raw.values,
         strata=raw.strata,

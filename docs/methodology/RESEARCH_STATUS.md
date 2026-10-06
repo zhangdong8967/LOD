@@ -13,9 +13,9 @@ See also: [ELEVATED_FRAMING.md](ELEVATED_FRAMING.md), [PUBLICATION_READINESS.md]
 |-------|--------|-------|
 | S0–S7 guidance pipeline | **Done** | Usable end-to-end |
 | Theory P1–P11 + audit hash | **Done** | P7 all-positive; P8 exact vs asymptotic; P9 Holm FWER; P10 weight scale; P11 Tobit agreement |
-| **Three-layer theory (P1–P18+)** | **Done (v0.5)** | `theory/theorems/` (A), `theory/bounds/` (B), `theory/certificates/` (C); see `manuscript/THEORY_MONOGRAPH.md` |
+| **Three-layer theory (P1–P18+)** | **Done (v0.5)** | `theory/theorems/` (A), `theory/bounds/` (B), `theory/certificates/` (C); see `archive/manuscript_retired/THEORY_MONOGRAPH.md` |
 | Challenge positioning | **Done** | Manifesto + Clinical Chemistry theory draft |
-| Real data download (multi-assay ladder) | **Done (v0.4.1)** | Tier A=9 (qPCR×2, estradiol, probit, radioimmuno precision+linearity, RMN, Carobene, **CPTAC/MSstatsLOBD**); B=3; C=1 troponin demo; see EVIDENCE_LADDER.md + EVIDENCE_STRATIFIED_REPORT.md |
+| Real data download (multi-assay ladder) | **Done (v0.4.1)** | Tier A=10 (qPCR×2, estradiol, probit, radioimmuno precision+linearity, RMN, Carobene, **CPTAC/MSstatsLOBD**, **TREC newborn screening**); B=3; C=1 troponin demo; see EVIDENCE_LADDER.md + EVIDENCE_STRATIFIED_REPORT.md |
 | Simulated stress catalogue | **Done (v0.4)** | 8 DGPs with draws, seed, sha256, dgp_catalogue.json |
 | **Deep qPCR hit-rate / logistic LoD** | **Done (v0.3 depth)** | `research/deep_qpcr.py` |
 | **MC operating characteristics** | **Done (v0.3 depth)** | folklore vs \(n^\star\) |
@@ -28,7 +28,7 @@ See also: [ELEVATED_FRAMING.md](ELEVATED_FRAMING.md), [PUBLICATION_READINESS.md]
 | **Type I calibration (Fisher/z)** | **Done (v0.4.1)** | Finite-sample H0 rejection rates; Boschloo optional demo |
 | **Decision-risk loss \(L\)** | **Done** | `research/decision_risk.py` — TypeI/β/mismatch/DE |
 | **Tier-A meta (Table 7)** | **Done** | `research/tierA_meta_analysis.py` |
-| **G1 Wilson/CP coverage (Table 8)** | **Done** | `research/one_proportion_coverage.py` |
+| **E1 Wilson/CP coverage (Table 8)** | **Done** | `research/one_proportion_coverage.py` |
 | **S2 threshold sensitivity** | **Done (v0.4.2)** | `research/s2_threshold_sensitivity.py` — flip rates under tightened/loosened DiagnosticThresholds |
 | **Journal figures (no in-PNG titles)** | **Done** | panel letters only; captions in paper_artifacts |
 | Bootstrap CI for nonparametric LoB | **Done (basic)** | `research/bootstrap_ci.py` — extend next |
@@ -107,7 +107,7 @@ Outputs under `paper_artifacts/`: unified Fig 1–7 / Table 1–5 captions, CSVs
 As a statistical / mathematical assessment of the *current* package:
 
 **What is already strong (publishable as methods/supplement material):**
-- Estimand locking (G1–G4) and S0–S7 gate logic.
+- Estimand locking (E1–E3) and S0–S7 gate logic.
 - Clear identification theorems / certificates **P1–P11** (incl. Holm FWER, weight scale invariance, Tobit agreement).
 - Exact vs asymptotic power discrepancy quantified (Fisher miss β ≈ 93% for 90 vs 80 at n=20).
 - Honest evidence ladder (tiers A/B/C/S) instead of overclaiming multi-assay validation.

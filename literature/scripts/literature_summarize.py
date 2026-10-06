@@ -29,11 +29,11 @@ SCREENING = LIT / "screening.csv"
 BLOCK_HOOKS = {
     "A": "Standards framing (EP17 LoB/LoD/LoQ vocabulary)",
     "A2": "Introductory LoB/LoD/LoQ review for clinicians",
-    "B": "Sample size / verification power (G2, C1, P8)",
+    "B": "Sample size / verification power (E2, C1, P8)",
     "B2": "Linnet/Kondratovich EP17 verification probability",
     "C": "Nonparametric LoB, skew, censoring (S2–S4, P5)",
     "D": "Probit/logistic hit-rate LoD design",
-    "E": "LoQ / precision profile (G3, EP05)",
+    "E": "LoQ / precision profile (LoQ, EP05)",
     "F": "Exact binomial confirmation (Fisher/Boschloo)",
     "G": "Estimands in diagnostics (ICH E9(R1) alignment)",
     "H": "Molecular / qPCR LoD verification",

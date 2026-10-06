@@ -1,4 +1,4 @@
-"""Tests for elevated analysis: decision risk, tier-A meta, G1 coverage, figure style."""
+"""Tests for elevated analysis: decision risk, tier-A meta, E1 coverage, figure style."""
 
 from __future__ import annotations
 
@@ -14,6 +14,7 @@ from lod_guide.research.one_proportion_coverage import (
     run_one_proportion_coverage_study,
 )
 from lod_guide.research.tierA_meta_analysis import run_tierA_meta_analysis
+from lod_guide.research.tierA_protocol_audit import run_tierA_protocol_audit
 from lod_guide.theory.propositions import prop7_all_positive_trap, prop8_exact_vs_asymptotic_gap
 
 
@@ -26,8 +27,9 @@ def test_decision_risk_scenarios():
     assert out["study_id"].startswith("DECISION-RISK")
     assert Path(out["path"]).exists()
     ids = {s["scenario_id"] for s in out["scenarios"]}
-    assert "G2_folklore_n20_90vs80" in ids
-    ratio = out["comparisons"]["G2_loss_ratio_folklore_over_powered"]
+    assert "E2_folklore_n20_90_vs_80" in ids
+    assert sum(1 for i in ids if i.startswith("E2_folklore_n20_")) == 8
+    ratio = out["comparisons"]["E2_loss_ratio_folklore_over_powered"]
     assert ratio is not None and ratio > 1.0
 
 
@@ -47,6 +49,24 @@ def test_one_proportion_study_writes():
     out = run_one_proportion_coverage_study()
     assert Path(out["path"]).exists()
     assert Path(out["table"]).exists()
+    assert Path(out["claim_pass_table"]).exists()
+
+
+def test_tierA_protocol_audit():
+    out = run_tierA_protocol_audit()
+    assert out["n_rows"] == 16
+    assert out["n_with_guidance_n_star"] == 15
+    assert out["n_oc_below_target_at_archived_n"] == 16
+    assert out["mapped_claim_counts"] == {"E1": 12, "E2": 3, "E3": 1}
+    assert out["n_empirical_rate_below_p0"] == 5
+    assert Path(out["summary_table"]).exists()
+    assert Path(out["table"]).exists()
+    text = Path(out["table"]).read_text(encoding="utf-8")
+    assert "jcm_hansen2020_abbott" in text
+    assert "scirep_jiang2025_mp" in text
+    assert "plos_bzdok2024_trec_cxce_1to100" in text
+    assert "plos_bzdok2024_trec_lod" in text
+    assert "analyseit_ep17_estradiol" in text
 
 
 def test_tierA_meta():

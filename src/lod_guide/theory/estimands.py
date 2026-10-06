@@ -2,6 +2,10 @@
 Formal estimands for LoD studies (Clinical Chemistry / ICH E9(R1) spirit).
 
 Each study locks exactly one primary estimand before seeing confirmatory data.
+
+LoD_95 operational semantics: at the LoD benchmark, p(c*)=0.95 so Pr(miss)=0.05
+(analytical rare miss). Verification adds inferential alpha/beta on finite n; see
+`theory.detection_limit_semantics`.
 """
 
 from __future__ import annotations
@@ -12,11 +16,11 @@ from typing import Any
 
 
 class EstimandID(str, Enum):
-    G1_DETECTION_PROBABILITY = "G1_DETECTION_PROBABILITY"
-    G1_LOD_CONCENTRATION = "G1_LOD_CONCENTRATION"
-    G2_RATE_DIFFERENCE = "G2_RATE_DIFFERENCE"
-    G3_CV_AT_CONCENTRATION = "G3_CV_AT_CONCENTRATION"
-    G4_KN_PROBABILITY = "G4_KN_PROBABILITY"
+    E1_DETECTION_PROBABILITY = "E1_DETECTION_PROBABILITY"
+    E1_LOD_CONCENTRATION = "E1_LOD_CONCENTRATION"
+    E2_RATE_DIFFERENCE = "E2_RATE_DIFFERENCE"
+    LOQ_CV_AT_CONCENTRATION = "LOQ_CV_AT_CONCENTRATION"
+    E3_KN_PROBABILITY = "E3_KN_PROBABILITY"
 
 
 @dataclass(frozen=True)
@@ -37,8 +41,8 @@ class Estimand:
 
 
 ESTIMANDS: dict[EstimandID, Estimand] = {
-    EstimandID.G1_DETECTION_PROBABILITY: Estimand(
-        id=EstimandID.G1_DETECTION_PROBABILITY,
+    EstimandID.E1_DETECTION_PROBABILITY: Estimand(
+        id=EstimandID.E1_DETECTION_PROBABILITY,
         symbol="θ₁ = p(c*)",
         definition="Single-trial positivity probability at fixed concentration c* near claimed LoD.",
         null_hypothesis="H0: p(c*) = p0 (manufacturer / protocol claim)",
@@ -48,8 +52,8 @@ ESTIMANDS: dict[EstimandID, Estimand] = {
             "No misclassification beyond the binary rule",
         ),
     ),
-    EstimandID.G1_LOD_CONCENTRATION: Estimand(
-        id=EstimandID.G1_LOD_CONCENTRATION,
+    EstimandID.E1_LOD_CONCENTRATION: Estimand(
+        id=EstimandID.E1_LOD_CONCENTRATION,
         symbol="θ₁^conc = LoD_α",
         definition="Concentration at which detection probability equals a target (e.g. 95%), or blank-based LoB/LoD functional.",
         null_hypothesis=None,
@@ -59,8 +63,8 @@ ESTIMANDS: dict[EstimandID, Estimand] = {
             "Commutable materials",
         ),
     ),
-    EstimandID.G2_RATE_DIFFERENCE: Estimand(
-        id=EstimandID.G2_RATE_DIFFERENCE,
+    EstimandID.E2_RATE_DIFFERENCE: Estimand(
+        id=EstimandID.E2_RATE_DIFFERENCE,
         symbol="θ₂ = p_A(c*) − p_B(c*)",
         definition="Difference in single-trial detection probabilities between reagents/lots at c*.",
         null_hypothesis="H0: θ₂ = 0",
@@ -71,23 +75,23 @@ ESTIMANDS: dict[EstimandID, Estimand] = {
             "Comparative metric is hat{p}, NOT 1-(1-p)^n",
         ),
     ),
-    EstimandID.G3_CV_AT_CONCENTRATION: Estimand(
-        id=EstimandID.G3_CV_AT_CONCENTRATION,
-        symbol="θ₃ = CV(c) = σ(c)/μ(c)",
+    EstimandID.LOQ_CV_AT_CONCENTRATION: Estimand(
+        id=EstimandID.LOQ_CV_AT_CONCENTRATION,
+        symbol="CV(c) = σ(c)/μ(c)",
         definition="Relative precision at concentration c (LoQ-type claim).",
-        null_hypothesis="H0: θ₃ ≤ τ (acceptance)",
-        alternative="H1: θ₃ > τ",
+        null_hypothesis="H0: CV(c) ≤ τ (acceptance)",
+        alternative="H1: CV(c) > τ",
         identification_assumptions=(
             "Finite mean and variance at c",
             "Variance function correctly modelled if heteroscedastic",
         ),
     ),
-    EstimandID.G4_KN_PROBABILITY: Estimand(
-        id=EstimandID.G4_KN_PROBABILITY,
-        symbol="θ₄ = P(S_n ≥ k), S_n ~ Bin(n,p)",
+    EstimandID.E3_KN_PROBABILITY: Estimand(
+        id=EstimandID.E3_KN_PROBABILITY,
+        symbol="θ₃ = P(S_n ≥ k), S_n ~ Bin(n,p)",
         definition="Probability of at least k positives in n replicates.",
         null_hypothesis=None,
-        alternative="Require θ₄ ≥ γ",
+        alternative="Require θ₃ ≥ γ",
         identification_assumptions=("IID Bernoulli(p)", "k,n fixed by protocol"),
     ),
 }
@@ -95,9 +99,9 @@ ESTIMANDS: dict[EstimandID, Estimand] = {
 
 def estimand_for_goal(goal_value: str) -> Estimand:
     mapping = {
-        "G1_VERIFY_LOD": EstimandID.G1_DETECTION_PROBABILITY,
-        "G2_COMPARE_REAGENTS": EstimandID.G2_RATE_DIFFERENCE,
-        "G3_LOQ_PRECISION": EstimandID.G3_CV_AT_CONCENTRATION,
-        "G4_QUALITATIVE_KN": EstimandID.G4_KN_PROBABILITY,
+        "E1_VERIFY_LOD": EstimandID.E1_DETECTION_PROBABILITY,
+        "E2_COMPARE_REAGENTS": EstimandID.E2_RATE_DIFFERENCE,
+        "LOQ_PRECISION": EstimandID.LOQ_CV_AT_CONCENTRATION,
+        "E3_QUALITATIVE_KN": EstimandID.E3_KN_PROBABILITY,
     }
     return ESTIMANDS[mapping[goal_value]]

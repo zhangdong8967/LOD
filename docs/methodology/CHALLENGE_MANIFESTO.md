@@ -27,7 +27,7 @@ Align with EP17-A2 LoB/LoD/LoQ vocabulary and dual parametric/nonparametric spir
 
 **Problem.** Sample size is estimand-dependent. Comparing 90% vs 80% detection rates needs ~199 replicates/arm for 80% power; n=20 yields ~14% power.
 
-**Algorithm response.** S0 locks goal G1–G4; S5 returns powered/precision-based n.
+**Algorithm response.** S0 locks goal E1–E3; S5 returns powered/precision-based n.
 
 ### C2. Always-parametric normal LoB (mean + k·SD)
 
@@ -45,7 +45,7 @@ Align with EP17-A2 LoB/LoD/LoQ vocabulary and dual parametric/nonparametric spir
 
 **Problem.** Metric saturates near 1 for both p=0.9 and p=0.8; differences vanish.
 
-**Algorithm response.** G2 uses observed rates hat{p} and two-proportion power only.
+**Algorithm response.** E2 uses observed rates hat{p} and two-proportion power only.
 
 ### C5. One protocol for binary, continuous, count, and multiclass assays
 

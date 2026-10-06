@@ -1,0 +1,283 @@
+{
+  "built": [
+    {
+      "n": 1,
+      "label": "clsi-ep17-a2",
+      "source": "manual"
+    },
+    {
+      "n": 2,
+      "label": "linnet-2004",
+      "source": "pubmed",
+      "pmid": 14764644
+    },
+    {
+      "n": 3,
+      "label": "galitzine-2018",
+      "source": "pubmed",
+      "pmid": 29438992
+    },
+    {
+      "n": 4,
+      "label": "vaks-2016",
+      "source": "pubmed",
+      "pmid": 33626838
+    },
+    {
+      "n": 5,
+      "label": "armbruster-2008",
+      "source": "pubmed",
+      "pmid": 18852857
+    },
+    {
+      "n": 6,
+      "label": "linnet-2005",
+      "source": "pubmed",
+      "pmid": 15899655
+    },
+    {
+      "n": 7,
+      "label": "fleiss-2003",
+      "source": "manual"
+    },
+    {
+      "n": 8,
+      "label": "chow-2008",
+      "source": "manual"
+    },
+    {
+      "n": 9,
+      "label": "agresti-2013",
+      "source": "manual"
+    },
+    {
+      "n": 10,
+      "label": "boschloo-1970",
+      "source": "crossref",
+      "doi": "10.1111/j.1467-9574.1970.tb00104.x",
+      "title": "Raised conditional level of significance for the 2 \u00d7 2\u2010table when testing the equality of two probabilities"
+    },
+    {
+      "n": 11,
+      "label": "fisher-1935",
+      "source": "crossref",
+      "doi": "10.2307/2342435",
+      "title": "The Logic of Inductive Inference"
+    },
+    {
+      "n": 12,
+      "label": "wilson-1927",
+      "source": "crossref",
+      "doi": "10.1080/01621459.1927.10502953",
+      "title": "Probable Inference, the Law of Succession, and Statistical Inference"
+    },
+    {
+      "n": 13,
+      "label": "clopper-1934",
+      "source": "crossref",
+      "doi": "10.1093/biomet/26.4.404",
+      "title": "THE USE OF CONFIDENCE OR FIDUCIAL LIMITS ILLUSTRATED IN THE CASE OF THE BINOMIAL"
+    },
+    {
+      "n": 14,
+      "label": "barnard-1947",
+      "source": "pubmed",
+      "pmid": 20287826
+    },
+    {
+      "n": 15,
+      "label": "holm-1979",
+      "source": "manual"
+    },
+    {
+      "n": 16,
+      "label": "mehta-patel-1983",
+      "source": "manual"
+    },
+    {
+      "n": 17,
+      "label": "tobin-1958",
+      "source": "crossref",
+      "doi": "10.2307/1907382",
+      "title": "Estimation of Relationships for Limited Dependent Variables"
+    },
+    {
+      "n": 18,
+      "label": "rocke-1995",
+      "source": "crossref",
+      "doi": "10.1080/00401706.1995.10484302",
+      "title": "A Two-Component Model for Measurement Error in Analytical Chemistry"
+    },
+    {
+      "n": 19,
+      "label": "finney-1978",
+      "source": "manual"
+    },
+    {
+      "n": 20,
+      "label": "bliss-1934",
+      "source": "crossref",
+      "doi": "10.1126/science.79.2037.38",
+      "title": "The Method of Probits"
+    },
+    {
+      "n": 21,
+      "label": "iso-11843-2",
+      "source": "manual"
+    },
+    {
+      "n": 22,
+      "label": "eurachem-detect-2016",
+      "source": "manual"
+    },
+    {
+      "n": 23,
+      "label": "ich-q2r1",
+      "source": "manual"
+    },
+    {
+      "n": 24,
+      "label": "carobene-2025",
+      "source": "pubmed",
+      "pmid": 41308721
+    },
+    {
+      "n": 25,
+      "label": "malkamaki-analchem",
+      "source": "pubmed",
+      "pmid": 39763364
+    },
+    {
+      "n": 26,
+      "label": "zenodo-qpcr",
+      "source": "zenodo",
+      "record_id": "12609243",
+      "doi": "10.5281/zenodo.12609243",
+      "title": "Building an eDNA surveillance toolkit for invasive rodents on islands: Can we detect wild-type and gene drive Mus musculus?",
+      "creators": [
+        "Piaggio, Antoinette"
+      ]
+    },
+    {
+      "n": 27,
+      "label": "zenodo-rmn",
+      "source": "zenodo",
+      "record_id": "17108929",
+      "doi": "10.5281/zenodo.17108929",
+      "title": "Underlying dataset for the manuscript titled \"Qualification of a reporter virus microneutralization assay for evaluation of influenza specific antibodies in human clinical trials\"",
+      "creators": [
+        "Sawant, Sheetal",
+        "Harit, Dimple",
+        "Tomaras, Georgia"
+      ]
+    },
+    {
+      "n": 28,
+      "label": "zenodo-ic-cations",
+      "source": "zenodo",
+      "record_id": "5909650",
+      "doi": "10.5281/zenodo.5909650",
+      "title": "Cation concentrations for LOD/LOQ determination",
+      "creators": [
+        "Dierendonck, Cameron"
+      ]
+    },
+    {
+      "n": 29,
+      "label": "zenodo-ic-anions",
+      "source": "zenodo",
+      "record_id": "5901444",
+      "doi": "10.5281/zenodo.5901444",
+      "title": "Anion concentrations for LOD/LOQ determination",
+      "creators": [
+        "Dierendonck, Cameron"
+      ]
+    },
+    {
+      "n": 30,
+      "label": "zenodo-radioimmuno-data",
+      "source": "zenodo",
+      "record_id": "12664367",
+      "doi": "10.5281/zenodo.12664367",
+      "title": "Data for publication: Specific protein quantification by radioimmuno-dot-blot assay for complex mixture samples utilizing Strep-tag and tritium-labeled StrepTactin",
+      "creators": [
+        "Malkam\u00e4ki, Maaria",
+        "Gandier, Julie-Anne",
+        "Meinander, Kristoffer",
+        "Linder, Markus B."
+      ]
+    },
+    {
+      "n": 31,
+      "label": "ray-2026",
+      "source": "pubmed",
+      "pmid": 42012909
+    },
+    {
+      "n": 32,
+      "label": "diederiks-2026",
+      "source": "pubmed",
+      "pmid": 42201254
+    },
+    {
+      "n": 33,
+      "label": "hs-ctni-practical-2015",
+      "source": "pubmed",
+      "pmid": 28932796
+    },
+    {
+      "n": 34,
+      "label": "hspsa-atellica-2026",
+      "source": "pubmed",
+      "pmid": 41427577
+    },
+    {
+      "n": 35,
+      "label": "ntm-mpcr-2026",
+      "source": "pubmed",
+      "pmid": 42459884
+    },
+    {
+      "n": 36,
+      "label": "analyseit-ep17",
+      "source": "manual"
+    },
+    {
+      "n": 37,
+      "label": "msstatslobd",
+      "source": "manual"
+    },
+    {
+      "n": 38,
+      "label": "clsi-ep05-a3",
+      "source": "manual"
+    },
+    {
+      "n": 39,
+      "label": "clsi-ep17ig-2021",
+      "source": "manual"
+    },
+    {
+      "n": 40,
+      "label": "glaser-mdl-1981",
+      "source": "crossref",
+      "doi": "10.1021/es00094a002",
+      "title": "Trace analyses for wastewaters"
+    }
+  ],
+  "pubmed_pmids": [
+    14764644,
+    33626838,
+    29438992,
+    18852857,
+    15899655,
+    41308721,
+    39763364,
+    42012909,
+    42201254,
+    20287826,
+    28932796,
+    41427577,
+    42459884
+  ]
+}
